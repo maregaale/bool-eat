@@ -2,15 +2,22 @@
 
 namespace App\Http\Controllers\Auth;
 
+
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
 {
+    public function addGenres(Request $request)
+    {
+        dd($request->all());
+    }
+  
     /*
     |--------------------------------------------------------------------------
     | Register Controller
@@ -51,8 +58,14 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
+            'lastname' => ['required', 'string', 'max:255'],
+            'address' => ['required', 'string', 'max:255'],
+            'city' => ['required', 'string', 'max:255', 'min:1'],
+            'restaurant_name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'vat_number' => ['required', 'numeric', 'digits:11'],
+            'phone_number' => ['required', 'numeric'],
         ]);
     }
 
@@ -64,10 +77,20 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        
         return User::create([
             'name' => $data['name'],
+            'lastname' => $data['lastname'],
+            'address' => $data['address'],
+            'city' => $data['city'],
+            'restaurant_name' => $data['restaurant_name'],
+            'vat_number' => $data['vat_number'],
+            'phone_number' => $data['phone_number'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+       
     }
+
+    
 }
