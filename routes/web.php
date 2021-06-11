@@ -19,4 +19,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::prefix('admin')->name('admin.')->namespace('Admin')->group(function () {
+   Route::resource('plates', 'PlateController');
+});
+
 Route::get('/home', 'HomeController@index')->name('home');
