@@ -2,22 +2,16 @@
 
 namespace App\Http\Controllers\Auth;
 
-
+use App\Genre;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
 {
-    public function addGenres(Request $request)
-    {
-        dd($request->all());
-    }
-  
     /*
     |--------------------------------------------------------------------------
     | Register Controller
@@ -77,8 +71,8 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        
-        return User::create([
+        //Salvo in una variabile le proprieta da salvare
+        $user =  User::create([
             'name' => $data['name'],
             'lastname' => $data['lastname'],
             'address' => $data['address'],
@@ -89,7 +83,20 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+        //Attach delle categorie
+        $user->genres()->attach($data['genres']);
+
+        //Return
+        return $user;
+
        
+    }
+     //Funzione per mostrare le categorie nella registrazione
+    public function showRegistrationForm()
+    {
+        $genres = Genre::all();
+
+        return view('auth.register', compact('genres'));
     }
 
     
