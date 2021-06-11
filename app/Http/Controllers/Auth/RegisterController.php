@@ -88,16 +88,12 @@ class RegisterController extends Controller
 
         //Return
         return $user;
-
-       
     }
-     //Funzione per mostrare le categorie nella registrazione
+    //Funzione per mostrare le categorie nella registrazione
     public function showRegistrationForm()
     {
         $genres = Genre::all();
 
         return view('auth.register', compact('genres'));
     }
-
-    
 }

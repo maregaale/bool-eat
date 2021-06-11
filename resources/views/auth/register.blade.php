@@ -8,6 +8,19 @@
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
+                    
+                    {{-- validation errors --}}
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        @endif
+
+
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -123,10 +136,8 @@
                             </div>
                         </div>
                         {{-- /p_iva  added --}}
-
                         
-                        
-                         <h3>Genres</h3>
+                        <h3>Genres</h3>
                         @foreach ($genres as $genre)
                           <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="{{$genre->id}}" id="{{$genre->name}}" name="genres[]">
@@ -134,11 +145,7 @@
                               {{$genre->name}}
                             </label>
                           </div>
-                        @endforeach  
-                      
-                        
-
-                        
+                        @endforeach
 
 
                         <div class="form-group row">
