@@ -11,6 +11,8 @@
 
     @foreach ($plates as $plate)
         <h3>{{$plate->name}}</h3>
+    <img src="{{$plate->image ? asset('storage/' . $plate->image) : 'https://via.placeholder.com/200'}}" alt="{{$plate->title}}" style="width: 200px">
+
         <button>Modifica piatto</button>
         <a href=""><button>Vai al piatto</button></a>
     @endforeach

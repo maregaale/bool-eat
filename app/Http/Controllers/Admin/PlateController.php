@@ -94,9 +94,15 @@ class PlateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Plate $plate)
     {
-        //
+        $user_id = Auth::id();
+
+        if ($plate->user_id != $user_id) {
+            abort('403');
+        }
+
+        return view('admin.plates.show', compact('plate'));
     }
 
     /**
