@@ -124,6 +124,22 @@
                         </div>
                         {{-- /p_iva  added --}}
 
+                        
+                        
+                         <h3>Genres</h3>
+                        @foreach ($genres as $genre)
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="{{$genre->id}}" id="{{$genre->name}}" name="genres[]">
+                            <label class="form-check-label" for="{{$genre->name}}">
+                              {{$genre->name}}
+                            </label>
+                          </div>
+                        @endforeach  
+                      
+                        
+
+                        
+
 
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
