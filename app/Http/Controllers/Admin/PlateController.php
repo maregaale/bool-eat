@@ -111,9 +111,16 @@ class PlateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Plate $plate)
     {
-        //
+        // Controllo se l'utente è autorizzato alla modifica
+        $user_id = Auth::id();
+        
+        if( $plate->user_id != $user_id ) {
+            abort('403');
+        }
+
+        return view('admin.plates.edit', compact('plate'));
     }
 
     /**
@@ -123,9 +130,38 @@ class PlateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Plate $plate)
     {
-        //
+        // Controllo se l'utente è autorizzato alla modifica
+        $user_id = Auth::id();
+
+        if( $plate->user_id != $user_id ) {
+            abort('403');
+        }
+
+        $validation = $this->validation;
+
+        $request->validate($validation);
+
+        $data = $request->all();
+
+        // salvataggio dati booleani
+        $data['visible'] = !isset($data['visible']) ? 0 : 1;
+        $data['vegan'] = !isset($data['vegan']) ? 0 : 1;
+        $data['vegetarian'] = !isset($data['vegetarian']) ? 0 : 1;
+        $data['gluten_free'] = !isset($data['gluten_free']) ? 0 : 1;
+        $data['hot'] = !isset($data['hot']) ? 0 : 1;
+        // slug nome piatto
+        $data['slug'] = Str::slug($data['name'], '-');
+
+        // upload file image
+        if (isset($data['image'])) {
+            $data['image'] = Storage::disk('public')->put('image', $data['image']);
+        }
+
+        $plate->update($data);
+
+        return redirect()->route('admin.plates.index')->with('update', 'Il piatto '.$plate->name. ' è stato modificato correttamente!');
     }
 
     /**
@@ -134,8 +170,17 @@ class PlateController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Plate $plate)
     {
-        //
+        // Controllo se l'utente è autorizzato alla modifica
+        $user_id = Auth::id();
+
+        if( $plate->user_id != $user_id ) {
+            abort('403');
+        }
+
+        $plate->delete();
+
+        return redirect()->route('admin.plates.index')->with('delete', 'Il piatto '.$plate->name. ' è stato eliminato correttamente!');
     }
 }
