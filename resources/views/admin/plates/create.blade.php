@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-
+    {{-- errori --}}
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -15,10 +15,14 @@
             </ul>
         </div>
     @endif
+    {{-- /errori --}}
 
+    {{-- form creazione piatto--}}
     <form class="mt-5" action="{{route('admin.plates.store')}}" method="POST" enctype="multipart/form-data">
         @method('POST')
         @csrf
+
+        {{-- input info piatto --}}
         <h1 class="mb-3">Aggiungi nuovo piatto</h1>
 
         <div class="form-group">
@@ -45,12 +49,16 @@
             <label for="scope">Portata</label>
             <input type="text" class="form-control" name="scope" id="scope" placeholder="Inserisci il tipo di portata">
         </div>
+        {{-- /input info piatto --}}
 
+        {{-- checkbox pubblicazione--}}
         <div class="form-check form-check-inline d-block mt-2">
             <input class="form-check-input" type="checkbox" id="visible" name="visible">
             <label class="form-check-label" for="visible">Pubblica piatto</label>
         </div>
-
+        {{-- checkbox pubblicazione--}}
+        
+        {{-- checkboxes tipologia--}}
         <h2 class="mt-5">Tipologia</h2>
 
         <div class="form-check form-check-inline mt-3">
@@ -72,14 +80,20 @@
             <input class="form-check-input" type="checkbox" id="hot" name="hot">
             <label class="form-check-label" for="hot">Piccante</label>
         </div>
+        {{-- /checkboxes tipologia--}}
 
+        {{-- upload immagine --}}
         <div class="form-group mt-3">
 			<label for="image">Immagine</label>
 			{{-- <input type="text" class="form-control" id="image" name="image" placeholder="Image"> --}}
 			<input type="file" id="image" name="image">
 		</div>
+        {{-- /upload immagine --}}
 
+        {{-- bottone submit --}}
         <button type="submit" class="btn btn-success mt-3">Salva!</button>
+        {{-- /bottone submit --}}
     </form>
+    {{-- /form creazione piatto--}}
         
-    @endsection
+@endsection

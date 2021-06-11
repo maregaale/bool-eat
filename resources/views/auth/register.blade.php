@@ -18,12 +18,15 @@
                                 @endforeach
                             </ul>
                         </div>
-                        @endif
+                    @endif
+                    {{-- /validation errors --}}
+                    
 
-
+                    {{-- form registrazione --}}
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
+                        {{-- name --}}
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
@@ -37,8 +40,9 @@
                                 @enderror
                             </div>
                         </div>
-                        {{-- Lastname added --}}
-                        
+                        {{-- /name --}}
+
+                        {{-- lastname --}}
                         <div class="form-group row">
                             <label for="lastname" class="col-md-4 col-form-label text-md-right">{{ __('Lastname') }}</label>
 
@@ -46,15 +50,15 @@
                                 <input id="lastname" type="text" class="form-control @error('lastname') is-invalid @enderror" name="lastname" value="{{ old('lastname') }}" required autocomplete="lastname" autofocus>
 
                                 @error('lastname')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                         </div>
-                        {{-- /Lastname added --}}
-                        {{-- restaurtant name added --}}
-                        
+                        {{-- /lastname --}}
+
+                        {{-- restaurtant name --}}
                         <div class="form-group row">
                             <label for="restaurant_name" class="col-md-4 col-form-label text-md-right">{{ __('Restaurant name') }}</label>
 
@@ -62,16 +66,16 @@
                                 <input id="restaurant_name" type="text" class="form-control @error('restaurant_name') is-invalid @enderror" name="restaurant_name" value="{{ old('restaurant_name') }}" required autocomplete="restaurant_name" autofocus>
 
                                 @error('restaurant_name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
                                 @enderror
                             </div>
                         </div>
-                        {{-- /restaurant name added --}}
-                           {{-- address added --}}
-                        
-                           <div class="form-group row">
+                        {{-- /restaurant name --}}
+
+                        {{-- address --}}                        
+                        <div class="form-group row">
                             <label for="address" class="col-md-4 col-form-label text-md-right">{{ __('Address') }}</label>
 
                             <div class="col-md-6">
@@ -84,9 +88,10 @@
                                 @enderror
                             </div>
                         </div>
-                        {{-- /address added --}}
-                          {{-- phone number added --}}
-                          <div class="form-group row">
+                        {{-- /address --}}
+
+                        {{-- phone number --}}
+                        <div class="form-group row">
                             <label for="phone_number" class="col-md-4 col-form-label text-md-right">{{ __('Phone Number') }}</label>
 
                             <div class="col-md-6">
@@ -99,11 +104,10 @@
                                 @enderror
                             </div>
                         </div>
-                   
-                        {{-- /phone number added --}}
-                          {{-- city added --}}
-                        
-                          <div class="form-group row">
+                        {{-- /phone number --}}
+
+                        {{-- city --}}
+                        <div class="form-group row">
                             <label for="city" class="col-md-4 col-form-label text-md-right">{{ __('City') }}</label>
 
                             <div class="col-md-6">
@@ -119,10 +123,10 @@
                                 @enderror
                             </div>
                         </div>
-                        {{-- /city added --}}
-                           {{-- p_iva added --}}
-                        
-                           <div class="form-group row">
+                        {{-- /city --}}
+
+                        {{-- vat_number --}}
+                        <div class="form-group row">
                             <label for="vat_number" class="col-md-4 col-form-label text-md-right">{{ __('Vat Number') }}</label>
 
                             <div class="col-md-6">
@@ -135,9 +139,12 @@
                                 @enderror
                             </div>
                         </div>
-                        {{-- /p_iva  added --}}
-                        
+                        {{-- /vat_number --}}
+
+                        {{-- genres --}}
                         <h3>Genres</h3>
+
+                        {{-- stampa generi --}}
                         @foreach ($genres as $genre)
                           <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="{{$genre->id}}" id="{{$genre->name}}" name="genres[]">
@@ -146,8 +153,10 @@
                             </label>
                           </div>
                         @endforeach
+                        {{-- stampa generi --}}
+                        
 
-
+                        {{-- email --}}
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
@@ -161,7 +170,9 @@
                                 @enderror
                             </div>
                         </div>
+                        {{-- /email --}}
 
+                        {{-- password --}}
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
@@ -175,7 +186,9 @@
                                 @enderror
                             </div>
                         </div>
+                        {{-- /password --}}
 
+                        {{-- password-confirm --}}
                         <div class="form-group row">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
@@ -183,7 +196,9 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
+                        {{-- /password-confirm --}}
 
+                        {{-- bottone submit --}}
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
@@ -191,7 +206,10 @@
                                 </button>
                             </div>
                         </div>
+                        {{-- /bottone submit --}}
                     </form>
+                    {{-- /form registrazione --}}
+
                 </div>
             </div>
         </div>
