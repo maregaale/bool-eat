@@ -147,6 +147,7 @@
                         {{-- stampa generi --}}
                         @foreach ($genres as $genre)
                           <div class="form-check">
+                              {{-- <img src="{{ $genre->logo }}" alt="" style="width: 100px"> --}}
                             <input class="form-check-input" type="checkbox" value="{{$genre->id}}" id="{{$genre->name}}" name="genres[]">
                             <label class="form-check-label" for="{{$genre->name}}">
                               {{$genre->name}}

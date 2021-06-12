@@ -7,8 +7,11 @@
 
 @section('content')  
     {{-- bottone aggiunta piatto --}}
-    <a href="{{route('admin.plates.create')}}"><button type="button" class="btn btn-success"> Aggiungi Piatto</button></a>
+    <a href="{{route('admin.plates.create')}}"><button type="button" class="btn btn-secondary"> Aggiungi Piatto</button></a>
     {{-- /bottone aggiunta piatto --}}
+    {{-- bottone back to dashboard --}}
+    <a href="{{route('home')}}"><button type="button" class="btn btn-success"> Torna alla Dashboard</button></a>
+    {{-- /bottone back to dashboard --}}
 
     {{-- stampa piatti --}}
     @foreach ($plates as $plate)
