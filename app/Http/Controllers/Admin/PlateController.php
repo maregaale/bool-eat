@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Plate;
 use App\Genre;
+use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
@@ -26,9 +27,9 @@ class PlateController extends Controller
      */
     public function index()
     {
-        //ci importiamo tutti i piatti
-        //$plates = Plate::all();
-
+        
+        //$user = User::where('slug' , $slug )->first();
+        //dd($user);
         //salviamo in una variabile lo user autenticato
         $user_id = Auth::id();
         //associamo a questa variabile i piatti che sono associati a quello User

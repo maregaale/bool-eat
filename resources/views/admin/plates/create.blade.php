@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('PageTitle')
+@section('pageTitle')
     Add Plate
 @endsection
 
