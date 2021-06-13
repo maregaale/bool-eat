@@ -6,6 +6,9 @@
 
 
 @section('content')  
+    {{-- nome del ristorante dell'utente --}}
+    <h1>{{ Auth::user()->restaurant_name }}</h1>
+    {{-- /nome del ristorante dell'utente --}}
     {{-- bottone aggiunta piatto --}}
     <a href="{{route('admin.plates.create')}}"><button type="button" class="btn btn-secondary"> Aggiungi Piatto</button></a>
     {{-- /bottone aggiunta piatto --}}
