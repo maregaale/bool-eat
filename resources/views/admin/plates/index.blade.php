@@ -20,7 +20,7 @@
     @foreach ($plates as $plate)
         <h3>{{$plate->name}}</h3>
         {{-- prova stampa img --}}
-        {{-- <img src="{{ $plate->image }}" alt="{{ $plate->name }}" style="width: 100px"> --}}
+       {{-- <img src="{{ $plate->image }}" alt="{{ $plate->name }}" style="width: 100px">  --}}
         {{-- /prova stampa img --}}
         <img src="{{$plate->image ? asset('storage/' . $plate->image) : 'https://via.placeholder.com/200'}}" alt="{{$plate->title}}" style="width: 200px">
 
