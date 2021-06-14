@@ -12,9 +12,9 @@ class RestaurantController extends Controller
     public function userWithGenres()
     {
         //Prendo gli utenti che hanno delle categorie associate
-        $usergenres = User::with(['genres'])->get();
+        $userGenres = User::with(['genres'])->get();
         //Risposta in Json
-        return response()->json($usergenres);
+        return response()->json($userGenres);
     }
 
     public function genres()
