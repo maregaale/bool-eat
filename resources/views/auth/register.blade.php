@@ -108,7 +108,7 @@
 
                         {{-- city --}}
                         <div class="form-group row">
-                            <label for="city" class="col-md-4 col-form-label text-md-right">{{ __('Citta') }}</label>
+                            <label for="city" class="col-md-4 col-form-label text-md-right">{{ __('Città') }}</label>
 
                             <div class="col-md-6">
                                 <select id="city" type="select" class="form-control @error('city') is-invalid @enderror" name="city" value="{{ old('city') }}" required autocomplete="city" autofocus>
