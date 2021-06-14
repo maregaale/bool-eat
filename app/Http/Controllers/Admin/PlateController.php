@@ -16,7 +16,7 @@ class PlateController extends Controller
 
     protected $validation = [
         'name' => 'required|string',
-        'price' => 'required|numeric',
+        'price' => 'required|numeric|min:0',
         'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
     ];
 
@@ -145,6 +145,18 @@ class PlateController extends Controller
         $request->validate($validation);
 
         $data = $request->all();
+
+        // tutti i piatti
+        $allPlates = Plate::all();
+
+        // controllo unicità nome nella lista piatti
+        foreach ($allPlates as $thePlate) {
+
+            if ($thePlate->name == $data['name']) {
+                return back()->with('save_name', 'ciao');
+            }
+        }
+        
 
         // salvataggio dati booleani
         $data['visible'] = !isset($data['visible']) ? 0 : 1;
