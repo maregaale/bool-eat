@@ -20,5 +20,4 @@
         </div>
     </div>
 </div>
- <h1>Ciao</h1>
 @endsection
