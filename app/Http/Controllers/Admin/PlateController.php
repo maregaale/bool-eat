@@ -146,6 +146,18 @@ class PlateController extends Controller
 
         $data = $request->all();
 
+        // tutti i piatti
+        $allPlates = Plate::all();
+
+        // controllo unicità nome nella lista piatti
+        foreach ($allPlates as $thePlate) {
+
+            if ($thePlate->name == $data['name']) {
+                return back()->with('save_name', 'ciao');
+            }
+        }
+        
+
         // salvataggio dati booleani
         $data['visible'] = !isset($data['visible']) ? 0 : 1;
         $data['vegan'] = !isset($data['vegan']) ? 0 : 1;
