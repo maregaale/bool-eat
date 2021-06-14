@@ -5,6 +5,14 @@
 @endsection
 
 @section('content')
+     {{-- toast  --}}
+     @if (session('save_name'))
+     <div class="alert alert-danger">
+         {{ session('save_name') }}
+     </div>
+     @endif
+     {{-- /toast  --}}
+     
     {{-- errori --}}
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -96,4 +104,6 @@
 
     </form>
     {{-- /form di modifica piatto --}}
+
+   
 @endsection
