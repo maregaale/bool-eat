@@ -35,7 +35,7 @@
 
         {{-- dashboard right (info piatti, statistiche) --}}
         <div class="dashboard_right">
-               
+               <h2>ciao a tutti</h2>
         </div>  
     </div>
 @endsection
