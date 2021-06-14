@@ -1,0 +1,33 @@
+.dashbord_left{
+    width: 30%;
+    height: 100vh;
+    padding: 25px;
+    background-color: grey;
+
+    .container_aside{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .dashbord_left_info{
+        display: flex;
+        flex-direction: column;   
+        justify-content: center;
+        
+        a{
+            height: 75px;
+            // margin: 30px 0;
+            line-height: 75px;
+            border: 1px solid red;
+            display: block;
+        }
+    }
+}
+
+.dashboard_right{
+    width: 70%;
+    height: 100vh;
+    background-color: lightgrey;
+}
