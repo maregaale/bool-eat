@@ -25,6 +25,24 @@ class RestaurantController extends Controller
         return response()->json($genres);
     }
 
+    public function filterGenre(Request $request)
+    {   
+        //Tutti i ristoranti
+        $restaurants = User::all();
+        //metodo collect php
+        $restaurantsFinded = collect();
+        // aggiungo i genres per ogni ristorante
+        foreach ($restaurants as $restaurant) {
+            
+            if ($restaurant->genres->contains('id', $request->genre)) {   
+                $restaurantsFinded->add($restaurant);
+            }
+            
+        }
+        //Risposta in json
+        return response()->json($restaurantsFinded);
+    }
+
 
     
 
