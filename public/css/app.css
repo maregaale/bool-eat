@@ -10002,39 +10002,94 @@ h3 {
     border-color: #dee2e6;
   }
 }
-.dashbord_left {
-  width: 30%;
-  height: 100vh;
-  padding: 25px;
-  background-color: grey;
+body {
+  background-image: url("https://png.pngtree.com/thumb_back/fw800/back_our/20190620/ourmid/pngtree-eat-food-flat-geometric-yellow-banner-image_172504.jpg");
+  background-size: contain;
 }
-.dashbord_left .container_aside {
+
+.navbar-brand img {
+  width: 100px;
+}
+
+.dashboard_left, .dashboard_right {
+  font-family: "Montserrat", sans-serif;
+}
+
+.dashboard_left {
+  width: 25%;
+  height: calc(100vh - 60px);
+  padding: 30px;
+  background-color: #d9d9d9;
+  text-align: center;
+}
+.dashboard_left .container_aside {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   height: 100%;
 }
-.dashbord_left .dashbord_left_info {
+.dashboard_left .container_aside .box_info img {
+  width: 200px;
+  border-radius: 50%;
+}
+.dashboard_left .dashbord_left_info {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-size: 18px;
 }
-.dashbord_left .dashbord_left_info a {
+.dashboard_left .dashbord_left_info a {
   height: 75px;
   line-height: 75px;
-  border: 1px solid yellow;
   display: block;
+  color: #000;
+  border-bottom: 2px solid #fff;
+  font-style: italic;
+  font-weight: 600;
+  text-decoration: none;
+  text-shadow: 2px 3px 3px #969696;
+}
+.dashboard_left .dashbord_left_info a:hover {
+  color: #fff;
 }
 
 .dashboard_right {
-  width: 70%;
-  height: 100vh;
-  padding: 25px;
-  background-color: lightgray;
+  width: 75%;
+  height: calc(100vh - 60px);
+  padding: 30px;
+  background: #ffffb3;
 }
-
-img {
-  width: 50px;
+.dashboard_right-card {
+  display: flex;
+  width: 100%;
+}
+.dashboard_right-card .box {
+  margin: 10px;
+  width: calc(100% / 3);
+  height: 100%;
+  flex-wrap: wrap;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 5px;
+}
+.dashboard_right-card .box img {
+  width: 100%;
+  height: 120px;
+  border-radius: 5px;
+}
+.dashboard_right-card .box h3 {
+  font-size: 14px;
+}
+.dashboard_right .stats_container {
+  height: calc(100% - 300px);
+}
+.dashboard_right .stats_container .stats {
+  width: 100%;
+  height: 100%;
+  background-color: #737373;
+}
+.dashboard_right .stats_container .stats .progress {
+  height: 80px;
 }
 
 .our_modal {
