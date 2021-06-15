@@ -15,9 +15,10 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
+     protected $fillable = [
         'name', 'lastname', 'email', 'password','genres','password', 'vat_number' , 'restaurant_name' , 'address', 'city', 'phone_number'
-    ];
+     ];
+    
 
     /**
      * The attributes that should be hidden for arrays.
@@ -40,7 +41,7 @@ class User extends Authenticatable
     public function genres ()
     {
 
-        return $this->belongsToMany('App\Genre' , 'user_genre');
+        return $this->belongsToMany('App\Genre');
     }
 
     public function plates ()
