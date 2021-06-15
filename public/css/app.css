@@ -10022,12 +10022,13 @@ h3 {
 .dashbord_left .dashbord_left_info a {
   height: 75px;
   line-height: 75px;
-  border: 1px solid red;
+  border: 1px solid yellow;
   display: block;
 }
 
 .dashboard_right {
   width: 70%;
   height: 100vh;
-  background-color: lightgrey;
+  padding: 25px;
+  background-color: lightgray;
 }
