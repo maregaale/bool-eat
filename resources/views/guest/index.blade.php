@@ -30,10 +30,10 @@ Booleat
             @endforeach
         </select>
         {{-- /Select Genres --}}
-     <div v-if="search != '' ">
+     <div v-if="search =! '' ">
         <ul>
-            <li v-for="restaurant in restaurants">
-                @{{ restaurant.restaurant_name }}
+            <li   v-for="restaurant in restaurants">
+                @{{ restaurant.genres['name'] }}
             </li>
         </ul> 
     </div>

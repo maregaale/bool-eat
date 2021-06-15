@@ -14,13 +14,13 @@ new Vue({
     filterGenre: function filterGenre() {
       var _this = this;
 
-      axios.get('http://localhost:8000/api/filter', {
+      axios.get('http://localhost:8000/api/search', {
         params: {
           search: this.search
         }
       }).then(function (result) {
         console.log(result.data);
-        _this.restaurants = result.data;
+        _this.restaurants = result.data; //this.restaurants.genres = result.data.genres;
       });
     }
   }

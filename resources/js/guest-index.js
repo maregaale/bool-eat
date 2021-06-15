@@ -8,7 +8,7 @@ new Vue({
     //Filtro per genres
     filterGenre: function() {
      
-    axios.get('http://localhost:8000/api/filter',{
+    axios.get('http://localhost:8000/api/search',{
         params: {
           search: this.search
         }
@@ -16,6 +16,7 @@ new Vue({
         
         console.log(result.data);
         this.restaurants = result.data;
+        //this.restaurants.genres = result.data.genres;
       });
     }
     }
