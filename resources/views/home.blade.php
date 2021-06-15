@@ -6,14 +6,17 @@
             {{-- dahsboard left (modifica dati vari, visualizza) --}}
             <div class="container_aside">
                 <div class="box_info">
-                    <img src="" alt="">
+                    {{-- logo --}}
+                    <img src="{{ Auth::user()->logo }}" alt="">
                     {{-- Restaurant name --}}
+
                     <h2 class="mt-5">{{ Auth::user()->restaurant_name }}</h2>
+                    
                 </div>
                 
                 {{-- modifiche varie --}}
                 <div class="dashbord_left_info">
-                    <a href=""><i class="fas fa-edit"></i> Modifica i tuoi dati</a>
+                    <a href="{{ route('admin.plates.index') }}"><i class="fas fa-edit"></i> Modifica i tuoi dati</a>
                     <a class="" href="{{ route('admin.plates.index') }}"><i class="fas fa-eye"></i> Visualizza Menù</a>
                     <a href="{{route('admin.plates.create')}}"><i class="fas fa-plus-circle"></i> Aggiungi Piatto</a>
                 </div>
@@ -35,7 +38,23 @@
 
         {{-- dashboard right (info piatti, statistiche) --}}
         <div class="dashboard_right">
-               <h2>ciao a tutti</h2>
+            <div>
+                {{-- @dd($plates); --}}
+                <h2>ultimi piatti</h2>
+                @foreach ($plates as $plate)
+                <div class="dashboard_right-card-piatti">
+                    <img src="{{$plate->image}}" alt="">
+                    <h3 class="">{{$plate->name}}</h3>
+                </div>
+                @endforeach 
+                
+
+                {{-- <div class="dashboard_right-cardPiatti">
+                    
+                </div> --}}
+
+            </div>
+               
         </div>  
     </div>
 @endsection

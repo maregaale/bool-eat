@@ -20,7 +20,7 @@
             height: 75px;
             // margin: 30px 0;
             line-height: 75px;
-            border: 1px solid red;
+            border: 1px solid yellow;
             display: block;
         }
     }
@@ -29,5 +29,10 @@
 .dashboard_right{
     width: 70%;
     height: 100vh;
-    background-color: lightgrey;
+    padding: 25px;
+    background-color: lightgray;   
+}
+
+img {
+    width: 50px;
 }
