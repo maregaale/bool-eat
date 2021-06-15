@@ -42,10 +42,10 @@ Booleat
         </ul> --}}
         <input  type="text" placeholder="cerca categorie" value="" v-model="search">
         <button class="btn" type="button" name="button" v-on:click="filterGenre">Search</button>
-         <div class="container">
-             @foreach ( $users as $user)
-                 <h3>{{ $user->name }}</h3>
-             @endforeach
+         <div class="container" v-for="restaurant in restaurants">
+            
+             <h3>@{{ restaurant.restaurant_name }}</h3>
+            
          </div>
      </div>
     
