@@ -30,6 +30,9 @@ Route::namespace('Api')->group(function () {
     Route::get('/genres', 'RestaurantController@genres');
 
     Route::get('/filter', 'RestaurantController@filterGenre');
+
+    Route::get('/filterapi/{genre}', 'RestaurantController@filteredApi');
+
 });
 
 

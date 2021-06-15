@@ -63,6 +63,28 @@ class RestaurantController extends Controller
         //return response()->json($data);
     }
 
+    //Api filteredRestaurants
+    public function filteredApi($genre)
+    {
+        if($genre != "All") {
+            $restaurants = User::whereHas('genres', function($query) use($genre) {
+                $query->where('name', $genre);
+            })->get();
+        } else {
+            $restaurants = User::all();
+        }
+       
+
+         foreach ($restaurants as $restaurant) {
+             $genres = [];
+             $genres = $restaurant->genres;
+             $restaurant->genres = $genres;
+            
+         };
+
+        return response()->json($restaurants);
+    }
+
 
     
 
