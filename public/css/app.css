@@ -10032,3 +10032,7 @@ h3 {
   padding: 25px;
   background-color: lightgray;
 }
+
+img {
+  width: 50px;
+}
