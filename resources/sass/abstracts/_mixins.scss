@@ -1,0 +1,62 @@
+//   Versione con i nomi dispositivi
+
+@mixin phone {
+    @media (max-width: 375px) { @content; }
+  }
+@mixin phone_landscape {
+    @media (max-width: 667px) { @content; }
+  }
+@mixin tablet {
+    @media (max-width: 768px) { @content; }
+  }
+@mixin tablet_landscape {
+    @media (max-width: 1024px) { @content; }
+  }
+@mixin small_desktop {
+    @media (max-width: 1336px) { @content; }
+  }
+@mixin big-desktop {
+    @media (max-width: 1920px) { @content; }
+  }
+
+//   Alternativa con nomi misure
+
+//  @mixin extra_extra_small {
+//     @media (max-width: 375px) { @content; }
+//   }
+//  @mixin extra_small {
+//     @media (max-width: 667px) { @content; }
+//   }
+//  @mixin small {
+//     @media (max-width: 768px) { @content; }
+//   }
+//  @mixin medium {
+//    @media (max-width: 1024px) { @content; }
+//   }
+//  @mixin large {
+//    @media (max-width: 1336px) { @content; }
+//   }
+//  @mixin extra_large {
+//    @media (max-width: 1920px) { @content; }
+//   }
+
+// Alternativa ispirata a Bootstrap
+
+// @mixin extra_small {
+//     @media (max-width: 576px) { @content; }
+//   }
+// @mixin small {
+//     @media (min-width: 576px) { @content; }
+//   }
+// @mixin medium {
+//     @media (min-width: 768px) { @content; }
+//   }
+// @mixin large {
+//     @media (min-width: 992px) { @content; }
+//   }
+// @mixin extra_large {
+//     @media (min-width: 1200px) { @content; }
+//   }
+// @mixin extra_extra_large {
+//     @media (min-width: 1400px) { @content; }
+//   }
