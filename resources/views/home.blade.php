@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('pageTitle')
+    Dashboard
+@endsection
+
 @section('content')
     <div class="main_logo container">
         <img src="{{asset('storage/image/bool_eat.png')}}" alt=""></a>
@@ -10,15 +14,16 @@
             <div class="container_aside">
                 <div class="box_info">
                     {{-- logo --}}
-                    {{-- <img src="{{ Auth::user()->logo }}" alt=""> --}}
-                    <img src="https://www.freeiconspng.com/thumbs/restaurant-icon-png/restaurant-icon-png-7.png" alt="">
+                    <img src="{{ Auth::user()->logo }}" alt="">
+                    {{-- <img src="https://www.freeiconspng.com/thumbs/restaurant-icon-png/restaurant-icon-png-7.png" alt=""> --}}
                     {{-- Restaurant name --}}
                     <h3 class="mt-5 font-weight-bold">{{ Auth::user()->restaurant_name }}</h3>
                 </div>
                 
                 {{-- modifiche varie --}}
                 <div class="dashbord_left_info">
-                    <a href="{{ route('admin.plates.index') }}"><span class="mr-2"><i class="fas fa-edit"></i></span> Modifica i tuoi dati</a>
+                    <a href="{{route('home')}}"><span class="mr-2"><i class="fas fa-edit"></i></span> Dashboard</a>
+                    {{-- <a href="{{ route('admin.plates.index') }}"><span class="mr-2"><i class="fas fa-edit"></i></span> Modifica i tuoi dati</a> --}}
                     <a class="" href="{{ route('admin.plates.index') }}"><span class="mr-2"><i class="fas fa-eye"></i></span> Visualizza Menù</a>
                     <a href="{{route('admin.plates.create')}}"><span class="mr-2"><i class="fas fa-plus-circle"></i></span> Aggiungi Piatto</a>
                 </div>
@@ -45,8 +50,10 @@
             <div class="dashboard_right-card">
                     @foreach ($plates as $plate)
                     <div class="box_plate">
-                        <img src="{{$plate->image}}" alt="">
-                        <p class="mt-2">{{$plate->name}}</p>
+                        <a href="{{route('admin.plates.show', ['plate' => $plate->id] )}}">
+                            <div class="box_plate-img"><img src="{{$plate->image}}" alt=""></div>
+                            <p class="mt-2">{{$plate->name}}</p>
+                        </a>
                     </div>
                 @endforeach 
             </div>

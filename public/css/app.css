@@ -10080,13 +10080,15 @@ body {
 }
 .dashboard_right-card {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   width: 100%;
+  overflow-x: auto;
 }
 .dashboard_right-card .box_plate {
+  flex-shrink: 0;
   margin: 10px;
-  width: calc(( 100% / 3 ) - 20px);
   height: 100%;
+  width: 200px;
   background-color: #fff;
   text-align: center;
   border-radius: 5px;
@@ -10094,8 +10096,13 @@ body {
 }
 .dashboard_right-card .box_plate img {
   width: 100%;
-  height: 120px;
-  border-radius: 5px;
+  height: 160px;
+}
+.dashboard_right-card .box_plate p {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .dashboard_right .stats_container .stats {
   width: 100%;
@@ -10104,6 +10111,14 @@ body {
 }
 .dashboard_right .stats_container .stats .progress {
   height: 80px;
+}
+
+.bombazza {
+  width: 100px;
+}
+.bombazza img {
+  width: 100%;
+  height: 100%;
 }
 
 .our_modal {

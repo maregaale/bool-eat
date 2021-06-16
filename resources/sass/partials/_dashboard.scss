@@ -91,25 +91,40 @@ body{
 
     &-card{
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         width: 100%;
+        overflow-x: auto;
+        
 
         .box_plate{
+            flex-shrink: 0;
             margin: 10px;
-            width: calc(( 100% / 3 ) - 20px);
+            //width: calc(( 100% / 3 ) - 20px);
             height: 100%;
+            width: 200px;      
             background-color: #fff;
             text-align: center;
             border-radius: 5px;
             box-shadow: 2px 3px 3px rgba(150, 150, 150, 1);
+            //padding: 10px;            
 
-            img{
+            img{                
                 width: 100%;
-                height: 120px;
-                border-radius: 5px;
+                height: 160px;
+                //border-radius: 5px;
             };
+            p {
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
         }
     }
+
+    //&-table-img{
+
+    
 
     .stats_container{
 
@@ -124,4 +139,16 @@ body{
             }
         }
     }
+}
+
+.bombazza{
+    
+    //height:50px;
+    width:100px;
+        
+    img{
+        width: 100%;
+        height: 100%;
+    }
+
 }
