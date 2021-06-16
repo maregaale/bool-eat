@@ -42,7 +42,29 @@
 
         {{-- dashboard right (menu) --}}
         <div class="dashboard_right">
-            <h3 class="font-weight-bold">Ultimi piatti</h3>
+            <h3 class="font-weight-bold">Menu</h3>
+                          {{-- toast success --}}
+                          @if (session('update'))
+                          <div class="alert alert-success">
+                              {{ session('update') }}
+                              <button type="button" class="ml-2 mb-1 close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          @endif
+                          {{-- /toast success --}}
+                      
+                          {{-- toast delete --}}
+                          @if (session('delete'))
+                          <div class="alert alert-success">
+                              {{ session('delete') }}
+                              <button type="button" class="ml-2 mb-1 close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                          </div>
+                          @endif
+                          {{-- /toast delete --}}
+            
             {{-- stampiamo i menu --}}
             <div id="app">
               <table class="table align-middle">
@@ -60,7 +82,7 @@
                   @foreach ($plates as $plate)
                   <tr>
                    
-                    <td class="bombazza"><img src="{{$plate->image}}" alt="{{$plate->title}}" style=""></td> 
+                    <td class="dashboard_right-table-img"><img src="{{$plate->image}}" alt="{{$plate->title}}" style=""></td> 
                     <td>{{$plate->name}}</td>
                     <td>{{$plate->price}} €</td>
                     <td>{{$plate->scope}}</td>
@@ -89,21 +111,6 @@
               {{-- <h1>{{ Auth::user()->restaurant_name }}</h1> --}}
 
               
-              {{-- toast success --}}
-              @if (session('update'))
-              <div class="alert alert-success">
-                  {{ session('update') }}
-              </div>
-              @endif
-              {{-- /toast success --}}
-          
-              {{-- toast delete --}}
-              @if (session('delete'))
-              <div class="alert alert-success">
-                  {{ session('delete') }}
-              </div>
-              @endif
-              {{-- /toast delete --}}
             </div>
         </div> 
     </div>
