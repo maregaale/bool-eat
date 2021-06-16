@@ -20,32 +20,42 @@ Booleat
   
         <input  type="text" placeholder="cerca categorie" value="" v-model="search">
         <button class="btn btn-success" type="button" name="button" v-on:click="filterGenre">Search</button>
-         <div class="container" v-for="restaurant in restaurants">
-            
-             <h3>@{{ restaurant.restaurant_name }}</h3>
-            
-         </div>
+    </div>
 
-        
+        <nav class="nav_btn">
            <div v-for="genre in genres">
-            <button class="btn-primary" v-on:click="filterGenreButtons(genre.name)">@{{ genre.name }}</button>
+            <button class="btn_genre" v-on:click="filterGenreButtons(genre.name)">@{{ genre.name }}</button>
+           </div>
+        </nav>
+
+     <div v-if="restaurants.length > 0" class="results">
+        <h2  class="text-center">I risultati della tua ricerca</h2>
+        <i class="fas fa-arrow-alt-circle-down"></i>
+     </div>
+
+     <div v-if="restaurants.length == 0" class="results">
+        <h2  class="text-center">Cerca per categoria di ristorante </h2>
+        <i class="fas fa-arrow-circle-up"></i>
+     </div>
+        
+        <div class="container_card" >
+            <div class="card_restaurant" v-for="restaurant in restaurants">
+                 
+                <h3>Ristorante: @{{ restaurant.restaurant_name }}</h3>
+                <h4>Indirizzo: @{{ restaurant.address }}</ </h4>
+                <p>Telefono: @{{ restaurant.phone_number }}</p>
+
+            </div>
+            
+            
+           
            </div>
                 
                 
           
-
-            {{-- <select class="choose-genre" name="" v-model="selectRestaurant" v-on:change="filterGenre">
-                <option value="">All</option>
-                <option v-for="genre in genres">@{{ genre.name }}</option>
-              </select>
-
-              <div v-for="restaurant in restaurants" v-if="selectRestaurant == restaurant.genres[0].name">
-                  <h3>@{{ restaurant.name }}</h3>
-
-              </div> --}}
        
        
-     </div>
+     
     
 </div>   
 
