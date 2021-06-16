@@ -69,7 +69,14 @@
                       <span>                     
                         <a href="{{route('admin.plates.edit', ['plate' => $plate->id] )}}"><i class="fas fa-edit text-dark"></i></a>
                         <a href="{{route('admin.plates.show', ['plate' => $plate->id] )}}"><i class="fas fa-eye text-secondary"></i></a>
-                        <a href="" v-on:click="showModal = true" data-id="{{$plate->id}}" ><i class="fas fa-trash-alt text-danger"></i></i></a>
+                        {{-- form della delete --}}
+                        <form class="d-inline-block" action="{{route('admin.plates.destroy', ['plate' => $plate->id] )}}" method="POST"> 
+                          @method('DELETE')
+                          @csrf
+                          <button type="submit" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
+                        </form>  
+                        {{-- /form della delete --}} 
+                        {{-- <a href="" v-on:click="showModal = true" data-id="{{$plate->id}}" ><i class="fas fa-trash-alt text-danger"></i></i></a> --}}
                       </span>
 
                     </td>
@@ -97,36 +104,7 @@
               </div>
               @endif
               {{-- /toast delete --}}
-          
-              {{-- modale cancellazione piatto --}}
-              <div v-if="showModal" class="our_modal" tabindex="-1" role="dialog">
-                  <div class="modal-dialog .modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                      <div class="modal-body">
-                        <p>Confermi di voler eliminare il piatto?</p>
-                      </div>
-                      <div class="modal-footer">
-                          {{-- form della delete --}}
-                          <form class="d-inline-block" action="{{route('admin.plates.destroy', ['plate' => $plate->id] )}}" method="POST"> 
-                              @method('DELETE')
-                              @csrf
-                              <button type="submit" class="btn btn-danger ml-4">Sì</button>
-                          </form>  
-                          {{-- /form della delete --}} 
-                        <button type="button" class="btn btn-secondary" v-on:click="showModal = false">No</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              {{-- /modale cancellazione piatto --}}
-              </div>
-          
-              
-              {{-- script Vue e js --}}
-              <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-              <script src="{{asset('js/modal_delete.js')}}"></script>
-              {{-- /script Vue e js --}}
-          
+            </div>
         </div> 
     </div>
 @endsection

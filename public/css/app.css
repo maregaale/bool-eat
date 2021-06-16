@@ -10112,6 +10112,9 @@ body {
 .dashboard_right .stats_container .stats .progress {
   height: 80px;
 }
+.dashboard_right .btn_invisible {
+  border: none;
+}
 
 .bombazza {
   width: 100px;
