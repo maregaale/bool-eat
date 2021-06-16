@@ -49,34 +49,22 @@ Booleat
          </div>
 
         
-            {{-- @foreach ($genres as $genre)
+           <div v-for="genre in genres">
+            <button class="btn-primary" v-on:click="filterGenreButtons(genre.name)">@{{ genre.name }}</button>
+           </div>
                 
-                <button class="btn-primary" v-on:click="filterGenre">{{ $genre->name }}</button>
                 
-            @endforeach --}}
-            <select v-model="selectRestaurant" v-on:change="filterGenre">
+          
+
+            {{-- <select class="choose-genre" name="" v-model="selectRestaurant" v-on:change="filterGenre">
                 <option value="">All</option>
-                @foreach ($genres as $genre)
-                    
-                    <option value="{{ $genre->id }}">
-                        {{ $genre->name }}
-                    </option>
-                    
-                @endforeach
-            </select>
-            <ul  v-if= "selectRestaurant == '' ">
-                <li v-for="restaurant in restaurants">
-                    @{{ restaurant.restaurant_name }}
-                </li>
-            </ul> 
-        
-             <ul v-else>
-                @foreach ($users as $user)
-                    <li>
-                        {{ $user->restaurant_name }}
-                    </li>
-                @endforeach
-            </ul>
+                <option v-for="genre in genres">@{{ genre.name }}</option>
+              </select>
+
+              <div v-for="restaurant in restaurants" v-if="selectRestaurant == restaurant.genres[0].name">
+                  <h3>@{{ restaurant.name }}</h3>
+
+              </div> --}}
        
        
      </div>
