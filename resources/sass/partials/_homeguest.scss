@@ -1,0 +1,35 @@
+.container_card {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1020px;
+    margin: 0 auto;
+}
+
+
+.card_restaurant {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    margin: 10px;
+}
+
+.nav_btn {
+ display: flex;
+ justify-content: space-between;
+ width: 800px;
+ margin: 0 auto;
+}
+
+.results {
+    text-align: center;
+     h2 {
+        font-size: 50px;
+        font-weight: bold;
+        color: chocolate;
+     }
+     i {
+         font-size: 40px;
+     }
+}
