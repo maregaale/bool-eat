@@ -47,6 +47,15 @@ Booleat
              <h3>@{{ restaurant.restaurant_name }}</h3>
             
          </div>
+
+        
+            @foreach ($genres as $genre)
+                
+                <button class="btn-primary" v-on:click="filterGenre">{{ $genre->name }}</button>
+                
+            @endforeach
+       
+       
      </div>
     
 </div>   

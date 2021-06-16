@@ -43,7 +43,7 @@ class User extends Authenticatable
     public function genres ()
     {
 
-        return $this->belongsToMany('App\Genre');
+        return $this->belongsToMany('App\Genre', 'user_genre');
     }
 
     public function plates ()
