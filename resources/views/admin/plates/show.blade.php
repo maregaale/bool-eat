@@ -43,15 +43,46 @@
 
         {{-- dashboard right (menu) --}}
         <div class="dashboard_right">
-            <a class="" href="{{ route('admin.plates.index') }}" ><button class="btn btn-secondary"> Torna indietro</button></a>
-            {{-- stampiamo i menu --}}
-            <div>
-                <h2 class="font-weight-bold mt-4">{{$plate->name}}</h2>
-                <img src="{{$plate->image ? asset('storage/' . $plate->image) : 'https://via.placeholder.com/200'}}" alt="{{$plate->title}}" style="width: 200px">
-                <h4>Ingredienti:</h4>
-                <p>{{ $plate->ingredients}}</p>
-                <h4>Portata: </h4>
-                <span>{{ $plate->scope }}</span>
+            <div class="container show_container">
+                {{-- bottone --}}
+                <div class="button_container">
+                    <a href="{{route('admin.plates.index')}}">
+                        <button class="btn btn-primary" >Torna al Menù</button>
+                    </a>
+                </div>
+                {{-- /bottone --}}
+        
+                {{-- piatto --}}
+                <div class="plate_container">
+                    <div class="plate">
+                        <h2 >{{$plate->name}}</h2>
+        
+                        {{-- immagine con storage --}}
+                        {{-- <img class="mb-5 mt-5" src="{{$plate->image ? asset('storage/' . $plate->image) : 'https://via.placeholder.com/200'}}" alt="{{$plate->title}}"> --}}
+                        {{-- /immagine con storage --}}
+        
+                        {{-- immagine con remoto --}}
+                        <img class="mb-5 mt-5" src="{{$plate->image ? $plate->image : 'https://via.placeholder.com/200'}}" alt="{{$plate->title}}">
+                        {{-- /immagine con remoto --}}
+        
+                        {{-- ingredienti --}}
+                        <h4>Ingredienti:</h4>
+                        <p class="par">{{ $plate->ingredients}}</p>
+                        {{-- /ingredienti --}}
+        
+                        {{-- portata --}}
+                        <h4>Portata: </h4>
+                        <p class="par">{{ $plate->scope }}</p>
+                        {{-- portata --}}
+        
+                        {{-- portata --}}
+                        <h4>Prezzo: </h4>
+                        <p class="par">{{ $plate->price }} &euro;</p>
+                        {{-- portata --}}
+        
+                    </div>
+                </div>
+                {{-- /piatto --}}
             </div>
         </div> 
     </div>

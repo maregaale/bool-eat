@@ -10,10 +10,16 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+// partials
 @import 'partials/dashboard';
 
 @import 'partials/modal';
 
 @import 'partials/homeguest';
 
+// components
 @import 'components/buttons';
+
+// pages
+@import 'pages/admin/show';
+
