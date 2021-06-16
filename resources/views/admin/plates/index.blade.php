@@ -42,7 +42,7 @@
 
         {{-- dashboard right (menu) --}}
         <div class="dashboard_right">
-            <h3 class="font-weight-bold">Ultimi piatti</h3>
+            <h3 class="font-weight-bold">Menu</h3>
             {{-- stampiamo i menu --}}
             <div id="app">
               <table class="table align-middle">
