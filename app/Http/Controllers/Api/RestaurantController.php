@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 
 class RestaurantController extends Controller
 {
+    //Tutti gli utenti con le categorie in formato json
     public function userWithGenres()
     {
         //Prendo gli utenti che hanno delle categorie associate
@@ -16,7 +17,7 @@ class RestaurantController extends Controller
         //Risposta in Json
         return response()->json($userGenres);
     }
-
+    //Tutte le categorie in formato json
     public function genres()
     {
         //Prendo tutte le categorie
@@ -25,45 +26,8 @@ class RestaurantController extends Controller
         return response()->json($genres);
     }
 
-    public function filterGenre(Request $request)
-    {   
-        // //Tutti i ristoranti
-        $restaurants = User::all();
-         //metodo collect php
-         $restaurantsFinded = collect();
-         // aggiungo i genres per ogni ristorante
-        foreach ($restaurants as $restaurant) {
-            // dd($restaurant->genres);
-            
-         if ($restaurant->genres->contains('id', $request->genre)) {   
-         $restaurantsFinded->add($restaurant);
-          }
-
-        //     $restaurant['genres'] = $genres;
-            
-       }
-        
-         return response()->json($restaurants);
-
-
-        // $restaurants = [];
-
-
-        // $restaurants = $request('query');
-        // foreach ($restaurants as $restaurant) {
-        //     $data = User::whereHas('user_id', function ($q) use ($restaurant) {
-
-        //     $q->whereIn('genre', $restaurant);
-       
-        //    })->get();
-
-        //}
-
-       
-        //return response()->json($data);
-    }
-
-    //Api filteredRestaurants
+  
+    //Api che filtra i ristoranti per categoria
     public function filteredApi($genre)
     {
         if($genre != "All") {

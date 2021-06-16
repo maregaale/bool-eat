@@ -20,13 +20,7 @@ new Vue({
       }).then(function (result) {
         console.log(result.data);
         _this.restaurants = result.data; //console.log(this.restaurants);
-        //return this.restaurants.filter((restaurant) => {
-        //console.log(restaurant);
-        //return restaurant.genres.name.toLowerCase().match(this.search);
-        // this.restaurants.genres.forEach((genre) => {
-        //   return genre.name.toLowerCase().match(this.search);
-      }); //});
-      //this.restaurants.genres = result.data.genres;
+      });
     }
   }
 });
