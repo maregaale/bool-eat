@@ -26,13 +26,12 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md ">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+        {{-- <nav class="navbar navbar-expand-md ">
+            {{-- <div class="container"> --}}
+                {{-- <a class="navbar-brand" href="{{ url('/') }}"> --}}
                     {{-- {{ config('app.name', 'Laravel') }} --}}
-                    <img src="https://fontmeme.com/permalink/210615/f5c630eb49ad71357d69f3176b9b979f.png" alt="netflix-font" border="0"></a>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                {{-- </a> --}}
+                {{-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -40,7 +39,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
-                    </ul>
+                    </ul> --}} 
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
@@ -77,9 +76,9 @@
                             </li>
                         @endguest
                     </ul>
-                </div>
+                {{-- </div>
             </div>
-        </nav>
+        </nav> --}}
 
         {{-- <main class="py-4"> --}}
             @yield('content')

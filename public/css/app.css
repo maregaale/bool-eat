@@ -10003,24 +10003,40 @@ h3 {
   }
 }
 body {
-  background-image: url("https://png.pngtree.com/thumb_back/fw800/back_our/20190620/ourmid/pngtree-eat-food-flat-geometric-yellow-banner-image_172504.jpg");
-  background-size: contain;
+  background-image: url(/images/pattern_cibo.png?d7c3e1df367e395433bc0b36cd3d18e9);
+  background-size: cover;
 }
 
-.navbar-brand img {
+.main_logo img {
   width: 100px;
+  margin: 10px 0;
+}
+
+.dashboard_container {
+  display: flex;
 }
 
 .dashboard_left, .dashboard_right {
   font-family: "Montserrat", sans-serif;
+  background: linear-gradient(to bottom, #0099cc 0%, #00ffcc 100%);
+}
+.dashboard_left h3, .dashboard_right h3 {
+  font-size: 22px;
+  text-shadow: 2px 3px 3px #969696;
 }
 
 .dashboard_left {
   width: 25%;
   height: calc(100vh - 60px);
   padding: 30px;
-  background-color: #d9d9d9;
+  background: linear-gradient(to bottom, #006699 0%, #00334d 87%);
   text-align: center;
+  overflow-y: auto;
+}
+@media (max-width: 992px) {
+  .dashboard_left .container_aside {
+    display: flex;
+  }
 }
 .dashboard_left .container_aside {
   display: flex;
@@ -10029,7 +10045,7 @@ body {
   height: 100%;
 }
 .dashboard_left .container_aside .box_info img {
-  width: 200px;
+  max-width: 200px;
   border-radius: 50%;
 }
 .dashboard_left .dashbord_left_info {
@@ -10039,54 +10055,53 @@ body {
   font-size: 18px;
 }
 .dashboard_left .dashbord_left_info a {
-  height: 75px;
+  height: 45px;
   line-height: 75px;
   display: block;
-  color: #000;
-  border-bottom: 2px solid #fff;
+  color: #fff;
   font-style: italic;
   font-weight: 600;
   text-decoration: none;
   text-shadow: 2px 3px 3px #969696;
+  line-height: 45px;
+  border-radius: 5px;
+  margin: 10px 0;
 }
 .dashboard_left .dashbord_left_info a:hover {
   color: #fff;
+  background: linear-gradient(to bottom, #0099cc 0%, #00ffcc 100%);
 }
 
 .dashboard_right {
   width: 75%;
   height: calc(100vh - 60px);
   padding: 30px;
-  background: #ffffb3;
+  background: linear-gradient(to bottom right, #f2f2f2 17%, #e6e6e6 88%);
+  overflow-y: auto;
 }
 .dashboard_right-card {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
 }
-.dashboard_right-card .box {
+.dashboard_right-card .box_plate {
   margin: 10px;
-  width: calc(100% / 3);
+  width: calc(( 100% / 3 ) - 20px);
   height: 100%;
-  flex-wrap: wrap;
   background-color: #fff;
   text-align: center;
   border-radius: 5px;
+  box-shadow: 2px 3px 3px #969696;
 }
-.dashboard_right-card .box img {
+.dashboard_right-card .box_plate img {
   width: 100%;
   height: 120px;
   border-radius: 5px;
 }
-.dashboard_right-card .box h3 {
-  font-size: 14px;
-}
-.dashboard_right .stats_container {
-  height: calc(100% - 300px);
-}
 .dashboard_right .stats_container .stats {
   width: 100%;
   height: 100%;
-  background-color: #737373;
+  box-shadow: 2px 3px 3px #969696;
 }
 .dashboard_right .stats_container .stats .progress {
   height: 80px;
