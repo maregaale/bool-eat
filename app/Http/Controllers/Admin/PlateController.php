@@ -13,7 +13,7 @@ use Illuminate\Support\Str;
 
 class PlateController extends Controller
 {
-
+    
     protected $validation = [
         'name' => 'required|string',
         'price' => 'required|numeric|min:0',
@@ -151,10 +151,12 @@ class PlateController extends Controller
 
         // controllo unicità nome nella lista piatti
         foreach ($allPlates as $thePlate) {
-
-            if ($thePlate->name == $data['name']) {
-                return back()->with('save_name', 'ciao');
+            if ($thePlate->id != $plate->id) {
+                if ($thePlate->name == $data['name']) {
+                    return back()->with('save_name', 'nome già in uso');
+                }
             }
+
         }
         
 
