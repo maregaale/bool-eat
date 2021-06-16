@@ -41,7 +41,7 @@ Booleat
             @endforeach
         </ul> --}}
         <input  type="text" placeholder="cerca categorie" value="" v-model="search">
-        <button class="btn" type="button" name="button" v-on:click="filterGenre">Search</button>
+        <button class="btn btn-success" type="button" name="button" v-on:click="filterGenre">Search</button>
          <div class="container" v-for="restaurant in restaurants">
             
              <h3>@{{ restaurant.restaurant_name }}</h3>
@@ -49,11 +49,34 @@ Booleat
          </div>
 
         
-            @foreach ($genres as $genre)
+            {{-- @foreach ($genres as $genre)
                 
                 <button class="btn-primary" v-on:click="filterGenre">{{ $genre->name }}</button>
                 
-            @endforeach
+            @endforeach --}}
+            <select v-model="selectRestaurant" v-on:change="filterGenre">
+                <option value="">All</option>
+                @foreach ($genres as $genre)
+                    
+                    <option value="{{ $genre->id }}">
+                        {{ $genre->name }}
+                    </option>
+                    
+                @endforeach
+            </select>
+            <ul  v-if= "selectRestaurant == '' ">
+                <li v-for="restaurant in restaurants">
+                    @{{ restaurant.restaurant_name }}
+                </li>
+            </ul> 
+        
+             <ul v-else>
+                @foreach ($users as $user)
+                    <li>
+                        {{ $user->restaurant_name }}
+                    </li>
+                @endforeach
+            </ul>
        
        
      </div>

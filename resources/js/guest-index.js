@@ -2,8 +2,22 @@ new Vue({
     el: '#app',
     data: {
         search: '',
-        restaurants: []
+        restaurants: [],
+        selectRestaurant: '',
+        mntRestaurant: []
     },
+    //Mounted
+    mounted: function() {
+      axios.get('http://localhost:8000/api/search')
+      .then( (resp) => {
+         this.albums = resp.data;
+      });
+ 
+ 
+ 
+    },
+    //\Mounted
+
     methods:{
     //Filtro per genres
     filterGenre: function() {
