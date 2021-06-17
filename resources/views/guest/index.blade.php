@@ -69,7 +69,7 @@ Booleat
                 <h3>Ristorante: @{{ restaurant.restaurant_name }}</h3>
                 <h4>Indirizzo: @{{ restaurant.address }}</ </h4>
                 <p>Telefono: @{{ restaurant.phone_number }}</p>
-
+                <a :href="'http://localhost:8000/show/'+ restaurant.id">Visualizza menù</a>
             </div>
             
             
