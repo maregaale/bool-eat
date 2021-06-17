@@ -61,6 +61,61 @@ class UsersTableSeeder extends Seeder
                 'phone_number' => '+39 32887653',
                 'vat_number' => '12345310912'
             ],
+            [
+                'name' => 'Iginio',
+                'lastname' => 'Massari',
+                'email' => 'iginio@libero.com',
+                'password' => '7653071',
+                'restaurant_name' => 'Precisione Cafè',
+                'address' => 'via Meringa 55',
+                'city' => 'Milano',
+                'phone_number' => '+39 32431253',
+                'vat_number' => '11211311803'
+            ],
+            [
+                'name' => 'Joe',
+                'lastname' => 'Bastianich',
+                'email' => 'joe@gmail.com',
+                'password' => 'ecomefilmdiorore',
+                'restaurant_name' => 'Diludente',
+                'address' => 'piazza Duomo 11',
+                'city' => 'Milano',
+                'phone_number' => '+39 32345673',
+                'vat_number' => '00044466677'
+            ],
+            [
+                'name' => 'Marco',
+                'lastname' => 'Giordano',
+                'email' => 'pisellifvesch@hotmail.com',
+                'password' => '100200300',
+                'restaurant_name' => 'I Sapovi della mia tevva',
+                'address' => 'via Turati 558',
+                'city' => 'Milano',
+                'phone_number' => '+39 32653853',
+                'vat_number' => '12567666666'
+            ],
+            [
+                'name' => 'Francesco',
+                'lastname' => 'Aquila',
+                'email' => 'ziobricco@gmail.com',
+                'password' => 'ziobricco99',
+                'restaurant_name' => 'Aquila Bistrot',
+                'address' => 'arco della Pace 5',
+                'city' => 'Milano',
+                'phone_number' => '+39 328754322213',
+                'vat_number' => '00000000054'
+            ],
+            [
+                'name' => 'Giorgio',
+                'lastname' => 'Locatelli',
+                'email' => 'chefloca@gmail.com',
+                'password' => 'cmonguys44',
+                'restaurant_name' => 'la Doppietta',
+                'address' => 'via Svizzera 30',
+                'city' => 'Milano',
+                'phone_number' => '+39 065544333',
+                'vat_number' => '30303030303'
+            ],
 
         ];
 
@@ -79,7 +134,7 @@ class UsersTableSeeder extends Seeder
             $newUser->vat_number = $user['vat_number'];
             $newUser->save();
 
-            $newUser->genres()->attach($genres[rand(0, 9)]);
+            $newUser->genres()->attach($genres[rand(0, 7)]);
 
         }
        
