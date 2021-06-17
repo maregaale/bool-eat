@@ -43,7 +43,7 @@
                         {{-- <li class="nav-item">
                             <a class="nav-link" href="{{ route('admin.plates.index') }}">I tuoi Piatti</a>
                         </li> --}}
-                            <li class="nav-item dropdown">
+                            {{-- <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a> 
@@ -53,11 +53,22 @@
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
-                                    </a>
+                                    </a> --}}
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    {{-- <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
-                                    </form>
+                                    </form> --}}
+                                    <div class="dashbord_left_info logout_btn">
+                                        <button class="btn btn-info" href="{{ route('logout') }}"
+                                           onclick="event.preventDefault();
+                                                         document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                                        </button>
+                    
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="">
+                                            @csrf
+                                        </form>
+                                    </div>
                                 </div>
                             </li>
                         @endguest

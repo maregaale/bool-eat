@@ -10003,6 +10003,10 @@ h3 {
   }
 }
 body {
+<<<<<<< Updated upstream
+=======
+  background-image: url("C:/Users/luigi/Desktop/esercizi-classe-27/bool-eat/img/pattern_cibo.png");
+>>>>>>> Stashed changes
   background-size: cover;
 }
 
