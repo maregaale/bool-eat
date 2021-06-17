@@ -1,39 +1,92 @@
 .show_container {
-  position: relative;
-
-  .button_container {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+  height: 100%;
+  display: flex;
+  align-items: center;
+  // .button_container {
+  //   position: absolute;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  // }
 
   .plate_container {
-    padding: 80px;
     margin: 0 auto;
-    width: 100%;
+    width: 90%;
   
     .plate {
-      padding: 60px;
+      padding: 30px 60px;
       background-color: lightgrey;
-      text-align: center;
+      
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0,0,0,0.6);
       -moz-box-shadow: 0 0 10px rgba(0,0,0,0.6);
       -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.6);
       -o-box-shadow: 0 0 10px rgba(0,0,0,0.6);
 
+      .block, .type_block {
+        display: flex;
+        align-items: baseline;
+        
+        &:not(:last-of-type) {
+          margin-bottom: 10px;
+        }
+
+        .text_container {
+          display: flex;
+          flex-wrap: wrap;
+          width: 65%;
+
+          .types {
+            display: flex;
+            width: 50%;
+  
+            p {
+              margin-right: 10px;
+
+              &:first-child {
+                width: 70%;
+              }
+
+              &:last-child {
+                width: 30%;
+              }
+            }
+
+            .fas.fa-check-circle {
+              color: $green;
+            }
+
+            .fas.fa-times-circle {
+              color: $red;
+            }
+          }
+        }
+
+
+        h4 {
+          margin-right: 10px;
+          width: 35%;
+          color: $h4Show;
+          font-size: 25px;
+          font-weight: bold;
+        }
+
+        p {
+          width: 65%;
+          color: $textShow;
+
+        }
+      }
+
+
       h2 {
+        text-align: center;
         color: rgb(33, 37, 41);
         font-size: 40px;
         font-weight: bold;
         text-shadow: 2px 3px 3px #969696;
       }
 
-      .par:not(:last-of-type) {
-        margin-bottom: 5rem;
-      }
 
-    
       img {
         display: block;
         border-radius: 50%;
