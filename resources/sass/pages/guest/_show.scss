@@ -17,11 +17,11 @@
     // right: 0;
     width: 50%;
     min-height: 200px;
-    background-color: red;
+    background-color: lightgrey;
 
-    // .elements_container {
-    //   display: flex;
-    // }
+    .elements_container, .sum {
+      display: flex;
+    }
   }
     
 }

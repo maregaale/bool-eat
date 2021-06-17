@@ -26,8 +26,26 @@
     <div class="shopping_cart">
       <h2>Il tuo carrello</h2>
       
-      <p v-for="namePlate in namePlates">@{{namePlate}}</p>
-      <p v-for="price in prices">@{{price}} &euro;</p>
+      <div class="elements_container">
+        <div>
+          <p v-for="namePlate in namePlates">@{{namePlate}}</p>
+        </div>
+        <div>
+          <p v-for="price in prices">@{{price}} &euro;</p>
+        </div>
+
+        
+      </div>
+
+      <div class="sum">
+        <button v-if="namePlates.length != 0" v-on:click="total" class="btn btn-primary">Calcola il totale</button>
+
+        <h3 v-if="display == true">Totale: @{{sum}} &euro;</h3>
+      </div>
+
+      <div v-if="display == true" class="submit mt-3">
+        <button class="btn btn-success">Completa l'ordine</button>
+      </div>
     </div>
   </div>
 

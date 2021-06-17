@@ -10254,5 +10254,8 @@ body {
 #cart .shopping_cart {
   width: 50%;
   min-height: 200px;
-  background-color: red;
+  background-color: lightgrey;
+}
+#cart .shopping_cart .elements_container, #cart .shopping_cart .sum {
+  display: flex;
 }
