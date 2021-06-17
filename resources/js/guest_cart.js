@@ -16,6 +16,7 @@ new Vue({
     },
 
     total: function () {
+      this.sum = 0;
       for (let i = 0; i < this.prices.length; i++) {
         this.sum += this.prices[i];
         
