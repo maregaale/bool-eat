@@ -1,0 +1,27 @@
+#cart {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  .menu {
+    width: 50%;
+  }
+  .restaurant_plate {
+    display: flex;
+
+  }
+  
+  .shopping_cart {
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+    width: 50%;
+    min-height: 200px;
+    background-color: lightgrey;
+
+    .elements_container, .sum {
+      display: flex;
+    }
+  }
+    
+}

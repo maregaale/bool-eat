@@ -13,7 +13,7 @@
 // partials
 @import 'partials/dashboard';
 
-@import 'partials/modal';
+// @import 'partials/modal';
 
 @import 'partials/homeguest';
 
@@ -22,4 +22,6 @@
 
 // pages
 @import 'pages/admin/show';
+@import 'pages/guest/show';
+
 
