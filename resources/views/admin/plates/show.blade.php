@@ -44,13 +44,6 @@
         {{-- dashboard right (menu) --}}
         <div class="dashboard_right">
             <div class="container show_container">
-                {{-- bottone --}}
-                <div class="button_container">
-                    <a href="{{route('admin.plates.index')}}">
-                        <button class="btn btn-primary" >Torna al Menù</button>
-                    </a>
-                </div>
-                {{-- /bottone --}}
         
                 {{-- piatto --}}
                 <div class="plate_container">
@@ -62,23 +55,58 @@
                         {{-- /immagine con storage --}}
         
                         {{-- immagine con remoto --}}
-                        <img class="mb-5 mt-5" src="{{$plate->image ? $plate->image : 'https://via.placeholder.com/200'}}" alt="{{$plate->title}}">
+                        <img class="mb-4 mt-4" src="{{$plate->image ? $plate->image : 'https://via.placeholder.com/200'}}" alt="{{$plate->title}}">
                         {{-- /immagine con remoto --}}
         
                         {{-- ingredienti --}}
-                        <h4>Ingredienti:</h4>
-                        <p class="par">{{ $plate->ingredients}}</p>
+                        <div class="block">
+                            <h4>Ingredienti: </h4>
+                            <p class="par"> {{ $plate->ingredients}}</p>
+                        </div>
                         {{-- /ingredienti --}}
         
-                        {{-- portata --}}
-                        <h4>Portata: </h4>
-                        <p class="par">{{ $plate->scope }}</p>
-                        {{-- portata --}}
+                        
+                        {{-- Descrizione --}}
+                        <div class="block">
+                            <h4>Descrizione: </h4>
+                            <p class="par">{{ $plate->description }}</p>
+                        </div>
+                        {{-- /Descrizione --}}
+
+                        {{-- Tipologia --}}
+                        <div class="type_block">
+                            <h4>Tipologia: </h4>
+                            <div class="text_container">
+                                <div class="types">
+                                    <p>Vegan:</p>
+                                    <p class="par">{!! $plate->vegan ? '<i class="fas fa-check-circle"></i>' : '<i class="fas fa-times-circle"></i>'!!}</p>
+                                </div>
+
+                                <div class="types">
+                                    <p>Gluten Free:</p>
+                                    <p class="par">{!! $plate->gluten_free ? '<i class="fas fa-check-circle"></i>' : '<i class="fas fa-times-circle"></i>'!!}</p>
+                                </div>
+
+                                <div class="types">
+                                    <p>Vegetarian:</p>
+                                    <p class="par">{!! $plate->vegetarian ? '<i class="fas fa-check-circle"></i>' : '<i class="fas fa-times-circle"></i>'!!}</p>
+                                </div>
+
+                                <div class="types">
+                                    <p>Hot:</p>
+                                    <p class="par">{!! $plate->hot ? '<i class="fas fa-check-circle"></i>' : '<i class="fas fa-times-circle"></i>'!!}</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        {{-- /Tipologia --}}
         
-                        {{-- portata --}}
-                        <h4>Prezzo: </h4>
-                        <p class="par">{{ $plate->price }} &euro;</p>
-                        {{-- portata --}}
+                        {{-- prezzo --}}
+                        <div class="block">
+                            <h4>Prezzo: </h4>
+                            <p class="par">{{ $plate->price }} &euro;</p>
+                        </div>
+                        {{-- /prezzo --}}
         
                     </div>
                 </div>
