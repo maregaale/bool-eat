@@ -15,11 +15,15 @@ use Illuminate\Support\Facades\Route;
 //Route::get('/', function () {
     //return view('welcome');
 //});
-//Homepage
+// Sezione pubblica
+//Homepage 
 Route::get('/', 'Guest\BooleatController@index')->name('guest.index');
+Route::get('/show/{user}', 'Guest\BooleatController@show')->name('guest.show');
 
+// Autenticazione
 Auth::routes();
 
+// Rotte Admin
 Route::prefix('admin')->name('admin.')->namespace('Admin')->middleware('auth')->group(function () {
    Route::resource('plates', 'PlateController');
 });
