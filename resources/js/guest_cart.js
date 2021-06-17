@@ -28,8 +28,25 @@ new Vue({
 
     
   },
-  
-  
+  // mounted() {
+  //   if(localStorage.name) this.name = localStorage.name;
+  // },
+  mounted() {
+    this.namePlates = JSON.parse(localStorage.getItem("namePlates")) || [],
+    this.prices = JSON.parse(localStorage.getItem("prices")) || []
+  },
+  // watch:{
+  //   name(newName) {
+  //     localStorage.name = newName;
+  //   }
+  watch: {
+    namePlates(newValue, oldValue) {
+      localStorage.setItem("namePlates", JSON.stringify(newValue));
+    },
+    prices(newValue, oldValue) {
+      localStorage.setItem("prices", JSON.stringify(newValue));
+    }
+  }  
   
     
    
