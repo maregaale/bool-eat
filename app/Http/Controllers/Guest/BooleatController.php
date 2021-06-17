@@ -18,4 +18,9 @@ class BooleatController extends Controller
 
         return view('guest.index', compact('users', 'genres', 'plates'));
     }
+
+    public function show(User $user)
+    {
+        return view('guest.show', ['user' => $user]);
+    }
 }
