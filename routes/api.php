@@ -31,6 +31,9 @@ Route::namespace('Api')->group(function () {
 
     Route::get('/filterapi/{genre}', 'RestaurantController@filteredApi');
 
+    
+    Route::get('/names' , 'RestaurantController@searchRestaurant');
+
 });
 
 

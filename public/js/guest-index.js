@@ -8,7 +8,8 @@ new Vue({
   data: {
     search: '',
     restaurants: [],
-    selectRestaurant: '',
+    restaurantName: '',
+    users: [],
     genres: []
   },
   //Mounted
@@ -46,8 +47,20 @@ new Vue({
         console.log(result.data);
         _this3.restaurants = result.data; //console.log(this.restaurants);
       });
-    } // Fine Filtro per categorie con bottoni
+    },
+    // Fine Filtro per categorie con bottoni
+    searchName: function searchName() {
+      var _this4 = this;
 
+      var link = 'http://localhost:8000/api/names';
+      axios.get(link, {
+        params: {
+          restaurant_name: this.restaurantName
+        }
+      }).then(function (result) {
+        _this4.users = result.data;
+      });
+    }
   }
 });
 /******/ })()

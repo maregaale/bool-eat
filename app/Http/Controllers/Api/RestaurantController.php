@@ -50,6 +50,15 @@ class RestaurantController extends Controller
     }
 
 
+    public function searchRestaurant(Request $request)
+    {
+        //ricerca dei post per titolo
+        $restaurant_names = User::where('restaurant_name' , 'like', '%' . $request->restaurant_name . '%' )->get();
+        //Response in Json
+        return response()->json($restaurant_names);
+    }
+
+
     
 
 }

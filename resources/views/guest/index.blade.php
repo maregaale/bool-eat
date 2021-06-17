@@ -27,8 +27,8 @@ Booleat
                   <h1 class="mb-3">Benvenuto su Booleat</h1>
                   <h4 class="mb-3">cerca e ordina!</h4>
                   
-                  <input  type="text" placeholder="cerca categorie" value="" v-model="search">
-                  <button class="btn btn-outline-light btn-success btn-lg" type="button" name="button" v-on:click="filterGenre">Search</button>
+                  <input  type="text" placeholder="cerca il ristorante" value="" v-model="restaurantName">
+                  <button class="btn btn-outline-light btn-success btn-lg" type="button" name="button" v-on:click="searchName">Search</button>
                </div>
             </div>
          
@@ -39,6 +39,14 @@ Booleat
         <input  type="text" placeholder="cerca categorie" value="" v-model="search">
         <button class="btn btn-success" type="button" name="button" v-on:click="filterGenre">Search</button>
     </div> --}}
+    <div class="container_card" >
+      <div class="card_restaurant" v-for="user in users">
+         <h2>@{{user.restaurant_name}}</h2>
+         <p>@{{user.name}}  @{{user.lastname}} </p>
+
+     </div>
+   </div>
+
         <nav class="nav_btn mt-5">
            <div v-for="genre in genres">
             <button class="btn_genre" v-on:click="filterGenreButtons(genre.name)">@{{ genre.name }}</button>
@@ -67,6 +75,7 @@ Booleat
             
            
            </div>
+      
                 
                 
           
