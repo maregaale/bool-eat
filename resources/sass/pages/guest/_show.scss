@@ -1,13 +1,27 @@
-.restaurant_plate {
+#cart {
   display: flex;
-}
+  align-items: flex-start;
+  justify-content: space-between;
 
+  .menu {
+    width: 50%;
+  }
+  .restaurant_plate {
+    display: flex;
 
-.shopping_cart {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 200px;
-  height: 200px;
-  background-color: red;
+  }
+  
+  .shopping_cart {
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+    width: 50%;
+    min-height: 200px;
+    background-color: red;
+
+    // .elements_container {
+    //   display: flex;
+    // }
+  }
+    
 }

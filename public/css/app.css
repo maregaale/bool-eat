@@ -10240,15 +10240,19 @@ body {
   margin: auto;
 }
 
-.restaurant_plate {
+#cart {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+#cart .menu {
+  width: 50%;
+}
+#cart .restaurant_plate {
   display: flex;
 }
-
-.shopping_cart {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 200px;
-  height: 200px;
+#cart .shopping_cart {
+  width: 50%;
+  min-height: 200px;
   background-color: red;
 }

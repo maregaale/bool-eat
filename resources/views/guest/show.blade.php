@@ -11,22 +11,27 @@
 @endsection
 
 @section('content')
-  <div id="app" class="container">
-    <h1>{{$user->restaurant_name}}</h1>
+  <div id="cart" class="container">
+    <div class="menu">
+      <h1>{{$user->restaurant_name}}</h1>
 
-    @foreach ($user->plates as $plate)
-        <div class="restaurant_plate">
-          <p>{{$plate->name}}</p>
-          <button class="btn btn-success">aggiungi al carrello</button>
-        </div>
-        <p>{{$plate->price}} &euro;</p>
-    @endforeach
+      @foreach ($user->plates as $plate)
+          <div class="restaurant_plate">
+            <p>{{$plate->name}}</p>
+            <button v-on:click="addElementsToCart({{ json_encode($plate->name) }}, {{ json_encode($plate->price) }})" class="btn btn-success">aggiungi al carrello</button>
+          </div>
+          <p>{{$plate->price}} &euro;</p>
+      @endforeach
+    </div>
+    <div class="shopping_cart">
+      <h2>Il tuo carrello</h2>
+      
+      <p v-for="namePlate in namePlates">@{{namePlate}}</p>
+      <p v-for="price in prices">@{{price}} &euro;</p>
+    </div>
   </div>
 
 
-  <div class="shopping_cart">
-    ciao
-  </div>
 @endsection
 
 @section('script')

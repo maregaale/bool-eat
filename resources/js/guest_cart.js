@@ -1,7 +1,8 @@
 new Vue({
-  el: '#app',
+  el: '#cart',
   data: {
-      
+    namePlates: [],
+    prices: [],
   },
   //Mounted
   mounted: function() {
@@ -13,6 +14,11 @@ new Vue({
   //\Mounted
 
   methods:{
+
+    addElementsToCart: function (name, price) {
+      this.namePlates.push(name);
+      this.prices.push(price);
+    }
 
   },
   
