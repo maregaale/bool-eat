@@ -10,7 +10,7 @@
     display: flex;
 
   }
-  
+
   .shopping_cart {
     // position: absolute;
     // top: 0;
@@ -21,7 +21,39 @@
 
     .elements_container, .sum {
       display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      div {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        align-self: center;
+
+        &.name {
+          width: 50%;
+        }
+
+        &.price {
+          width: 20%;
+        }
+
+        &.button {
+          align-self: flex-start;
+          width: 30%;
+
+          
+        }
+
+        p {
+          align-self: center;
+          width: 100%;
+          min-height: 40px;
+          line-height: 40px;
+        }
+      }
     }
   }
-    
+
 }

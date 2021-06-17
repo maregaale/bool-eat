@@ -5,8 +5,9 @@ new Vue({
     prices: [],
     sum: 0,
     display: false,
+    total: 0,
   },
-  //\Mounted
+  //Methods
   
   methods:{
     
@@ -15,7 +16,7 @@ new Vue({
       this.prices.push(price);
     },
 
-    total: function () {
+    totalPrice: function () {
       this.sum = 0;
       for (let i = 0; i < this.prices.length; i++) {
         this.sum += this.prices[i];
@@ -24,7 +25,28 @@ new Vue({
 
       this.display = true;
       
-    }
+    }, 
+
+    removeCartElement: function (index) {
+      
+      this.namePlates.splice(index, 1);
+        
+    },
+
+    removePrice: function (index, price) {
+      this.prices.splice(index, 1);
+
+      this.sum = this.sum - price;
+    },
+
+    // sub: function (price) {
+    //   this.total = this.sum;
+      
+    //     this.total -= price;
+
+      // this.display = false;
+      
+    // }, 
 
     
   },
@@ -34,6 +56,9 @@ new Vue({
   mounted() {
     this.namePlates = JSON.parse(localStorage.getItem("namePlates")) || [],
     this.prices = JSON.parse(localStorage.getItem("prices")) || []
+
+    this.namePlates = []
+    this.prices = []
   },
   // watch:{
   //   name(newName) {

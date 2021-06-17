@@ -18,7 +18,7 @@
       @foreach ($user->plates as $plate)
           <div class="restaurant_plate">
             <p>{{$plate->name}}</p>
-            <button v-on:click="addElementsToCart({{ json_encode($plate->name) }}, {{ json_encode($plate->price) }})" class="btn btn-success">aggiungi al carrello</button>
+            <button v-on:click="addElementsToCart({{ json_encode($plate->name) }}, {{ json_encode($plate->price) }}); totalPrice()" class="btn btn-success">aggiungi al carrello</button>
           </div>
           <p>{{$plate->price}} &euro;</p>
       @endforeach
@@ -27,23 +27,22 @@
       <h2>Il tuo carrello</h2>
       
       <div class="elements_container">
-        <div>
+        <div class="name">
           <p v-for="namePlate in namePlates">@{{namePlate}}</p>
         </div>
-        <div>
+        <div class="price">
           <p v-for="price in prices">@{{price}} &euro;</p>
         </div>
-
-        
+        <div class="button">
+          <button v-on:click="removeCartElement(index); removePrice(index, price)" v-for="(price, index) in prices" v-if="namePlates.length != 0" class="btn btn-danger">Elimina</button>
+        </div>        
       </div>
 
       <div class="sum">
-        <button v-if="namePlates.length != 0" v-on:click="total" class="btn btn-primary">Calcola il totale</button>
-
-        <h3 v-if="display == true">Totale: @{{sum}} &euro;</h3>
+        <h3 v-if="namePlates.length != 0" >Totale: @{{sum}} &euro;</h3>
       </div>
 
-      <div v-if="display == true" class="submit mt-3">
+      <div v-if="namePlates.length != 0" class="submit mt-3">
         <button class="btn btn-success">Completa l'ordine</button>
       </div>
     </div>
