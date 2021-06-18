@@ -17,14 +17,14 @@
 
 @import 'partials/homeguest';
 
+@import 'partials/login';
+
 // components
 @import 'components/buttons';
 
 // pages
 @import 'pages/admin/show';
 @import 'pages/guest/show';
-
-
 
 //bootsrap modal
 @import 'public/assets/scss/material-kit.scss'
