@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Genre;
 use App\Http\Controllers\Controller;
+use App\Plate;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -56,6 +57,15 @@ class RestaurantController extends Controller
         $restaurant_names = User::where('restaurant_name' , 'like', '%' . $request->restaurant_name . '%' )->get();
         //Response in Json
         return response()->json($restaurant_names);
+    }
+
+
+    public function veganPlates()
+    {
+        //ricerca dei post per titolo
+        $vegan_plates = Plate::where('vegan', 1)->get();
+        //Response in Json
+        return response()->json($vegan_plates);
     }
 
 

@@ -114,6 +114,16 @@
       </div>
       </div>
     </div>
+
+    <section id="vegan">
+       <h2>I Consigli per i piatti vegani</h2>
+       <div v-for="plate in vegans">
+         <h4>@{{ plate.name }}</h4>
+
+       </div>
+       
+
+    </section>
   </div>   
 @endsection
 

@@ -12,9 +12,11 @@
 
 @section('content')
   <div id="cart" class="container">
+    @if (count($user->plates) > 0)
+        
+   
     <div class="menu">
       <h1>{{$user->restaurant_name}}</h1>
-
       @foreach ($user->plates as $plate)
       <div class="restaurant_plate">
           <div class="info-plate">
@@ -34,6 +36,11 @@
           
       @endforeach
     </div>
+    @else
+    <h1>Non ci sono piatti per questo Ristorante!</h1>
+    @endif
+
+    @if (count($user->plates) > 0)
     <div class="shopping_cart">
       <h2>Il tuo carrello</h2>
       
@@ -57,6 +64,7 @@
         <button class="btn btn-success">Completa l'ordine</button>
       </div>
     </div>
+    @endif
   </div>
 
 

@@ -10,7 +10,8 @@ new Vue({
     restaurants: [],
     restaurantName: '',
     users: [],
-    genres: []
+    genres: [],
+    vegans: []
   },
   //Mounted
   mounted: function mounted() {
@@ -19,6 +20,10 @@ new Vue({
     axios.get('http://localhost:8000/api/genres').then(function (resp) {
       _this.genres = resp.data;
       console.log(_this.genres);
+    });
+    axios.get('http://localhost:8000/api/vegan').then(function (resp) {
+      _this.vegans = resp.data;
+      console.log(_this.vegans);
     });
   },
   //\Mounted

@@ -34,6 +34,8 @@ Route::namespace('Api')->group(function () {
     
     Route::get('/names' , 'RestaurantController@searchRestaurant');
 
+    Route::get('/vegan' , 'RestaurantController@veganPlates');
+
 });
 
 

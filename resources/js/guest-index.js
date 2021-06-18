@@ -5,7 +5,8 @@ new Vue({
         restaurants: [],
         restaurantName: '',
         users: [],
-        genres: []
+        genres: [],
+        vegans: []
     },
     //Mounted
     mounted: function() {
@@ -13,6 +14,12 @@ new Vue({
       .then( (resp) => {
          this.genres = resp.data;
          console.log(this.genres);
+      });
+
+      axios.get('http://localhost:8000/api/vegan')
+      .then( (resp) => {
+         this.vegans = resp.data;
+         console.log(this.vegans);
       });
  
  
