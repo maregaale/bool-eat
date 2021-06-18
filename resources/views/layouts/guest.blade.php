@@ -15,12 +15,10 @@
     <title>@yield('pageTitle')</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md bg-light navbar-light">
+    <nav class="navbar-expand-md">
             <div class="container"> 
-                 <a class="navbar-brand" href="{{ url('/') }}"> 
-                    Booleat
-                 </a> 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                 
+                {{-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -28,20 +26,27 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
-                    </ul> 
+                    </ul>  --}}
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="">
                         <!-- Authentication Links -->
                         @guest
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
+                        <div class="main_nav_home">
+                            <a class="" href="{{ url('/') }}"> 
+                                Bool-Eat
+                             </a> 
+                             <div>
+                            <a class="">
+                                <button class="btn btn-primary btn-round"><i class="material-icons">login</i><a class="ml-2" href="{{ route('login') }}">{{ __('Login') }}</a></button>
+                            </a>
                             @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>                                    
-                                </li>
+                                <a class="">
+                                    <button class="btn btn-primary btn-round"><i class="material-icons">face</i><a class="ml-2" href="{{ route('register') }}">{{ __('Register') }}</a></button>                                    
+                                </a>
+                            </div>
                             @endif
+                        </div>
                         @else
                         {{-- <li class="nav-item">
                             <a class="nav-link" href="{{ route('admin.plates.index') }}">I tuoi Piatti</a>
