@@ -16,11 +16,22 @@
       <h1>{{$user->restaurant_name}}</h1>
 
       @foreach ($user->plates as $plate)
-          <div class="restaurant_plate">
-            <p>{{$plate->name}}</p>
-            <button v-on:click="addElementsToCart({{ json_encode($plate->name) }}, {{ json_encode($plate->price) }}); totalPrice()" class="btn btn-success">aggiungi al carrello</button>
+      <div class="restaurant_plate">
+          <div class="info-plate">
+            <h2>{{$plate->name}}</h2>
+            <h4>Ingredienti: </h4>
+            <p>{{ $plate->ingredients }}</p>
+            <span>Aggiungi al carrello</span>
+              
+            <button v-on:click="addElementsToCart({{ json_encode($plate->name) }}, {{ json_encode($plate->price) }}); totalPrice()" class="btn btn-success"><i class="fas fa-plus"></i></button>
+            <p>Costo: {{$plate->price}} &euro;</p>
           </div>
-          <p>{{$plate->price}} &euro;</p>
+          <div class="img-plate">
+            <img src="{{ $plate->image }}" alt="">
+
+          </div>
+        </div>
+          
       @endforeach
     </div>
     <div class="shopping_cart">

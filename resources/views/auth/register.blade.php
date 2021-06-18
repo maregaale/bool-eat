@@ -23,7 +23,7 @@
                     
 
                     {{-- form registrazione --}}
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('register') }}" class="register_form">
                         @csrf
 
                         {{-- name --}}
@@ -142,9 +142,15 @@
                         {{-- /vat_number --}}
 
                         {{-- genres --}}
-                        <h3>Tipologia</h3>
+                        
 
                         {{-- stampa generi --}}
+                <div class="head_genres">
+                    <h3 class="text-center">Seleziona le tipologie</h3>
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+                    <div class="container-check-genre">
+                        
                         @foreach ($genres as $genre)
                           <div class="form-check">
                               {{-- <img src="{{ $genre->logo }}" alt="" style="width: 100px"> --}}
@@ -152,8 +158,12 @@
                             <label class="form-check-label" for="{{$genre->name}}">
                               {{$genre->name}}
                             </label>
+                            <span class="form-check-sign">
+                                <span class="check"></span>
+                           </span>
                           </div>
                         @endforeach
+                    </div>
                         {{-- stampa generi --}}
                         
 
