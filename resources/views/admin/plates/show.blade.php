@@ -4,13 +4,14 @@
     {{$plate->name}}    
 @endsection
 @section('content')
+
     <div class="main_logo container">
         <img src="{{asset('storage/image/bool_eat.png')}}" alt=""></a>
     </div>
+    
     <div class="container dashboard_container">
         
         @include('partials.aside_left')
-        
 
         {{-- dashboard right (menu) --}}
         <div class="dashboard_right">
@@ -84,6 +85,7 @@
                 {{-- /piatto --}}
             </div>
         </div> 
+        {{-- /dashboard right (menu) --}}
     </div>
 @endsection
 
