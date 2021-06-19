@@ -10105,6 +10105,16 @@ body {
   font-weight: 600;
 }
 
+.jumbotron_wrapper {
+  background-image: url("images/food-banner.jpg");
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+}
+.jumbotron_wrapper .height-text-jumbotron {
+  line-height: 200px;
+}
+
 .jumbotron_content h1 {
   font-weight: bold;
   font-size: 60px;

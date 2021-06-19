@@ -12,7 +12,7 @@
    
   <!-- Jumbotron -->
   <div class="jumbotron_wrapper">
-    <div class="text-center" style="background: linear-gradient(to bottom right, #33ccff 0%, #ff99cc 100%);; height: 500px;">
+    <div class="text-center height-text-jumbotron">
       <div class="d-flex justify-content-center align-items-center ">
         {{-- jumbotron_content --}}
         <div class="jumbotron_content text-white mt-5">

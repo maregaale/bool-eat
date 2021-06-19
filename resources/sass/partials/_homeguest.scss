@@ -11,9 +11,17 @@
         font-weight: 600;
     }
 }
-// .jumbotron_wrapper {
-//     background-image: url('../../public/images/food_banner.jpg');
-// }
+.jumbotron_wrapper {
+    background-image: url('images/food-banner.jpg');
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+
+    .height-text-jumbotron {
+        line-height: 200px;
+    }
+}
+
 .jumbotron_content{
 
     h1{
