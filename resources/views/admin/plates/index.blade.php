@@ -16,6 +16,7 @@
               {{-- <img src="https://www.freeiconspng.com/thumbs/restaurant-icon-png/restaurant-icon-png-7.png" alt=""> --}}
               {{-- Restaurant name --}}
               <h3 class="mt-5 font-weight-bold">{{ Auth::user()->restaurant_name }}</h3>
+              <a href="{{route('admin.user.edit' , ['user' => Auth::user()->id])}}"><span class="mr-2"><i class="fas fa-plus-circle"></i></span> Modifica i tuoi dati</a>
           </div>
                 
           {{-- modifiche varie --}}
@@ -23,6 +24,7 @@
               <a href="{{route('home')}}"><span class="mr-2"><i class="fas fa-home"></i></span> Dashboard</a>
               <a class="" href="{{ route('admin.plates.index') }}"><span class="mr-2"><i class="fas fa-eye"></i></span> Visualizza Menù</a>
               <a href="{{route('admin.plates.create')}}"><span class="mr-2"><i class="fas fa-plus-circle"></i></span> Aggiungi Piatto</a>
+              
           </div>
 
                 {{-- button logout --}}

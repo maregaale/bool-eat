@@ -63,6 +63,11 @@
         <div class="form-check form-check-inline d-block mt-2">
             <input class="form-check-input" type="checkbox" id="visible" name="visible" value="{{$plate->visible}}" {{$plate->visible ? 'checked' : ''}}>
             <label class="form-check-label" for="visible">Pubblica piatto</label>
+             {{-- check checkbox --}}
+           <span class="form-check-sign">
+             <span class="check"></span>
+           </span>
+           {{-- /check checkbox --}}
         </div>
         {{-- /checkbox pubblicazione--}}
 
@@ -72,29 +77,56 @@
         <div class="form-check form-check-inline mt-3">
             <input class="form-check-input" type="checkbox" id="vegan" name="vegan" value="{{$plate->vegan}}" {{$plate->vegan ? 'checked' : ''}}>
             <label class="form-check-label" for="vegan">Vegano</label>
+             {{-- check checkbox --}}
+            <span class="form-check-sign">
+              <span class="check"></span>
+            </span>
+            {{-- /check checkbox --}}
         </div>
 
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="checkbox" id="vegetarian" name="vegetarian" value="{{$plate->vegetarian}}" {{$plate->vegetarian ? 'checked' : ''}}>
             <label class="form-check-label" for="vegetarian">Vegetariano</label>
+              {{-- check checkbox --}}
+             <span class="form-check-sign">
+               <span class="check"></span>
+            </span>
+            {{-- /check checkbox --}}
         </div>
 
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="checkbox" id="gluten_free" name="gluten_free" value="{{$plate->gluten_free}}" {{$plate->gluten_free ? 'checked' : ''}}>
             <label class="form-check-label" for="gluten_free">Senza glutine</label>
+              {{-- check checkbox --}}
+           <span class="form-check-sign">
+             <span class="check"></span>
+           </span>
+           {{-- /check checkbox --}}
         </div>
 
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="checkbox" id="hot" name="hot" value="{{$plate->hot}}" {{$plate->hot ? 'checked' : ''}}>
             <label class="form-check-label" for="hot">Piccante</label>
+              {{-- check checkbox --}}
+            <span class="form-check-sign">
+             <span class="check"></span>
+            </span>
+            {{-- /check checkbox --}}
         </div>
         {{-- /checkboxes tipologia--}}
 
         {{-- modifica immagine --}}
-        <div class="form-group mt-3">
+        <div class="form-group form-file-upload form-file-simple mt-3">
             <label for="image">Immagine</label>
             {{-- <input type="text" class="form-control" id="image" name="image" placeholder="Image"> --}}
-            <input type="file" id="image" name="image" value="{{$plate->image}}">
+            <input type="file"  class="inputFileHidden" id="image" name="image" value="{{$plate->image}}">
+            {{-- button upload --}}
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-fab btn-round btn-primary">
+                    <i class="material-icons"><i class="fas fa-paperclip"></i></i>
+                </button>
+            </span>
+            {{-- /button upload --}}
         </div>
         {{-- /modifica immagine --}}
 

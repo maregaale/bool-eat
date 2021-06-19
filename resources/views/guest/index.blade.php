@@ -16,6 +16,7 @@
       <div class="d-flex justify-content-center align-items-center ">
         {{-- jumbotron_content --}}
         <div class="jumbotron_content text-white mt-5">
+             <img src="" alt="">
             <h1 class="mb-3">Benvenuto su Booleat</h1>
             <h2 class="mb-3">Scopri i nostri ristoranti!</h2>
             {{-- <input  type="text" class="form-control" placeholder="cerca il ristorante" value="" v-model="restaurantName">

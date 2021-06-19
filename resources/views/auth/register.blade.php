@@ -158,9 +158,11 @@
                             <label class="form-check-label" for="{{$genre->name}}">
                               {{$genre->name}}
                             </label>
+                            {{-- check checkbox --}}
                             <span class="form-check-sign">
                                 <span class="check"></span>
                            </span>
+                            {{-- /check checkbox --}}
                           </div>
                         @endforeach
                     </div>
