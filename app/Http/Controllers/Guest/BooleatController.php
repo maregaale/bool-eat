@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Guest;
 
 use App\Genre;
 use App\Http\Controllers\Controller;
+use App\Order;
 use App\Plate;
 use App\User;
 use Illuminate\Http\Request;
@@ -19,8 +20,8 @@ class BooleatController extends Controller
         return view('guest.index', compact('users', 'genres', 'plates'));
     }
 
-    public function show(User $user)
+    public function show(User $user, Order $order )
     {
-        return view('guest.show', ['user' => $user]);
+        return view('guest.show', ['user' => $user , 'order' => $order]);
     }
 }

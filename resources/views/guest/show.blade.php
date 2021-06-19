@@ -61,7 +61,9 @@
       </div>
 
       <div v-if="namePlates.length != 0" class="submit mt-3">
-        <button class="btn btn-success">Completa l'ordine</button>
+       
+        <button class="btn btn-success"><a href="{{ route('guest.checkout' , $user->id)}}">Completa l'ordine</a></button>
+        
       </div>
     </div>
     @endif
