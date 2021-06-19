@@ -60,7 +60,7 @@
 {{-- /errori --}}
 
 {{-- form creazione piatto--}}
-<form class="mt-5" action="{{route('admin.plates.store')}}" method="POST" enctype="multipart/form-data">
+<form action="{{route('admin.plates.store')}}" method="POST" enctype="multipart/form-data">
     @method('POST')
     @csrf
 

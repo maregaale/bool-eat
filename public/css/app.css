@@ -10040,53 +10040,6 @@ body {
   text-shadow: 2px 3px 3px #969696;
 }
 
-.dashboard_left {
-  width: 25%;
-  height: calc(100vh - 60px);
-  padding: 30px;
-  background: linear-gradient(to bottom, #006699 0%, #00334d 87%);
-  text-align: center;
-  overflow-y: auto;
-}
-@media (max-width: 992px) {
-  .dashboard_left .container_aside {
-    display: flex;
-  }
-}
-.dashboard_left .container_aside {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  height: 100%;
-}
-.dashboard_left .container_aside .box_info img {
-  max-width: 200px;
-  border-radius: 50%;
-}
-.dashboard_left .dashbord_left_info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 18px;
-}
-.dashboard_left .dashbord_left_info a {
-  height: 45px;
-  line-height: 75px;
-  display: block;
-  color: #fff;
-  font-style: italic;
-  font-weight: 600;
-  text-decoration: none;
-  text-shadow: 2px 3px 3px #969696;
-  line-height: 45px;
-  border-radius: 5px;
-  margin: 10px 0;
-}
-.dashboard_left .dashbord_left_info a:hover {
-  color: #fff;
-  background: linear-gradient(to bottom, #0099cc 0%, #00ffcc 100%);
-}
-
 .dashboard_right {
   width: 75%;
   height: calc(100vh - 60px);
@@ -10242,6 +10195,53 @@ body {
   margin: auto;
   font-size: 30px;
   color: #900C3F;
+}
+
+.dashboard_left {
+  width: 25%;
+  height: calc(100vh - 60px);
+  padding: 30px;
+  background: linear-gradient(to bottom, #006699 0%, #00334d 87%);
+  text-align: center;
+  overflow-y: auto;
+}
+@media (max-width: 992px) {
+  .dashboard_left .container_aside {
+    display: flex;
+  }
+}
+.dashboard_left .container_aside {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+}
+.dashboard_left .container_aside .box_info img {
+  max-width: 200px;
+  border-radius: 50%;
+}
+.dashboard_left .dashbord_left_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 18px;
+}
+.dashboard_left .dashbord_left_info a {
+  height: 45px;
+  line-height: 75px;
+  display: block;
+  color: #fff;
+  font-style: italic;
+  font-weight: 600;
+  text-decoration: none;
+  text-shadow: 2px 3px 3px #969696;
+  line-height: 45px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+.dashboard_left .dashbord_left_info a:hover {
+  color: #fff;
+  background: linear-gradient(to bottom, #0099cc 0%, #00ffcc 100%);
 }
 
 .btn_genre {

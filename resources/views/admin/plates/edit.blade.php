@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.app')
 
 @section('pageTitle')
 	Modifica: {{$plate->name}}
@@ -24,9 +24,22 @@
         </div>
     @endif
     {{-- /errori --}}
+    
+    {{-- logo --}}
+    <div class="main_logo container">
+        <img src="{{asset('storage/image/bool_eat.png')}}" alt=""></a>
+    </div>
+    {{-- logo --}}
 
+    <div class="container dashboard_container">
+
+        @include('partials.aside_left')
+
+        {{-- dashboard right (form) --}}
+        <div class="dashboard_right">
+            
     {{-- form di modifica piatto --}}
-    <form class="mt-5" action="{{route('admin.plates.update', ['plate' => $plate->id])}}" method="POST" enctype="multipart/form-data">
+    <form action="{{route('admin.plates.update', ['plate' => $plate->id])}}" method="POST" enctype="multipart/form-data">
         @method('PUT')
         @csrf
 
@@ -136,6 +149,15 @@
 
     </form>
     {{-- /form di modifica piatto --}}
+            
+        </div>
+    
+    </div>
+
+
+
+
+
 
    
 @endsection
