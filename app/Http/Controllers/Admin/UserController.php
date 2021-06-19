@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Genre;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -59,8 +61,9 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
+        $genres = Genre::all();
 
-        return view('admin.restaurant.edit', compact('user'));
+        return view('admin.restaurant.edit', compact('user', 'genres'));
     }
 
     /**
@@ -70,9 +73,36 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request , User $user)
     {
-        //
+        // dd($request->all());
+            //Validation
+            $request->validate([
+                'restaurant_name' => 'required', 'string', 'max:255',
+                'address' => 'required', 'string', 'max:255',
+                'phone_number' => 'required', 'numeric',
+                'vat_number' => 'required', 'numeric', 'digits:11','unique:users',
+                'logo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            ]);
+
+            $data = $request->all();
+
+             if ( isset($data['logo']) ) {
+                $data['logo'] = Storage::disk('public')->put('images', $data['logo']);
+            }
+
+            
+            $user->update($data);
+
+            // if (!isset($data['genres'])) {
+            //     $data['genres'] = 2;
+            // }
+
+            // $user->genres()->sync($data['genres']);
+            
+
+            //Redirect
+            return redirect()->route('home', $user);
     }
 
     /**
