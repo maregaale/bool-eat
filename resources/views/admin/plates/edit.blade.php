@@ -38,41 +38,41 @@
         {{-- dashboard right (form) --}}
         <div class="dashboard_right">
             {{-- form di modifica piatto --}}
-            <form action="{{route('admin.plates.update', ['plate' => $plate->id])}}" method="POST" enctype="multipart/form-data">
+            <form action="{{route('admin.plates.update', ['plate' => $plate->id])}}" method="POST" enctype="multipart/form-data" class="register_form">
                 @method('PUT')
                 @csrf
 
                 {{-- input info piatto --}}
-                <h1 class="mb-3">Modifica il piatto</h1>
+                <h1 class="mb-3 text-center">Modifica il piatto</h1>
 
-                <div class="form-group">
+                <div class="form-group form-fields">
                     <label for="name">Nome piatto</label>
                     <input type="text" class="form-control" name="name" id="name" placeholder="Inserisci un piatto" value="{{$plate->name}}">
                 </div>
 
-                <div class="form-group">
+                <div class="form-group form-fields">
                     <label for="ingredients">Ingredienti</label>
                     <textarea class="form-control" name="ingredients" id="ingredients" placeholder="Inserisci gli ingredienti" value="{{$plate->ingredients}}">{{$plate->ingredients}}</textarea>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group form-fields">
                     <label for="price">Prezzo</label>
                     <input type="text" class="form-control" name="price" id="price" placeholder="Inserisci il prezzo" value="{{$plate->price}}">
                 </div>
 
-                <div class="form-group">
+                <div class="form-group form-fields">
                     <label for="description">Descrizione</label>
                     <textarea name="description" class="form-control" id="description" rows='4' placeholder="Descrizione" value="{{$plate->description}}">{{$plate->description}}</textarea>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group form-fields">
                     <label for="scope">Portata</label>
                     <input type="text" class="form-control" name="scope" id="scope" placeholder="Inserisci il tipo di portata" value="{{$plate->scope}}">
                 </div>
                 {{-- /input info piatto --}}
 
                 {{-- checkbox pubblicazione--}}
-                <div class="form-check form-check-inline d-block mt-2">
+                <div class="form-check form-check-inline d-block mt-2 form-fields">
                     <input class="form-check-input" type="checkbox" id="visible" name="visible" value="{{$plate->visible}}" {{$plate->visible ? 'checked' : ''}}>
                     <label class="form-check-label" for="visible">Pubblica piatto</label>
                     {{-- check checkbox --}}
@@ -84,6 +84,7 @@
                 {{-- /checkbox pubblicazione--}}
 
                 {{-- checkboxes tipologia--}}
+            <div class="form-fields">
                 <h2 class="mt-5">Tipologia</h2>
 
                 <div class="form-check form-check-inline mt-3">
@@ -126,9 +127,10 @@
                     {{-- /check checkbox --}}
                 </div>
                 {{-- /checkboxes tipologia--}}
+            </div>
 
                 {{-- modifica immagine --}}
-                <div class="form-group form-file-upload form-file-simple mt-3">
+                <div class="form-group form-file-upload form-file-simple mt-3 form-fields">
                     <label for="image">Immagine</label>
                     {{-- <input type="text" class="form-control" id="image" name="image" placeholder="Image"> --}}
                     <input type="file"  class="inputFileHidden" id="image" name="image" value="{{$plate->image}}">
@@ -143,9 +145,10 @@
                 {{-- /modifica immagine --}}
 
                 {{-- bottone submit --}}
+            <div class="form-fields">
                 <button type="submit" class="btn btn-success mt-3">Salva!</button>
                 {{-- /bottone submit --}}
-
+            </div>
             </form>
             {{-- /form di modifica piatto --}}
         </div>
