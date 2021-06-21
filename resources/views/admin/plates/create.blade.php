@@ -30,40 +30,41 @@
             {{-- /errori --}}
 
             {{-- form creazione piatto--}}
-            <form action="{{route('admin.plates.store')}}" method="POST" enctype="multipart/form-data">
+            <form action="{{route('admin.plates.store')}}" method="POST" class="register_form" enctype="multipart/form-data">
                 @method('POST')
                 @csrf
 
                 {{-- input info piatto --}}
-                <h1 class="mb-3">Aggiungi nuovo piatto</h1>
+                <h1 class="mb-3 text-center">Aggiungi nuovo piatto</h1>
 
-                <div class="form-group">
+                <div class="form-group form-fields">
                     <label for="name">Nome piatto</label>
                     <input type="text" class="form-control" name="name" id="name" placeholder="Inserisci un piatto">
                 </div>
 
-                <div class="form-group">
+                <div class="form-group form-fields">
                     <label for="ingredients">Ingredienti</label>
                     <textarea class="form-control" name="ingredients" id="ingredients" placeholder="Inserisci gli ingredienti"></textarea>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group form-fields">
                     <label for="price">Prezzo</label>
                     <input type="text" class="form-control" name="price" id="price" placeholder="Inserisci il prezzo">
                 </div>
 
-                <div class="form-group">
+                <div class="form-group form-fields">
                     <label for="description">Descrizione</label>
                     <textarea name="description" class="form-control" id="description" rows='4' placeholder="Descrizione"></textarea>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group form-fields">
                     <label for="scope">Portata</label>
                     <input type="text" class="form-control" name="scope" id="scope" placeholder="Inserisci il tipo di portata">
                 </div>
                 {{-- /input info piatto --}}
 
                 {{-- checkbox pubblicazione--}}
+            <div class="form-fields">
                 <div class="form-check form-check-inline d-block mt-2">
                     <input class="form-check-input" type="checkbox" id="visible" name="visible">
                     <label class="form-check-label" for="visible">Pubblica piatto</label>
@@ -73,9 +74,11 @@
                 </span>
                     {{-- /check checkbox --}}
                 </div>
+            </div>
                 {{-- checkbox pubblicazione--}}
                 
                 {{-- checkboxes tipologia--}}
+            <div class="form-fields">
                 <h2 class="mt-5">Tipologia</h2>
 
                 <div class="form-check form-check-inline mt-3">
@@ -87,6 +90,7 @@
                 </span>
                     {{-- /check checkbox --}}
                 </div>
+            
 
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" id="vegetarian" name="vegetarian">
@@ -118,25 +122,21 @@
                     {{-- /check checkbox --}}
                 </div>
                 {{-- /checkboxes tipologia--}}
+            </div>
 
                 {{-- upload immagine --}}
-                <div class="form-group mt-3">
+                <div class="form-group form-fields mt-3">
                     <label for="image">Immagine</label>
                     {{-- <input type="text" class="form-control" id="image" name="image" placeholder="Image"> --}}
                     <input type="file" id="image" name="image">
-                    {{-- button upload --}}
-                    <span class="input-group-btn">
-                        <button type="button" class="btn btn-fab btn-round btn-primary">
-                            <i class="material-icons"><i class="fas fa-paperclip"></i></i>
-                        </button>
-                    </span>
-                    {{-- /button upload --}}
                 </div>
                 {{-- /upload immagine --}}
 
                 {{-- bottone submit --}}
-                <button type="submit" class="btn btn-success mt-3">Salva!</button>
+            <div class="form-fields">
+                <button type="submit" class="btn btn-success mt-3 ">Salva!</button>
                 {{-- /bottone submit --}}
+            </div>
             </form>
             {{-- /form creazione piatto--}}
         </div> 
