@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'Guest\BooleatController@index')->name('guest.index');
 Route::get('/show/{user}', 'Guest\BooleatController@show')->name('guest.show');
 Route::get('/show/{user}/checkout', 'Guest\OrderController@formOrder')->name('guest.checkout');
+Route::post('restaurant/checkout', 'Guest\OrderController@storePayment')->name('guest.checkout.store');
 
 // Autenticazione
 Auth::routes();

@@ -11,7 +11,8 @@ new Vue({
     restaurantName: '',
     users: [],
     genres: [],
-    vegans: []
+    vegans: [],
+    usersId: []
   },
   //Mounted
   mounted: function mounted() {
@@ -24,9 +25,14 @@ new Vue({
     axios.get('http://localhost:8000/api/vegan').then(function (resp) {
       _this.vegans = resp.data;
       console.log(_this.vegans);
-    });
+    }); // this.usersId = JSON.parse(localStorage.getItem("usersId")) || []
   },
   //\Mounted
+  // watch: {
+  //   usersId(newValue, oldValue) {
+  //     localStorage.setItem("usersId", JSON.stringify(newValue));
+  //   }
+  // },
   methods: {
     //Filtro per genres!!!!!
     filterGenre: function filterGenre() {
@@ -67,7 +73,13 @@ new Vue({
         _this4.restaurants = [];
         _this4.users = result.data;
       });
-    }
+    } // message: function (id) {
+    //   console.log(this.usersId);
+    //   if (id != this.usersId[0]) {
+    //     alert();
+    //   }
+    // },
+
   }
 });
 /******/ })()
