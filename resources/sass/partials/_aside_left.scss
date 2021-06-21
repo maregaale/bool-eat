@@ -1,9 +1,14 @@
 .dashboard_left{
-  width: 25%;
-  height: calc(100vh - 60px);
-  padding: 30px;
+display: flex;
+flex-direction: column;
+align-items: center;
+position: fixed;
+left: 0;
+width: 20vw;
+height: 100vh;
+padding: 30px;
   background: linear-gradient(to bottom, #006699 0%, #00334d 87%);
-  text-align: center;
+  text-align: left;
   overflow-y: auto;
 
   $breakpoint-middle: 992px;
@@ -32,7 +37,7 @@
   .dashbord_left_info{
       display: flex;
       flex-direction: column;   
-      justify-content: center;
+      justify-content: flex-start;
       font-size: 18px;
 
       a{
@@ -54,4 +59,12 @@
           }
       }
   }
+}
+
+
+.btn-logout {
+    background-color: azure;
+    width: 200px;
+    border-radius: 15px;
+    margin: 0 auto;
 }

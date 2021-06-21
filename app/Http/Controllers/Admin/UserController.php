@@ -61,9 +61,8 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        $genres = Genre::all();
 
-        return view('admin.restaurant.edit', compact('user', 'genres'));
+        return view('admin.restaurant.edit', compact('user'));
     }
 
     /**

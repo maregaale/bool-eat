@@ -5,12 +5,13 @@
 @endsection
 
 @section('content')
+<div class="wrapper">
 
-  <div class="main_logo container">
+  {{-- <div class="main_logo container">
       <img src="{{asset('storage/image/bool_eat.png')}}" alt=""></a>
-  </div>
+  </div> --}}
 
-  <div class="container dashboard_container">
+  <div class=" dashboard">
 
     @include('partials.aside_left')
 
@@ -42,7 +43,7 @@
         {{-- /toast delete --}}
       
         {{-- stampiamo i menu --}}
-        <div id="app">
+        <div id="app" class="dashboard-right">
           <table class="table align-middle">
             <thead>
               <tr>
@@ -94,6 +95,8 @@
     </div> 
     {{-- /dashboard right (menu) --}}
   </div>
+
+</div>
 @endsection
 
 
