@@ -12,10 +12,10 @@
     }
 }
 .jumbotron_wrapper {
-    background-image: url('images/banner_2.webp');
-    height: 600px;
+    background-image: url('images/banner_4.png');
+    height: 700px;
     background-size: cover;
-    // background-position: center;
+    background-repeat: no-repeat;
 
     .height-text-jumbotron {
         line-height: 200px;
@@ -24,11 +24,11 @@
 
 .jumbotron_content{
 
-
     h1{
         font-weight: bold;
         font-size: 70px;
-        color: lightgreen;
+        color: #004466;
+
     }
 
     h2{
@@ -79,25 +79,34 @@
     }
 }
 
-.nav_btn {
- display: flex;
- justify-content: space-between;
- align-items: center;
- width: 1020px;
- margin: 0 auto;
+.jumbotron_bottom{
+    background-image: url('images/banner_2.webp');
+    height: 300px;
+
+    input{
+        height: 40px;
+        width: 200px;
+        border: none;
+    }
 }
 
-.list-btn {
+.navbar_genres{
+
     display: flex;
-    align-items: center;
-    margin: auto;
-     li {
-         padding: 10px;
-     }
+    // justify-content: center;
+    
+    li{
+        list-style: none;
+        margin: 5px;
+
+        a{
+            font-size: 20px;
+            text-decoration: none;
+        }
+    }
+
+    img{
+        width: 120px;
+        height: 120px;
+    }
 }
-
-
-.btn-genres {
-    color: azure;
-}
-

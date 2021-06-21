@@ -6,6 +6,8 @@
   margin: 0 auto;
   padding: 0 20px;
   
+  
+  
   .menu {
     width: 80%;
       
@@ -27,7 +29,7 @@
           display: flex;
           justify-content: space-between;
           border-radius: 10px;
-          margin: 15px 0;
+          margin: 5px 0;
           margin-right: 10px;
           padding: 10px;
           background-color: #fff;
@@ -80,7 +82,11 @@
     padding: 10px;
     border-radius: 10px;
     min-height: 200px;
-    background-color:#f2f2f2;
+    
+
+      h3{
+        font-weight: bold;
+      }
 
     h2{
       color: #004466;
@@ -120,7 +126,6 @@
     .checkout{
 
       button{
-        // display:block;
         text-align: center;
         background-color: #2fac66;
         width: 100%;

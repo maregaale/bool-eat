@@ -47,7 +47,7 @@
     </div>
 
     <!-- Jumbotron -->
-    <div class="text-center" style="background-color: rgba(0, 0, 0, 0.6); height: 300px;">
+    <div class="text-center jumbotron_bottom">
       <div class="d-flex justify-content-center align-items-center ">
         <div class="text-white mt-5">
             <h1 class="mb-3">Benvenuto su Booleat</h1>
@@ -61,20 +61,21 @@
     </div>
 
     <div v-if="restaurants.length == 0" class="results">
-      <h2  class="text-center">Cerca per categoria di ristorante </h2>
+      {{-- <h2  class="text-center">Cerca per categoria di ristorante </h2> --}}
     </div>
     {{-- Nav Buttons --}}
-    <nav class="navbar navbar-expand-lg bg-primary nav_btn">
-      <div class="container ">
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav list-btn">
-            <li class="nav-item active" v-for="genre in genres">
-              <a class="btn-genres"  v-on:click="filterGenreButtons(genre.name)" href="javascript:;">@{{ genre.name }}<span class="sr-only">(current)</span></a>
+    {{-- <nav class="navbar navbar-expand-lg"> --}}
+      <div class="container">
+        <div id="navbarNav navbar_genres">
+          <ul class="navbar_genres">
+            <li class="active" v-for="genre in genres">
+              <a class="btn-genres"  v-on:click="filterGenreButtons(genre.name)" href="javascript:;">@{{ genre.name }}<span class="sr-only">(current)</span>
+              <img v-bind:src="genre.logo" alt=""></a>
             </li>
           </ul>
         </div>
       </div>
-    </nav>
+    {{-- </nav> --}}
      {{-- /Nav Buttons --}}
     {{-- Container Card Ristoranti --}}
     <div class="container_card">
@@ -110,34 +111,26 @@
     </div>
   {{-- /Container Card Ristoranti --}}
     
-        
     {{-- <nav class="nav_btn mt-5">
       <div v-for="genre in genres">
         <button class="btn_genre" v-on:click="filterGenreButtons(genre.name)">@{{ genre.name }}</button>
       </div>
     </nav> --}}
 
-   
-
-    <div v-if="restaurants.length > 0">
-        <h2  class="text-center">I risultati della tua ricerca</h2>
-        <i class="fas fa-arrow-alt-circle-down"></i>
-    </div>
-
-    
-        
     
 
     <section id="vegan">
-       <h2>I Consigli per i piatti vegani</h2>
+       {{-- <h2>I Consigli per i piatti vegani</h2> --}}
        <div v-for="plate in vegans">
          <h4>@{{ plate.name }}</h4>
 
        </div>
     </section>
 
-
 </div>   
+
+@include('partials.footer')
+
 @endsection
 
 @section('script')
