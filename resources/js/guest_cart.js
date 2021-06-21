@@ -13,8 +13,8 @@ new Vue({
   methods:{
     
     addElementsToCart: function (name, price) {
-        this.namePlates.push(name);
-        this.prices.push(price);
+      this.namePlates.push(name);
+      this.prices.push(price);
     },
 
     totalPrice: function (price) {
@@ -25,13 +25,9 @@ new Vue({
 
       for (let i = 0; i < this.prices.length; i++) {
         this.sum += this.prices[i];
-        
       }
 
-      console.log(this.sum);
-
       this.display = true;
-      
     }, 
 
     removePrevCart: function (name, price, index) {
@@ -40,11 +36,12 @@ new Vue({
       
       for (let i = 0; i < this.usersId.length; i++) {
         if (this.usersId[i] != index) {
-          this.usersId = [];
-
-          this.usersId.push(index);
-          this.namePlates = [];
-          this.prices = [];
+            this.usersId = [];
+  
+            this.usersId.push(index);
+            this.namePlates = [];
+            this.prices = [];
+         
           
         } else {
           this.namePlates;
@@ -70,10 +67,15 @@ new Vue({
   },
   
   mounted() {
+    this.usersId = []
+    
     this.namePlates = JSON.parse(localStorage.getItem("namePlates")) || [],
     this.prices = JSON.parse(localStorage.getItem("prices")) || []
     this.usersId = JSON.parse(localStorage.getItem("usersId")) || []
 
+    for (let i = 0; i < this.prices.length; i++) {
+      this.sum += this.prices[i];
+    }
   },
   
   watch: {
@@ -85,6 +87,9 @@ new Vue({
     },
     usersId(newValue, oldValue) {
       localStorage.setItem("usersId", JSON.stringify(newValue));
+    },
+    sum(newValue, oldValue) {
+      localStorage.setItem("sum", JSON.stringify(newValue));
     }
   }  
   
