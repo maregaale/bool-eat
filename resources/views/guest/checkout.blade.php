@@ -15,12 +15,12 @@ Booleat | Completa l'Ordine
 @section('content')
 <div class="container text-center">
 
- <form id="pay_form" method="POST" enctype="multipart/form-data"> 
+ <form id="pay_form" method="POST" action="{{route('guest.checkout.store')}}"  enctype="multipart/form-data"> 
     @csrf
     @method('POST')
     <div >
         <label for="name">Nome</label>
-        <input type="text"  id="name" name="name"  placeholder="Inserisci il nome" required>
+        <input type="text" id="name" name="name"  placeholder="Inserisci il nome" required>
     </div>
     <div >
         <label for="lastname">Cognome</label>
@@ -41,6 +41,11 @@ Booleat | Completa l'Ordine
 
     </div>
 
+    
+    <div id="dropin-container"></div>
+    <button id="submit-button" class="button button--small button--green">Purchase</button>
+      
+
     <button class="btn-success" type="submit" >Completa l' Ordine</button>
 
     
@@ -51,5 +56,34 @@ Booleat | Completa l'Ordine
 
 
 @section('script')
+<script src="https://js.braintreegateway.com/js/braintree-2.32.1.min.js"></script>
+
+
+
+
+
+<script>
+
+var form = document.querySelector('#pay_form');
+var token = "{{ $token }}"
+braintree.dropin.create({
+authorization: token,
+selector: '#dropin-container'
+}, function (err, instance) {
+form.addEventListener('submit',function (event) {
+        event.preventDefault();
+        instance.requestPaymentMethod(function (err, payload) {
+            if (err) {
+                console.log('Request Payment Method Error', err);
+                return;
+            }
+            // Add the nonce to the form and submit
+            document.querySelector('#nonce').value = payload.nonce;
+            form.submit();
+        });
+    })
+});
+ 
+</script> 
 
 @endsection
