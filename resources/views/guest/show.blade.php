@@ -25,7 +25,7 @@
             <p>{{ $plate->ingredients }}</p>
             <span>Aggiungi al carrello</span>
               
-            <button v-on:click="addElementsToCart({{ json_encode($plate->name) }}, {{ json_encode($plate->price) }}); totalPrice()" class="btn btn-success"><i class="fas fa-plus"></i></button>
+            <button v-on:click="totalPrice(); removePrevCart({{ json_encode($plate->name) }}, {{ json_encode($plate->price) }}, {{ json_encode($plate->user_id) }})" class="btn btn-success"><i class="fas fa-plus"></i></button>
             <p>Costo: {{$plate->price}} &euro;</p>
           </div>
           <div class="img-plate">
