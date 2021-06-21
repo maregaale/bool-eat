@@ -35,7 +35,7 @@ class OrderController extends Controller
     public function storePayment(Request $request)
     {
 
-        // dd($request->all());
+        //dd($request->all());
 
         $data = $request->all();
 

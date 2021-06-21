@@ -16,7 +16,7 @@ Booleat | Completa l'Ordine
 <div class="container text-center">
 
  <form id="pay_form" method="POST" action="{{route('guest.checkout.store')}}"  enctype="multipart/form-data"> 
-    @csrf
+     @csrf
     @method('POST')
     <div >
         <label for="name">Nome</label>
@@ -41,12 +41,15 @@ Booleat | Completa l'Ordine
 
     </div>
 
+    {{-- <button class="btn-success" type="submit" ></button> --}}
+
     
-    <div id="dropin-container"></div>
-    <button id="submit-button" class="button button--small button--green">Purchase</button>
+      <div id="dropin-container"></div>
+    <input  type="submit" value="completa l ordine">
+    <input type="hidden" id="nonce" name="payment_method_nonce"/>
       
 
-    <button class="btn-success" type="submit" >Completa l' Ordine</button>
+    
 
     
  </form>
@@ -56,9 +59,11 @@ Booleat | Completa l'Ordine
 
 
 @section('script')
+
+
 <script src="https://js.braintreegateway.com/js/braintree-2.32.1.min.js"></script>
 
-
+ <script src="https://js.braintreegateway.com/web/dropin/1.10.0/js/dropin.js"></script>
 
 
 
