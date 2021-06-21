@@ -29,7 +29,7 @@
      @csrf
 
      {{-- input info piatto --}}
-     <h1 class="mb-3">Modifica i tuoi dati</h1>
+     <h1 class="mb-3">Modifica i tuoi dati comodamente</h1>
 
 
      <div class="form-group">
