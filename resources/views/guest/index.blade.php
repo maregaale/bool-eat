@@ -38,7 +38,7 @@
               <ul class="list-group list-group-flush">
                 <li class="list-group-item"><img src="https://qul.imgix.net/6ec903c8-c731-4bd0-aadb-f8c68f23c169/528634_sld.jpg" alt=""></li>
                 <li class="list-group-item">Indirizzo: {{$user->address}}</li>
-                <li class="list-group-item"><a href="{{ route('guest.show' , ['user' => $user->id])}}">Visualizza menù</a></li>
+                <li class="list-group-item"><a v-on:click="message({{ json_encode($user->id) }})" href="{{ route('guest.show' , ['user' => $user->id])}}">Visualizza menù</a></li>
               </ul>
             </div>
           @endforeach
