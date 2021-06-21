@@ -55,6 +55,7 @@ new Vue({
           //   search: this.search
           // }
         }).then((result)=>{
+          this.users = [];
           
           console.log(result.data);
           this.restaurants = result.data;
@@ -71,6 +72,8 @@ new Vue({
               restaurant_name:this.restaurantName
             }
           }).then((result)=>{
+            this.restaurants = [];
+            
             this.users = result.data;
           });
         }

@@ -29,6 +29,7 @@
   <div id="app">
     <div class="container">
       <div class="row container_card">
+        {{-- Tutti i ristoranti --}}
           @foreach ($users as $user)
             <div class="card card-nav-tabs card_restaurant" style="width: 20rem;">
               <div class="card-header color_card_header">
@@ -41,6 +42,7 @@
               </ul>
             </div>
           @endforeach
+        {{-- /Tutti i ristoranti --}}
       </div>
     </div>
 
@@ -50,36 +52,18 @@
         <div class="text-white mt-5">
             <h1 class="mb-3">Benvenuto su Booleat</h1>
             <h4 class="mb-3">cerca e ordina!</h4>
-            
+            {{-- Search names --}}
             <input  type="text" placeholder="cerca il ristorante" value="" v-model="restaurantName">
             <button class="btn btn-outline-light btn-success btn-lg" type="button" name="button" v-on:click="searchName">Search</button>
+            {{-- Search names --}}
         </div>
       </div>
     </div>
-    
-    {{-- card top --}}
-    <div class="container_card">
-      <div class="row">
-        <div class="card card-nav-tabs card_restaurant" style="width: 20rem;" v-for="user in users" >
-          <div class="card-header card-header-danger">
-            <h4>@{{user.restaurant_name}}</h4> 
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item"><img src="https://qul.imgix.net/6ec903c8-c731-4bd0-aadb-f8c68f23c169/528634_sld.jpg" alt=""></li>
-            <li class="list-group-item">Indirizzo: @{{user.address}}</li>
-            <li class="list-group-item"><a :href="'http://localhost:8000/show/'+ user.id">Visualizza menù</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    {{-- card top --}}
-        
-    {{-- <nav class="nav_btn mt-5">
-      <div v-for="genre in genres">
-        <button class="btn_genre" v-on:click="filterGenreButtons(genre.name)">@{{ genre.name }}</button>
-      </div>
-    </nav> --}}
 
+    <div v-if="restaurants.length == 0" class="results">
+      <h2  class="text-center">Cerca per categoria di ristorante </h2>
+    </div>
+    {{-- Nav Buttons --}}
     <nav class="navbar navbar-expand-lg bg-primary nav_btn">
       <div class="container ">
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -91,30 +75,58 @@
         </div>
       </div>
     </nav>
+     {{-- /Nav Buttons --}}
+    {{-- Container Card Ristoranti --}}
+    <div class="container_card">
+      <div class="row">
+
+        {{-- card Ricerca Nome --}}
+        <div class="card card-nav-tabs card_restaurant" style="width: 20rem;" v-for="user in users" >
+          <div class="card-header card-header-danger">
+            <h4>@{{user.restaurant_name}}</h4> 
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><img src="https://qul.imgix.net/6ec903c8-c731-4bd0-aadb-f8c68f23c169/528634_sld.jpg" alt=""></li>
+            <li class="list-group-item">Indirizzo: @{{user.address}}</li>
+            <li class="list-group-item"><a :href="'http://localhost:8000/show/'+ user.id">Visualizza menù</a></li>
+          </ul>
+        </div>
+      {{-- /card Ricerca Nome --}}
+
+      {{-- Card ricerca categorie --}}
+        <div class="card card-nav-tabs card_restaurant" style="width: 20rem;" v-for="restaurant in restaurants" >
+          <div class="card-header card-header-danger">
+              <h4>@{{restaurant.restaurant_name}}</h4> 
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><img src="https://qul.imgix.net/6ec903c8-c731-4bd0-aadb-f8c68f23c169/528634_sld.jpg" alt=""></li>
+            <li class="list-group-item">Indirizzo: @{{restaurant.address}}</li>
+            <li class="list-group-item"><a :href="'http://localhost:8000/show/'+ restaurant.id">Visualizza menù</a></li>
+          </ul>
+        </div>
+         {{-- /Card ricerca categorie --}}
+    
+      </div>
+    </div>
+  {{-- /Container Card Ristoranti --}}
+    
+        
+    {{-- <nav class="nav_btn mt-5">
+      <div v-for="genre in genres">
+        <button class="btn_genre" v-on:click="filterGenreButtons(genre.name)">@{{ genre.name }}</button>
+      </div>
+    </nav> --}}
+
+   
 
     <div v-if="restaurants.length > 0">
         <h2  class="text-center">I risultati della tua ricerca</h2>
         <i class="fas fa-arrow-alt-circle-down"></i>
     </div>
 
-    <div v-if="restaurants.length == 0" class="results">
-        <h2  class="text-center">Cerca per categoria di ristorante </h2>
-    </div>
+    
         
-    <div class="container container_card">
-      <div class="row">
-      <div class="card card-nav-tabs card_restaurant" style="width: 20rem;" v-for="restaurant in restaurants" >
-        <div class="card-header card-header-danger">
-            <h4>@{{restaurant.restaurant_name}}</h4> 
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item"><img src="https://qul.imgix.net/6ec903c8-c731-4bd0-aadb-f8c68f23c169/528634_sld.jpg" alt=""></li>
-          <li class="list-group-item">Indirizzo: @{{restaurant.address}}</li>
-          <li class="list-group-item"><a :href="'http://localhost:8000/show/'+ restaurant.id">Visualizza menù</a></li>
-        </ul>
-      </div>
-      </div>
-    </div>
+    
 
     <section id="vegan">
        <h2>I Consigli per i piatti vegani</h2>
@@ -122,10 +134,10 @@
          <h4>@{{ plate.name }}</h4>
 
        </div>
-       
-
     </section>
-  </div>   
+
+
+</div>   
 @endsection
 
 @section('script')
