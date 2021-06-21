@@ -49,6 +49,7 @@ new Vue({
         //   search: this.search
         // }
       }).then(function (result) {
+        _this3.users = [];
         console.log(result.data);
         _this3.restaurants = result.data; //console.log(this.restaurants);
       });
@@ -63,6 +64,7 @@ new Vue({
           restaurant_name: this.restaurantName
         }
       }).then(function (result) {
+        _this4.restaurants = [];
         _this4.users = result.data;
       });
     }
