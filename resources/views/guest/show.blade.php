@@ -11,18 +11,21 @@
 @endsection
 
 @section('content')
-  <div id="cart" class="container">
+  <div id="cart" class="">
     @if (count($user->plates) > 0)
         
-   
     <div class="menu">
-      <h1>{{$user->restaurant_name}}</h1>
+      <h1 class="">{{$user->restaurant_name}}</h1>
+      <div class="wrapper_plate">
+
       @foreach ($user->plates as $plate)
-      <div class="restaurant_plate">
+        {{-- piatto singolo e info--}}
+        <div class="restaurant_plate">
           <div class="info-plate">
-            <h2>{{$plate->name}}</h2>
-            <h4>Ingredienti: </h4>
+            <h3>{{$plate->name}}</h3>
+            {{-- <h4>Ingredienti: </h4> --}}
             <p>{{ $plate->ingredients }}</p>
+            <h4>{{$plate->price}} &euro;</h4>
             <span>Aggiungi al carrello</span>
               
             <button v-on:click="removePrevCart({{ json_encode($plate->name) }}, {{ json_encode($plate->price) }}, {{ json_encode($plate->user_id) }}); totalPrice({{ json_encode($plate->price) }})" class="btn btn-success"><i class="fas fa-plus"></i></button>
@@ -30,11 +33,10 @@
           </div>
           <div class="img-plate">
             <img src="{{ $plate->image }}" alt="">
-
           </div>
         </div>
-          
       @endforeach
+    </div>
     </div>
     @else
     <h1>Non ci sono piatti per questo Ristorante!</h1>
@@ -42,7 +44,8 @@
 
     @if (count($user->plates) > 0)
     <div class="shopping_cart">
-      <h2>Il tuo carrello</h2>
+      
+      <h2 class="text-right mb-4">Il tuo carrello</h2>
       
       <div class="elements_container">
         <div class="name">
@@ -60,16 +63,13 @@
         <h3 v-if="namePlates.length != 0" >Totale: @{{sum}} &euro;</h3>
       </div>
 
-      <div v-if="namePlates.length != 0" class="submit mt-3">
-       
-        <button class="btn btn-success"><a href="{{ route('guest.checkout' , $user->id)}}">Completa l'ordine</a></button>
-        
+      <div class="checkout" v-if="namePlates.length != 0" class="submit mt-3">
+        <button v-if class="btn"><a href="{{ route('guest.checkout' , $user->id)}}">Checkout</a></button>
       </div>
+    
     </div>
     @endif
   </div>
-
-
 @endsection
 
 @section('script')

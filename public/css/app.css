@@ -10101,10 +10101,9 @@ body {
 }
 
 .jumbotron_wrapper {
-  background-image: url("images/food-banner.jpg");
-  height: 500px;
+  background-image: url("images/banner_2.webp");
+  height: 600px;
   background-size: cover;
-  background-position: center;
 }
 .jumbotron_wrapper .height-text-jumbotron {
   line-height: 200px;
@@ -10112,10 +10111,14 @@ body {
 
 .jumbotron_content h1 {
   font-weight: bold;
-  font-size: 60px;
+  font-size: 70px;
+  color: lightgreen;
 }
 .jumbotron_content h2 {
+  font-weight: bold;
+  font-size: 50px;
   font-weight: 600;
+  color: #000;
 }
 .jumbotron_content input {
   background-color: #fff;
@@ -10363,73 +10366,102 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 #cart .menu {
-  width: 50%;
+  width: 80%;
 }
 #cart .menu h1 {
-  text-transform: uppercase;
-  font-size: 60px;
+  color: #004466;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 40px;
+  letter-spacing: -1px;
 }
-#cart .restaurant_plate {
+#cart .menu .wrapper_plate {
   display: flex;
-  background: chocolate;
-  border-radius: 20px;
-  margin: 30px 0;
-  padding: 50px;
+  width: 100%;
+  flex-wrap: wrap;
 }
-#cart .restaurant_plate button {
+#cart .menu .wrapper_plate .restaurant_plate {
+  width: calc((100% / 3) - 20px);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  margin: 15px 0;
+  margin-right: 10px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: -1px 2px 10px -3px rgba(0, 0, 0, 0.74);
+}
+#cart .menu .wrapper_plate .restaurant_plate button {
   width: 30px;
   height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin: 0 10px;
+  display: inline-block;
+  padding: 5px;
 }
-#cart .info-plate {
-  width: 50%;
+#cart .menu .wrapper_plate .restaurant_plate .info-plate {
+  width: 60%;
 }
-#cart .info-plate span {
+#cart .menu .wrapper_plate .restaurant_plate .info-plate h3 {
+  font-size: 18px;
+}
+#cart .menu .wrapper_plate .restaurant_plate .info-plate h4 {
+  font-size: 16px;
+}
+#cart .menu .wrapper_plate .restaurant_plate .info-plate span {
   font-weight: bold;
+  color: #2fac66;
 }
-#cart .img-plate {
-  width: 50%;
+#cart .menu .wrapper_plate .restaurant_plate .img-plate {
+  width: 40%;
 }
-#cart .img-plate img {
+#cart .menu .wrapper_plate .restaurant_plate .img-plate img {
   width: 100%;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 #cart .shopping_cart {
-  width: 40%;
-  padding: 40px;
-  border-radius: 20px;
+  width: 20%;
+  padding: 10px;
+  border-radius: 10px;
   min-height: 200px;
-  background-color: lightgrey;
+  background-color: #f2f2f2;
 }
-#cart .shopping_cart .elements_container, #cart .shopping_cart .sum {
+#cart .shopping_cart h2 {
+  color: #004466;
+  font-weight: bold;
+}
+#cart .shopping_cart .elements_container {
   display: flex;
-  align-items: flex-start;
+  width: 100%;
   justify-content: space-between;
-  flex-wrap: wrap;
+  align-items: center;
 }
-#cart .shopping_cart .elements_container div, #cart .shopping_cart .sum div {
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  align-self: center;
+#cart .shopping_cart .elements_container p {
+  margin: 0 !important;
 }
-#cart .shopping_cart .elements_container div.name, #cart .shopping_cart .sum div.name {
+#cart .shopping_cart .elements_container .name {
   width: 50%;
 }
-#cart .shopping_cart .elements_container div.price, #cart .shopping_cart .sum div.price {
+#cart .shopping_cart .elements_container .price {
   width: 20%;
 }
-#cart .shopping_cart .elements_container div.button, #cart .shopping_cart .sum div.button {
-  align-self: flex-start;
+#cart .shopping_cart .elements_container .button {
   width: 30%;
+  height: 100%;
 }
-#cart .shopping_cart .elements_container div p, #cart .shopping_cart .sum div p {
-  align-self: center;
+#cart .shopping_cart .elements_container .button button {
+  line-height: 100%;
+  display: inline-block;
+  margin: 5px 0;
+}
+#cart .shopping_cart .checkout button {
+  text-align: center;
+  background-color: #2fac66;
   width: 100%;
-  min-height: 40px;
-  line-height: 40px;
+}
+#cart .shopping_cart .checkout button a {
+  color: #fff;
 }

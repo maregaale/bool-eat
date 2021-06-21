@@ -12,10 +12,10 @@
     }
 }
 .jumbotron_wrapper {
-    background-image: url('images/food-banner.jpg');
-    height: 500px;
+    background-image: url('images/banner_2.webp');
+    height: 600px;
     background-size: cover;
-    background-position: center;
+    // background-position: center;
 
     .height-text-jumbotron {
         line-height: 200px;
@@ -24,13 +24,19 @@
 
 .jumbotron_content{
 
+
     h1{
         font-weight: bold;
-        font-size: 60px;
+        font-size: 70px;
+        color: lightgreen;
     }
 
     h2{
+        font-weight: bold;
+        font-size: 50px;
         font-weight: 600;
+        color: #000;
+
     }
 
     input{
