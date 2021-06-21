@@ -14,7 +14,7 @@ class OrderController extends Controller
     {
         $restaurant = User::find($id)->first();
 
-        $gateway = new Gateway([
+        $gateway = new Gateway([ 
             'environment' => 'sandbox',
             'merchantId' => '6fgmgkg9h9rz85kp',
             'publicKey' => 'xfg5vxxfb7ycbdtk',
