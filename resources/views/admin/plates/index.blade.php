@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('pageTitle')
-    Menu
+@section('page_title')
+    Booleat | Il Tuo Menu
 @endsection
 
 @section('content')

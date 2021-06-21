@@ -7,7 +7,7 @@
 @endsection
 
 @section('pageTitle')
-  {{$user->restaurant_name}} | Menu
+  Booleat | {{$user->restaurant_name}} | Menu
 @endsection
 
 @section('content')

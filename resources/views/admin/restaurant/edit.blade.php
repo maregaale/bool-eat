@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('pageTitle')
+@section('page_title')
     Booleat | Modifica i tuoi dati
 @endsection
 

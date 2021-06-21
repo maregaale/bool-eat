@@ -1,8 +1,9 @@
-
 @extends('layouts.app')
-@section('pageTitle')
-    {{$plate->name}}    
+
+@section('page_title')
+    Booleat | Il Piatto | {{$plate->name}}    
 @endsection
+
 @section('content')
 
     <div class="main_logo container">

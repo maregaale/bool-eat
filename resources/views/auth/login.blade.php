@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+
+@section('page_title')
+    Booleat | Login   
+@endsection
+
 @section('content')
 
 

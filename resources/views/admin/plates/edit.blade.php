@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('pageTitle')
-	Modifica: {{$plate->name}}
+@section('page_title')
+    Booleat | Modifica | {{$plate->name}}
 @endsection
 
 @section('content')

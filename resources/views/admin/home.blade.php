@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('pageTitle')
-    Dashboard
+@section('page_title')
+    Booleat | La Tua Dashboard
 @endsection
 
 @section('content')

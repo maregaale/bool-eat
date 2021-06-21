@@ -1,9 +1,8 @@
 @extends('layouts.app')
 
-@section('pageTitle')
-    Add Plate
+@section('page_title')
+    Booleat | Aggiungi un Piatto
 @endsection
-
 
 @section('content')
     {{-- <div class="main_logo container">
@@ -35,7 +34,7 @@
                 @csrf
 
                 {{-- input info piatto --}}
-                <h1 class="mb-3 text-center">Aggiungi nuovo piatto</h1>
+                <h1 class="mb-3 text-center">Aggiungi un nuovo piatto</h1>
 
                 <div class="form-group form-fields">
                     <label for="name">Nome piatto</label>
