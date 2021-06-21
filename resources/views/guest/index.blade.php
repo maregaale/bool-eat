@@ -85,7 +85,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav list-btn">
             <li class="nav-item active" v-for="genre in genres">
-              <a class="nav-link"  v-on:click="filterGenreButtons(genre.name)" href="javascript:;">@{{ genre.name }}<span class="sr-only">(current)</span></a>
+              <a class="btn-genres"  v-on:click="filterGenreButtons(genre.name)" href="javascript:;">@{{ genre.name }}<span class="sr-only">(current)</span></a>
             </li>
           </ul>
         </div>
