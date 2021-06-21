@@ -3,7 +3,7 @@
   <div class="container_aside">
     <div class="box_info">
       {{-- logo --}}
-      <img src="{{ Auth::user()->logo }}" alt="">
+      <img src="{{ Auth::user()->logo }}" src="{{Auth::user()->logo ? asset('storage/' . Auth::user()->logo) : 'https://via.placeholder.com/200'}}" alt="">
 
       {{-- <img src="https://www.freeiconspng.com/thumbs/restaurant-icon-png/restaurant-icon-png-7.png" alt=""> --}}
       
@@ -28,7 +28,7 @@
 
     {{-- button logout --}}
     <div class="dashbord_left_info logout_btn">
-      <button class="btn btn-info" href="{{ route('logout') }}"
+      <button class="btn btn-logout" href="{{ route('logout') }}"
           onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
           {{ __('Logout') }}

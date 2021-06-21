@@ -5,10 +5,10 @@
 @endsection
 
 @section('content')
-    <div class="main_logo container">
+    {{-- <div class="main_logo ">
         <img src="{{asset('storage/image/bool_eat.png')}}" alt=""></a>
-    </div>
-    <div class="container dashboard_container">
+    </div> --}}
+    <div class="dashboard_container">
         
         @include('partials.aside_left')
         

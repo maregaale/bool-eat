@@ -13,9 +13,9 @@
     </head>
     <body>
 
-        <div class="container mt-5">
+    
             @yield('content')
-        </div>
+        
 
         {{-- @yield('script_js') --}}
     </body>

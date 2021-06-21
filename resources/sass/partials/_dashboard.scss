@@ -5,18 +5,22 @@ body{
     background-size: cover;
 }
 
+
 .main_logo img{
     width: 100px;
     margin: 10px 0;
 }
 
-.dashboard_container{
+.dashboard{
     display: flex;
+    height: 100%;
+    width: 100%;
 }
 
 .dashboard_left, .dashboard_right{
     font-family: 'Montserrat', sans-serif;
     background: linear-gradient(to bottom, #0099cc 0%, #00ffcc 100%);
+    height:100%;
 
     h3{
         font-size: 22px;
@@ -24,9 +28,14 @@ body{
     }
 }
 
+
+
 .dashboard_right{
-    width: 75%;
-    height: calc(100vh - 60px);
+    width: 80vw;
+    margin: 0 auto;
+    height: 100%;
+    position: fixed;
+    right: 0;
     padding: 30px;
     background: linear-gradient(to bottom right, #f2f2f2 17%, #e6e6e6 88%);
     overflow-y: auto;
@@ -34,7 +43,6 @@ body{
     &-card{
         display: flex;
         flex-wrap: nowrap;
-        width: 100%;
         overflow-x: auto;
         
 
@@ -94,4 +102,6 @@ body{
     
     }
 }
+
+
 
