@@ -28,6 +28,6 @@ class HomeController extends Controller
     {
         $plates = Plate::where('user_id', Auth::id())->get();
 
-        return view('home', compact('plates'));
+        return view('admin.home', compact('plates'));
     }
 }

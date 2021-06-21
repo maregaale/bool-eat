@@ -15,7 +15,7 @@
         @include('partials.aside_left')
 
         {{-- dashboard right (info piatti, statistiche) --}}
-        <div class="dashboard_right">
+        <div class="dashboard_right create_plate">
 
             {{-- errori --}}
             @if ($errors->any())
