@@ -7,7 +7,7 @@
 @endsection
 
 @section('pageTitle')
-  {{$user->name}}
+  {{$user->restaurant_name}} | Menu
 @endsection
 
 @section('content')
@@ -45,8 +45,8 @@
     @if (count($user->plates) > 0)
     <div class="shopping_cart">
       
-      <h2 class="text-right mb-4">Il tuo carrello</h2>
-      
+      <h3 class="text-right">Carrello</h3>
+      <hr>
       <div class="elements_container">
         <div class="name">
           <p v-for="namePlate in namePlates">@{{namePlate}}</p>
@@ -59,20 +59,26 @@
         </div>        
       </div>
 
-      <div class="sum">
+      <div class="sum mt-4 mb-4">
         <h3 v-if="namePlates.length != 0" >Totale: @{{sum}} &euro;</h3>
       </div>
 
       <div class="checkout" v-if="namePlates.length != 0" class="submit mt-3">
-        <button v-if class="btn"><a href="{{ route('guest.checkout' , $user->id)}}">Checkout</a></button>
+        <button v-if class="btn"><a href="{{ route('guest.checkout' , $user->id)}}">Completa l'ordine</a></button>
       </div>
     
     </div>
     @endif
+    
   </div>
+
+ @include('partials.footer')
+
 @endsection
+
 
 @section('script')
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   <script src="{{ asset('js/guest_cart.js')}}"></script>
 @endsection
+
