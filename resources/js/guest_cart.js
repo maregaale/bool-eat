@@ -8,8 +8,8 @@ new Vue({
     display: false,
     total: 0,
   },
+
   //Methods
-  
   methods:{
     
     addElementsToCart: function (name, price) {
