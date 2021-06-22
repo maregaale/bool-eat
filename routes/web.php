@@ -34,4 +34,7 @@ Route::prefix('admin')->name('admin.')->namespace('Admin')->middleware('auth')->
 });
 
 
+// rotta prova chartjs
+Route::get('/chartjs', 'Guest\BooleatController@chartjs')->name('guest.chartjs');
+
 

@@ -26,6 +26,10 @@ Booleat | Completa l'Ordine
         @csrf
         @method('POST')
         <div >
+            <label for="total">Total</label>
+            <input type="text" id="total" name="total"  v-model="sum" readonly="readonly" required>
+        </div>
+        <div >
             <label for="name">Nome</label>
             <input type="text" id="name" name="name"  placeholder="Inserisci il nome" required>
         </div>

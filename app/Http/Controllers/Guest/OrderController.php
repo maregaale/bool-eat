@@ -39,7 +39,7 @@ class OrderController extends Controller
 
         $data = $request->all();
 
-        $data['total'] = 20;
+        // $data['total'] = 20;
         $data['plates'] = [3 , 5];
 
         $newOrder = new Order();
