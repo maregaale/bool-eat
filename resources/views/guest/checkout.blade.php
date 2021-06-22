@@ -15,8 +15,12 @@ Booleat | Completa l'Ordine
 @section('content')
 <div class="container text-center">
 
-    <div id="total">
-        <h2>Totale del tuo ordine: @{{sum}} &euro;</h2>
+ <form id="pay_form" method="POST" action="{{route('guest.checkout.store')}}"  enctype="multipart/form-data"> 
+    @csrf
+    @method('POST')
+    <div >
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name"  placeholder="Inserisci il nome" required>
     </div>
 
     <h3 class="mt-5 mb-4">Inserisci ora i tuoi dati per completare l'ordine</h3>
@@ -45,7 +49,11 @@ Booleat | Completa l'Ordine
             <label  for="phone_number">Inserisci il numero di telefono</label>
             <input  type="tel" id="phone_number" name="phone_number">  
 
-        </div>
+    
+    <div id="dropin-container"></div>
+    <input  type="submit" value="completa l ordine">
+    <input type="hidden" id="nonce" name="payment_method_nonce"/>
+      
 
         {{-- <button class="btn-success" type="submit" ></button> --}}
 
