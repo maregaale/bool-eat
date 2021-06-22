@@ -18,10 +18,7 @@ Booleat | Completa l'Ordine
  <form id="pay_form" method="POST" action="{{route('guest.checkout.store')}}"  enctype="multipart/form-data"> 
     @csrf
     @method('POST')
-    <div >
-        <label for="name">Nome</label>
-        <input type="text" id="name" name="name"  placeholder="Inserisci il nome" required>
-    </div>
+ 
 
     <h3 class="mt-5 mb-4">Inserisci ora i tuoi dati per completare l'ordine</h3>
 
@@ -58,9 +55,6 @@ Booleat | Completa l'Ordine
         {{-- <button class="btn-success" type="submit" ></button> --}}
 
         
-        <div id="dropin-container"></div>
-        <input  type="submit" value="completa l ordine">
-        <input type="hidden" id="nonce" name="payment_method_nonce"/>
         
 
         
