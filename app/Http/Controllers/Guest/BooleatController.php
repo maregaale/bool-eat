@@ -24,4 +24,10 @@ class BooleatController extends Controller
     {
         return view('guest.show', ['user' => $user , 'order' => $order]);
     }
+
+    public function chartjs()
+    {
+        $orders = Order::all();
+        return view('prova_chartjs', compact('orders'));
+    }
 }
