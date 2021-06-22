@@ -1,10 +1,10 @@
-.dashboard_left{
+/*.dashboard_left{
 display: flex;
 flex-direction: column;
 align-items: center;
 position: fixed;
 left: 0;
-width: 20vw;
+width: 300px;
 height: 100vh;
 padding: 30px;
  background: linear-gradient(to bottom, #006699 0%, #00334d 87%);
@@ -14,7 +14,6 @@ padding: 30px;
   $breakpoint-middle: 992px;
   @media (max-width: $breakpoint-middle) {
       .container_aside{
-          // width: 100%;
           display: flex;
       }
   }
@@ -47,24 +46,165 @@ padding: 30px;
           color: #fff;
           font-style: italic;
           font-weight: 600;
-          text-decoration: none;
           text-shadow: 2px 3px 3px rgba(150, 150, 150, 1);
           line-height: 45px;
           border-radius: 5px;
           margin: 10px 0;
           
-          &:hover{
-              color: #fff;
-              background: linear-gradient(to bottom, #0099cc 0%, #00ffcc 100%);
-          }
       }
   }
+}*/
+
+.dashboard_left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    width: 350px;
+    height: 100vh;
+    background-color: $db_blue_dark;
+
+    $breakpoint-mobile: 659px;
+    @media (max-width: $breakpoint-mobile) {
+        
+        width: 120px;
+
+        
+        
+    }
+
+    
+    h3 {
+        color: $db_white;
+    }
+
+    &-container{
+        width: 100%;
+        display: flex; 
+        flex-direction: column;
+        
+        align-items: center;
+        height:100%;
+
+       
+
+        &-admin{
+
+            
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img{
+                
+                height: 150px;
+                border-radius: .25rem;    
+
+
+            }
+
+            
+
+            $breakpoint-mobile: 659px;
+            @media (max-width: $breakpoint-mobile) {
+                
+                img, h3{
+                
+                    display: none;
+    
+    
+                }               
+            }
+        }
+
+        &-button{
+            //background-color:red;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            width: 100%;
+
+            $breakpoint-mobile: 659px;
+            @media (max-width: $breakpoint-mobile) {
+                
+                h5{
+                
+                    display: none;
+    
+    
+                }               
+            }
+
+            
+            a{
+                display:flex;  
+                flex-direction: row;
+                align-items: center;
+           
+                text-decoration: none;
+                width:100%;
+                height:100px;
+                border-radius: .25rem;
+                color: $db_grey;
+                box-shadow: 0 10px 40px 0 rgb(0 0 0 / 0%), 0 2px 9px 0 rgb(0 0 0 / 0%);
+                background: $db_blue_dark;
+                transition: all 0.6s;
+
+                &:hover{
+                    color: #fff;
+                    box-shadow: 0 10px 40px 0 #42429E, 0 2px 9px 0 #242456;
+                    background: linear-gradient(to bottom, #242456 0%, #42429E 100%);
+                    z-index: 10;
+                }
+      
+            }
+        }
+
+        &-logout {
+
+            position: fixed; 
+            bottom: 0;
+            width: 350px;
+
+            $breakpoint-mobile: 659px;
+            @media (max-width: $breakpoint-mobile) {
+                
+                width: 160px; 
+
+                h5{
+
+                                   
+                    display: none;  
+    
+                }               
+            }
+
+
+            &-btn{
+
+                background-color: $db_green-light;
+                height:70px;
+                width: 100%;
+                border-radius: .25rem;
+                transition: all 0.6s;
+
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                &:hover{
+                    color: #fff;
+                    box-shadow: 0 10px 40px 0 rebeccapurple, 0 2px 9px 0 red;
+                    background: linear-gradient(to bottom, #A2536C 0%, #C08497 100%);
+                }
+            }
+        }
+    }
+    
+
 }
 
 
-.btn-logout {
-    background-color: azure;
-    width: 200px;
-    border-radius: 15px;
-    margin: 0 auto;
-}
