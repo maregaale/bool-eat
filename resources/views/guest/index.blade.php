@@ -9,6 +9,8 @@
 @endsection
 
 @section('content')
+
+  @include('partials.header')
    
   <!-- Jumbotron -->
   <div class="jumbotron_wrapper">
@@ -27,19 +29,17 @@
   </div>
 
   <div id="app">
-    <div class="container">
-      <div class="row container_card">
+    <div class="">
+      <div class="container_card">
         {{-- Tutti i ristoranti --}}
           @foreach ($users as $user)
-            <div class="card card-nav-tabs card_restaurant" style="width: 20rem;">
-              <div class="card-header color_card_header">
-               <h4>{{$user->restaurant_name}}</h4> 
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item"><img src="https://qul.imgix.net/6ec903c8-c731-4bd0-aadb-f8c68f23c169/528634_sld.jpg" alt=""></li>
-                <li class="list-group-item">Indirizzo: {{$user->address}}</li>
-                <li class="list-group-item"><a v-on:click="message({{ json_encode($user->id) }})" href="{{ route('guest.show' , ['user' => $user->id])}}">Visualizza menù</a></li>
-              </ul>
+            <div class="card_restaurant">
+                <img class="image" src="https://qul.imgix.net/6ec903c8-c731-4bd0-aadb-f8c68f23c169/528634_sld.jpg" alt="">
+                <h4>{{$user->restaurant_name}}</h4> 
+                <div class="overlay">
+                  <p class="text card_address mt-2">{{$user->address}}</p>
+                  <button class="btn_menu_overlay button_card_menu"><a v-on:click="message({{ json_encode($user->id) }})" href="{{ route('guest.show' , ['user' => $user->id])}}">Vai al Menù</a></button>
+                </div>
             </div>
           @endforeach
         {{-- /Tutti i ristoranti --}}
@@ -53,26 +53,26 @@
             <h1 class="mb-3">Benvenuto su Booleat</h1>
             <h4 class="mb-3">cerca e ordina!</h4>
             {{-- Search names --}}
-            <input  type="text" placeholder="cerca il ristorante" value="" v-model="restaurantName">
+            <input  type="text" placeholder="Nome ristorante" value="" v-model="restaurantName">
             <button class="btn btn-outline-light btn-success btn-lg" type="button" name="button" v-on:click="searchName">Search</button>
             {{-- Search names --}}
         </div>
       </div>
     </div>
 
-    <div v-if="restaurants.length == 0" class="results">
+    {{-- <div v-if="restaurants.length == 0" class="results">
       {{-- <h2  class="text-center">Cerca per categoria di ristorante </h2> --}}
-    </div>
-    {{-- Nav Buttons --}}
+    {{-- </div> --}}
     {{-- <nav class="navbar navbar-expand-lg"> --}}
-      <div class="container">
-        <div id="navbarNav navbar_genres">
-          <ul class="navbar_genres">
-            <li class="active" v-for="genre in genres">
-              <a class="btn-genres"  v-on:click="filterGenreButtons(genre.name)" href="javascript:;">@{{ genre.name }}<span class="sr-only">(current)</span>
-              <img v-bind:src="genre.logo" alt=""></a>
-            </li>
-          </ul>
+      <div class="wrapper_genres">
+        <h2>...puoi sempre cercare per genere. Facile no?</h2>
+
+        <div id="navbarNav" class="navbar_genres">
+          <div class="navbar_genres">
+            <div class="active genres_content" v-for="genre in genres">
+              <a class="btn-genres"  v-on:click="filterGenreButtons(genre.name)" href="javascript:;"><img v-bind:src="genre.logo" alt="">@{{ genre.name }}<span class="sr-only">(current)</span></a>
+            </div>
+          </div>
         </div>
       </div>
     {{-- </nav> --}}
@@ -109,15 +109,6 @@
     
       </div>
     </div>
-  {{-- /Container Card Ristoranti --}}
-    
-    {{-- <nav class="nav_btn mt-5">
-      <div v-for="genre in genres">
-        <button class="btn_genre" v-on:click="filterGenreButtons(genre.name)">@{{ genre.name }}</button>
-      </div>
-    </nav> --}}
-
-    
 
     <section id="vegan">
        {{-- <h2>I Consigli per i piatti vegani</h2> --}}
