@@ -15,59 +15,70 @@ Booleat | Completa l'Ordine
 @section('content')
 <div class="container text-center">
 
- <form id="pay_form" method="POST" action="{{route('guest.checkout.store')}}"  enctype="multipart/form-data"> 
-     @csrf
-    @method('POST')
-    <div >
-        <label for="name">Nome</label>
-        <input type="text" id="name" name="name"  placeholder="Inserisci il nome" required>
-    </div>
-    <div >
-        <label for="lastname">Cognome</label>
-        <input type="text" id="lastname" name="lastname"  placeholder="Inserisci il cognome" required>
-    </div>
-    <div >
-        <label for="email">Email</label>
-        <input type="email"  name="email" id="email" placeholder="Inserisci l'email" required>
-    </div>
-    <div >
-        <label for="address">Inserisci l'indirizzo</label>
-        <input type="text"  id="address" name="address" placeholder="Indirizzo">
-    </div>
-    <div>
-
-        <label  for="phone_number">Inserisci il numero di telefono</label>
-        <input  type="tel" id="phone_number" name="phone_number">  
-
+    <div id="total">
+        <h2>Totale del tuo ordine: @{{sum}} &euro;</h2>
     </div>
 
-    {{-- <button class="btn-success" type="submit" ></button> --}}
+    <h3 class="mt-5 mb-4">Inserisci ora i tuoi dati per completare l'ordine</h3>
+
+    <form id="pay_form" method="POST" action="{{route('guest.checkout.store')}}"  enctype="multipart/form-data"> 
+        @csrf
+        @method('POST')
+        <div >
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name"  placeholder="Inserisci il nome" required>
+        </div>
+        <div >
+            <label for="lastname">Cognome</label>
+            <input type="text" id="lastname" name="lastname"  placeholder="Inserisci il cognome" required>
+        </div>
+        <div >
+            <label for="email">Email</label>
+            <input type="email"  name="email" id="email" placeholder="Inserisci l'email" required>
+        </div>
+        <div >
+            <label for="address">Inserisci l'indirizzo</label>
+            <input type="text"  id="address" name="address" placeholder="Indirizzo">
+        </div>
+        <div>
+
+            <label  for="phone_number">Inserisci il numero di telefono</label>
+            <input  type="tel" id="phone_number" name="phone_number">  
+
+        </div>
+
+        {{-- <button class="btn-success" type="submit" ></button> --}}
+
+        
+        <div id="dropin-container"></div>
+        <input  type="submit" value="completa l ordine">
+        <input type="hidden" id="nonce" name="payment_method_nonce"/>
+        
+
+        
+
+        
+    </form>
 
     
-      <div id="dropin-container"></div>
-    <input  type="submit" value="completa l ordine">
-    <input type="hidden" id="nonce" name="payment_method_nonce"/>
-      
-
-    
-
-    
- </form>
 </div>
     
 @endsection
 
 
 @section('script')
+<script src="{{ asset('js/total.js')}}"></script>
 
 
 <script src="https://js.braintreegateway.com/js/braintree-2.32.1.min.js"></script>
 
  <script src="https://js.braintreegateway.com/web/dropin/1.10.0/js/dropin.js"></script>
 
-
-
-<script>
+ 
+ 
+ 
+ <script>
+    
 
 var form = document.querySelector('#pay_form');
 var token = "{{ $token }}"
@@ -90,5 +101,7 @@ form.addEventListener('submit',function (event) {
 });
  
 </script> 
+
+
 
 @endsection
