@@ -1,0 +1,26 @@
+#success {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box_success {
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    h1 {
+        font-size: 60px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $h4Show;
+    }
+     img {
+         width: 100%;
+     }
+     p {
+         color: $h4Show;
+     }
+}

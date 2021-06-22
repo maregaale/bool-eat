@@ -10497,3 +10497,30 @@ body {
 .dashboard_right.create_plate {
   padding: 0;
 }
+
+#success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box_success {
+  display: flex;
+  flex-direction: column;
+  width: 650px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.box_success h1 {
+  font-size: 60px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #031b4e;
+}
+.box_success img {
+  width: 100%;
+}
+.box_success p {
+  color: #031b4e;
+}
