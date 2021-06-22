@@ -4,9 +4,11 @@ namespace App\Http\Controllers\Guest;
 use Braintree\Gateway as Gateway;
 use Braintree\Transaction as Transaction;
 use App\Http\Controllers\Controller;
+use App\Mail\SendNewMail;
 use App\Order;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class OrderController extends Controller
 {
@@ -53,7 +55,7 @@ class OrderController extends Controller
         
         $newOrder->plates()->attach($data['plates']);
 
-
+        Mail::to('info@booleat.com')->send(new SendNewMail($newOrder));
 
         $gateway = new Gateway([
             'environment' => 'sandbox',
