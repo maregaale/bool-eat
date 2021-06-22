@@ -10,6 +10,8 @@
     
 @endsection
 
+@include('partials.header')
+
 
 @section('content')
 
