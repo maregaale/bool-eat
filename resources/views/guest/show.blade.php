@@ -11,6 +11,9 @@
 @endsection
 
 @section('content')
+
+  @include('partials.header')
+
   <div id="cart" class="">
     @if (count($user->plates) > 0)
         
@@ -26,10 +29,9 @@
             {{-- <h4>Ingredienti: </h4> --}}
             <p>{{ $plate->ingredients }}</p>
             <h4>{{$plate->price}} &euro;</h4>
-            <span>Aggiungi al carrello</span>
-              
+            <span><i class="fas fa-cart-arrow-down"></i> Aggiungi al carrello</span>
             <button v-on:click="removePrevCart({{ json_encode($plate->name) }}, {{ json_encode($plate->price) }}, {{ json_encode($plate->user_id) }}); totalPrice({{ json_encode($plate->price) }})" class="btn btn-success"><i class="fas fa-plus"></i></button>
-            <p>Costo: {{$plate->price}} &euro;</p>
+            <p class="font-weight-bold">{{$plate->price}} &euro;</p>
           </div>
           <div class="img-plate">
             <img src="{{ $plate->image }}" alt="">
