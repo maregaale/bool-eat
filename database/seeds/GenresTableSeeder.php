@@ -16,31 +16,31 @@ class GenresTableSeeder extends Seeder
         $genres = [
             [
                 'name' => 'Hamburger',
-                'logo' => 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+                'logo' => 'https://f.roocdn.com/images/menus/225238/header-image.jpg?width=353&height=177&auto=webp&format=jpg&fit=crop&v=1585830197'
             ],
             [
                 'name' => 'Kebab',
-                'logo' => 'https://images.pexels.com/photos/2955819/pexels-photo-2955819.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+                'logo' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcr7s48S-Wb828vUJxSOMFP84U_qZNNL7XaQ&usqp=CAU'
             ],
             [
                 'name' => 'Greco',
-                'logo' => 'https://images.pexels.com/photos/1211887/pexels-photo-1211887.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260'
+                'logo' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkSkFugaYhE6lHxxCrw_QiZXdGecQiWbPlWQ&usqp=CAU'
             ],
             [
                 'name' => 'Pizza',
-                'logo' => 'https://images.pexels.com/photos/1260968/pexels-photo-1260968.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+                'logo' => 'https://f.roocdn.com/images/menus/63776/header-image.jpg?width=353&height=177&auto=webp&format=jpg&fit=crop&v=1556873766'
             ],
             [
                 'name' => 'Giapponese',
-                'logo' => 'https://images.pexels.com/photos/2871757/pexels-photo-2871757.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+                'logo' => 'https://f.roocdn.com/images/menus/213898/header-image.jpg?width=353&height=177&auto=webp&format=jpg&fit=crop&v=1573558821'
             ],
             [
                 'name' => 'Thai',
-                'logo' => 'https://images.pexels.com/photos/6646067/pexels-photo-6646067.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+                'logo' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT254aPmxCxqqWswCyrcd-FiBDkV8DgqfTQrg&usqp=CAU'
             ],
             [
                 'name' => 'Mediterraneo',
-                'logo' => 'https://images.pexels.com/photos/803963/pexels-photo-803963.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+                'logo' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRisD1QodUmR8BsQuFBa6WfqaVwdg1Chf6glA&usqp=CAU'
             ],
             [
                 'name' => 'Cinese',
@@ -52,10 +52,10 @@ class GenresTableSeeder extends Seeder
             ]
         ];
         foreach ($genres as $genre) {
-            $newGenre = new Genre(); 
+            $newGenre = new Genre();
             $newGenre->name = $genre['name'];
             $newGenre->logo = $genre['logo'];
-            $newGenre->slug = Str::slug( $genre['name'] , '-');
+            $newGenre->slug = Str::slug($genre['name'], '-');
             $newGenre->save();
         }
     }
