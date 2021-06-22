@@ -15,6 +15,7 @@ mix.js('resources/js/app.js', 'public/js')
    .js('resources/js/guest-index.js', 'public/js')
    .js('resources/js/guest_cart.js', 'public/js')
    .js('resources/js/total.js', 'public/js')
+   .js('resources/js/success.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css')
    .options({
       processCssUrls: false

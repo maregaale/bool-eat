@@ -6,7 +6,7 @@
 
 @section('pageTitle')
 
-Success!
+ Booleat | Success!
     
 @endsection
 
@@ -27,6 +27,7 @@ Success!
 
 @section('script')
 
+<script src="{{ asset('js/success.js')}}"></script>
 
     
 @endsection

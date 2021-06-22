@@ -2,5 +2,7 @@
     "/js/app.js": "/js/app.js",
     "/js/guest-index.js": "/js/guest-index.js",
     "/js/guest_cart.js": "/js/guest_cart.js",
+    "/js/total.js": "/js/total.js",
+    "/js/success.js": "/js/success.js",
     "/css/app.css": "/css/app.css"
 }
