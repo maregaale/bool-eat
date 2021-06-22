@@ -14,6 +14,17 @@ Booleat | Completa l'Ordine
 
 @section('content')
 <div class="container text-center">
+     {{-- errori --}}
+     @if ($errors->any())
+     <div class="alert alert-danger">
+         <ul>
+             @foreach ($errors->all() as $error)
+                 <li>{{ $error }}</li>
+             @endforeach
+         </ul>
+     </div>
+     @endif
+     {{-- /errori --}}
 
  <form id="pay_form" method="POST" action="{{route('guest.checkout.store')}}"  enctype="multipart/form-data"> 
     @csrf
