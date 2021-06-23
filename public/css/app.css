@@ -10702,14 +10702,45 @@ padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 3em;
+  margin-bottom: 1.5em;
 }
 .dashboard_left-container-admin img {
   height: 150px;
   border-radius: 0.25rem;
+  width: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 1024px) {
   .dashboard_left-container-admin img, .dashboard_left-container-admin h3 {
     display: none;
+  }
+}
+@media (max-height: 999px) {
+  .dashboard_left-container-admin img {
+    height: 150px;
+    width: 150px;
+  }
+}
+@media (max-height: 800px) {
+  .dashboard_left-container-admin {
+    padding: 0;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+  }
+  .dashboard_left-container-admin img {
+    display: none;
+  }
+}
+@media (max-height: 425px) {
+  .dashboard_left-container-admin {
+    padding: 0;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+  }
+  .dashboard_left-container-admin .box-padding {
+    padding: 0;
   }
 }
 .dashboard_left-container-button {
@@ -10742,10 +10773,21 @@ padding: 30px;
   background: linear-gradient(to bottom, #242456 0%, #42429E 100%);
   z-index: 10;
 }
+@media (max-height: 999px) {
+  .dashboard_left-container-button a {
+    height: 76px;
+  }
+}
+@media (max-height: 800px) {
+  .dashboard_left-container-button a {
+    height: 50px;
+  }
+}
 .dashboard_left-container-logout {
   position: fixed;
   bottom: 0;
   width: 350px;
+  margin-bottom: 40px;
 }
 @media (max-width: 1024px) {
   .dashboard_left-container-logout {
@@ -10753,6 +10795,11 @@ padding: 30px;
   }
   .dashboard_left-container-logout h5 {
     display: none;
+  }
+}
+@media (max-height: 999px) {
+  .dashboard_left-container-logout {
+    margin-bottom: 10px;
   }
 }
 .dashboard_left-container-logout-btn {
@@ -10769,6 +10816,12 @@ padding: 30px;
   color: #fff;
   box-shadow: 0 10px 40px 0 rebeccapurple, 0 2px 9px 0 red;
   background: linear-gradient(to bottom, #A2536C 0%, #C08497 100%);
+}
+@media (max-height: 999px) {
+  .dashboard_left-container-logout-btn {
+    height: 50px;
+    padding-bottom: 5px;
+  }
 }
 
 .btn_genre {

@@ -1,14 +1,14 @@
 {{-- dahsboard left (modifica dati vari, visualizza) --}}
 <aside class="dashboard_left box-padding ">
   <div class="dashboard_left-container">
-    <div class="dashboard_left-container-admin mb-4 mt-5">
+    <div class="dashboard_left-container-admin ">
       {{-- logo --}}
       <img src="{{ Auth::user()->logo }}" src="{{Auth::user()->logo ? asset('storage/' . Auth::user()->logo) : 'https://via.placeholder.com/200'}}" alt="">
 
       {{-- <img src="https://www.freeiconspng.com/thumbs/restaurant-icon-png/restaurant-icon-png-7.png" alt=""> --}}
       
       {{-- Restaurant name --}}
-      <div class="box-padding mt-3">
+      <div class="box-padding ">
         <h3 class=" text-capitalize ">{{ Auth::user()->restaurant_name }}</h3>
 
       </div>
@@ -30,7 +30,7 @@
 
 
     {{-- button logout --}}
-    <div class="dashboard_left-container-logout mb-5 box-padding">
+    <div class="dashboard_left-container-logout box-padding">
       <div class="box-padding">
         <button class="btn dashboard_left-container-logout-btn" href="{{ route('logout') }}"
         onclick="event.preventDefault();
