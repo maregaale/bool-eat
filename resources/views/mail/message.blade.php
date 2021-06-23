@@ -19,7 +19,7 @@ Mail
     @endforeach
 </ul>
 
-<h5>Totale: {{ $order->total}}</h5>
+<h5>Totale: {{ $order->total}} &euro;</h5>
 
 
 <a class="" href="{{ url('/') }}"> 
