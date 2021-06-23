@@ -7,7 +7,7 @@
   padding: 0 20px;
   
   .menu {
-    width: 80%;
+    width: 65%;
       
       h1 {
         color: #004466;
@@ -77,8 +77,8 @@
     // position: fixed;
     //  top: 100px;
     //  right: 0;
-    width: 20%;
-    padding: 10px;
+    width: 35%;
+    padding: 40px;
     border-radius: 10px;
     min-height: 200px;
     
@@ -94,30 +94,54 @@
 
     .elements_container {
       display: flex;
-      width: 100%;
       justify-content: space-between;
       align-items: center;
+      .input_cart {
+        min-height: 30px;
+        
+        input {
+          max-width: 50px;
+          display: block;
+          margin: 5px 0;
+        }
+      }
 
       p{
          margin: 0!important;
+         white-space: nowrap;
+         font-size: 11px;
+         min-height: 30px;
+         padding-top: 6px;
+         align-self: center;
        }
 
         .name {
           width: 50%;
+          min-height: 30px;
         }
 
         .price {
           width: 20%;
+          min-height: 30px;
         }
 
         .button{
-          width: 30%;
+          width: 30px;
           height: 100%;
+          display: flex;
+          flex-direction: column;
+         justify-content: space-between;
 
            button{
-             line-height: 100%;
-             display: inline-block;
-             margin: 5px 0;
+             width: 20px;
+             text-align: center;
+             font-size: 11px;
+             //line-height: 100%;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             margin: 3px 0;
+             
            }
         }
     }
