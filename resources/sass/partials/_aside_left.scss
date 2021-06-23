@@ -97,15 +97,20 @@ padding: 30px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-top:3em;
+            margin-bottom:1.5em;
 
             img{
                 
                 height: 150px;
                 border-radius: .25rem;    
+                width: 150px;
+                object-fit: cover;
 
 
             }
 
+            
             
 
             $breakpoint-mobile: 1024px;
@@ -118,6 +123,54 @@ padding: 30px;
     
                 }               
             }
+
+            
+            $breakpoint-height: 999px;
+            @media (max-height: $breakpoint-height) {
+
+                
+                img{
+                
+                    height: 150px;
+                    width: 150px;
+    
+    
+                }
+    
+                
+            }
+
+            $breakpoint-midheight: 800px;
+            @media (max-height: $breakpoint-midheight) {
+
+                
+                img{
+                
+                    display:none;
+    
+                }
+
+
+                padding: 0;
+                margin-top:.5em;
+                margin-bottom:0;
+    
+            }
+
+            $breakpoint-minheight: 425px;
+            @media (max-height: $breakpoint-minheight) {
+
+                .box-padding {
+                    padding: 0;
+                }
+                padding: 0;
+                margin-top:.5em;
+                margin-bottom:0;
+    
+            }
+
+
+
         }
 
         &-button{
@@ -138,6 +191,16 @@ padding: 30px;
     
                 }               
             }
+
+            $breakpoint-height: 999px;
+            @media (max-height: $breakpoint-height) {
+
+                
+
+                
+            }
+
+
 
             
             a{
@@ -160,6 +223,27 @@ padding: 30px;
                     background: linear-gradient(to bottom, #242456 0%, #42429E 100%);
                     z-index: 10;
                 }
+
+
+                $breakpoint-height: 999px;
+                @media (max-height: $breakpoint-height) {
+    
+                    
+                    height:76px;
+
+                    
+                }
+
+                $breakpoint-midheight: 800px;
+                @media (max-height: $breakpoint-midheight) {
+    
+                    
+                    height:50px;
+
+                    
+                }
+
+    
       
             }
         }
@@ -169,7 +253,7 @@ padding: 30px;
             position: fixed; 
             bottom: 0;
             width: 350px;
-
+            margin-bottom: 40px;
             $breakpoint-mobile: 1024px;
             @media (max-width: $breakpoint-mobile) {
                 
@@ -182,6 +266,15 @@ padding: 30px;
     
                 }               
             }
+
+            $breakpoint-height: 999px;
+            @media (max-height: $breakpoint-height) {
+
+                
+                margin-bottom: 10px;
+                
+            }
+
 
 
             &-btn{
@@ -201,6 +294,18 @@ padding: 30px;
                     box-shadow: 0 10px 40px 0 rebeccapurple, 0 2px 9px 0 red;
                     background: linear-gradient(to bottom, #A2536C 0%, #C08497 100%);
                 }
+
+                $breakpoint-height: 999px;
+                @media (max-height: $breakpoint-height) {
+    
+                    
+                    height:50px;
+                    padding-bottom: 5px;
+
+                    
+                }
+    
+
             }
         }
     }

@@ -160,11 +160,6 @@
                                     {{-- <input type="text" class="form-control" id="image" name="image" placeholder="Image"> --}}
                                     <input type="file"  class="inputFileHidden" id="image" name="image" value="{{$plate->image}}">
                                     {{-- button upload --}}
-                                    <span class="input-group-btn">
-                                        <button type="button" class="btn btn-fab btn-round btn-primary">
-                                            <i class="material-icons"><i class="fas fa-paperclip"></i></i>
-                                        </button>
-                                    </span>
                                     {{-- /button upload --}}
                                 </div>
                                 {{-- /modifica immagine --}}
