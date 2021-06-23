@@ -7,7 +7,7 @@
   padding: 0 20px;
   
   .menu {
-    width: 65%;
+    width: 50%;
       
       h1 {
         color: #004466;
@@ -23,7 +23,7 @@
         flex-wrap: wrap;
 
         .restaurant_plate {
-          width: calc((100% / 3) - 20px);
+          width: calc((100% / 2) - 20px);
           display: flex;
           justify-content: space-between;
           border-radius: 10px;
@@ -57,6 +57,10 @@
             span {
               font-weight: bold;
               color: #2fac66;
+              background-color: #e2e6ea;
+              padding: 8px;
+              border-radius: 5px;
+              cursor: pointer;
               
             }
           }
@@ -74,18 +78,17 @@
     }
 
   .shopping_cart {
-    // position: fixed;
-    //  top: 100px;
-    //  right: 0;
-    width: 35%;
+    width: 50%;
     padding: 40px;
     border-radius: 10px;
     min-height: 200px;
+
+    
     
 
-      h3{
-        font-weight: bold;
-      }
+    h3{
+      font-weight: bold;
+    }
 
     h2{
       color: #004466;
@@ -96,6 +99,27 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      .plus {
+        display: flex;
+        flex-direction: column;
+
+        .fas.fa-plus-square {
+          cursor: pointer;
+          font-size: 20px;
+          color: #38c172;
+          margin: 5px 0;
+
+        }
+  
+        .fas.fa-minus-square {
+          cursor: pointer;
+          font-size: 20px;
+          color: #dc3545;
+          margin: 5px 0;
+
+        }
+      }
       .input_cart {
         min-height: 30px;
         
@@ -106,52 +130,53 @@
         }
       }
 
-      p{
-         margin: 0!important;
-         white-space: nowrap;
-         font-size: 11px;
-         min-height: 30px;
-         padding-top: 6px;
-         align-self: center;
-       }
+      p {
+        margin: 0!important;
+        white-space: nowrap;
+        font-size: 16px;
+        min-height: 30px;
+        padding-top: 3px;
+        align-self: center;
+      }
 
-        .name {
-          width: 50%;
-          min-height: 30px;
-        }
+      .name {
+        width: 50%;
+        min-height: 30px;
+      }
 
-        .price {
-          width: 20%;
-          min-height: 30px;
-        }
+      .price {
+        min-height: 30px;
+      }
 
-        .button{
-          width: 30px;
-          height: 100%;
+      .button{
+        width: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        button{
+          width: 50px;
+          height: 30px;
+          text-align: center;
+          font-size: 14px;
+          font-weight: 600;
           display: flex;
-          flex-direction: column;
-         justify-content: space-between;
-
-           button{
-             width: 20px;
-             text-align: center;
-             font-size: 11px;
-             //line-height: 100%;
-             display: flex;
-             align-items: center;
-             justify-content: center;
-             margin: 3px 0;
-             
-           }
+          align-items: center;
+          justify-content: center;
+          margin: 3px 0;
+          
         }
+      }
     }
 
     .checkout{
+      display: flex;
+      justify-content: center;
 
       button{
         text-align: center;
         background-color: #2fac66;
-        width: 100%;
+        width: 300px;
         a{
           color:#fff;
         }

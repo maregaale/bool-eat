@@ -10860,7 +10860,7 @@ padding: 30px;
   padding: 0 20px;
 }
 #cart .menu {
-  width: 65%;
+  width: 50%;
 }
 #cart .menu h1 {
   color: #004466;
@@ -10875,7 +10875,7 @@ padding: 30px;
   flex-wrap: wrap;
 }
 #cart .menu .wrapper_plate .restaurant_plate {
-  width: calc((100% / 3) - 20px);
+  width: calc((100% / 2) - 20px);
   display: flex;
   justify-content: space-between;
   border-radius: 10px;
@@ -10904,6 +10904,10 @@ padding: 30px;
 #cart .menu .wrapper_plate .restaurant_plate .info-plate span {
   font-weight: bold;
   color: #2fac66;
+  background-color: #e2e6ea;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 #cart .menu .wrapper_plate .restaurant_plate .img-plate {
   width: 40%;
@@ -10913,7 +10917,7 @@ padding: 30px;
   border-radius: 10px;
 }
 #cart .shopping_cart {
-  width: 35%;
+  width: 50%;
   padding: 40px;
   border-radius: 10px;
   min-height: 200px;
@@ -10930,6 +10934,22 @@ padding: 30px;
   justify-content: space-between;
   align-items: center;
 }
+#cart .shopping_cart .elements_container .plus {
+  display: flex;
+  flex-direction: column;
+}
+#cart .shopping_cart .elements_container .plus .fas.fa-plus-square {
+  cursor: pointer;
+  font-size: 20px;
+  color: #38c172;
+  margin: 5px 0;
+}
+#cart .shopping_cart .elements_container .plus .fas.fa-minus-square {
+  cursor: pointer;
+  font-size: 20px;
+  color: #dc3545;
+  margin: 5px 0;
+}
 #cart .shopping_cart .elements_container .input_cart {
   min-height: 30px;
 }
@@ -10941,9 +10961,9 @@ padding: 30px;
 #cart .shopping_cart .elements_container p {
   margin: 0 !important;
   white-space: nowrap;
-  font-size: 11px;
+  font-size: 16px;
   min-height: 30px;
-  padding-top: 6px;
+  padding-top: 3px;
   align-self: center;
 }
 #cart .shopping_cart .elements_container .name {
@@ -10951,29 +10971,33 @@ padding: 30px;
   min-height: 30px;
 }
 #cart .shopping_cart .elements_container .price {
-  width: 20%;
   min-height: 30px;
 }
 #cart .shopping_cart .elements_container .button {
-  width: 30px;
-  height: 100%;
+  width: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 #cart .shopping_cart .elements_container .button button {
-  width: 20px;
+  width: 50px;
+  height: 30px;
   text-align: center;
-  font-size: 11px;
+  font-size: 14px;
+  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 3px 0;
 }
+#cart .shopping_cart .checkout {
+  display: flex;
+  justify-content: center;
+}
 #cart .shopping_cart .checkout button {
   text-align: center;
   background-color: #2fac66;
-  width: 100%;
+  width: 300px;
 }
 #cart .shopping_cart .checkout button a {
   color: #fff;
