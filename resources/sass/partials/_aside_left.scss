@@ -64,8 +64,9 @@ padding: 30px;
     width: 350px;
     height: 100vh;
     background-color: $db_blue_dark;
+    transition: all 0.1s;
 
-    $breakpoint-mobile: 659px;
+    $breakpoint-mobile: 1024px;
     @media (max-width: $breakpoint-mobile) {
         
         width: 120px;
@@ -107,7 +108,7 @@ padding: 30px;
 
             
 
-            $breakpoint-mobile: 659px;
+            $breakpoint-mobile: 1024px;
             @media (max-width: $breakpoint-mobile) {
                 
                 img, h3{
@@ -127,7 +128,7 @@ padding: 30px;
 
             width: 100%;
 
-            $breakpoint-mobile: 659px;
+            $breakpoint-mobile: 1024px;
             @media (max-width: $breakpoint-mobile) {
                 
                 h5{
@@ -169,7 +170,7 @@ padding: 30px;
             bottom: 0;
             width: 350px;
 
-            $breakpoint-mobile: 659px;
+            $breakpoint-mobile: 1024px;
             @media (max-width: $breakpoint-mobile) {
                 
                 width: 160px; 
