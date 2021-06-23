@@ -3,21 +3,37 @@
     line-height: 60px;
     display: flex;
     justify-content: space-between;
-    margin: 25px 0 25px 0;
+    margin: 20px 0 20px 0;
     align-items: center;
+
+    @media screen and( max-width: 768px){
+        margin: 12px 0 12px 0;
+    }
+
+    a img {
+        width: 100px;
+
+        @media screen and( max-width: 992px){
+            width: 60px;
+        }
+    }
 
     .text_icon_nav_top{
         
         h2{
             font-weight: bold;
-            font-size: 34px;
+            font-size: 30px;
             color: #004466;
             font-style: italic;
             vertical-align: middle;
+
+            @media screen and( max-width: 992px){
+                font-size: 22px;
+            }
         }
 
-        img{
-            width: 60px;
+        @media screen and( max-width: 550px){
+            display: none;
         }
     }    
     
@@ -27,6 +43,16 @@
 
     .nav_top_right{
         margin-right: 30px;
+
+        .hamburger_nav{
+            display: none;
+            font-size: 28px;
+            color: coral;
+
+            @media screen and( max-width: 768px){
+                display: block;
+            }
+        }
     }
 
     .button_card_menu {
@@ -35,8 +61,7 @@
         text-align: center;
         cursor: pointer;
         outline: none;
-        // background-color: #2fac66;
-        background: #2b5876;  /* fallback for old browsers */
+        background: #2b5876;
         background: -webkit-linear-gradient(to bottom, #4e4376, #2b5876);  
         background: linear-gradient(to bottom, #4e4376, #2b5876); 
         border: none;
@@ -52,10 +77,22 @@
                 text-decoration: none;
             }
         }
+
+        @media screen and( max-width: 992px){
+            padding: 5px 15px;
+            font-size: 16px;
+
+            i{
+                font-size: 12px;
+            }
+        }
+
+          @media screen and( max-width: 768px){
+              display: none;
+          }
       }
 
       .button_card_menu:hover {
-        // background-color: coral;
         background: linear-gradient(to right, #38ef7d, #11998e);
       }
     
@@ -90,18 +127,32 @@
         }
 }
 .jumbotron_wrapper {
+    position: relative;
     background-image: url('images/banner_4.png');
     height: 600px;
     background-size: cover;
     background-repeat: no-repeat;
 
-    .height-text-jumbotron {
-        line-height: 200px;
+    @media screen and( max-width: 992px){
+        height: 400px;
     }
 
+    @media screen and( max-width: 768px){
+        height: 300px;
+    }
+
+    @media screen and( max-width: 500px){
+        height: 220px;
+    }
+    
 }
 
 .jumbotron_content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     h1{
         font-weight: bold;
@@ -119,7 +170,6 @@
 
     
     @media screen and( max-width: 992px){
-        
         h1{
             font-size: 50px;
         }
@@ -130,7 +180,6 @@
     }
 
     @media screen and( max-width: 768px){
-        
         h1{
             font-size: 40;
         }
@@ -140,14 +189,13 @@
         }
     }
 
-    @media screen and( max-width: 450px){
-        
+    @media screen and( max-width: 500px){
         h1{
-            font-size: 26px;
+            font-size: 28px;
         }
 
         h2{
-            font-size: 18px;
+            font-size: 20px;
         }
     }
 
@@ -167,9 +215,7 @@
 .container_card {
     display: flex;
     flex-wrap: wrap;
-    // justify-content: center;
     align-items: center;
-    // margin: 0 auto;
     padding: 30px 0;
     max-width: 100%;
     
@@ -273,6 +319,7 @@
 
         @media screen and( max-width: 768px){
             width: calc((100% / 1) - 20px);
+            margin: 10px 20px;
             
             h4{
                 font-size: 14px;
@@ -312,7 +359,6 @@
         transform: translate(-50%, -50%);
         white-space: nowrap;
       }
-
       .btn_menu_overlay {
         color: white;
         font-size: 20px;
@@ -354,6 +400,15 @@
         font-style: italic;
         font-size: 32px;
         color: #004466;
+        text-align: center;
+
+        @media screen and( max-width: 768px){
+            font-size: 24px;
+        }
+
+        @media screen and( max-width: 500px){
+            font-size: 18px;
+        }
     }
 
     .navbar_genres{
