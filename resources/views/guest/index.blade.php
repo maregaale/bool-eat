@@ -71,45 +71,32 @@
     
     {{-- Container Card Ristoranti --}}
     <div class="container_card">
-        {{-- card Ricerca Nome --}}
-        {{-- <div class="card_restaurant"> 
-          <img src="{{$user->logo}}" alt="">
-          <h4>{{$user->restaurant_name}}</h4> 
+        <div class="card_restaurant" v-for="user in users">
+            <img v-bind:src="user.logo" alt="">
+            <h4>@{{user.restaurant_name}}</h4>
           <div class="overlay">
-            <p class="text card_address mt-2">{{$user->address}}</p>
-            <button class="btn_menu_overlay button_card_menu"><a v-on:click="message({{ json_encode($user->id) }})" href="{{ route('guest.show' , ['user' => $user->id])}}">Vai al Menù</a></button>
-          </div>
-      </div> --}}
-        <div class="card_restaurant">
-          <div class="overlay" v-for="user in users">
-            <img src="https://qul.imgix.net/6ec903c8-c731-4bd0-aadb-f8c68f23c169/528634_sld.jpg" alt="">
-            <h4>@{{user.restaurant_name}}</h4> 
-            <p class="">@{{user.address}}</p>
-            <button class=""><a :href="'http://localhost:8000/show/'+ user.id">Visualizza menù</a></button>
+            <p class="text card_address mt-2">@{{user.address}}</p>
+            <button class="btn_menu_overlay button_card_menu"><a :href="'http://localhost:8000/show/'+ user.id">Visualizza menù</a></button>
           </div>
         </div>
       {{-- /card Ricerca Nome --}}
 
       {{-- Card ricerca categorie --}}
-        <div class="card card-nav-tabs card_restaurant" style="width: 20rem;" v-for="restaurant in restaurants" >
-          <div class="card-header card-header-danger">
-              <h4>@{{restaurant.restaurant_name}}</h4> 
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item"><img src="https://qul.imgix.net/6ec903c8-c731-4bd0-aadb-f8c68f23c169/528634_sld.jpg" alt=""></li>
-            <li class="list-group-item">Indirizzo: @{{restaurant.address}}</li>
-            <li class="list-group-item"><a :href="'http://localhost:8000/show/'+ restaurant.id">Visualizza menù</a></li>
-          </ul>
+        <div class="card_restaurant" v-for="restaurant in restaurants">
+          <img v-bind:src="restaurant.logo" alt="">
+          <h4>@{{restaurant.restaurant_name}}</h4>
+        <div class="overlay">
+          <p class="text card_address mt-2">@{{restaurant.address}}</p>
+          <button class="btn_menu_overlay button_card_menu"><a :href="'http://localhost:8000/show/'+ restaurant.id">Visualizza menù</a></button>
         </div>
-         {{-- /Card ricerca categorie --}}
-    
+      </div>
+    {{-- /Card ricerca categorie --}}
     </div>
 
     <section id="vegan">
        {{-- <h2>I Consigli per i piatti vegani</h2> --}}
        <div v-for="plate in vegans">
          <h4>@{{ plate.name }}</h4>
-
        </div>
     </section>
 

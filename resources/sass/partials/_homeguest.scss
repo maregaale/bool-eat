@@ -6,7 +6,6 @@
     margin: 25px 0 25px 0;
     align-items: center;
 
-    
     .text_icon_nav_top{
         
         h2{
@@ -45,7 +44,6 @@
         box-shadow: 0 9px #999;
         margin-bottom: 20px;
         margin-left: 10px;
-
 
         a{
             color: #fff;
@@ -100,6 +98,7 @@
     .height-text-jumbotron {
         line-height: 200px;
     }
+
 }
 
 .jumbotron_content{
@@ -116,7 +115,40 @@
         font-size: 40px;
         font-weight: 600;
         color: #000;
+    }
 
+    
+    @media screen and( max-width: 992px){
+        
+        h1{
+            font-size: 50px;
+        }
+
+        h2{
+            font-size: 34px;
+        }
+    }
+
+    @media screen and( max-width: 768px){
+        
+        h1{
+            font-size: 40;
+        }
+
+        h2{
+            font-size: 24px;
+        }
+    }
+
+    @media screen and( max-width: 450px){
+        
+        h1{
+            font-size: 26px;
+        }
+
+        h2{
+            font-size: 18px;
+        }
     }
 
     input{
@@ -140,7 +172,6 @@
     // margin: 0 auto;
     padding: 30px 0;
     max-width: 100%;
-
     
     h4{
         color: #004466;
@@ -201,7 +232,8 @@
           }
           
           .button_card_menu:hover {
-              background-color: #3e8e41;
+            transition: all .5s ease-out;
+            background-color: #3e8e41;  
             }
           
           .button_card_menu:active {
@@ -248,18 +280,12 @@
         }
       }
       
-      .image {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
-      
       .overlay {
         position: absolute;
         bottom: 0;
         left: 100%;
         right: 0;
-        background-color: rgba($color: #004466, $alpha: 0.8);
+        background-color: rgba($color: #004466, $alpha: 0.9);
         overflow: hidden;
         width: 0;
         height: 100%;
@@ -286,6 +312,7 @@
         transform: translate(-50%, -50%);
         white-space: nowrap;
       }
+
       .btn_menu_overlay {
         color: white;
         font-size: 20px;

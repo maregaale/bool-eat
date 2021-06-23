@@ -10351,6 +10351,30 @@ body {
   font-weight: 600;
   color: #000;
 }
+@media screen and (max-width: 992px) {
+  .jumbotron_content h1 {
+    font-size: 50px;
+  }
+  .jumbotron_content h2 {
+    font-size: 34px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .jumbotron_content h1 {
+    font-size: 40;
+  }
+  .jumbotron_content h2 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .jumbotron_content h1 {
+    font-size: 26px;
+  }
+  .jumbotron_content h2 {
+    font-size: 18px;
+  }
+}
 .jumbotron_content input {
   background-color: #fff;
   border-radius: 5px;
@@ -10420,6 +10444,7 @@ body {
   text-decoration: none;
 }
 .container_card .card_restaurant .button_card_menu:hover {
+  transition: all 0.5s ease-out;
   background-color: #3e8e41;
 }
 .container_card .card_restaurant .button_card_menu:active {
@@ -10462,17 +10487,12 @@ body {
     font-size: 14px;
   }
 }
-.container_card .image {
-  display: block;
-  width: 100%;
-  height: auto;
-}
 .container_card .overlay {
   position: absolute;
   bottom: 0;
   left: 100%;
   right: 0;
-  background-color: rgba(0, 68, 102, 0.8);
+  background-color: rgba(0, 68, 102, 0.9);
   overflow: hidden;
   width: 0;
   height: 100%;
