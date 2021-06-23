@@ -11029,7 +11029,12 @@ padding: 30px;
 }
 
 .input_total {
-  padding-left: 10px;
   background-color: transparent;
   border: solid transparent;
+}
+
+.style_aligned {
+  width: 200px;
+  text-align: right;
+  padding-right: 10px;
 }

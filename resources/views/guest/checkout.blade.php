@@ -37,33 +37,32 @@ Booleat | Completa l'Ordine
         @csrf
         @method('POST')
         <div >
-            <label for="total">Total</label>
+            <label class="style_aligned" for="total">Total</label>
             <input type="text" id="total" name="total" class="input_total" v-model="sum" readonly="readonly" required>
         </div>
         <div >
-            <label for="name">Nome</label>
+            <label class="style_aligned" for="name">Nome</label>
             <input type="text" id="name" name="name"  placeholder="Inserisci il nome" required>
         </div>
         <div >
-            <label for="lastname">Cognome</label>
+            <label class="style_aligned" for="lastname">Cognome</label>
             <input type="text" id="lastname" name="lastname"  placeholder="Inserisci il cognome" required>
         </div>
         <div >
-            <label for="email">Email</label>
+            <label class="style_aligned" for="email">Email</label>
             <input type="email"  name="email" id="email" placeholder="Inserisci l'email" required>
         </div>
         <div >
-            <label for="address">Inserisci l'indirizzo</label>
+            <label class="style_aligned" for="address">Inserisci l'indirizzo</label>
             <input type="text"  id="address" name="address" placeholder="Indirizzo">
         </div>
         <div>
-
-            <label  for="phone_number">Inserisci il numero di telefono</label>
+            <label class="style_aligned" for="phone_number">Inserisci il numero di telefono</label>
             <input  type="tel" id="phone_number" name="phone_number">  
-
+        </div>
     
     <div id="dropin-container"></div>
-    <input  type="submit" value="completa l ordine">
+    <input  type="submit" class="btn btn-primary mb-2" value="Completa l'ordine">
     <input type="hidden" id="nonce" name="payment_method_nonce"/>
       
 
