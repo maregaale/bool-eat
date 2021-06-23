@@ -36,6 +36,13 @@ class OrderController extends Controller
 
     public function storePayment(Request $request)
     {
+         $request->validate([
+            'name' => 'required', 'string', 'max:255',
+            'address' => 'required', 'string', 'max:255',
+            'lastname' => 'required', 'string', 'max:255',
+            'phone_number' => 'required', 'numeric',
+            'total' => 'required', 'numeric',
+        ]);
 
         //dd($request->all());
 
