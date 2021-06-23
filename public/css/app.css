@@ -11027,3 +11027,9 @@ padding: 30px;
 .box_success p {
   color: #031b4e;
 }
+
+.input_total {
+  padding-left: 10px;
+  background-color: transparent;
+  border: solid transparent;
+}

@@ -38,7 +38,7 @@ Booleat | Completa l'Ordine
         @method('POST')
         <div >
             <label for="total">Total</label>
-            <input type="text" id="total" name="total"  v-model="sum" readonly="readonly" required>
+            <input type="text" id="total" name="total" class="input_total" v-model="sum" readonly="readonly" required>
         </div>
         <div >
             <label for="name">Nome</label>
