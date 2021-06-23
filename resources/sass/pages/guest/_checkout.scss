@@ -1,5 +1,6 @@
 body {
    background-color:#F6F6F6;
+   overflow: hidden;
    
    .input_total{
     
@@ -22,7 +23,7 @@ body {
     }
 
     @keyframes left_to_right {
-        0%   {left:0px;}
+        0%   {left:0%;}
         100% {left:100%;}
       }
 

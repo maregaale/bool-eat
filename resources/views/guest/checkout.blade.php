@@ -62,7 +62,7 @@ Booleat | Completa l'Ordine
         </div>
     
     <div id="dropin-container"></div>
-    <input  type="submit" class="btn btn-primary mb-2" value="Completa l'ordine">
+    <input type="submit" class="btn btn-primary mb-2" value="Completa l'ordine">
     <input type="hidden" id="nonce" name="payment_method_nonce"/>
       
 
@@ -78,7 +78,7 @@ Booleat | Completa l'Ordine
 
     
 </div>
-<img class="icon-rider" src="{{asset('images/uber-for-food.png')}}">  
+<img id="delivery-boy" class="icon-rider icon-rider_btn" src="{{asset('images/uber-for-food.png')}}">  
 @endsection
 
 

@@ -11030,6 +11030,7 @@ padding: 30px;
 
 body {
   background-color: #F6F6F6;
+  overflow: hidden;
 }
 body .input_total {
   background-color: transparent;
@@ -11052,7 +11053,7 @@ body .icon-rider {
 }
 @-webkit-keyframes left_to_right {
   0% {
-    left: 0px;
+    left: 0%;
   }
   100% {
     left: 100%;
@@ -11060,7 +11061,7 @@ body .icon-rider {
 }
 @keyframes left_to_right {
   0% {
-    left: 0px;
+    left: 0%;
   }
   100% {
     left: 100%;
