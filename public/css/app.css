@@ -10262,24 +10262,54 @@ body {
   line-height: 60px;
   display: flex;
   justify-content: space-between;
-  margin: 25px 0 25px 0;
+  margin: 20px 0 20px 0;
   align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .main_nav_home {
+    margin: 12px 0 12px 0;
+  }
+}
+.main_nav_home a img {
+  width: 100px;
+}
+@media screen and (max-width: 992px) {
+  .main_nav_home a img {
+    width: 60px;
+  }
 }
 .main_nav_home .text_icon_nav_top h2 {
   font-weight: bold;
-  font-size: 34px;
+  font-size: 30px;
   color: #004466;
   font-style: italic;
   vertical-align: middle;
 }
-.main_nav_home .text_icon_nav_top img {
-  width: 60px;
+@media screen and (max-width: 992px) {
+  .main_nav_home .text_icon_nav_top h2 {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .main_nav_home .text_icon_nav_top {
+    display: none;
+  }
 }
 .main_nav_home img {
   margin: 10px 0 10px 30px;
 }
 .main_nav_home .nav_top_right {
   margin-right: 30px;
+}
+.main_nav_home .nav_top_right .hamburger_nav {
+  display: none;
+  font-size: 28px;
+  color: coral;
+}
+@media screen and (max-width: 768px) {
+  .main_nav_home .nav_top_right .hamburger_nav {
+    display: block;
+  }
 }
 .main_nav_home .button_card_menu {
   padding: 10px 25px;
@@ -10288,7 +10318,6 @@ body {
   cursor: pointer;
   outline: none;
   background: #2b5876;
-  /* fallback for old browsers */
   background: linear-gradient(to bottom, #4e4376, #2b5876);
   border: none;
   border-radius: 5px;
@@ -10301,6 +10330,20 @@ body {
 }
 .main_nav_home .button_card_menu a:hover {
   text-decoration: none;
+}
+@media screen and (max-width: 992px) {
+  .main_nav_home .button_card_menu {
+    padding: 5px 15px;
+    font-size: 16px;
+  }
+  .main_nav_home .button_card_menu i {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main_nav_home .button_card_menu {
+    display: none;
+  }
 }
 .main_nav_home .button_card_menu:hover {
   background: linear-gradient(to right, #38ef7d, #11998e);
@@ -10331,15 +10374,35 @@ body {
 }
 
 .jumbotron_wrapper {
+  position: relative;
   background-image: url("images/banner_4.png");
   height: 600px;
   background-size: cover;
   background-repeat: no-repeat;
 }
-.jumbotron_wrapper .height-text-jumbotron {
-  line-height: 200px;
+@media screen and (max-width: 992px) {
+  .jumbotron_wrapper {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .jumbotron_wrapper {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .jumbotron_wrapper {
+    height: 220px;
+  }
 }
 
+.jumbotron_content {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .jumbotron_content h1 {
   font-weight: bold;
   font-size: 80px;
@@ -10367,12 +10430,12 @@ body {
     font-size: 24px;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   .jumbotron_content h1 {
-    font-size: 26px;
+    font-size: 28px;
   }
   .jumbotron_content h2 {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 .jumbotron_content input {
@@ -10482,6 +10545,7 @@ body {
 @media screen and (max-width: 768px) {
   .container_card .card_restaurant {
     width: calc((100% / 1) - 20px);
+    margin: 10px 20px;
   }
   .container_card .card_restaurant h4 {
     font-size: 14px;
@@ -10549,6 +10613,17 @@ body {
   font-style: italic;
   font-size: 32px;
   color: #004466;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .wrapper_genres h2 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .wrapper_genres h2 {
+    font-size: 18px;
+  }
 }
 .wrapper_genres .navbar_genres {
   display: flex;
@@ -10556,7 +10631,7 @@ body {
   justify-content: center;
 }
 .wrapper_genres .navbar_genres .genres_content {
-  margin: 5px;
+  margin: 6px;
 }
 .wrapper_genres .navbar_genres .genres_content a {
   font-size: 18px;
@@ -10568,6 +10643,108 @@ body {
   display: block;
   width: 200px;
   height: 100px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+}
+
+main {
+  background: linear-gradient(to bottom, #242456 0%, #42429E 100%);
+}
+
+.brand-wrapper {
+  margin-bottom: 19px;
+}
+.brand-wrapper .logo {
+  height: 37px;
+}
+
+.login-card {
+  border: 0;
+  border-radius: 27.5px;
+  box-shadow: 0 10px 30px 0 rgba(172, 168, 168, 0.43);
+  overflow: hidden;
+}
+.login-card-img {
+  border-radius: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.login-card .card-body {
+  padding: 85px 60px 60px;
+}
+@media (max-width: 422px) {
+  .login-card .card-body {
+    padding: 35px 24px;
+  }
+}
+.login-card-description {
+  font-size: 25px;
+  color: #000;
+  font-weight: normal;
+  margin-bottom: 23px;
+}
+.login-card form {
+  max-width: 326px;
+}
+.login-card .form-control {
+  border: 1px solid #d5dae2;
+  padding: 15px 25px;
+  margin-bottom: 20px;
+  min-height: 45px;
+  font-size: 13px;
+  line-height: 15;
+  font-weight: normal;
+}
+.login-card .form-control::-moz-placeholder {
+  color: #919aa3;
+}
+.login-card .form-control:-ms-input-placeholder {
+  color: #919aa3;
+}
+.login-card .form-control::placeholder {
+  color: #919aa3;
+}
+.login-card .login-btn {
+  padding: 13px 20px 12px;
+  border-radius: 4px;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #fff;
+  margin-bottom: 24px;
+  background: #0C0C1D;
+  transition: all 0.6s;
+}
+.login-card .login-btn:hover {
+  color: #fff;
+  box-shadow: 0 10px 40px 0 #42429E, 0 2px 9px 0 #242456;
+  background: linear-gradient(to bottom, #242456 0%, #42429E 100%);
+  z-index: 10;
+}
+.login-card .forgot-password-link {
+  font-size: 14px;
+  color: #919aa3;
+  margin-bottom: 12px;
+}
+.login-card-footer-text {
+  font-size: 16px;
+  color: #0d2366;
+  margin-bottom: 60px;
+}
+@media (max-width: 767px) {
+  .login-card-footer-text {
+    margin-bottom: 24px;
+  }
+}
+.login-card-footer-nav a {
+  font-size: 14px;
+  color: #919aa3;
 }
 
 .container-check-genre {
