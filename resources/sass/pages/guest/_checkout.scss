@@ -1,11 +1,33 @@
-.input_total{
+body {
+   background-color:#F6F6F6;
+   
+   .input_total{
     
     background-color: transparent;
     border: solid transparent;
+    }
+
+    .style_aligned {
+        width: 200px;
+        text-align: right;
+        padding-right: 10px;
+    }
+
+    .icon-rider {
+        height: 100px;
+        position: relative;
+        animation-name: left_to_right;
+        animation-duration: 5s;
+        animation-delay: 2s;
+    }
+
+    @keyframes left_to_right {
+        0%   {left:0px;}
+        100% {left:100%;}
+      }
+
 }
 
-.style_aligned {
-    width: 200px;
-    text-align: right;
-    padding-right: 10px;
-}
+
+
+

@@ -78,7 +78,7 @@ Booleat | Completa l'Ordine
 
     
 </div>
-    
+<img class="icon-rider" src="{{asset('images/uber-for-food.png')}}">  
 @endsection
 
 

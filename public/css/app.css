@@ -11028,13 +11028,41 @@ padding: 30px;
   color: #031b4e;
 }
 
-.input_total {
+body {
+  background-color: #F6F6F6;
+}
+body .input_total {
   background-color: transparent;
   border: solid transparent;
 }
-
-.style_aligned {
+body .style_aligned {
   width: 200px;
   text-align: right;
   padding-right: 10px;
+}
+body .icon-rider {
+  height: 100px;
+  position: relative;
+  -webkit-animation-name: left_to_right;
+          animation-name: left_to_right;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+@-webkit-keyframes left_to_right {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+@keyframes left_to_right {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: 100%;
+  }
 }
