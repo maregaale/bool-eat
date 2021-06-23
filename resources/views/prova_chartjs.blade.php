@@ -6,13 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+  
+
 
     <title>Document</title>
   </head>
   <body>
     <div>
       
-      <div class="container">
+      <div class="container chart_container" style="width: 400px">
 
         <canvas id="myChart" width="400" height="400"></canvas>
           <script>
