@@ -13,72 +13,76 @@ Booleat | Completa l'Ordine
 
 
 @section('content')
-<div class="container text-center">
-     {{-- errori --}}
-     @if ($errors->any())
-     <div class="alert alert-danger">
-         <ul>
-             @foreach ($errors->all() as $error)
-                 <li>{{ $error }}</li>
-             @endforeach
-         </ul>
-     </div>
-     @endif
-     {{-- /errori --}}
+<div class="body_checkout">
 
- <form id="pay_form" method="POST" action="{{route('guest.checkout.store')}}"  enctype="multipart/form-data"> 
-    @csrf
-    @method('POST')
- 
 
-    <h3 class="mt-5 mb-4">Inserisci ora i tuoi dati per completare l'ordine</h3>
+    <div class="container text-center">
+        {{-- errori --}}
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
+        {{-- /errori --}}
 
     <form id="pay_form" method="POST" action="{{route('guest.checkout.store')}}"  enctype="multipart/form-data"> 
         @csrf
         @method('POST')
-        <div >
-            <label class="style_aligned" for="total">Total</label>
-            <input type="text" id="total" name="total" class="input_total" v-model="sum" readonly="readonly" required>
-        </div>
-        <div >
-            <label class="style_aligned" for="name">Nome</label>
-            <input type="text" id="name" name="name"  placeholder="Inserisci il nome" required>
-        </div>
-        <div >
-            <label class="style_aligned" for="lastname">Cognome</label>
-            <input type="text" id="lastname" name="lastname"  placeholder="Inserisci il cognome" required>
-        </div>
-        <div >
-            <label class="style_aligned" for="email">Email</label>
-            <input type="email"  name="email" id="email" placeholder="Inserisci l'email" required>
-        </div>
-        <div >
-            <label class="style_aligned" for="address">Inserisci l'indirizzo</label>
-            <input type="text"  id="address" name="address" placeholder="Indirizzo">
-        </div>
-        <div>
-            <label class="style_aligned" for="phone_number">Inserisci il numero di telefono</label>
-            <input  type="tel" id="phone_number" name="phone_number">  
-        </div>
     
-    <div id="dropin-container"></div>
-    <input type="submit" class="btn btn-primary mb-2" value="Completa l'ordine">
-    <input type="hidden" id="nonce" name="payment_method_nonce"/>
-      
 
-        {{-- <button class="btn-success" type="submit" ></button> --}}
+        <h3 class="mt-5 mb-4">Inserisci ora i tuoi dati per completare l'ordine</h3>
+
+        <form id="pay_form" method="POST" action="{{route('guest.checkout.store')}}"  enctype="multipart/form-data"> 
+            @csrf
+            @method('POST')
+            <div >
+                <label class="style_aligned" for="total">Total</label>
+                <input type="text" id="total" name="total" class="input_total" v-model="sum" readonly="readonly" required>
+            </div>
+            <div >
+                <label class="style_aligned" for="name">Nome</label>
+                <input type="text" id="name" name="name"  placeholder="Inserisci il nome" required>
+            </div>
+            <div >
+                <label class="style_aligned" for="lastname">Cognome</label>
+                <input type="text" id="lastname" name="lastname"  placeholder="Inserisci il cognome" required>
+            </div>
+            <div >
+                <label class="style_aligned" for="email">Email</label>
+                <input type="email"  name="email" id="email" placeholder="Inserisci l'email" required>
+            </div>
+            <div >
+                <label class="style_aligned" for="address">Inserisci l'indirizzo</label>
+                <input type="text"  id="address" name="address" placeholder="Indirizzo">
+            </div>
+            <div>
+                <label class="style_aligned" for="phone_number">Inserisci il numero di telefono</label>
+                <input  type="tel" id="phone_number" name="phone_number">  
+            </div>
+        
+        <div id="dropin-container"></div>
+        <input type="submit" class="btn btn-primary mb-2" value="Completa l'ordine">
+        <input type="hidden" id="nonce" name="payment_method_nonce"/>
+        
+
+            {{-- <button class="btn-success" type="submit" ></button> --}}
+
+            
+            
+
+            
+
+            
+        </form>
 
         
-        
-
-        
-
-        
-    </form>
-
-    
+    </div>
+    <img class="icon-rider" src="{{asset('images/uber-for-food.png')}}">  
 </div>
-<img id="delivery-boy" class="icon-rider icon-rider_btn" src="{{asset('images/uber-for-food.png')}}">  
 @endsection
 
 

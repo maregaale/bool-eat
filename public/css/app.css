@@ -11028,20 +11028,20 @@ padding: 30px;
   color: #031b4e;
 }
 
-body {
+.body_checkout {
   background-color: #F6F6F6;
   overflow: hidden;
 }
-body .input_total {
+.body_checkout .input_total {
   background-color: transparent;
   border: solid transparent;
 }
-body .style_aligned {
+.body_checkout .style_aligned {
   width: 200px;
   text-align: right;
   padding-right: 10px;
 }
-body .icon-rider {
+.body_checkout .icon-rider {
   height: 100px;
   position: relative;
   -webkit-animation-name: left_to_right;
@@ -11050,6 +11050,8 @@ body .icon-rider {
           animation-duration: 5s;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 @-webkit-keyframes left_to_right {
   0% {
