@@ -50,7 +50,7 @@
       <h3 class="text-right">Carrello</h3>
       <hr>
       <div class="elements_container">
-        <div>
+        <div class="input_cart">
           
           <input v-on:change="summatory()" v-for="(namePlate, index) in namePlatesShow" type="number" min=1 placeholder="quantity" v-model.number="quantity[index]" >
 
@@ -62,7 +62,7 @@
           <p v-for="price in pricesShow">@{{price}} &euro;</p>
         </div>
         <div class="button">
-          <button v-on:click="removeCartElement(index); removePrice(index, price)" v-for="(price, index) in pricesShow" v-if="namePlates.length != 0" class="btn btn-danger">Elimina</button>
+          <button v-on:click="removeCartElement(index); removePrice(index, price)" v-for="(price, index) in pricesShow" v-if="namePlates.length != 0" class="btn btn-danger"><i class="fas fa-minus"></i></button>
         </div>        
       </div>
 
