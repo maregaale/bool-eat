@@ -10278,23 +10278,6 @@ body {
     width: 60px;
   }
 }
-.main_nav_home .text_icon_nav_top h2 {
-  font-weight: bold;
-  font-size: 30px;
-  color: #004466;
-  font-style: italic;
-  vertical-align: middle;
-}
-@media screen and (max-width: 992px) {
-  .main_nav_home .text_icon_nav_top h2 {
-    font-size: 22px;
-  }
-}
-@media screen and (max-width: 550px) {
-  .main_nav_home .text_icon_nav_top {
-    display: none;
-  }
-}
 .main_nav_home img {
   margin: 10px 0 10px 30px;
 }
@@ -10305,11 +10288,6 @@ body {
   display: none;
   font-size: 28px;
   color: coral;
-}
-@media screen and (max-width: 768px) {
-  .main_nav_home .nav_top_right .hamburger_nav {
-    display: block;
-  }
 }
 .main_nav_home .button_card_menu {
   padding: 10px 25px;
@@ -10336,12 +10314,19 @@ body {
     padding: 5px 15px;
     font-size: 16px;
   }
-  .main_nav_home .button_card_menu i {
-    font-size: 12px;
-  }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 550px) {
   .main_nav_home .button_card_menu {
+    padding: 5px 10px 5px 16px;
+    font-size: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+  }
+  .main_nav_home .button_card_menu i {
+    font-size: 22px;
+  }
+  .main_nav_home .button_card_menu span {
     display: none;
   }
 }
@@ -10379,6 +10364,7 @@ body {
   height: 600px;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 @media screen and (max-width: 992px) {
   .jumbotron_wrapper {
@@ -10397,6 +10383,7 @@ body {
 }
 
 .jumbotron_content {
+  font-family: "Vollkorn", serif;
   width: 100%;
   position: absolute;
   top: 50%;
@@ -10410,7 +10397,7 @@ body {
 }
 .jumbotron_content h2 {
   font-weight: bold;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 600;
   color: #000;
 }
@@ -10597,6 +10584,11 @@ body {
   background-size: cover;
   height: 300px;
 }
+.jumbotron_bottom h2 {
+  font-size: 34px;
+  font-weight: bold;
+  color: #00334d;
+}
 .jumbotron_bottom input {
   height: 40px;
   width: 200px;
@@ -10631,7 +10623,7 @@ body {
   justify-content: center;
 }
 .wrapper_genres .navbar_genres .genres_content {
-  margin: 6px;
+  margin: 5px;
 }
 .wrapper_genres .navbar_genres .genres_content a {
   font-size: 18px;

@@ -20,7 +20,7 @@
         <div class="jumbotron_content text-white">
              <img src="" alt="">
             <h1 class="mb-3">Benvenuto su Booleat</h1>
-            <h2 class="mb-3">Scopri i nostri ristoranti!</h2>
+            <h2 class="mb-3">Affidati al top del top, scopri i nostri ristoranti!</h2>
         </div>
       </div>
     </div>
@@ -48,8 +48,7 @@
     <div class="text-center jumbotron_bottom">
       <div class="d-flex justify-content-center align-items-center ">
         <div class="text-white mt-5">
-            <h1 class="mb-3">Benvenuto su Booleat</h1>
-            <h4 class="mb-3">cerca e ordina!</h4>
+            <h2 class="mb-4">Cerca e ordina!</h2>
             {{-- Search names --}}
             <input  type="text" placeholder="Nome ristorante" value="" v-model="restaurantName">
             <button class="btn btn-outline-light btn-success btn-lg" type="button" name="button" v-on:click="searchName">Search</button>
