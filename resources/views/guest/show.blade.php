@@ -34,7 +34,7 @@
             <p class="font-weight-bold">{{$plate->price}} &euro;</p>
             
             <span v-on:click.once="removePrevCart({{ json_encode($plate->name) }}, {{ json_encode($plate->price) }}, {{ json_encode($plate->user_id) }}); totalPrice({{ json_encode($plate->price) }})">
-              <i class="fas fa-cart-arrow-down"></i> Aggiungi al carrello
+              <i class="fas fa-cart-arrow-down"></i> <span class="add_cart_text">Aggiungi al carrello</span> 
             </span>
 
             

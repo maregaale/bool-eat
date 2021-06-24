@@ -11153,6 +11153,7 @@ padding: 30px;
   justify-content: space-between;
   margin: 0 auto;
   padding: 0 20px;
+  height: calc(100vh - 450px);
 }
 #cart .menu {
   width: 50%;
@@ -11203,6 +11204,16 @@ padding: 30px;
   padding: 8px;
   border-radius: 5px;
   cursor: pointer;
+}
+@media (min-width: 1200px) {
+  #cart .menu .wrapper_plate .restaurant_plate .info-plate span .add_cart_text {
+    display: none;
+  }
+}
+@media (min-width: 1400px) {
+  #cart .menu .wrapper_plate .restaurant_plate .info-plate span .add_cart_text {
+    display: inline;
+  }
 }
 #cart .menu .wrapper_plate .restaurant_plate .img-plate {
   width: 40%;
@@ -11256,7 +11267,7 @@ padding: 30px;
 #cart .shopping_cart .elements_container p {
   margin: 0 !important;
   white-space: nowrap;
-  font-size: 16px;
+  font-size: 20px;
   min-height: 30px;
   padding-top: 3px;
   align-self: center;
@@ -11296,6 +11307,7 @@ padding: 30px;
 }
 #cart .shopping_cart .checkout button a {
   color: #fff;
+  font-size: 20px;
 }
 
 .footer_wrapper {
