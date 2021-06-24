@@ -16,6 +16,7 @@
  
      .icon-rider {
          height: 100px;
+         visibility: hidden;
          position: relative;
          animation-name: left_to_right;
          animation-duration: 5s;
@@ -24,8 +25,8 @@
      }
  
      @keyframes left_to_right {
-         0%   {left:0%;}
-         100% {left:100%;}
+         0%   {visibility: visible; left:0%;}
+         100% {visibility: visible; left:100%;}
        }
  
  }

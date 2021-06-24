@@ -11043,6 +11043,7 @@ padding: 30px;
 }
 .body_checkout .icon-rider {
   height: 100px;
+  visibility: hidden;
   position: relative;
   -webkit-animation-name: left_to_right;
           animation-name: left_to_right;
@@ -11055,17 +11056,21 @@ padding: 30px;
 }
 @-webkit-keyframes left_to_right {
   0% {
+    visibility: visible;
     left: 0%;
   }
   100% {
+    visibility: visible;
     left: 100%;
   }
 }
 @keyframes left_to_right {
   0% {
+    visibility: visible;
     left: 0%;
   }
   100% {
+    visibility: visible;
     left: 100%;
   }
 }
