@@ -89,6 +89,10 @@
               <div class="brand-wrapper">
                 <img src="{{asset('images/bool_eat.png')}}" alt="logo" class="logo">
               </div>
+
+
+              <a class="homebutton anchor-link" href="{{ url('/') }}">Torna alla home</a>
+
               <p class="login-card-description">Accedi al tuo account</p>
               <form  method="POST" action="{{ route('login') }}">
                 @csrf
@@ -121,12 +125,12 @@
 
                   <input name="login" id="login" class="btn btn-block login-btn mb-4" type="submit" value="{{ __('Login') }}">
                     @if (Route::has('password.request'))
-                    <a href="{{ route('password.request') }}" class="forgot-password-link">{{ __('Password Dimenticata?') }}</a>
+                    <a href="{{ route('password.request') }}" class="forgot-password-link anchor-alert">{{ __('Password Dimenticata?') }}</a>
 
                     @endif
 
                 </form>
-                <p class="login-card-footer-text">Non hai un account? <a href="{{ route('register') }}" class="text-reset">Registrati qui</a></p>
+                <p class="login-card-footer-text ">Non hai un account? <a href="{{ route('register') }}" class="anchor-link">Registrati qui</a></p>
                 {{-- <nav class="login-card-footer-nav">
                   <a href="#!">Terms of use.</a>
                   <a href="#!">Privacy policy</a>
