@@ -67,16 +67,6 @@ Booleat | Completa l'Ordine
         <div id="dropin-container"></div>
         <input type="submit" class="btn btn-primary mb-2" value="Completa l'ordine">
         <input type="hidden" id="nonce" name="payment_method_nonce"/>
-        
-
-            {{-- <button class="btn-success" type="submit" ></button> --}}
-
-            
-            
-
-            
-
-            
         </form>
 
         

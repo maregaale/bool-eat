@@ -4,38 +4,48 @@ new Vue ({
     prices: [],
     usersId: [],
     namePlates: [],
+    namePlatesShow: [],
+    pricesShow: [],
+
     sum: 0,
+    quantity: [],
 
   },
 
   mounted() {
-    
     this.namePlates = JSON.parse(localStorage.getItem("namePlates")) || [],
-    this.prices = JSON.parse(localStorage.getItem("prices")) || []
+    this.namePlatesShow = JSON.parse(localStorage.getItem("namePlatesShow")) || [],
+    this.prices = JSON.parse(localStorage.getItem("prices")) || [],
+    this.pricesShow = JSON.parse(localStorage.getItem("pricesShow")) || [],
     this.usersId = JSON.parse(localStorage.getItem("usersId")) || []
-    this.sum = JSON.parse(localStorage.getItem("sum")) || []
-    
-    this.usersId = []
-    this.prices = []
-    this.namePlates = []
-    this.sum = 0
+  
+    this.quantity = JSON.parse(localStorage.getItem("quantity")) || []
 
-    
+    this.sum = JSON.parse(localStorage.getItem("sum")) || []
   },
   
   watch: {
-    namePlates(newValue, oldValue) {
-      localStorage.setItem("namePlates", JSON.stringify(newValue));
+    namePlates([], oldValue) {
+      localStorage.setItem("namePlates", JSON.stringify([]));
     },
-    prices(newValue, oldValue) {
-      localStorage.setItem("prices", JSON.stringify(newValue));
+    namePlatesShow([], oldValue) {
+      localStorage.setItem("namePlatesShow", JSON.stringify([]));
     },
-    usersId(newValue, oldValue) {
-      localStorage.setItem("usersId", JSON.stringify(newValue));
+    pricesShow([], oldValue) {
+      localStorage.setItem("pricesShow", JSON.stringify([]));
     },
-    sum(newValue, oldValue) {
-      localStorage.setItem("sum", JSON.stringify(newValue));
-    }
+    prices([], oldValue) {
+      localStorage.setItem("prices", JSON.stringify([]));
+    },
+    usersId([], oldValue) {
+      localStorage.setItem("usersId", JSON.stringify([]));
+    },
+    sum( newValue , oldValue) {
+      localStorage.setItem("sum", 0);
+    },
+    quantity([], oldValue) {
+      localStorage.setItem("quantity", JSON.stringify([]));
+    },
   }
 
 });
