@@ -10257,6 +10257,28 @@ body {
   background-color: #A2536C;
 }
 
+.fullwidth {
+  width: 100%;
+}
+
+.anchor-link {
+  text-decoration: none;
+  color: grey;
+}
+.anchor-link:hover {
+  text-decoration: none;
+  color: #0E7C7B;
+}
+
+.anchor-alert {
+  text-decoration: none;
+  color: #E1B03D;
+}
+.anchor-alert:hover {
+  text-decoration: none;
+  color: #0E7C7B;
+}
+
 .main_nav_home {
   height: 60px;
   line-height: 60px;

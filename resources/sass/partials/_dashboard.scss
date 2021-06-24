@@ -356,3 +356,29 @@ body{
     background-color: $db_red;
 
 }
+
+.fullwidth {
+    width: 100%;    
+}
+
+.anchor-link{
+    text-decoration: none; 
+    color: grey;
+    &:hover {
+        text-decoration: none; 
+        color: $db_green;
+    }
+}
+
+.anchor-alert {
+    
+    text-decoration: none; 
+    color: $db_yellow;
+
+    &:hover {
+        
+        text-decoration: none; 
+        color: $db_green;
+    }
+
+}

@@ -5,47 +5,54 @@
 @endsection
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
 
+<main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
+    <div class="container ">
+        <div class="card register-card ">
+            <div class="row no-gutters ">
                 <div class="card-body">
+
+
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
 
-                    <form method="POST" action="{{ route('password.email') }}">
-                        @csrf
+                    <a class="homebutton anchor-link" href="{{ url('/') }}">Torna alla home</a>
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+                    <p class="login-card-description">{{ __('Reset Password') }}</p>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
+                    <form method="POST" action="{{ route('password.email') }}" >
+                      @csrf
+
+
+      
+                            {{-- REGISTER --}}
+                            <div class="form-group fullwidth">
+      
+                                <label for="email" class="col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+
+                                <input id="email" type="email" class=" form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="Inserisci il tuo nome">
+                                
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                             </div>
-                        </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Send Password Reset Link') }}
-                                </button>
-                            </div>
-                        </div>
+                            <input name="login" id="login" class="btn btn-block login-btn mb-4" type="submit" value="{{ __('Send Password Reset Link') }}">
+
                     </form>
+      
+
                 </div>
             </div>
         </div>
     </div>
-</div>
+</main>
+
+
 @endsection

@@ -19,18 +19,18 @@
                 <img src="{{asset('images/bool_eat.png')}}" alt="logo" class="logo">
               </div> --}}
 
-                <div class="d-flex justify-content-start ">
+                {{-- <div class="d-flex justify-content-start ">
                     
                         <button type="submit" class="form-group mb-1 btn">
-                            <a class="homebutton" href="{{ url('/') }}">Torna alla home</a>
-                        </button>
-    
+                        </button>   
                     
-                </div>
+                </div> --}}
 
 
+               <a class="homebutton anchor-link" href="{{ url('/') }}">Torna alla home</a>
 
               <p class="login-card-description">Registrati</p>
+
               <form method="POST" action="{{ route('register') }}" >
                 @csrf
 
