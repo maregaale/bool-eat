@@ -36,7 +36,9 @@ Route::namespace('Api')->group(function () {
 
     Route::get('/vegan' , 'RestaurantController@veganPlates');
 
-    Route::get('/payment/done' , 'PaymentController@apiPayment');
+    //Route::get('/payment/done' , 'PaymentController@apiPayment');
+
+    Route::get('/orders/{id}', 'RestaurantController@orders');
 
 });
 

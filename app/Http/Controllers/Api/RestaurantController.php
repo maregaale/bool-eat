@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Genre;
 use App\Http\Controllers\Controller;
+use App\Order;
 use App\Plate;
 use App\User;
 use Illuminate\Http\Request;
@@ -66,6 +67,32 @@ class RestaurantController extends Controller
         $vegan_plates = Plate::where('vegan', 1)->get();
         //Response in Json
         return response()->json($vegan_plates);
+    }
+
+
+
+
+    public function orders($id)
+    {
+        $restaurant = User::where('id', $id)->firstOrFail();
+
+        $allOrders = Order::all();
+
+        $orders = [];
+    
+        foreach ($allOrders as $order) {
+            
+          foreach ($order->plates as $plate) {
+    
+            if ($plate->user_id === $restaurant->id && !in_array($order, $orders)) {
+              
+                $orders[] = $order;
+    
+            }
+          }
+        }
+    
+        return response()->json($orders);
     }
 
 
