@@ -113,7 +113,7 @@
 
 
                               <tr>
-                                <td class="dashboard_right-table-img"><img src="{{$plate->image}}" alt="{{$plate->title}}" style=""></td> 
+                                <td class="dashboard_right-table-img"><img src="{{ asset('storage/' . $plate->image )}}" alt="{{$plate->name}}" style=""></td> 
 
                                 <td class="dashboard_right-table-name"><p>{{$plate->name}}</p></td>
 
