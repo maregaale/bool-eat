@@ -109,7 +109,7 @@
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
-                @enderror
+                    @enderror
                   </div>
                   <div class="form-check mb-3">
                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -117,7 +117,7 @@
                     <label class="form-check-label" for="remember">
                         {{ __('Ricordami') }}
                     </label>
-                </div>
+                    </div>
 
                   <input name="login" id="login" class="btn btn-block login-btn mb-4" type="submit" value="{{ __('Login') }}">
                     @if (Route::has('password.request'))
