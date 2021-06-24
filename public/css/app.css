@@ -11149,14 +11149,25 @@ padding: 30px;
 
 #cart {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
   justify-content: space-between;
   margin: 0 auto;
   padding: 0 20px;
-  height: calc(100vh - 450px);
 }
-#cart .menu {
-  width: 50%;
+@media (min-width: 700px) {
+  #cart {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1400px) and (min-height: 946px) {
+  #cart {
+    height: calc(100vh - 470px);
+  }
+}
+@media (min-width: 700px) {
+  #cart .menu {
+    width: 50%;
+  }
 }
 #cart .menu h1 {
   color: #004466;
@@ -11171,7 +11182,7 @@ padding: 30px;
   flex-wrap: wrap;
 }
 #cart .menu .wrapper_plate .restaurant_plate {
-  width: calc((100% / 2) - 20px);
+  width: 100%;
   display: flex;
   justify-content: space-between;
   border-radius: 10px;
@@ -11181,6 +11192,11 @@ padding: 30px;
   background-color: #fff;
   box-shadow: -1px 2px 10px -3px rgba(0, 0, 0, 0.74);
 }
+@media (min-width: 1200px) {
+  #cart .menu .wrapper_plate .restaurant_plate {
+    width: calc((100% / 2) - 20px);
+  }
+}
 #cart .menu .wrapper_plate .restaurant_plate button {
   width: 30px;
   height: 30px;
@@ -11188,8 +11204,10 @@ padding: 30px;
   display: inline-block;
   padding: 5px;
 }
-#cart .menu .wrapper_plate .restaurant_plate .info-plate {
-  width: 60%;
+@media (min-width: 1400px) and (min-height: 946px) {
+  #cart .menu .wrapper_plate .restaurant_plate .info-plate {
+    width: 60%;
+  }
 }
 #cart .menu .wrapper_plate .restaurant_plate .info-plate h3 {
   font-size: 18px;
@@ -11205,16 +11223,6 @@ padding: 30px;
   border-radius: 5px;
   cursor: pointer;
 }
-@media (min-width: 1200px) {
-  #cart .menu .wrapper_plate .restaurant_plate .info-plate span .add_cart_text {
-    display: none;
-  }
-}
-@media (min-width: 1400px) {
-  #cart .menu .wrapper_plate .restaurant_plate .info-plate span .add_cart_text {
-    display: inline;
-  }
-}
 #cart .menu .wrapper_plate .restaurant_plate .img-plate {
   width: 40%;
 }
@@ -11223,13 +11231,32 @@ padding: 30px;
   border-radius: 10px;
 }
 #cart .shopping_cart {
-  width: 50%;
-  padding: 40px;
   border-radius: 10px;
   min-height: 200px;
 }
+@media (min-width: 700px) {
+  #cart .shopping_cart {
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  #cart .shopping_cart {
+    padding: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  #cart .shopping_cart {
+    padding: 40px;
+  }
+}
 #cart .shopping_cart h3 {
   font-weight: bold;
+  text-align: center;
+}
+@media (min-width: 700px) {
+  #cart .shopping_cart h3 {
+    text-align: right;
+  }
 }
 #cart .shopping_cart h2 {
   color: #004466;
@@ -11237,7 +11264,7 @@ padding: 30px;
 }
 #cart .shopping_cart .elements_container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 #cart .shopping_cart .elements_container .plus {
@@ -11267,17 +11294,36 @@ padding: 30px;
 #cart .shopping_cart .elements_container p {
   margin: 0 !important;
   white-space: nowrap;
-  font-size: 20px;
+  font-size: 17px;
   min-height: 30px;
   padding-top: 3px;
   align-self: center;
 }
+@media (min-width: 1200px) {
+  #cart .shopping_cart .elements_container p {
+    font-size: 20px;
+  }
+}
 #cart .shopping_cart .elements_container .name {
-  width: 50%;
   min-height: 30px;
+}
+@media (min-width: 992px) {
+  #cart .shopping_cart .elements_container .name {
+    width: 50%;
+  }
 }
 #cart .shopping_cart .elements_container .price {
   min-height: 30px;
+}
+@media (min-width: 700px) {
+  #cart .shopping_cart .elements_container .price {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  #cart .shopping_cart .elements_container .price {
+    display: inline-block;
+  }
 }
 #cart .shopping_cart .elements_container .button {
   width: 50px;
@@ -11295,6 +11341,12 @@ padding: 30px;
   align-items: center;
   justify-content: center;
   margin: 3px 0;
+}
+#cart .shopping_cart .elements_container .button button .trash_text {
+  display: none;
+}
+#cart .shopping_cart .elements_container .button button .trash {
+  display: inline-block;
 }
 #cart .shopping_cart .checkout {
   display: flex;

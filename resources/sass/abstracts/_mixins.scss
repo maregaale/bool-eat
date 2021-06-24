@@ -48,6 +48,9 @@
 @mixin small {
     @media (min-width: 576px) { @content; }
   }
+@mixin small_medium {
+    @media (min-width: 700px) { @content; }
+  }  
 @mixin medium {
     @media (min-width: 768px) { @content; }
   }
@@ -58,5 +61,5 @@
     @media (min-width: 1200px) { @content; }
   }
 @mixin extra_extra_large {
-    @media (min-width: 1400px) { @content; }
+    @media (min-width: 1400px) and (min-height: 946px) { @content; }
   }

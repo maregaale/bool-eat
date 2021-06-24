@@ -34,7 +34,7 @@
             <p class="font-weight-bold">{{$plate->price}} &euro;</p>
             
             <span v-on:click.once="removePrevCart({{ json_encode($plate->name) }}, {{ json_encode($plate->price) }}, {{ json_encode($plate->user_id) }}); totalPrice({{ json_encode($plate->price) }})">
-              <i class="fas fa-cart-arrow-down"></i> <span class="add_cart_text">Aggiungi al carrello</span> 
+              <i class="fas fa-cart-arrow-down"></i> Aggiungi al carrello 
             </span>
 
             
@@ -53,7 +53,7 @@
     @if (count($user->plates) > 0)
     <div class="shopping_cart">
       
-      <h3 class="text-right">Carrello</h3>
+      <h3>Carrello</h3>
       <hr>
       <div class="elements_container">
 
@@ -85,7 +85,7 @@
         </div>
 
         <div class="button">
-          <button v-on:click="removeCartElement(index); removePrice(index, price)" v-for="(price, index) in pricesShow" v-if="namePlates.length != 0" class="btn btn-danger">Elimina</i></button>
+          <button v-on:click="removeCartElement(index); removePrice(index, price)" v-for="(price, index) in pricesShow" v-if="namePlates.length != 0" class="btn btn-danger"><span class="trash_text">Elimina</span><i class="fas fa-trash trash"></i></button>
         </div>        
       </div>
 
