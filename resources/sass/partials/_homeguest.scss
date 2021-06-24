@@ -17,25 +17,6 @@
             width: 60px;
         }
     }
-
-    .text_icon_nav_top{
-        
-        h2{
-            font-weight: bold;
-            font-size: 30px;
-            color: #004466;
-            font-style: italic;
-            vertical-align: middle;
-
-            @media screen and( max-width: 992px){
-                font-size: 22px;
-            }
-        }
-
-        @media screen and( max-width: 550px){
-            display: none;
-        }
-    }    
     
     img{
         margin: 10px 0 10px 30px;
@@ -48,10 +29,6 @@
             display: none;
             font-size: 28px;
             color: coral;
-
-            @media screen and( max-width: 768px){
-                display: block;
-            }
         }
     }
 
@@ -81,14 +58,22 @@
         @media screen and( max-width: 992px){
             padding: 5px 15px;
             font-size: 16px;
-
-            i{
-                font-size: 12px;
-            }
         }
 
-          @media screen and( max-width: 768px){
-              display: none;
+          @media screen and( max-width: 550px){
+            padding: 5px 10px 5px 16px;
+            font-size: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            margin-left: 5px;
+
+            i{
+                font-size: 22px;
+            }
+
+            span{
+                display: none;
+            }
           }
       }
 
@@ -132,6 +117,7 @@
     height: 600px;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 
     @media screen and( max-width: 992px){
         height: 400px;
@@ -148,6 +134,7 @@
 }
 
 .jumbotron_content{
+    font-family: 'Vollkorn', serif;
     width: 100%;
     position: absolute;
     top: 50%;
@@ -163,7 +150,7 @@
 
     h2{
         font-weight: bold;
-        font-size: 40px;
+        font-size: 30px;
         font-weight: 600;
         color: #000;
     }
@@ -380,6 +367,12 @@
     background-size: cover;
     height: 300px;
 
+    h2{
+        font-size: 34px;
+        font-weight: bold;
+        color: #00334d;
+    }
+
     input{
         height: 40px;
         width: 200px;
@@ -418,7 +411,7 @@
         justify-content: center;
         
         .genres_content{
-            margin: 6px;
+            margin: 5px;
 
             a{
                 font-size: 18px;
