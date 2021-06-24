@@ -18,11 +18,13 @@ new Vue({
     addStorage: function (params) {
       
       this.quantity = this.quantity;
+
     },
 
     adding: function (index) {
       this.show = false;
       
+
       this.quantity[index] = this.quantity[index] + 1;
       
       this.show = true;
@@ -82,6 +84,7 @@ new Vue({
       for (let i = 0; i < this.prices.length; i++) {
         this.sum += this.prices[i];
       }
+
     },
     
     addElementsToCart: function (name, price) {
@@ -93,12 +96,25 @@ new Vue({
       
       this.show = true;
 
+      
+      
+      for (let i = 0; i < this.usersId.length; i++) {
+        if (this.usersId[i] != index) {
+          
+          this.quantity = [];
+          
+        }
+      }
+      // this.quantity.push(1);
+
       this.usersId.push(index);
+
 
       if (this.namePlatesShow.includes(name)) {
         return;
       } else {
         this.quantity.push(1);
+        
       }
       
       for (let i = 0; i < this.usersId.length; i++) {
@@ -142,6 +158,7 @@ new Vue({
         }
       }
 
+
       this.display = true;
     }, 
 
@@ -150,6 +167,7 @@ new Vue({
       this.namePlates.splice(index, 1);
       this.namePlatesShow.splice(index, 1);
       this.quantity.splice(index, 1);
+      this.usersId.splice(index, 1);
     },
 
     removePrice: function (index, price) {
@@ -166,12 +184,15 @@ new Vue({
   mounted() {
     this.usersId = []
 
-    this.quantity = JSON.parse(localStorage.getItem("quantity")) || [],
+    
     this.namePlates = JSON.parse(localStorage.getItem("namePlates")) || [],
     this.namePlatesShow = JSON.parse(localStorage.getItem("namePlatesShow")) || [],
     this.prices = JSON.parse(localStorage.getItem("prices")) || [],
     this.pricesShow = JSON.parse(localStorage.getItem("pricesShow")) || [],
     this.usersId = JSON.parse(localStorage.getItem("usersId")) || []
+
+
+    this.quantity = JSON.parse(localStorage.getItem("quantity")) || []
 
     for (let i = 0; i < this.pricesShow.length; i++) {
 
@@ -204,6 +225,7 @@ new Vue({
     quantity(newValue, oldValue) {
       localStorage.setItem("quantity", JSON.stringify(newValue));
     },
+    
   }
 });
 
