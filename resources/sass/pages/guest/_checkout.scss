@@ -1,0 +1,35 @@
+.body_checkout {
+    background-color:#F6F6F6;
+    overflow: hidden;
+    
+    .input_total{
+     
+     background-color: transparent;
+     border: solid transparent;
+     }
+ 
+     .style_aligned {
+         width: 200px;
+         text-align: right;
+         padding-right: 10px;
+     }
+ 
+     .icon-rider {
+         height: 100px;
+         visibility: hidden;
+         position: relative;
+         animation-name: left_to_right;
+         animation-duration: 5s;
+         animation-delay: 2s;
+         animation-iteration-count: infinite;
+     }
+ 
+     @keyframes left_to_right {
+         0%   {visibility: visible; left:0%;}
+         100% {visibility: visible; left:100%;}
+       }
+ 
+ }
+
+
+
