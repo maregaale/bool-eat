@@ -1,38 +1,37 @@
 <footer>
     <div class="footer_wrapper">
-        <hr class="mt-5">
+        
+        
 
-        <section>
-            <h3>Crediti</h3>
-            <ul>
-                <li>wfwe</li>
-                <li>wfwf</li>
-                <li>wfw</li>
-                <li>wff</li>
-                <li>wffwff</li>
-            </ul>
-        </section>
-
-        <section>
-            <h3>Contatti</h3>
-            <ul>
-                <li>wfwe</li>
-                <li>wfwf</li>
-                <li>wfw</li>
-                <li>wff</li>
-                <li>wffwff</li>
-            </ul>
-        </section>
-
-        <section>
-            <h3>Lavora con noi</h3>
-            <ul>
-                <li>wfwe</li>
-                <li>wfwf</li>
-                <li>wfw</li>
-                <li>wff</li>
-                <li>wffwff</li>
-            </ul>
-        </section>
+        <div class="footer_content">
+            <div class="img_footer">
+                <img src="{{asset('images/bool_eat.png')}}" alt="">
+            </div>
+            <div class="content_list">
+                <ul class="footer_list">
+                    <h3>Bool Eat social</h3>
+                    <li><a href=""><i class="mb-3 fab fa-facebook-square"></i></a></li>
+                    <li><a href=""><i class="mb-3 fab fa-instagram-square"></i></a></li>
+                    <li><a href=""><i class="mb-3 fab fa-linkedin"></i></a></li>
+                    <li><a href=""><i class="mb-3 fab fa-youtube-square"></i></a></li>
+                </ul>
+                <ul class="footer_list">
+                    <h3>About Us</h3>
+                    <li><a href="">Alessandro Marega</a></li>
+                    <li><a href="">Daniele Lai</a></li>
+                    <li><a href="">Gianluca Forgia</a></li>
+                    <li><a href="">Giorgio Rindonone</a></li>
+                    <li><a href="">Gianluigi Spisto</a></li>
+                </ul>
+                <ul class="footer_list">
+                    <h3>Return</h3>
+                    <li><a href="http://localhost:8000">Home <i class="fas fa-arrow-circle-up"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="credits">
+            <p>Bool Eat è un marchio registrato dal Team #2</p>
+        </div>
     </div>
 </footer>
