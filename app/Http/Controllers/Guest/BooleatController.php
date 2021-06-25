@@ -8,6 +8,7 @@ use App\Order;
 use App\Plate;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BooleatController extends Controller
 {
@@ -25,9 +26,10 @@ class BooleatController extends Controller
         return view('guest.show', ['user' => $user , 'order' => $order]);
     }
 
-    public function chartjs()
+    public function chartjs(User $user)
     {
         $orders = Order::all();
-        return view('prova_chartjs', compact('orders'));
+        $plates = Plate::where('user_id', Auth::id())->get();
+        return view('prova_chartjs', compact('orders', 'user', 'plates'));
     }
 }
