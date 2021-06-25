@@ -1,6 +1,7 @@
 new Vue ({
   el: '#success',
   data: {
+    plates: [],
     prices: [],
     usersId: [],
     namePlates: [],
@@ -13,6 +14,7 @@ new Vue ({
   },
 
   mounted() {
+    this.plates = JSON.parse(localStorage.getItem("plates")) || [],
     this.namePlates = JSON.parse(localStorage.getItem("namePlates")) || [],
     this.namePlatesShow = JSON.parse(localStorage.getItem("namePlatesShow")) || [],
     this.prices = JSON.parse(localStorage.getItem("prices")) || [],
@@ -25,6 +27,9 @@ new Vue ({
   },
   
   watch: {
+    plates([], oldValue) {
+      localStorage.setItem("plates", JSON.stringify([]));
+    },
     namePlates([], oldValue) {
       localStorage.setItem("namePlates", JSON.stringify([]));
     },
