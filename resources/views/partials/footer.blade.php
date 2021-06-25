@@ -1,22 +1,20 @@
 <footer>
     <div class="footer_wrapper">
         
-        
-
         <div class="footer_content">
             <div class="img_footer">
                 <img src="{{asset('images/bool_eat.png')}}" alt="">
             </div>
             <div class="content_list">
-                <ul class="footer_list">
-                    <h3>Bool Eat social</h3>
+                <ul class="footer_list flex_social">
+                    <h4>Bool Eat social</h4>
                     <li><a href=""><i class="mb-3 fab fa-facebook-square"></i></a></li>
                     <li><a href=""><i class="mb-3 fab fa-instagram-square"></i></a></li>
                     <li><a href=""><i class="mb-3 fab fa-linkedin"></i></a></li>
                     <li><a href=""><i class="mb-3 fab fa-youtube-square"></i></a></li>
                 </ul>
                 <ul class="footer_list">
-                    <h3>About Us</h3>
+                    <h4 class="mt-3">About Us</h4>
                     <li><a href="">Alessandro Marega</a></li>
                     <li><a href="">Daniele Lai</a></li>
                     <li><a href="">Gianluca Forgia</a></li>
@@ -24,7 +22,7 @@
                     <li><a href="">Gianluigi Spisto</a></li>
                 </ul>
                 <ul class="footer_list">
-                    <h3>Return</h3>
+                    <h4 class="mt-3">Return</h4>
                     <li><a href="http://localhost:8000">Home <i class="fas fa-arrow-circle-up"></i></a></li>
                 </ul>
             </div>
