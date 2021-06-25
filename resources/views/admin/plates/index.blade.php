@@ -197,6 +197,8 @@
                                         </form>  
                                         {{-- /form della delete --}} 
                                         {{-- <a href="" v-on:click="showModal = true" data-id="{{$plate->id}}" ><i class="fas fa-trash-alt text-danger"></i></i></a> --}}
+                                         {{-- Bottone che richiama la modale  --}}
+                                    <button data-toggle="modal" data-target="#deleteModal-{{$plate->id}}" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
                                       </span>
                                     </td>
                                   </tr>                    
