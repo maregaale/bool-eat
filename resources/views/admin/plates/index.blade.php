@@ -137,7 +137,7 @@
                                     </form>
                                     {{-- /form della delete --}}
                                     {{-- Bottone che richiama la modale  --}}
-                                    <button data-toggle="modal" data-target="#deleteModal" data-id="{{$plate->id}}" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
+                                    <button data-toggle="modal" data-target="#deleteModal" data-value="{{$plate->id}}" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
                                   </span>
                                 </td>
                               </tr>                    
@@ -198,7 +198,7 @@
                                         {{-- /form della delete --}} 
                                         {{-- <a href="" v-on:click="showModal = true" data-id="{{$plate->id}}" ><i class="fas fa-trash-alt text-danger"></i></i></a> --}}
                                          {{-- Bottone che richiama la modale  --}}
-                                    <button data-toggle="modal" data-target="#deleteModal-{{$plate->id}}" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
+                                    <button data-toggle="modal" data-target="#deleteModal" data-id="{{$plate->id}}" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
                                       </span>
                                     </td>
                                   </tr>                    
@@ -837,13 +837,9 @@
 </div>
 
  <!-- Modal -->
- <div class="modal fade" id="deleteModal-{{$plate->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      {{-- Intestazione form  --}}
-      <form class="d-inline-block" action="{{route('admin.plates.destroy', ['plate' => $plate->id] )}}" method="POST"> 
-        @method('DELETE')
-        @csrf
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Elimina piatto</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -851,17 +847,31 @@
           </button>
         </div>
         <div class="modal-body">
+           {{-- Intestazione form  --}}
+          <form id="deletePlateForm" class="d-inline-block" action="{{route('admin.plates.destroy', ['plate' => $plate->id] )}}" method="POST"> 
+          @method('DELETE')
+          @csrf
           <h5>Confermi di voler eliminare questo piatto?</h5>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-          <button type="submit" class="btn btn-primary">Sì</button>
+          <button type="submit" class="btn btn-primary" name="delete_button">Sì</button>
         </div>
       </form>
     </div>
   </div>
 </div>
 
+
+
+<script>
+$(document).ready(function (e) {
+    $(document).on("click", "#deleteModal", function (e) {
+        var delete_id = $(this).attr('data-value');
+        $('button[name="delete_button"]').val(delete_id);
+    });
+});
+</script>
 @endsection
 
 
