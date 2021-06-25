@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use App\Mail\SendNewMail;
 use App\Order;
 use App\User;
+use App\Plate;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -44,12 +46,25 @@ class OrderController extends Controller
             'total' => 'required', 'numeric',
         ]);
 
-        //dd($request->all());
+        foreach ($request->plates_id as $id) {
+            intval($id);
+        }
+
+    
+            
 
         $data = $request->all();
 
         // $data['total'] = 20;
-        $data['plates'] = [2 , 4];
+        $data['plates'] = $request->plates_id;
+
+        $plates = Plate::find($request->plates_id[0]);
+
+        $restaurant = User::where('id', $plates->user_id)->first();
+
+
+
+
 
         $newOrder = new Order();
         $newOrder->name = $data['name'];

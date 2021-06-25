@@ -1,6 +1,8 @@
 new Vue({
   el: '#cart',
   data: {
+    plates: [],
+    platesId: [],
     namePlatesShow: [],
     pricesShow: [],
     namePlates: [],
@@ -70,8 +72,11 @@ new Vue({
       this.prices.push(price);
     },
     
-    removePrevCart: function (name, price, index) {
-      
+    removePrevCart: function (plate, id, name, price, index) {
+
+      this.plates.push(plate);
+      this.platesId.push(id);
+
       this.show = true;
       
       for (let i = 0; i < this.usersId.length; i++) {
@@ -157,7 +162,9 @@ new Vue({
   mounted() {
     this.usersId = []
 
-    
+    this.plates = JSON.parse(localStorage.getItem("plates")) || [],
+
+    this.platesId = JSON.parse(localStorage.getItem("platesId")) || [],
     this.namePlates = JSON.parse(localStorage.getItem("namePlates")) || [],
     this.namePlatesShow = JSON.parse(localStorage.getItem("namePlatesShow")) || [],
     this.prices = JSON.parse(localStorage.getItem("prices")) || [],
@@ -182,6 +189,12 @@ new Vue({
   },
   
   watch: {
+    plates(newValue, oldValue) {
+      localStorage.setItem("plates", JSON.stringify(newValue));
+    },
+    platesId(newValue, oldValue) {
+      localStorage.setItem("platesId", JSON.stringify(newValue));
+    },
     namePlates(newValue, oldValue) {
       localStorage.setItem("namePlates", JSON.stringify(newValue));
     },

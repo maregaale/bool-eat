@@ -13,10 +13,10 @@ Booleat | Completa l'Ordine
 
 
 @section('content')
-<div class="body_checkout">
+<div  class="body_checkout">
 
 
-    <div class="container text-center">
+    <div  class="container text-center">
         {{-- errori --}}
         @if ($errors->any())
         <div class="alert alert-danger">
@@ -29,9 +29,7 @@ Booleat | Completa l'Ordine
         @endif
         {{-- /errori --}}
 
-    <form id="pay_form" method="POST" action="{{route('guest.checkout.store')}}"  enctype="multipart/form-data"> 
-        @csrf
-        @method('POST')
+    
     
 
         <h3 class="mt-5 mb-4">Inserisci ora i tuoi dati per completare l'ordine</h3>
@@ -43,6 +41,7 @@ Booleat | Completa l'Ordine
                 <label class="style_aligned" for="total">Total</label>
                 <input type="text" id="total" name="total" class="input_total" v-model="sum" readonly="readonly" required>
             </div>
+            
             <div >
                 <label class="style_aligned" for="name">Nome</label>
                 <input type="text" id="name" name="name"  placeholder="Inserisci il nome" required>
@@ -63,10 +62,18 @@ Booleat | Completa l'Ordine
                 <label class="style_aligned" for="phone_number">Inserisci il numero di telefono</label>
                 <input  type="tel" id="phone_number" name="phone_number">  
             </div>
+
+            {{-- <div  v-for="plate in plates">@{{plate.name}}</div> --}}
+            <div id="plates">
+
+                <input  v-for="plate in plates" type="hidden" v-bind:value="plate.id" name="plates_id[]">
+            </div>
         
-        <div id="dropin-container"></div>
-        <input type="submit" class="btn btn-primary mb-2" value="Completa l'ordine">
-        <input type="hidden" id="nonce" name="payment_method_nonce"/>
+            <div id="dropin-container"></div>
+            <input type="submit" class="btn btn-primary mb-2" value="Completa l'ordine">
+            <input type="hidden" id="nonce" name="payment_method_nonce"/>
+
+        
         </form>
 
         
