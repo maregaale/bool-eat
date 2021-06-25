@@ -197,6 +197,54 @@
         transition: all 0.5s;
         cursor: pointer;
      }
+
+    // @import url('https://fonts.googleapis.com/css?family=Montserrat');
+    // body {
+	//  background-color: #111;
+    // }
+
+    // .title {
+    //     font-family: "Montserrat";
+    //     text-align: center;
+    //     color: #FFF;
+    //     display: flex;
+    //     flex-direction: column;
+    //     align-items: center;
+    //     justify-content: center;
+    //     height: 100vh;
+    //     letter-spacing: 1px;
+    // }
+
+    // h1 {
+    //     background-image: url(https://media1.giphy.com/media/ReqpJ6fApNvOw/200.webp?cid=ecf05e47oufb91xikaejvtwtadtbd71wgbdoty31ih8kerjt&rid=200.webp&ct=g);
+    //     // background-size: cover;
+    //     color: transparent;
+    //     -moz-background-clip: text;
+    //     -webkit-background-clip: text;
+    //     text-transform: uppercase;
+    //     font-size: 120px;
+    //     line-height: .75;
+    //     margin: 10px 0;
+    // }
+
+    // .white-mode {
+    //     text-decoration: none;
+    //     padding: 7px 10px;
+    //     background-color: #122;
+    //     border-radius: 3px;
+    //     color: #FFF;
+    //     transition: .35s ease-in-out;
+    //     position: absolute;
+    //     left: 15px;
+    //     bottom: 15px;
+    //     font-family: "Montserrat";
+    // }
+
+    // .white-mode:hover {
+    //     background-color: #FFF;
+    //     color: #122;
+    // }
+
 }
 
 .container_card {
@@ -216,25 +264,20 @@
  
     .card_restaurant {
         width: calc((100% / 4) - 20px);
-        margin: 10px 10px 30px 10px;
-        -webkit-border-top-left-radius: 30px;
-        -webkit-border-top-right-radius: 30px;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
+        margin: 10px 10px 20px 10px;
         -webkit-box-shadow: -1px 2px 10px -3px rgba(0,0,0,0.74); 
         box-shadow: -1px 2px 10px -3px rgba(0,0,0,0.74);
         
         h4,p,button{
             margin: 8px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
         }
 
         img {
             width: 100%;
-            height: 300px;
-            -webkit-border-top-left-radius: 30px;
-            -webkit-border-top-right-radius: 30px;
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
+            height: 200px;
         }
 
         .card_address{
@@ -251,7 +294,7 @@
             outline: none;
             background-color: #004466;
             border: none;
-            border-radius: 15px;
+            border-radius: 5px;
             box-shadow: 0 9px #999;
             margin-bottom: 20px;
 
@@ -272,13 +315,13 @@
           .button_card_menu:active {
             background-color: #3e8e41;
             box-shadow: 0 5px #666;
-            // transform: translateY(4px);
           }
     }
 
     .card_restaurant {
         position: relative;
         width: calc((100% / 4) - 20px);
+        max-height: 100%;
 
         @media screen and( max-width: 1280px){
             width: calc((100% / 3) - 20px);
@@ -305,11 +348,19 @@
         }
 
         @media screen and( max-width: 768px){
-            width: calc((100% / 1) - 20px);
-            margin: 10px 20px;
-            
+            width: calc((100% / 2) - 20px);
+            margin: 10px;
+
             h4{
                 font-size: 14px;
+            }
+        }
+
+        @media screen and( max-width: 550px){
+            width: 100%;
+
+            h4{
+                font-size: 12px;
             }
         }
       }
@@ -324,10 +375,10 @@
         width: 0;
         height: 100%;
         transition: .5s ease;
-        -webkit-border-top-left-radius: 30px;
-        -webkit-border-top-right-radius: 30px;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
+        // -webkit-border-top-left-radius: 30px;
+        // -webkit-border-top-right-radius: 30px;
+        // border-top-left-radius: 15px;
+        // border-top-right-radius: 15px;
       }
       
       .card_restaurant:hover .overlay {
@@ -360,27 +411,53 @@
 }
 
 .jumbotron_bottom{
-    background-image: url('images/banner_2.webp');
+    // background-image: url('images/banner_2.webp');
+    //background: linear-gradient(to bottom right, #2fac66 23%, #006699 87%);
+    font-family: 'Vollkorn', serif;
     filter: grayscale(44%) opacity(81%);
     -webkit-filter: grayscale(44%) opacity(81%);
     -moz-filter: grayscale(44%) opacity(81%);
     background-size: cover;
-    height: 300px;
+    height: 180px;
 
     h2{
-        font-size: 34px;
+        font-size: 42px;
         font-weight: bold;
-        color: #00334d;
+        color: #004466;
+
+        @media screen and( max-width: 768px){
+            font-size: 26px;
+        }
     }
 
     input{
         height: 40px;
-        width: 200px;
+        width: 400px;
         border: none;
         padding: 5px;
+        vertical-align: middle;
+        background: #e6e6e6;
+
+        &:focus{
+            outline: none;
+        }
+
+        @media screen and( max-width: 768px){
+            width: 200px;
+        }
+    }
+
+    button{
+        vertical-align: middle;
+        height: 40px;
+        padding: 0 20px;
+        background-color: #2fac66;
+        border:none;
+        color:#fff;
+        font-weight: bold;
 
         &:hover{
-            outline: none;
+            background: coral;
         }
     }
 }
@@ -393,6 +470,7 @@
         font-style: italic;
         font-size: 32px;
         color: #004466;
+
         text-align: center;
 
         @media screen and( max-width: 768px){
@@ -423,8 +501,75 @@
             img{
                 display: block;
                 width: 200px;
-                height: 100px;
+                height: 80px;
+
+                &:hover{
+                    filter: grayscale(100%);
+                }
             }
         } 
     }
 }
+
+.card_container_2{
+
+    h2{
+        font-family: 'Vollkorn', serif;
+        font-size: 42px;
+        font-weight: bold;
+        color: #004466;
+
+        @media screen and( max-width: 768px){
+            font-size: 26px;
+        }
+    }
+//     @import url(https://fonts.googleapis.com/css?family=Signika:700,300,600);
+
+//     html, body { height: 100%; }
+//     body { display: flex; justify-content: center; align-items: center; margin:20px 0; text-align:center; background:beige; overflow:hidden; }
+
+//     h1 {
+//     user-select:none;
+//     }
+
+//     h1 span { display:inline-block; animation:float .2s ease-in-out infinite; }
+//     @keyframes float {
+//     0%,100%{ transform:none; }
+//     33%{ transform:translateY(-1px) rotate(-2deg); }
+//     66%{ transform:translateY(1px) rotate(2deg); }
+//     }
+//     .div:hover span { animation:bounce .6s; }
+//     @keyframes bounce {
+//     0%,100%{ transform:translate(0); }
+//     25%{ transform:rotateX(20deg) translateY(2px) rotate(-3deg); }
+//     50%{ transform:translateY(-20px) rotate(3deg) scale(1.1);  }
+//     }
+
+//     span:nth-child(4n) { color:hsl(50, 75%, 55%); text-shadow:1px 1px hsl(50, 75%, 45%), 2px 2px hsl(50, 45%, 45%), 3px 3px hsl(50, 45%, 45%), 4px 4px hsl(50, 75%, 45%); }
+//     span:nth-child(4n-1) { color:hsl(135, 35%, 55%); text-shadow:1px 1px hsl(135, 35%, 45%), 2px 2px hsl(135, 35%, 45%), 3px 3px hsl(135, 35%, 45%), 4px 4px hsl(135, 35%, 45%); }
+//     span:nth-child(4n-2) { color:hsl(155, 35%, 60%); text-shadow:1px 1px hsl(155, 25%, 50%), 2px 2px hsl(155, 25%, 50%), 3px 3px hsl(155, 25%, 50%), 4px 4px hsl(140, 25%, 50%); }
+//     span:nth-child(4n-3) { color:hsl(30, 65%, 60%); text-shadow:1px 1px hsl(30, 45%, 50%), 2px 2px hsl(30, 45%, 50%), 3px 3px hsl(30, 45%, 50%), 4px 4px hsl(30, 45%, 50%); }
+
+//     h1 span:nth-child(2){ animation-delay:.05s; }
+//     h1 span:nth-child(3){ animation-delay:.1s; }
+//     h1 span:nth-child(4){ animation-delay:.15s; }
+//     h1 span:nth-child(5){ animation-delay:.2s; }
+//     h1 span:nth-child(6){ animation-delay:.25s; }
+//     h1 span:nth-child(7){ animation-delay:.3s; }
+//     h1 span:nth-child(8){ animation-delay:.35s; }
+//     h1 span:nth-child(9){ animation-delay:.4s; }
+//     h1 span:nth-child(10){ animation-delay:.45s; }
+//     h1 span:nth-child(11){ animation-delay:.5s; }
+//     h1 span:nth-child(12){ animation-delay:.55s; }
+//     h1 span:nth-child(13){ animation-delay:.6s; }
+//     h1 span:nth-child(14){ animation-delay:.65s; }
+//     h1 span:nth-child(15){ animation-delay:.7s; }
+//     h1 span:nth-child(16){ animation-delay:.75s; }
+//     h1 span:nth-child(17){ animation-delay:.8s; }
+//     h1 span:nth-child(18){ animation-delay:.85s; }
+//     h1 span:nth-child(19){ animation-delay:.9s; }
+//     h1 span:nth-child(20){ animation-delay:.95s; }
+//     h1 span:nth-child(21){ animation-delay:.10s; }
+//     h1 span:nth-child(22){ animation-delay:.105s; }
+}
+
