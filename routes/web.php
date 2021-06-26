@@ -31,8 +31,10 @@ Route::get('/admin/home', 'HomeController@index')->name('home');
 Route::prefix('admin')->name('admin.')->namespace('Admin')->middleware('auth')->group(function () {
    Route::resource('plates', 'PlateController');
    Route::resource('user', 'UserController');
-});
 
+  
+});
+Route::get('/orders/{user}', 'OrderController@orders')->name('orders.index');
 
 // rotta prova chartjs
 Route::get('/chartjs/{user}', 'Guest\BooleatController@chartjs')->name('guest.chartjs');
