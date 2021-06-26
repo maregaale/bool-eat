@@ -40,7 +40,7 @@
             
           </div>
           <div class="img-plate">
-            <img src="{{ $plate->image }}" alt="">
+            <img src="{{ asset('storage/' . $plate->image )}}" alt="{{$plate->name}}" style="">
           </div>
         </div>
       @endforeach

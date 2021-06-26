@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Genre;
 use App\Http\Controllers\Controller;
+use App\Order;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -16,9 +17,10 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(User $user)
     {
-        
+        $orders = Order::all();
+        return view('admin.home', compact('orders', 'user'));
     }
 
     /**

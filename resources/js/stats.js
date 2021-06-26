@@ -1,11 +1,12 @@
 var stats = new Vue({
     el: "#stats",
     data: {
-      orders: [],
-      labels: [],
-      totals: [],
+        orders: [],
+        year: new Date()
     },
     mounted: function() {
+
+
 
 
         // var ctx = document.getElementById('myChart');
@@ -57,7 +58,7 @@ var stats = new Vue({
             "http://localhost:8000/api/orders/" + user_id 
           )
           .then(res => {
-            console.log(res.data);
+            //console.log(res.data);
             this.orders = res.data;
             console.log(this.orders);
             this.orders.forEach(element => {

@@ -192,6 +192,10 @@
                             {{-- box chart--}}
                             <div class="charts_container-row-box-cont-chart">
                                 {{-- sezione top --}}
+
+                                 <div class="" id="stats">
+                                    <canvas id="myChart" width="400" height="400"></canvas>
+                                  </div>
                                 
                             </div>
 
@@ -210,6 +214,10 @@
 
             <script src="https://unpkg.com/vue@next"></script>
             <script src="https://unpkg.com/vue-dragscroll"></script>
+
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
             <script>
                 
     
@@ -238,4 +246,64 @@
        
     
     </div>
+
+    <script>
+        var earnings = [];
+  
+        var myLabels = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre" ];
+  
+        
+  
+        // if ({!! json_encode($user->id) !!}) {
+          
+          for (let i = 0; i < {!! json_encode($user->plates) !!}.length; i++) {
+  
+            console.log({!! json_encode($user->plates) !!}[i])
+            
+          }
+        // }
+  
+        
+        var ctx = document.getElementById('myChart');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                
+                
+                labels: myLabels,
+                datasets: [{
+                    label: 'Guadagno: ',
+                    data: [@if($user->id && count($user->plates) > 0)@foreach($orders as $order) "{{$order->total}}", @endforeach,@endif ],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+      </script>
+
+
 @endsection

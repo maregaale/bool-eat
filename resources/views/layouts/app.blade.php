@@ -45,7 +45,7 @@
 <script src = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script>  
 <script src="assets/js/plugins/moment.min.js"></script>
 <!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
-<script src="assets/js/plugins/bootstrap-datetimepicker.
+<script src="assets/js/plugins/bootstrap-datetimepicker"></script>
 
 </body>
 </html>

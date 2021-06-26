@@ -14,7 +14,13 @@
         @endif
     </div>
     @else
-    <div class="dashbord_left_info logout_btn">
+    <div class="dashboard_left_info">
+ 
+     <div class="dash-link">
+        <a href="{{route('home')}}"><span class="mr-2 "><i class="fas fa-home  fa-2x  mr-2"></i></span><h5>Torna alla Dashboard</h5></a>
+    </div>
+
+    <div class="logout_btn">
         <button class="btn btn-info" href="{{ route('logout') }}"
             onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">
@@ -24,5 +30,6 @@
         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="">
             @csrf
         </form>
+    </div>
     </div>
 @endguest

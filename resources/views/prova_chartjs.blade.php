@@ -49,14 +49,14 @@
       
       var ctx = document.getElementById('myChart');
       var myChart = new Chart(ctx, {
-          type: 'bar',
+          type: 'line',
           data: {
               
               
               labels: myLabels,
               datasets: [{
-                  label: '# of Votes',
-                  data: [@if($user->id)@foreach($orders as $order) "{{$order->total}}", @endforeach,@endif ],
+                  label: 'Guadagno: ',
+                  data: [@if($user->id && count($user->plates) > 0)@foreach($orders as $order) "{{$order->total}}", @endforeach,@endif ],
                   backgroundColor: [
                       'rgba(255, 99, 132, 0.2)',
                       'rgba(54, 162, 235, 0.2)',
