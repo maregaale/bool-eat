@@ -29,7 +29,6 @@ class HomeController extends Controller
     public function index(User $user)
     {
         $plates = Plate::where('user_id', Auth::id())->get();
-        $orders = Order::all();
-        return view('admin.home', compact('plates', 'orders', 'user'));
+        return view('admin.home', compact('plates', 'user'));
     }
 }
