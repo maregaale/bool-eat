@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Plate;
 use App\Genre;
+use App\Order;
 use App\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -34,6 +35,7 @@ class PlateController extends Controller
         $user_id = Auth::id();
         //associamo a questa variabile i piatti che sono associati a quello User
         $plates = Plate::where('user_id', $user_id)->get();
+
 
         return view('admin.plates.index', compact('plates'));
     }

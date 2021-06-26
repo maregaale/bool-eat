@@ -10028,6 +10028,12 @@ body {
   height: 100%;
 }
 
+.dashboard_left_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .dashboard_right {
   min-height: 100vh;
   width: calc(100vw - 350px);

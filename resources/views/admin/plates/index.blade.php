@@ -169,7 +169,7 @@
 
 
                                   <tr>
-                                    <td class="dashboard_right-table-img"><img src="{{$plate->image}}" alt="{{$plate->title}}" style=""></td> 
+                                    <td class="dashboard_right-table-img"><img src="{{ asset('storage/' . $plate->image )}}" alt="{{$plate->name}}" style=""></td> 
 
                                     <td class="dashboard_right-table-name"><p>{{$plate->name}}</p></td>
 
@@ -225,7 +225,7 @@
                                 @if ($plate->scope == 'secondo' | $plate->scope == 'Secondo' | $plate->scope == 'secondi' | $plate->scope == 'Secondi')
 
                                 <tr>
-                                  <td class="dashboard_right-table-img"><img src="{{$plate->image}}" alt="{{$plate->title}}" style=""></td> 
+                                  <td class="dashboard_right-table-img"><img src="{{ asset('storage/' . $plate->image )}}" alt="{{$plate->name}}" style=""></td> 
 
                                   <td class="dashboard_right-table-name"><p>{{$plate->name}}</p></td>
 
@@ -281,7 +281,7 @@
                                 @if ($plate->scope == 'pizza' | $plate->scope == 'Pizza' | $plate->scope == 'pizze' | $plate->scope == 'Pizze')
 
                                 <tr>
-                                  <td class="dashboard_right-table-img"><img src="{{$plate->image}}" alt="{{$plate->title}}" style=""></td> 
+                                  <td class="dashboard_right-table-img"><img src="{{ asset('storage/' . $plate->image )}}" alt="{{$plate->name}}" style=""></td> 
 
                                   <td class="dashboard_right-table-name"><p>{{$plate->name}}</p></td>
 
@@ -338,7 +338,7 @@
 
 
                                   <tr>
-                                    <td class="dashboard_right-table-img"><img src="{{$plate->image}}" alt="{{$plate->title}}" style=""></td> 
+                                    <td class="dashboard_right-table-img"><img src="{{ asset('storage/' . $plate->image )}}" alt="{{$plate->name}}" style=""></td> 
 
                                     <td class="dashboard_right-table-name"><p>{{$plate->name}}</p></td>
 

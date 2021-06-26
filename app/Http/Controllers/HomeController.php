@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Order;
 use Illuminate\Support\Facades\Auth;
 use App\Plate;
 
@@ -24,10 +26,10 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(User $user)
     {
         $plates = Plate::where('user_id', Auth::id())->get();
-
-        return view('admin.home', compact('plates'));
+        $orders = Order::all();
+        return view('admin.home', compact('plates', 'orders', 'user'));
     }
 }
