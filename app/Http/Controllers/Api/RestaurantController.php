@@ -72,27 +72,25 @@ class RestaurantController extends Controller
 
 
 
-    public function orders($id)
+    public function orders(Request $request)
     {
-        $restaurant = User::where('id', $id)->firstOrFail();
+        $plates = Plate::where('user_id', $request->id)->get();
 
-        $allOrders = Order::all();
-
-        $orders = [];
-    
-        foreach ($allOrders as $order) {
-            
-          foreach ($order->plates as $plate) {
-    
-            if ($plate->user_id === $restaurant->id && !in_array($order, $orders)) {
-              
-                $orders[] = $order;
-    
+        $orders = Order::all();
+        
+        $ordersFounded = collect();
+        //Associazione degli Orders ai Plates
+        foreach ($orders as $order) {
+            $order['plates'] = $order->plates;
+            foreach ($order['plates'] as $plate) {
+                
+                if ($plate->user_id == $request->id) {
+                   $ordersFounded->add($order);
+                }
             }
-          }
         }
-    
-        return response()->json($orders);
+        
+        return response()->json($ordersFounded);
     }
 
 

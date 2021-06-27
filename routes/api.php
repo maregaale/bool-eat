@@ -38,7 +38,7 @@ Route::namespace('Api')->group(function () {
 
     //Route::get('/payment/done' , 'PaymentController@apiPayment');
 
-    Route::get('/orders/{id}', 'RestaurantController@orders');
+    Route::get('/user/orders', 'RestaurantController@orders');
 
 });
 
