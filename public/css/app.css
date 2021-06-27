@@ -11536,23 +11536,11 @@ padding: 30px;
   color: #031b4e;
 }
 
-.body_checkout {
-  background-color: #F6F6F6;
-  overflow: hidden;
-}
-.body_checkout .input_total {
-  background-color: transparent;
-  border: solid transparent;
-}
-.body_checkout .style_aligned {
-  width: 200px;
-  text-align: right;
-  padding-right: 10px;
-}
-.body_checkout .icon-rider {
+.icon-rider {
   height: 100px;
   visibility: hidden;
-  position: relative;
+  position: absolute;
+  bottom: 20px;
   -webkit-animation-name: left_to_right;
           animation-name: left_to_right;
   -webkit-animation-duration: 5s;
@@ -11581,4 +11569,17 @@ padding: 30px;
     visibility: visible;
     left: 100%;
   }
+}
+
+.back-checkout {
+  background-image: url("images/city-landscape.jpg");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.back-checkout-container {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+  height: 100vh;
 }
