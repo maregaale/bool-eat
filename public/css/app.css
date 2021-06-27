@@ -10042,12 +10042,19 @@ body {
   position: fixed;
   right: 0;
   overflow-y: auto;
-  transition: 0.1s;
 }
 @media (max-width: 1024px) {
   .dashboard_right {
     width: calc(100vw - 120px);
   }
+}
+@media (max-width: 540px) {
+  .dashboard_right {
+    width: calc(100vw - 60px);
+  }
+}
+.dashboard_right-sectioncharts {
+  height: 100%;
 }
 .dashboard_right-card {
   display: flex;
@@ -10133,7 +10140,6 @@ body {
 }
 .dashboard_right .stats_container-row-box-cont-chart {
   width: 100%;
-  background-color: red;
   height: 400px;
 }
 .dashboard_right .stats_container-row-box-icon {
@@ -10144,7 +10150,11 @@ body {
   flex-direction: row;
   padding: 10px 0;
 }
+.dashboard_right .charts_container-row-box {
+  min-width: 500px;
+}
 .dashboard_right .charts_container-row-box-cont {
+  height: 100%;
   display: flex;
   flex-direction: column;
   background-color: #fff;
@@ -10159,8 +10169,6 @@ body {
 }
 .dashboard_right .charts_container-row-box-cont-chart {
   width: 100%;
-  background-color: red;
-  height: 400px;
 }
 .dashboard_right .charts_container-row-box-icon {
   color: #E1B03D;
@@ -10989,6 +10997,12 @@ padding: 30px;
     width: 120px;
   }
 }
+@media (max-width: 540px) {
+  .dashboard_left {
+    width: 60px;
+    padding: 1rem 0 1rem 0rem;
+  }
+}
 .dashboard_left h3 {
   color: #fff;
 }
@@ -11024,7 +11038,7 @@ padding: 30px;
     width: 150px;
   }
 }
-@media (max-height: 800px) {
+@media (max-height: 850px) {
   .dashboard_left-container-admin {
     padding: 0;
     margin-top: 0.5em;
@@ -11084,6 +11098,12 @@ padding: 30px;
     height: 50px;
   }
 }
+@media (max-width: 540px) {
+  .dashboard_left-container-button a {
+    padding: 0;
+    padding-left: 1rem;
+  }
+}
 .dashboard_left-container-logout {
   position: fixed;
   bottom: 0;
@@ -11116,7 +11136,7 @@ padding: 30px;
 .dashboard_left-container-logout-btn:hover {
   color: #fff;
   box-shadow: 0 10px 40px 0 rebeccapurple, 0 2px 9px 0 red;
-  background: linear-gradient(to bottom, #A2536C 0%, #C08497 100%);
+  background: #A2536C;
 }
 @media (max-height: 999px) {
   .dashboard_left-container-logout-btn {

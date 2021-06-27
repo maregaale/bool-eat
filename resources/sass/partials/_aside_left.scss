@@ -75,6 +75,15 @@ padding: 30px;
         
     }
 
+    $breakpoint-mobile: 540px;
+    @media (max-width: $breakpoint-mobile) {
+        
+        width: 60px;    
+        padding: 1rem 0 1rem 0rem;  
+        
+    }
+
+
     
     h3 {
         color: $db_white;
@@ -140,7 +149,7 @@ padding: 30px;
                 
             }
 
-            $breakpoint-midheight: 800px;
+            $breakpoint-midheight: 850px;
             @media (max-height: $breakpoint-midheight) {
 
                 
@@ -181,6 +190,16 @@ padding: 30px;
 
             width: 100%;
 
+            $breakpoint-height: 999px;
+            @media (max-height: $breakpoint-height) {
+
+                
+
+                
+            }
+
+
+
             $breakpoint-mobile: 1024px;
             @media (max-width: $breakpoint-mobile) {
                 
@@ -190,14 +209,6 @@ padding: 30px;
     
     
                 }               
-            }
-
-            $breakpoint-height: 999px;
-            @media (max-height: $breakpoint-height) {
-
-                
-
-                
             }
 
 
@@ -242,7 +253,15 @@ padding: 30px;
 
                     
                 }
-
+                $breakpoint-mobile: 540px;
+                @media (max-width: $breakpoint-mobile) {
+                    
+                    padding: 0;        
+                    padding-left: 1rem;
+                    
+                }
+            
+            
     
       
             }
@@ -292,7 +311,7 @@ padding: 30px;
                 &:hover{
                     color: #fff;
                     box-shadow: 0 10px 40px 0 rebeccapurple, 0 2px 9px 0 red;
-                    background: linear-gradient(to bottom, #A2536C 0%, #C08497 100%);
+                    background: #A2536C ;
                 }
 
                 $breakpoint-height: 999px;

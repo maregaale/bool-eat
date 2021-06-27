@@ -18,7 +18,7 @@
             <div  v-dragscroll.y  class="dashboard_right">
                 
                 {{-- sezione piatti --}}
-                <section class="container-fluid">
+                <section class="container-fluid dashboard_right-section">
 
                     {{-- titolo  --}}
 
