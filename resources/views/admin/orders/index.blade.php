@@ -8,16 +8,13 @@
 @section('content')
 
 
-@include('partials.aside_left')
+    @include('partials.aside_left')
 
-    <div id="stats" class="dashboard-right">
-        {{-- Grafico--}}
+    {{-- <div id="stats" class="dashboard-right">
         <div class="graph_mounths" style="width: 600px">
             <h2 class="mb-2">Totale ordini per mese</h2>
             <canvas  id="myChart"></canvas>   
         </div>
-        {{-- /Grafico --}}
-        {{-- Orders --}}
             <h2>Tutti gli ordini presso il tuo ristorante</h2>
 
             <div class="list-orders">
@@ -27,9 +24,59 @@
                      <li>Totale: @{{ order.total}} &euro;</li>
                 </ul>
             </div>
-        {{-- /Orders --}}
-    </div>
+    </div> --}}
     
+    <div  v-dragscroll  class="dashboard_right">
+                
+        {{-- sezione piatti --}}
+        
+
+        {{-- visual statistiche  --}}
+
+        <section class="container-fluid dashboard_right-sectioncharts">
+
+            {{-- titolo  --}}
+        
+            <div class="mt-3 mb-1 title-padding">
+                <h4 class="text-uppercase">Grafico statistiche</h4>
+                    <p >Controlla nello specifico quanti ordini hai ricevuto in un determinato lasso di tempo</p>   
+            </div>
+
+                        {{-- grafico statistiche --}}
+
+
+                        <div class="col-12 charts_container-row-box box-padding">
+                            {{-- contenitore box --}}
+                            <div class="col-12 charts_container-row-box-cont box-padding">
+                
+                                {{-- box chart--}}
+                                <div class="charts_container-row-box-cont-chart">
+                                    {{-- sezione top --}}
+                
+                                     <div class="" id="stats" style="min-width:400px;">
+                                        <canvas id="myChart"  ></canvas>
+                                      </div>
+                                    
+                                </div>
+                
+                                
+                
+                
+                            </div>
+                            
+                        </div>
+            
+
+
+        </section>
+
+
+
+
+
+
+        
+    </div> 
 
     
 {{-- <script>
@@ -94,6 +141,9 @@
 @endsection
 
 @section('script')
+<script src="https://unpkg.com/vue@next"></script>
+<script src="https://unpkg.com/vue-dragscroll"></script>
+
 {{-- dayjs --}}
 <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
 {{-- axios --}}

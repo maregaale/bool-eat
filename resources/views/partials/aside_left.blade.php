@@ -26,7 +26,7 @@
 
       <a href="{{route('admin.plates.create')}}" class="box-padding mb-1"><span class="mr-2"><i class="fas fa-plus-circle  fa-2x  mr-2"></i></span><h5>Aggiungi Piatto</h5></a>
 
-      <a href="{{route('orders.index' , ['user' => Auth::user()->id] )}}" class="box-padding mb-1"><span class="mr-2"><i class="fas fa-chart-line"></i></span><h5> Guarda le Statistiche</h5></a>
+      <a href="{{route('orders.index' , ['user' => Auth::user()->id] )}}" class="box-padding mb-1"><span class="mr-2"><i class="fas fa-chart-line fa-2x mr-2"></i></span><h5> Guarda le Statistiche</h5></a>
     </div>
     {{-- /modifiche varie --}}
 
