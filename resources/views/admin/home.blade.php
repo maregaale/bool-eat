@@ -66,15 +66,17 @@
     
 
                 </section>
+
                 
-    
+
+
                 {{-- visual statistiche  --}}
                 <section class="container-fluid stats_container grey-bg">
     
                     <div class="stats_container-row grid-margin">
     
                         {{-- box stats --}}
-                        <div class="col-xl-4 col-sm-12 col-12 stats_container-row-box box-padding">
+                        <div class="col-xl-3 col-lg-12 col-md-12 col-sm-12 col-12 stats_container-row-box box-padding">
                             {{-- contenitore box --}}
                             <div class="col-12 stats_container-row-box-cont box-padding">
 
@@ -82,120 +84,140 @@
                             <div class=" text-left">
                                 
                                 <div class=" text-left">
-                                    <h3>34</h3>
-                                    <span><h5>Ordini totali</h5></span>
+                                    <h3>{{count($vegan_plates)}}</h3>
+                                    <span><h5>piatti vegani</h5></span>
                                  </div>
                              </div>
                              {{-- icona box --}}
                              <div class="align-self-center stats_container-row-box-icon ">
-                                <i class="fas fa-file-signature fa-4x"></i>
+                                <i class="fas fa-leaf fa-2x"></i>
                              </div>
  
                             </div>
                             
                         </div>
-                        {{-- box stats --}}
-                        <div class="col-xl-4 col-sm-12 col-12 stats_container-row-box box-padding">
+
+                        <div class="col-xl-3 col-lg-12 col-md-12 col-sm-12 col-12 stats_container-row-box box-padding">
                             {{-- contenitore box --}}
                             <div class="col-12 stats_container-row-box-cont box-padding">
 
                              {{-- testi --}}
                             <div class=" text-left">
                                 
-                                <h3>78</h3>
-                               <span><h5>Visualizzazioni </h5></span>
+                                <div class=" text-left">
+                                    <h3>{{count($vegetarian_plates)}}</h3>
+                                    <span><h5>piatti vegetariani</h5></span>
+                                 </div>
                              </div>
                              {{-- icona box --}}
                              <div class="align-self-center stats_container-row-box-icon ">
-                                <i class="fas fa-info fa-4x"></i>
+                                <i class="fas fa-seedling fa-2x"></i>
                              </div>
  
                             </div>
                             
                         </div>
 
-                        {{-- box stats --}}
-                        <div class="col-xl-4 col-sm-12 col-12 stats_container-row-box box-padding">
+                        <div class="col-xl-3 col-lg-12 col-md-12 col-sm-12 col-12 stats_container-row-box box-padding">
                             {{-- contenitore box --}}
                             <div class="col-12 stats_container-row-box-cont box-padding">
 
                              {{-- testi --}}
                             <div class=" text-left">
                                 
-                                <div class="inline-flex"><h3>356</h3><h3>€</h3></div>
-                                <span><h5>Incasso totale</h5></span>
+                                <div class=" text-left">
+                                    <h3>{{count($spicy_plates)}}</h3>
+                                    <span><h5>piatti piccanti</h5></span>
+                                 </div>
                              </div>
                              {{-- icona box --}}
                              <div class="align-self-center stats_container-row-box-icon ">
-                                 <i class="fas fa-wallet  fa-4x"></i>
+                                <i class="fas fa-pepper-hot fa-2x"></i>
                              </div>
  
                             </div>
                             
                         </div>
+                        <div class="col-xl-3 col-lg-12 col-md-12 col-sm-12 col-12 stats_container-row-box box-padding">
+                            {{-- contenitore box --}}
+                            <div class="col-12 stats_container-row-box-cont box-padding">
+
+                             {{-- testi --}}
+                            <div class=" text-left">
+                                
+                                <div class=" text-left">
+                                    <h3>{{count($glutenfree_plates)}}</h3>
+                                    <span><h5>piatti gluten free</h5></span>
+                                 </div>
+                             </div>
+                             {{-- icona box --}}
+                             <div class="align-self-center stats_container-row-box-icon ">
+                                <i class="fas fa-bread-slice fa-2x"></i>
+                             </div>
+ 
+                            </div>
+                            
+                        </div>
+
+                        
+                        {{-- box stats --}}
+
+                        {{-- box stats --}}
+                        
+                       
+                        
 
                     </div>
     
                 </section>
 
+
                 <section class="container-fluid">
 
-                    {{-- titolo  --}}
+
+    
+
                 
-                    <div class="mt-3 mb-1 title-padding">
-                        <h4 class="text-uppercase">Grafico statistiche</h4>
-                            <p >Controlla nello specifico quanti ordini hai ricevuto in un determinato lasso di tempo</p>   
-                    </div>
+                    <div class="mt-2 mb-0 box-padding">
+                        <h4 class="text-uppercase">Info generali ristorante</h4>
+                            {{-- <p >Accedi subito agli ultimi piatti aggiunti</p>    --}}
+                    </div>  
 
-
-                    {{-- grafico statistiche --}}
 
                     <div class="col-12 charts_container-row-box box-padding">
-                        {{-- contenitore box --}}
                         <div class="col-12 charts_container-row-box-cont box-padding">
+        
 
-                            <div class="charts_container-row-box-cont-top mb-3 align-items-center">
-                                        
-                                <h5 class="mr-2">Seleziona il range di date da</h5>
-                                
-                                {{-- <div class="align-self-center charts_container-row-box-icon ">
-                                    <i class="fas fa-chart-area fa-2x"></i>
-                                    
-                                </div> --}}
-                                
-                                {{-- <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker">
-                                    <input placeholder="Select date" type="text" id="example" class="form-control">
-                                    <label for="example">Try me...</label>
-                                    <i class="fas fa-calendar input-prefix" tabindex=0></i>
-                                  </div> --}}
-                                  {{-- <div class ="form-group">  
-                                    <div class = 'input-group date' id='datetimepicker3'>  
-                                       <input type = 'text' class="form-control" />  
-                                       <span class = "input-group-addon">  
-                                       <span class = "glyphicon glyphicon-time"></span>  
-                                       </span>  
-                                    </div>  
-                                 </div>   --}}
-                                 <div id = "sandbox-container" class = "">
-                                     
-                                    <div class="input-daterange input-group align-items-center" id="datepicker">
-                                        <input type="date" id="" class="field date-field dob-field input-sm form-control" min="1900-01-01" max="2015-09-18" name="start" >
-                                        <h5 class="ml-2 mr-2">a</h5>
-                                        <input type="date" id="" class="field date-field dob-field input-sm form-control" min="1900-01-01" max="2015-09-18" name="end">
-                                    </div>
-    
-
-                                 </div>
-    
-
-                            </div>
-                            {{-- box chart--}}
                             <div class="charts_container-row-box-cont-chart">
-                                {{-- sezione top --}}
 
-                                 <div class="" id="stats">
-                                    <canvas id="myChart" width="400" height="400"></canvas>
-                                  </div>
+                                <div class="inline-flex"><h3>Indirzzo</h3></div>                               
+
+                                <h5 class="mr-2">{{$user->address}}</h5>
+
+                                
+                            </div>
+                            <div class="charts_container-row-box-cont-chart">
+
+                                <div class="inline-flex"><h3>Partita IVA</h3></div>                               
+
+                                <h5 class="mr-2">{{$user->vat_number}}</h5>
+
+                                
+                            </div>
+                            <div class="charts_container-row-box-cont-chart">
+
+                                <div class="inline-flex"><h3>Telefono</h3></div>                               
+
+                                <h5 class="mr-2">{{$user->phone_number}}</h5>
+
+                                
+                            </div>
+                            <div class="charts_container-row-box-cont-chart">
+
+                                <div class="inline-flex"><h3>E-mail</h3></div>                               
+
+                                <h5 class="mr-2">{{$user->email}}</h5>
+
                                 
                             </div>
 
@@ -205,6 +227,25 @@
                         </div>
                         
                     </div>
+
+                    <a href="{{ url('/') }}" >
+                
+                        <button class="col-xl-12 col-sm-12 col-12 container box-padding btn" href="{{ url('/') }}">                                   {{-- contenitore box --}}
+                            <div class="col-12 stats_container-row-box-cont box-padding " >
+        
+                            {{-- testi --}}
+                                <div class=" text-left">
+                                    
+                                    <h3>Vai a Booleat</h3>
+                                {{-- <span><h5>Vai a BoolEat </h5></span> --}}
+                                </div>
+                                <img style="width:50px;" src="{{asset('images/bool_eat.png')}}" alt="">
+
+                            </div>
+                            </button>
+                    </a>
+    
+
 
 
                 </section>
@@ -247,63 +288,6 @@
     
     </div>
 
-    <script>
-        var earnings = [];
-  
-        var myLabels = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre" ];
-  
-        
-  
-        // if ({!! json_encode($user->id) !!}) {
-          
-          for (let i = 0; i < {!! json_encode($user->plates) !!}.length; i++) {
-  
-            console.log({!! json_encode($user->plates) !!}[i])
-            
-          }
-        // }
-  
-        
-        var ctx = document.getElementById('myChart');
-        var myChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                
-                
-                labels: myLabels,
-                datasets: [{
-                    label: 'Guadagno: ',
-                    data: [@if($user->id && count($user->plates) > 0)@foreach($orders as $order) "{{$order->total}}", @endforeach,@endif ],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: true,
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-      </script>
 
 
 @endsection
