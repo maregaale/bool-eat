@@ -11576,10 +11576,11 @@ padding: 30px;
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+  overflow-x: hidden;
 }
 .back-checkout-container {
   overflow-x: hidden;
   width: 100%;
-  position: relative;
   height: 100vh;
 }

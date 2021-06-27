@@ -23,15 +23,16 @@
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+    overflow-x: hidden;
+
 
 
 
     &-container {
 
-
         overflow-x: hidden;
         width: 100%;
-        position: relative;
         height: 100vh;
     }
 
