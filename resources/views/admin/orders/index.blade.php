@@ -8,8 +8,9 @@
 @section('content')
 
 
+@include('partials.aside_left')
 
-    <div id="stats">
+    <div id="stats" class="dashboard-right">
         {{-- Grafico--}}
         <div class="graph_mounths" style="width: 600px">
             <h2 class="mb-2">Totale ordini per mese</h2>
