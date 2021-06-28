@@ -66,16 +66,13 @@
 
 
                 {{-- visual statistiche  --}}
-                <section class="container-fluid stats_container grey-bg">
+                {{-- <section class="container-fluid stats_container grey-bg">
     
                     <div class="stats_container-row grid-margin">
     
-                        {{-- box stats --}}
                         <div class="col-xl-3 col-lg-12 col-md-12 col-sm-12 col-12 stats_container-row-box box-padding">
-                            {{-- contenitore box --}}
                             <div class="col-12 stats_container-row-box-cont box-padding">
 
-                             {{-- testi --}}
                             <div class=" text-left">
                                 
                                 <div class=" text-left">
@@ -83,7 +80,6 @@
                                     <span><h5>piatti vegani</h5></span>
                                  </div>
                              </div>
-                             {{-- icona box --}}
                              <div class="align-self-center stats_container-row-box-icon ">
                                 <i class="fas fa-leaf fa-2x"></i>
                              </div>
@@ -93,10 +89,8 @@
                         </div>
 
                         <div class="col-xl-3 col-lg-12 col-md-12 col-sm-12 col-12 stats_container-row-box box-padding">
-                            {{-- contenitore box --}}
                             <div class="col-12 stats_container-row-box-cont box-padding">
 
-                             {{-- testi --}}
                             <div class=" text-left">
                                 
                                 <div class=" text-left">
@@ -104,7 +98,6 @@
                                     <span><h5>piatti vegetariani</h5></span>
                                  </div>
                              </div>
-                             {{-- icona box --}}
                              <div class="align-self-center stats_container-row-box-icon ">
                                 <i class="fas fa-seedling fa-2x"></i>
                              </div>
@@ -114,10 +107,8 @@
                         </div>
 
                         <div class="col-xl-3 col-lg-12 col-md-12 col-sm-12 col-12 stats_container-row-box box-padding">
-                            {{-- contenitore box --}}
                             <div class="col-12 stats_container-row-box-cont box-padding">
 
-                             {{-- testi --}}
                             <div class=" text-left">
                                 
                                 <div class=" text-left">
@@ -125,7 +116,6 @@
                                     <span><h5>piatti piccanti</h5></span>
                                  </div>
                              </div>
-                             {{-- icona box --}}
                              <div class="align-self-center stats_container-row-box-icon ">
                                 <i class="fas fa-pepper-hot fa-2x"></i>
                              </div>
@@ -134,10 +124,8 @@
                             
                         </div>
                         <div class="col-xl-3 col-lg-12 col-md-12 col-sm-12 col-12 stats_container-row-box box-padding">
-                            {{-- contenitore box --}}
                             <div class="col-12 stats_container-row-box-cont box-padding">
 
-                             {{-- testi --}}
                             <div class=" text-left">
                                 
                                 <div class=" text-left">
@@ -145,7 +133,6 @@
                                     <span><h5>piatti gluten free</h5></span>
                                  </div>
                              </div>
-                             {{-- icona box --}}
                              <div class="align-self-center stats_container-row-box-icon ">
                                 <i class="fas fa-bread-slice fa-2x"></i>
                              </div>
@@ -155,16 +142,13 @@
                         </div>
 
                         
-                        {{-- box stats --}}
-
-                        {{-- box stats --}}
                         
                        
                         
 
                     </div>
     
-                </section>
+                </section> --}}
 
 
                 <section class="container-fluid">
@@ -179,8 +163,8 @@
                     </div>  
 
 
-                    <div class="col-12 charts_container-row-box box-padding">
-                        <div class="col-12 charts_container-row-box-cont box-padding">
+                    <div class="col-12 charts_container-row-boxinfo box-padding">
+                        <div class="col-12 charts_container-row-boxinfo-cont box-padding">
         
 
                             <div class="charts_container-row-box-cont-chart">
@@ -249,25 +233,25 @@
     
 
             <script src="https://unpkg.com/vue@next"></script>
-            <script src="https://unpkg.com/vue-dragscroll"></script>
+                <script src="https://unpkg.com/vue-dragscroll"></script>
 
-            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 
-            <script>
-                
+                <script>               
     
-                const App = {
-                  data() {
-                  }
-                }
-            
-                const app = Vue.createApp(App);
-                app.directive('dragscroll', VueDragscroll);
-                app.mount('#app')
-              </script>
+                    const App = {
+                    data() {
+                    }
+                    }
+                
+                    const app = Vue.createApp(App);
+                    app.directive('dragscroll', VueDragscroll);
+                    app.mount('#app')
 
-              <script>
+                </script>
+
+              {{-- <script>
                   $('#sandbox-container .input-daterange').datepicker({
                     format: "dd/mm/yyyy",
                     language: "it",
@@ -276,7 +260,7 @@
                     calendarWeeks: true,
                     autoclose: true
                 });
-              </script>
+              </script> --}}
         </div>
     
        
