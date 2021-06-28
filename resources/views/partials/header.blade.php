@@ -4,6 +4,11 @@
             <img src="{{asset('images/bool_eat.png')}}" alt="">
         </a>
 
+        <button id="dark" v-on:click="darkThemeSwitch(); toggleTheme()">
+            <span v-if="theme == 'darkmode'">Light</span> 
+            <span v-else>Dark</span>
+         </button> 
+
         <div class="nav_top_right">
             <span class="hamburger_nav"><i class="fas fa-hamburger"></i></span>
             <a><a class="ml-2" href="{{ route('login') }}"><button class="button_card_menu"><i class="material-icons">login</i><span>{{ __('Login') }}</span></button></a>
@@ -19,6 +24,8 @@
      <div class="dash-link">
         <a href="{{route('home')}}"><span class="mr-2 "><i class="fas fa-home  fa-2x  mr-2"></i></span><h5>Torna alla Dashboard</h5></a>
     </div>
+
+    
 
     <div class="logout_btn">
         <button class="btn btn-info" href="{{ route('logout') }}"

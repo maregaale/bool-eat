@@ -31,12 +31,11 @@ new Vue({
   //\Mounted
   //Methods
   methods: {
-    toggleTheme: function toggleTheme() {
-      this.theme = this.theme == 'darkMode' ? '' : 'darkMode'; //toggles theme value
-
-      document.documentElement.setAttribute('data-theme', this.theme); // sets the data-theme attribute
-
-      localStorage.setItem('theme', this.theme); // stores theme value on local storage
+    scrollToTop: function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
     },
     //Filtro per genres!!!!!
     filterGenre: function filterGenre() {

@@ -23,7 +23,8 @@
                 </ul>
                 <ul class="footer_list">
                     <h4 class="">Return</h4>
-                    <li><a href="http://localhost:8000">Home <i class="fas fa-arrow-circle-up"></i></a></li>
+                    <li v-on:click="scrollToTop()"><a > Home <i class="fas fa-arrow-circle-up"></i></a></li>
+                    
                 </ul>
             </div>
         </div>

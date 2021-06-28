@@ -116,8 +116,8 @@
     {{-- </nav>  --}}
 
     @yield('content')
-    
 
+    <script src="{{ asset('js/dark_mode.js')}}"></script>
     @yield('script')
 </body>
 </html>
