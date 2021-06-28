@@ -44,7 +44,7 @@ new Vue({
     },
     _removeDarkTheme() {
       this.darkThemeLinkEl = document.querySelector("#dark-theme-style");
-      this.docHead = this.darkThemeLinkEl.parentNode;
+      this.docHead = document.querySelector("head");
       this.docHead.removeChild(this.darkThemeLinkEl);
       this.mix = localStorage.setItem('data-theme', 'light');
     },
