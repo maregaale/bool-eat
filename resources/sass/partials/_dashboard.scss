@@ -246,6 +246,40 @@ body{
                 
             }
             }
+
+            &-boxinfo{
+                &-cont{
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    background-color: $db_white;
+                    border: 1px solid rgba(0,0,0,.06);
+                    border-radius: .25rem;
+                    box-shadow: 0 10px 40px 0 rgb(62 57 107 / 7%), 0 2px 9px 0 rgb(62 57 107 / 6%);
+                    
+                    &-top{
+                        display:flex;
+                        flex-direction:row;
+                        //justify-content:space-between;
+                        flex-wrap: wrap;
+                    }
+
+                    &-chart{
+
+                        width: 100%;
+                        //background-color:red;
+                        //height:400px;
+                    }
+                }
+                
+            
+            &-icon{
+
+                color: $db_yellow;
+                
+            }
+
+            }
         }
     }
     .btn_invisible{
@@ -287,7 +321,7 @@ body{
         $breakpoint-mobile: 1024px;
         background-color: $db_white;
         box-shadow: 0 10px 40px 0 rgb(62 57 107 / 7%), 0 2px 9px 0 rgb(62 57 107 / 6%);
-
+        min-width: 400px;
         @media (max-width: $breakpoint-mobile) {
             
             display: block;                

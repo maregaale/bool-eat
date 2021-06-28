@@ -10173,6 +10173,26 @@ body {
 .dashboard_right .charts_container-row-box-icon {
   color: #E1B03D;
 }
+.dashboard_right .charts_container-row-boxinfo-cont {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 0.25rem;
+  box-shadow: 0 10px 40px 0 rgba(62, 57, 107, 0.07), 0 2px 9px 0 rgba(62, 57, 107, 0.06);
+}
+.dashboard_right .charts_container-row-boxinfo-cont-top {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.dashboard_right .charts_container-row-boxinfo-cont-chart {
+  width: 100%;
+}
+.dashboard_right .charts_container-row-boxinfo-icon {
+  color: #E1B03D;
+}
 .dashboard_right .btn_invisible {
   border: none;
 }
@@ -10198,6 +10218,7 @@ body {
   display: none;
   background-color: #fff;
   box-shadow: 0 10px 40px 0 rgba(62, 57, 107, 0.07), 0 2px 9px 0 rgba(62, 57, 107, 0.06);
+  min-width: 400px;
 }
 @media (max-width: 1024px) {
   .dashboard_right-tablemobile {
@@ -11095,6 +11116,7 @@ main {
   overflow: hidden;
   margin-top: 60px;
   margin-bottom: 60px;
+  z-index: 5;
 }
 .register-card-img {
   border-radius: 0;

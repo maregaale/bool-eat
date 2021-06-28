@@ -9,33 +9,35 @@
     {{-- aside --}}
     @include('partials.aside_left')
 
-    <div  v-dragscroll  class="dashboard_right">
-        {{-- visual statistiche  --}}
-        <section class="container-fluid dashboard_right-sectioncharts">
-
-            {{-- titolo  --}}
-            <div class="mt-3 mb-1 title-padding">
-                <h4 class="text-uppercase">Grafico statistiche</h4>
-                    <p >Controlla nello specifico quanti ordini hai ricevuto in un determinato lasso di tempo</p>   
-            </div>
-            {{-- /titolo  --}}
-
-            {{-- grafico statistiche --}}
-            <div class="col-12 charts_container-row-box box-padding">
-                {{-- contenitore box --}}
-                <div class="col-12 charts_container-row-box-cont box-padding">
-                    {{-- box chart--}}
-                    <div class="charts_container-row-box-cont-chart">
-                        {{-- sezione top --}}
-                        <div id="stats" style="min-width:400px;">
-                            <canvas id="myChart"></canvas>
+        <div  v-dragscroll  class="dashboard_right" >
+            {{-- visual statistiche  --}}
+            <section class="container-fluid dashboard_right-sectioncharts">
+    
+                {{-- titolo  --}}
+                <div class="mt-3 mb-1 title-padding">
+                    <h4 class="text-uppercase">Grafico statistiche</h4>
+                        <p >Controlla nello specifico quanti ordini hai ricevuto in un determinato lasso di tempo</p>   
+                </div>
+                {{-- /titolo  --}}
+    
+                {{-- grafico statistiche --}}
+                <div class="col-12 charts_container-row-box box-padding">
+                    {{-- contenitore box --}}
+                    <div class="col-12 charts_container-row-box-cont box-padding">
+                        {{-- box chart--}}
+                        <div class="charts_container-row-box-cont-chart">
+                            {{-- sezione top --}}
+                            <div id="stats" style="min-width:400px;">
+                                <canvas id="myChart"></canvas>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            {{-- /grafico statistiche --}}
-        </section>
-    </div> 
+                {{-- /grafico statistiche --}}
+            </section>
+        </div> 
+    
+
 @endsection
 
 @section('script')
@@ -50,7 +52,24 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 
     {{-- script statistiche--}}
+
+    <script>               
+    
+        const App = {
+        data() {
+        }
+        }
+    
+        const app = Vue.createApp(App);
+        app.directive('dragscroll', VueDragscroll);
+        app.mount('#app')
+
+    </script>
+
+
     <script>
+
+
         new Vue({
             el: '#stats',
             data: {

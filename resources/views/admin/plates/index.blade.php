@@ -26,7 +26,7 @@
 
   {{-- dashboard right (menu) --}}
   <div id="appscroll">
-      <div  v-dragscroll.y  class="dashboard_right ">
+      <div  v-dragscroll  class="dashboard_right ">
           
           {{-- sezione menu --}}
           <section class="container-fluid">
@@ -507,11 +507,6 @@
                                     {{-- /form della delete --}} 
                                     {{-- <a href="" v-on:click="showModal = true" data-id="{{$plate->id}}" ><i class="fas fa-trash-alt text-danger"></i></i></a> --}}
                                     {{-- form della delete --}} 
-                                    <form class="d-inline-block" action="{{route('admin.plates.destroy', ['plate' => $plate->id] )}}" method="POST"> 
-                                      @method('DELETE')
-                                      @csrf
-                                      <button type="submit" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
-                                    </form>
                                 {{-- /form della delete --}}
                                   </span>
                                 </td>
@@ -569,11 +564,6 @@
                                           <button type="submit" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
                                         </form>  
                                         {{-- form della delete --}} 
-                                        <form class="d-inline-block" action="{{route('admin.plates.destroy', ['plate' => $plate->id] )}}" method="POST"> 
-                                          @method('DELETE')
-                                          @csrf
-                                          <button type="submit" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
-                                        </form>
                                     {{-- /form della delete --}}
                                       </span>
                                     </td>
@@ -631,11 +621,6 @@
                                         <button type="submit" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
                                       </form>  
                                       {{-- form della delete --}} 
-                                      <form class="d-inline-block" action="{{route('admin.plates.destroy', ['plate' => $plate->id] )}}" method="POST"> 
-                                        @method('DELETE')
-                                        @csrf
-                                        <button type="submit" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
-                                      </form>
                                   {{-- /form della delete --}}
                                     </span>
                                   </td>
@@ -693,11 +678,6 @@
                                         <button type="submit" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
                                       </form>  
                                      {{-- form della delete --}} 
-                                     <form class="d-inline-block" action="{{route('admin.plates.destroy', ['plate' => $plate->id] )}}" method="POST"> 
-                                      @method('DELETE')
-                                      @csrf
-                                      <button type="submit" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
-                                    </form>
                                 {{-- /form della delete --}}
                                     </span>
                                   </td>
@@ -756,11 +736,6 @@
                                           <button type="submit" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
                                         </form>  
                                         {{-- form della delete --}} 
-                                        <form class="d-inline-block" action="{{route('admin.plates.destroy', ['plate' => $plate->id] )}}" method="POST"> 
-                                          @method('DELETE')
-                                          @csrf
-                                          <button type="submit" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
-                                        </form>
                                     {{-- /form della delete --}}
                                       </span>
                                     </td>
