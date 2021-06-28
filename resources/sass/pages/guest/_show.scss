@@ -1,7 +1,7 @@
 
 #cart {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   // align-items: flex-start;
   justify-content: space-between;
   margin: 0 auto;
@@ -100,38 +100,58 @@
   .shopping_cart {
     border-radius: 10px;
     min-height: 200px;
-    text-align: right;
+    padding-bottom: 40px;
+    padding-top: 10px;
+    // text-align: right;
     
-    background: linear-gradient(-45deg, #004466, #2fac66, #23a6d5, #fff);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+    // background: linear-gradient(-45deg, #004466, #2fac66, #23a6d5, #fff);
+    // background-size: 400% 400%;
+    // animation: gradient 15s ease infinite;
     
-    @keyframes gradient {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
-    }
+    // @keyframes gradient {
+    //     0% {
+    //         background-position: 0% 50%;
+    //     }
+    //     50% {
+    //         background-position: 100% 50%;
+    //     }
+    //     100% {
+    //         background-position: 0% 50%;
+    //     }
+    // }
 
     .cart_top{
       display: flex;
       justify-content: flex-end;
-      align-items: center;
+      align-items: flex-end;
+      padding: 12px;
+      border-radius: 20% 20% 0 0;
+      background: linear-gradient(-45deg, #004466, #2fac66, #23a6d5, #fff);
+      background-size: 400% 400%;
+       animation: gradient 15s ease infinite;
+      
+    
+       @keyframes gradient {
+           0% {
+               background-position: 0% 50%;
+           }
+           50% {
+               background-position: 100% 50%;
+           }
+           100% {
+               background-position: 0% 50%;
+           }
+       }
+
 
       img{
         width: 50px;
         margin-left: 20px;
       }
 
-      p{
+      h3{
         margin: 0!important;
         font-weight: bold;
-        font-size: 18px;
         color: #fff;
       }
     }
@@ -139,14 +159,19 @@
     
 
     @include small_medium {
-      width: 30%;
+      width: 50%;
     }
 
     @include medium {
       padding: 20px;
     }
 
+    @include large {
+      width: 45%;
+    }
+
     @include extra_large {
+      width: 40%;
       padding: 40px;
     }
     
@@ -168,6 +193,7 @@
       display: flex;
       justify-content: space-evenly;
       align-items: center;
+      padding-top: 10px;
 
       .plus {
         display: flex;
@@ -247,15 +273,20 @@
         justify-content: space-between;
 
         button{
-          width: 50px;
+          width: 30px;
           height: 30px;
           text-align: center;
-          font-size: 14px;
+          font-size: 12px;
           font-weight: 600;
           display: flex;
           align-items: center;
           justify-content: center;
           margin: 3px 0;
+
+          @include large {
+            width: 50px;
+            font-size: 14px;
+          }
 
           .trash_text {
             display: none;

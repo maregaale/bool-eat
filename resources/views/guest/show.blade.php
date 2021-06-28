@@ -46,12 +46,11 @@
 
     @if (count($user->plates) > 0)
     <div class="shopping_cart">
-      <div class="cart_top">
-        <p v-if="namePlatesShow.length != 0" > @{{sum}} &euro;</p>
+      <div v-if="namePlatesShow.length != 0" class="cart_top">
+        <h3>Totale: @{{sum}} &euro;</h3>
         <img src="{{asset('images/shopping-cart.png')}}" alt="">
       </div>
       {{-- <h3>Carrello</h3> --}}
-      <hr>
       <div class="elements_container">
 
         <div class="plus">
@@ -67,7 +66,7 @@
         </div>
         
         <div class="name">
-          <p v-for="namePlate in namePlatesShow">| @{{namePlate}} |</p>
+          <p v-for="namePlate in namePlatesShow"> @{{namePlate}}</p>
         </div>
         
         <div class="price">

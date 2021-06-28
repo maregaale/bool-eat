@@ -11494,7 +11494,7 @@ padding: 30px;
 
 #cart {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: space-between;
   margin: 0 auto;
   padding: 0 20px;
@@ -11578,7 +11578,15 @@ padding: 30px;
 #cart .shopping_cart {
   border-radius: 10px;
   min-height: 200px;
-  text-align: right;
+  padding-bottom: 40px;
+  padding-top: 10px;
+}
+#cart .shopping_cart .cart_top {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 12px;
+  border-radius: 20% 20% 0 0;
   background: linear-gradient(-45deg, #004466, #2fac66, #23a6d5, #fff);
   background-size: 400% 400%;
   -webkit-animation: gradient 15s ease infinite;
@@ -11606,24 +11614,18 @@ padding: 30px;
     background-position: 0% 50%;
   }
 }
-#cart .shopping_cart .cart_top {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
 #cart .shopping_cart .cart_top img {
   width: 50px;
   margin-left: 20px;
 }
-#cart .shopping_cart .cart_top p {
+#cart .shopping_cart .cart_top h3 {
   margin: 0 !important;
   font-weight: bold;
-  font-size: 18px;
   color: #fff;
 }
 @media (min-width: 700px) {
   #cart .shopping_cart {
-    width: 30%;
+    width: 50%;
   }
 }
 @media (min-width: 768px) {
@@ -11631,8 +11633,14 @@ padding: 30px;
     padding: 20px;
   }
 }
+@media (min-width: 992px) {
+  #cart .shopping_cart {
+    width: 45%;
+  }
+}
 @media (min-width: 1200px) {
   #cart .shopping_cart {
+    width: 40%;
     padding: 40px;
   }
 }
@@ -11653,6 +11661,7 @@ padding: 30px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  padding-top: 10px;
 }
 #cart .shopping_cart .elements_container .plus {
   display: flex;
@@ -11725,15 +11734,21 @@ padding: 30px;
   justify-content: space-between;
 }
 #cart .shopping_cart .elements_container .button button {
-  width: 50px;
+  width: 30px;
   height: 30px;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 3px 0;
+}
+@media (min-width: 992px) {
+  #cart .shopping_cart .elements_container .button button {
+    width: 50px;
+    font-size: 14px;
+  }
 }
 #cart .shopping_cart .elements_container .button button .trash_text {
   display: none;
