@@ -83,14 +83,9 @@ class UserController extends Controller
                 'address' => 'required', 'string', 'max:255',
                 'phone_number' => 'required', 'numeric',
                 'vat_number' => 'required', 'numeric', 'digits:11','unique:users',
-                'logo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             ]);
 
             $data = $request->all();
-
-             if ( isset($data['logo']) ) {
-                $data['logo'] = Storage::disk('public')->put('images', $data['logo']);
-            }
 
             
             $user->update($data);

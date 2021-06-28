@@ -62,7 +62,7 @@
                                     {{-- /immagine con storage --}}
                     
                                     {{-- immagine con remoto --}}
-                                    <img class="mb-4 mt-4" src="{{$plate->image ? $plate->image : 'https://via.placeholder.com/200'}}" alt="{{$plate->title}}">
+                                    <img src="{{ asset('storage/' . $plate->image )}}" alt="{{$plate->name}}" style="">
                                     {{-- /immagine con remoto --}}
                     
                                     {{-- ingredienti --}}

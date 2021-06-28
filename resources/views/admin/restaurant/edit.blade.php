@@ -95,14 +95,6 @@
                             {{-- </div> --}}
                             {{-- @endforeach --}}
 
-                                {{-- modifica immagine --}}
-                                <div class="form-group form-file-upload form-file-simple mt-3 form-fields">
-                                    <label for="logo">Logo</label>
-                                    {{-- <input type="text" class="form-control" id="image" name="image" placeholder="Image"> --}}
-                                    <input type="file"  class="inputFileHidden" id="logo" name="logo" value="{{Auth::user()->logo}}">
-                                </div>
-                                {{-- /modifica immagine --}}
-
 
                             {{-- bottone submit --}}
                             <div class="form-fields">
