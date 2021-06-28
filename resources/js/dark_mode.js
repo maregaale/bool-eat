@@ -13,6 +13,7 @@ new Vue({
     darkTheme: [],
     docHead: '',
     mix:'',
+    checked: false,
   },
 
   mounted () {
@@ -21,8 +22,12 @@ new Vue({
 
     if (x == 'dark') {
       this._addDarkTheme()
+      this.checked = true;
+
     } else {
-      this._removeDarkTheme()
+      this._removeDarkTheme();
+      this.checked = false;
+
     }
   },
   methods: {

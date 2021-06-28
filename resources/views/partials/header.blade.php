@@ -5,7 +5,7 @@
             <img src="{{asset('images/bool_eat.png')}}" alt="">
         </a>
         <div id="dark" v-on:click="darkThemeSwitch(); toggleTheme()" class="wrapper">
-            <input type="checkbox" name="checkbox" class="switch">
+            <input type="checkbox" name="checkbox" v-model="checked" class="switch">
         </div>
     </div>
 
