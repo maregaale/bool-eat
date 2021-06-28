@@ -16,7 +16,7 @@ new Vue({
   },
 
   //Methods
-  methods:{
+  methods: {
 
     adding: function (index) {
       // fisso quantity
@@ -25,17 +25,17 @@ new Vue({
 
       this.show = false;
       this.show = true;
-      
+
       // incremento
       this.quantity[index] = this.quantity[index] + 1;
-      
+
       // setto la somma
       this.sum = 0;
-      
+
       for (let i = 0; i < this.pricesShow.length; i++) {
 
         for (let k = 0; k < this.quantity[i]; k++) {
-          
+
           this.sum = this.sum + this.pricesShow[i];
         }
       }
@@ -51,17 +51,17 @@ new Vue({
 
       // decremento
       if (this.quantity[index] > 1) {
-        
+
         this.quantity[index] = this.quantity[index] - 1;
       }
-      
+
       // setto somma
       this.sum = 0;
-      
+
       for (let i = 0; i < this.pricesShow.length; i++) {
 
         for (let k = 0; k < this.quantity[i]; k++) {
-          
+
           this.sum = this.sum + this.pricesShow[i];
         }
       }
@@ -71,17 +71,17 @@ new Vue({
       this.namePlates.push(name);
       this.prices.push(price);
     },
-    
+
     removePrevCart: function (plate, id, name, price, index) {
 
       this.plates.push(plate);
       this.platesId.push(id);
 
       this.show = true;
-      
+
       for (let i = 0; i < this.usersId.length; i++) {
         if (this.usersId[i] != index) {
-          
+
           this.quantity = [];
         }
       }
@@ -92,19 +92,19 @@ new Vue({
         return;
       } else {
         this.quantity.push(1);
-        
+
       }
-      
+
       for (let i = 0; i < this.usersId.length; i++) {
         if (this.usersId[i] != index) {
-            this.usersId = [];
-  
-            this.usersId.push(index);
-            this.namePlates = [];
-            this.namePlatesShow = [];
+          this.usersId = [];
 
-            this.prices = [];
-            this.pricesShow = [];
+          this.usersId.push(index);
+          this.namePlates = [];
+          this.namePlatesShow = [];
+
+          this.prices = [];
+          this.pricesShow = [];
         } else {
           this.namePlates;
           this.prices;
@@ -123,7 +123,7 @@ new Vue({
       if (!this.pricesShow.includes(price)) {
         this.pricesShow.push(price);
       }
-      
+
       this.prices.push(price);
 
       this.sum = 0;
@@ -131,17 +131,17 @@ new Vue({
       for (let i = 0; i < this.pricesShow.length; i++) {
 
         for (let k = 0; k < this.quantity[i]; k++) {
-          
+
           this.sum = this.sum + this.pricesShow[i];
         }
       }
 
 
       this.display = true;
-    }, 
+    },
 
     removeCartElement: function (index) {
-      
+
       this.namePlates.splice(index, 1);
       this.namePlatesShow.splice(index, 1);
       this.quantity.splice(index, 1);
@@ -151,25 +151,25 @@ new Vue({
     removePrice: function (index, price) {
       this.prices.splice(index, 1);
       this.pricesShow.splice(index, 1);
-      
+
       this.sum = 0;
       for (let i = 0; i < this.pricesShow.length; i++) {
-          this.sum += this.quantity[i] * this.pricesShow[i];
+        this.sum += this.quantity[i] * this.pricesShow[i];
       }
     },
   },
-  
+
   mounted() {
     this.usersId = []
 
     this.plates = JSON.parse(localStorage.getItem("plates")) || [],
 
-    this.platesId = JSON.parse(localStorage.getItem("platesId")) || [],
-    this.namePlates = JSON.parse(localStorage.getItem("namePlates")) || [],
-    this.namePlatesShow = JSON.parse(localStorage.getItem("namePlatesShow")) || [],
-    this.prices = JSON.parse(localStorage.getItem("prices")) || [],
-    this.pricesShow = JSON.parse(localStorage.getItem("pricesShow")) || [],
-    this.usersId = JSON.parse(localStorage.getItem("usersId")) || []
+      this.platesId = JSON.parse(localStorage.getItem("platesId")) || [],
+      this.namePlates = JSON.parse(localStorage.getItem("namePlates")) || [],
+      this.namePlatesShow = JSON.parse(localStorage.getItem("namePlatesShow")) || [],
+      this.prices = JSON.parse(localStorage.getItem("prices")) || [],
+      this.pricesShow = JSON.parse(localStorage.getItem("pricesShow")) || [],
+      this.usersId = JSON.parse(localStorage.getItem("usersId")) || []
 
 
     this.quantity = JSON.parse(localStorage.getItem("quantity")) || []
@@ -177,17 +177,17 @@ new Vue({
     for (let i = 0; i < this.pricesShow.length; i++) {
 
       for (let k = 0; k < this.quantity[i]; k++) {
-        
+
         this.sum = this.sum + this.pricesShow[i];
       }
     }
   },
 
-  created () {
+  created() {
     this.quantity = [];
     this.quantity = JSON.parse(localStorage.getItem("quantity")) || []
   },
-  
+
   watch: {
     plates(newValue, oldValue) {
       localStorage.setItem("plates", JSON.stringify(newValue));
@@ -216,7 +216,7 @@ new Vue({
     quantity(newValue, oldValue) {
       localStorage.setItem("quantity", JSON.stringify(this.quantity));
     },
-    
+
   }
 });
 
