@@ -8,26 +8,45 @@ new Vue({
     genres: [],
     vegans: [],
     usersId: [],
-    theme: ''
+    theme: '',
+    darkThemeLinkEl: '',
+    darkTheme: [],
+    docHead: '',
+    mix:'',
+  },
+
+  mounted () {
+
+    var x = localStorage.getItem( 'data-theme');
+
+    if (x == 'dark') {
+      this._addDarkTheme()
+    } else {
+      this._removeDarkTheme()
+    }
   },
   methods: {
     _addDarkTheme() {
-      let darkThemeLinkEl = document.createElement("link");
-      darkThemeLinkEl.setAttribute("rel", "stylesheet");
-      darkThemeLinkEl.setAttribute("href", "/css/darktheme.css");
-      darkThemeLinkEl.setAttribute("id", "dark-theme-style");
+      this.darkThemeLinkEl = document.createElement("link");
+      this.darkThemeLinkEl.setAttribute("rel", "stylesheet");
+      this.darkThemeLinkEl.setAttribute("href", "/css/darktheme.css");
+      this.darkThemeLinkEl.setAttribute("id", "dark-theme-style");
+      this.mix = localStorage.setItem( 'data-theme', 'dark');  
     
-      let docHead = document.querySelector("head");
-      docHead.append(darkThemeLinkEl);
+      this.docHead = document.querySelector("head");
+      this.docHead.append(this.darkThemeLinkEl);
+
     },
     _removeDarkTheme() {
-      let darkThemeLinkEl = document.querySelector("#dark-theme-style");
-      let parentNode = darkThemeLinkEl.parentNode;
-      parentNode.removeChild(darkThemeLinkEl);
+      this.darkThemeLinkEl = document.querySelector("#dark-theme-style");
+      this.docHead = this.darkThemeLinkEl.parentNode;
+      this.docHead.removeChild(this.darkThemeLinkEl);
+      this.mix = localStorage.setItem('data-theme', 'light');
     },
     darkThemeSwitch() {
-      let darkThemeLinkEl = document.querySelector("#dark-theme-style");
-      if (!darkThemeLinkEl) {
+      this.darkThemeLinkEl = document.querySelector("#dark-theme-style");
+      if (!this.darkThemeLinkEl) {
+        
         this._addDarkTheme()
       } else {
         this._removeDarkTheme()
@@ -43,10 +62,7 @@ new Vue({
       }
  
     },
-  }
-
-
-
+  },
 });
 
 
