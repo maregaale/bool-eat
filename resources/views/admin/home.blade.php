@@ -35,12 +35,7 @@
                                 <div class="box-padding dashboard_right-card-plate-box">
                                     <a href="{{route('admin.plates.show', ['plate' => $plate->id] )}}">
                                         <div class="dashboard_right-card-plate-box-card" style="">
-                                            <img
-                                              src="{{$plate->image}}"
-                                              class=""
-                                              alt="..."
-                                              style=""
-                                            />
+                                            <img src="{{ asset('storage/' . $plate->image )}}" alt="{{$plate->name}}" style="">
                                             
                                         </div>
                                     </a>

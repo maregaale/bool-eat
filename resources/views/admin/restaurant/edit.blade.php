@@ -62,7 +62,7 @@
 
                             <div class="form-group form-fields mb-2">
                                 <label for="restaurant_name">Nome del Ristorante</label>
-                                <input type="text" class="form-control" name="restaurant_name" id="restaurant_name" placeholder="Inserisci il prezzo" value="{{Auth::user()->restaurant_name}}">
+                                <input type="text" class="form-control" name="restaurant_name" id="restaurant_name" placeholder="Inserisci il nome" value="{{Auth::user()->restaurant_name}}">
                             </div>
 
                             <div class="form-group form-fields mb-2">
