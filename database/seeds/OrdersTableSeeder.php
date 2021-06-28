@@ -93,7 +93,7 @@ class OrdersTableSeeder extends Seeder
                 'address' => 'via Cassia 17',
                 'phone_number' => '+39 368686858563',
                 'total' => 20,
-                'created_at' =>  date("2021-01-02")
+                'created_at' =>  date("2021-04-02")
             ],
             [
                 'name' => 'Mattia',
@@ -120,7 +120,7 @@ class OrdersTableSeeder extends Seeder
                 'address' => 'via Cortina  100',
                 'phone_number' => '+39 388833863',
                 'total' => 25,
-                'created_at' =>  date("2021-03-13")
+                'created_at' =>  date("2021-02-13")
             ],
 
 
@@ -131,7 +131,7 @@ class OrdersTableSeeder extends Seeder
                 'address' => 'via Montemario 50',
                 'phone_number' => '334 37686906777',
                 'total' => 24,
-                'created_at' =>  date("2021-03-20")
+                'created_at' =>  date("2021-04-20")
             ],
             [
                 'name' => 'Andrea',
@@ -149,7 +149,7 @@ class OrdersTableSeeder extends Seeder
                 'address' => 'via Cassia 17',
                 'phone_number' => '+39 368686858563',
                 'total' => 20,
-                'created_at' =>  date("2021-02-02")
+                'created_at' =>  date("2021-01-02")
             ],
             [
                 'name' => 'Mattia',
@@ -158,7 +158,7 @@ class OrdersTableSeeder extends Seeder
                 'address' => 'via Cassia 120',
                 'phone_number' => '+39 366888863',
                 'total' => 22,
-                'created_at' =>  date("2021-04-12")
+                'created_at' =>  date("2021-01-12")
             ],
             [
                 'name' => 'Riccardo',
@@ -167,7 +167,7 @@ class OrdersTableSeeder extends Seeder
                 'address' => 'via Cassia 1020',
                 'phone_number' => '+39 368686888863',
                 'total' => 28,
-                'created_at' =>  date("2021-03-15")
+                'created_at' =>  date("2021-02-15")
             ],
             [
                 'name' => 'Marco',
@@ -194,7 +194,7 @@ class OrdersTableSeeder extends Seeder
                 'address' => 'via Montemario 17',
                 'phone_number' => '+39 36675898563',
                 'total' => 35,
-                'created_at' =>  date("2021-04-20")
+                'created_at' =>  date("2021-0-20")
             ],
             [
                 'name' => 'Antonio',
@@ -203,7 +203,7 @@ class OrdersTableSeeder extends Seeder
                 'address' => 'via Cassia 17',
                 'phone_number' => '+39 368686858563',
                 'total' => 20,
-                'created_at' =>  date("2021-01-22")
+                'created_at' =>  date("2021-02-22")
             ],
             [
                 'name' => 'Mattia',
@@ -212,7 +212,7 @@ class OrdersTableSeeder extends Seeder
                 'address' => 'via Cassia 120',
                 'phone_number' => '+39 366888863',
                 'total' => 22,
-                'created_at' =>  date("2021-03-12")
+                'created_at' =>  date("2021-06-12")
             ],
             [
                 'name' => 'Antonio',
@@ -221,7 +221,7 @@ class OrdersTableSeeder extends Seeder
                 'address' => 'via Cassia 10',
                 'phone_number' => '+39 36333863',
                 'total' => 40,
-                'created_at' =>  date("2021-01-18")
+                'created_at' =>  date("2021-03-18")
             ],
             [
                 'name' => 'Marco',
@@ -230,7 +230,7 @@ class OrdersTableSeeder extends Seeder
                 'address' => 'via Cortina  100',
                 'phone_number' => '+39 388833863',
                 'total' => 25,
-                'created_at' =>  date("2021-03-13")
+                'created_at' =>  date("2021-05-13")
             ],
 
             
@@ -252,7 +252,7 @@ class OrdersTableSeeder extends Seeder
 
             $newOrder->save();
 
-            $newOrder->plates()->attach($plates[rand(0, 5)]);
+            $newOrder->plates()->attach($plates[rand(5, 19)]);
 
 
         }
