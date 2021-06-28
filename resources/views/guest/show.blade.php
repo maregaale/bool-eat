@@ -25,19 +25,13 @@
         {{-- piatto singolo e info--}}
         <div class="restaurant_plate">
           <div class="info-plate">
-
             <h3>{{$plate->name}}</h3>
-
-            {{-- <h4>Ingredienti: </h4> --}}
             <p>{{ $plate->ingredients }}</p>
-
+            <h4 class="font-weight-bold">Portata</h4><p>{{ $plate->scope }}</p>
             <p class="font-weight-bold">{{$plate->price}} &euro;</p>
-            
             <span v-on:click.once="removePrevCart({{ json_encode($plate) }},{{ json_encode($plate->id) }}, {{ json_encode($plate->name) }}, {{ json_encode($plate->price) }}, {{ json_encode($plate->user_id) }}); totalPrice({{ json_encode($plate->price) }})">
               <i class="fas fa-cart-arrow-down"></i> Aggiungi al carrello 
             </span>
-
-            
           </div>
           <div class="img-plate">
             <img src="{{ asset('storage/' . $plate->image )}}" alt="{{$plate->name}}" style="">
@@ -52,34 +46,30 @@
 
     @if (count($user->plates) > 0)
     <div class="shopping_cart">
-      
-      <h3>Carrello</h3>
+      <div class="cart_top">
+        <p v-if="namePlatesShow.length != 0" > @{{sum}} &euro;</p>
+        <img src="{{asset('images/shopping-cart.png')}}" alt="">
+      </div>
+      {{-- <h3>Carrello</h3> --}}
       <hr>
       <div class="elements_container">
 
-        
         <div class="plus">
-
           <i v-for="(namePlate, index) in namePlatesShow" v-on:click="adding(index)" class="fas fa-plus-square"></i>
         </div>
 
         <div class="number-input">
-
           <p v-if="show == true" v-for="element in quantity">@{{element}}</p>
-
         </div>
         
-         
         <div class="plus">
-
           <i v-for="(namePlate, index) in namePlatesShow"  v-on:click="remove(index)" class="fas fa-minus-square"></i>
         </div>
         
-
         <div class="name">
-          <p v-for="namePlate in namePlatesShow">@{{namePlate}}</p>
+          <p v-for="namePlate in namePlatesShow">| @{{namePlate}} |</p>
         </div>
-
+        
         <div class="price">
           <p v-for="price in pricesShow">@{{price}} &euro;</p>
         </div>
@@ -89,12 +79,12 @@
         </div>        
       </div>
 
-      <div class="sum mt-4 mb-4">
+      {{-- <div class="sum mt-4 mb-4">
         <h3 v-if="namePlatesShow.length != 0" >Totale: @{{sum}} &euro;</h3>
-      </div>
+      </div> --}}
 
       <div class="checkout" v-if="namePlatesShow.length != 0" class="submit mt-3">
-        <button v-on:click="addStorage()" v-if class="btn"><a href="{{ route('guest.checkout' , $user->id)}}">Completa l'ordine</a></button>
+        <button v-on:click="addStorage()" v-if class="btn mt-4"><a href="{{ route('guest.checkout' , $user->id)}}">Completa l'ordine</a></button>
       </div>
     
     </div>
