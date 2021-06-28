@@ -31,6 +31,12 @@
 
   <!-- Jumbotron search -->
   <div id="app">  
+
+    <button v-on:click="toggleTheme">
+      <span v-if="this.theme == 'darkMode'"> Light</span>
+      <span v-else> Dark</span>  
+    </button>
+
     <div class="text-center jumbotron_bottom">
       <div class="d-flex justify-content-center align-items-center ">
         <div class="text-white mt-3">
@@ -47,7 +53,7 @@
       {{-- <h2>...puoi sempre cercare per genere. Facile no?</h2> --}}
       <div id="navbarNav" class="navbar_genres">
         <div class="navbar_genres">
-          <div class="active genres_content" v-for="genre in genres">
+          <div class="active genres_content text-center" v-for="genre in genres">
             <a class="btn-genres"  v-on:click="filterGenreButtons(genre.name)" href="javascript:;"><img v-bind:src="genre.logo" alt="">@{{ genre.name }}<span class="sr-only">(current)</span></a>
           </div>
         </div>
@@ -91,7 +97,7 @@
               <h4>{{$user->restaurant_name}}</h4> 
               <div class="overlay">
                 <p class="text card_address mt-2">{{$user->address}}</p>
-                <button class="btn_menu_overlay button_card_menu"><a v-on:click="message({{ json_encode($user->id) }})" href="{{ route('guest.show' , ['user' => $user->id])}}">Vai al Menù</a></button>
+                <a v-on:click="message({{ json_encode($user->id) }})" href="{{ route('guest.show' , ['user' => $user->id])}}"><button class="btn_menu_overlay button_card_menu">Vai al Menù</button></a>
               </div>
           </div>
         @endforeach
@@ -105,7 +111,8 @@
          <h4>@{{ plate.name }}</h4>
        </div>
     </section>
-</div>   
+  </div>   
+
 
 @include('partials.footer')
 
@@ -114,5 +121,4 @@
 @section('script')
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   <script src="{{ asset('js/guest-index.js')}}"></script>
-
  @endsection

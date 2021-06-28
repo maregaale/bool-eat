@@ -10293,6 +10293,16 @@ body {
   color: #0E7C7B;
 }
 
+:root {
+  --background-color: #fff;
+  --text-color: #000;
+}
+
+[data-theme=darkMode] {
+  --background-color: #343a40;
+  --text-color: #fff;
+}
+
 .main_nav_home {
   height: 60px;
   line-height: 60px;
@@ -10338,12 +10348,16 @@ body {
   box-shadow: 0 9px #999;
   margin-bottom: 20px;
   margin-left: 10px;
+  color: #fff;
 }
 .main_nav_home .button_card_menu a {
   color: #fff;
 }
 .main_nav_home .button_card_menu a:hover {
   text-decoration: none;
+}
+.main_nav_home .button_card_menu i {
+  margin-right: 5px;
 }
 @media screen and (max-width: 992px) {
   .main_nav_home .button_card_menu {
@@ -10686,18 +10700,21 @@ body {
   margin: 5px;
 }
 .wrapper_genres .navbar_genres .genres_content a {
-  font-size: 18px;
+  font-size: 12px;
   text-decoration: none;
   font-weight: bold;
   font-style: italic;
 }
 .wrapper_genres .navbar_genres .genres_content img {
+  filter: grayscale(60%);
   display: block;
-  width: 200px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin: 0 5px;
 }
 .wrapper_genres .navbar_genres .genres_content img:hover {
-  filter: grayscale(100%);
+  filter: grayscale(0%);
 }
 
 .card_container_2 h2 {

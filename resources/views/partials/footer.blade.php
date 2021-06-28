@@ -14,7 +14,7 @@
                     <li><a href=""><i class="mb-3 fab fa-youtube-square"></i></a></li>
                 </ul>
                 <ul class="footer_list">
-                    <h4 class="mt-3">About Us</h4>
+                    <h4 class="">About Us</h4>
                     <li><a href="">Alessandro Marega</a></li>
                     <li><a href="">Daniele Lai</a></li>
                     <li><a href="">Gianluca Forgia</a></li>
@@ -22,7 +22,7 @@
                     <li><a href="">Gianluigi Spisto</a></li>
                 </ul>
                 <ul class="footer_list">
-                    <h4 class="mt-3">Return</h4>
+                    <h4 class="">Return</h4>
                     <li><a href="http://localhost:8000">Home <i class="fas fa-arrow-circle-up"></i></a></li>
                 </ul>
             </div>

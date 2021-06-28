@@ -1,3 +1,16 @@
+
+    :root{
+         --background-color: #fff;
+         --text-color: #000; 
+
+     }
+
+     [data-theme='darkMode'] {
+         --background-color: #343a40;
+         --text-color: #fff;   
+      }
+
+    
 .main_nav_home{
     height: 60px;
     line-height: 60px;
@@ -46,6 +59,7 @@
         box-shadow: 0 9px #999;
         margin-bottom: 20px;
         margin-left: 10px;
+        color: #fff;
 
         a{
             color: #fff;
@@ -53,6 +67,10 @@
             &:hover{
                 text-decoration: none;
             }
+        }
+
+        i{
+            margin-right: 5px;
         }
 
         @media screen and( max-width: 992px){
@@ -492,19 +510,22 @@
             margin: 5px;
 
             a{
-                font-size: 18px;
+                font-size: 12px;
                 text-decoration: none;
                 font-weight: bold;
                 font-style: italic;
             }
 
             img{
+                filter: grayscale(60%);
                 display: block;
-                width: 200px;
-                height: 80px;
+                width: 90px;
+                height: 90px;
+                border-radius: 50%;
+                margin: 0 5px;
 
                 &:hover{
-                    filter: grayscale(100%);
+                    filter: grayscale(0%);
                 }
             }
         } 
