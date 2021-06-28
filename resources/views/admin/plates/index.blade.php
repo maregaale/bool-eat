@@ -129,9 +129,14 @@
 
                                     <a href="{{route('admin.plates.show', ['plate' => $plate->id] )}}"><i class="fas fa-eye text-secondary"></i></a>
 
-                                   
-                                    {{-- Bottone che richiama la modale  --}}
-                                    <button data-toggle="modal" data-action="{{ route('admin.plates.destroy', ['plate' => $plate->id] )}}" data-target="#delete" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
+                                    {{-- form della delete --}} 
+                                    <form class="d-inline-block" action="{{route('admin.plates.destroy', ['plate' => $plate->id] )}}" method="POST"> 
+                                      @method('DELETE')
+                                      @csrf
+                                      <button type="submit" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
+                                    </form>
+                                    {{-- /form della delete --}}
+
                                   </span>
                                 </td>
                               </tr>                    
@@ -186,8 +191,13 @@
                                         <a href="{{route('admin.plates.show', ['plate' => $plate->id] )}}"><i class="fas fa-eye text-secondary"></i></a>
 
                                         
-                                        {{-- Bottone che richiama la modale  --}}
-                                        <button data-toggle="modal" data-action="{{ route('admin.plates.destroy', ['plate' => $plate->id] )}}" data-target="#delete" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
+                                       {{-- form della delete --}} 
+                                        <form class="d-inline-block" action="{{route('admin.plates.destroy', ['plate' => $plate->id] )}}" method="POST"> 
+                                          @method('DELETE')
+                                          @csrf
+                                          <button type="submit" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
+                                        </form>
+                                    {{-- /form della delete --}}
                                       </span>
                                     </td>
                                   </tr>                    
@@ -242,8 +252,13 @@
                                       <a href="{{route('admin.plates.show', ['plate' => $plate->id] )}}"><i class="fas fa-eye text-secondary"></i></a>
 
                                       
-                                      {{-- Bottone che richiama la modale  --}}
-                                      <button data-toggle="modal" data-action="{{ route('admin.plates.destroy', ['plate' => $plate->id] )}}" data-target="#delete" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
+                                     {{-- form della delete --}} 
+                                    <form class="d-inline-block" action="{{route('admin.plates.destroy', ['plate' => $plate->id] )}}" method="POST"> 
+                                      @method('DELETE')
+                                      @csrf
+                                      <button type="submit" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
+                                    </form>
+                                    {{-- /form della delete --}}
                                     </span>
                                   </td>
                                 </tr>                    
@@ -298,8 +313,13 @@
                                       <a href="{{route('admin.plates.show', ['plate' => $plate->id] )}}"><i class="fas fa-eye text-secondary"></i></a>
 
                                       
-                                      {{-- Bottone che richiama la modale  --}}
-                                      <button data-toggle="modal" data-action="{{ route('admin.plates.destroy', ['plate' => $plate->id] )}}" data-target="#delete" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
+                                     {{-- form della delete --}} 
+                                    <form class="d-inline-block" action="{{route('admin.plates.destroy', ['plate' => $plate->id] )}}" method="POST"> 
+                                      @method('DELETE')
+                                      @csrf
+                                      <button type="submit" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
+                                    </form>
+                                    {{-- /form della delete --}}
                                     </span>
                                   </td>
                                 </tr>                    
@@ -355,8 +375,13 @@
                                         <a href="{{route('admin.plates.show', ['plate' => $plate->id] )}}"><i class="fas fa-eye text-secondary"></i></a>
 
                                         
-                                        {{-- Bottone che richiama la modale  --}}
-                                       <button data-toggle="modal" data-action="{{ route('admin.plates.destroy', ['plate' => $plate->id] )}}" data-target="#delete" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
+                                       {{-- form della delete --}} 
+                                    <form class="d-inline-block" action="{{route('admin.plates.destroy', ['plate' => $plate->id] )}}" method="POST"> 
+                                      @method('DELETE')
+                                      @csrf
+                                      <button type="submit" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
+                                    </form>
+                                    {{-- /form della delete --}}
                                       </span>
                                     </td>
                                   </tr>                    
@@ -481,8 +506,13 @@
                                     </form>  
                                     {{-- /form della delete --}} 
                                     {{-- <a href="" v-on:click="showModal = true" data-id="{{$plate->id}}" ><i class="fas fa-trash-alt text-danger"></i></i></a> --}}
-                                    {{-- Bottone che richiama la modale  --}}
-                                    <button data-toggle="modal" data-action="{{ route('admin.plates.destroy', ['plate' => $plate->id] )}}" data-target="#delete" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
+                                    {{-- form della delete --}} 
+                                    <form class="d-inline-block" action="{{route('admin.plates.destroy', ['plate' => $plate->id] )}}" method="POST"> 
+                                      @method('DELETE')
+                                      @csrf
+                                      <button type="submit" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
+                                    </form>
+                                {{-- /form della delete --}}
                                   </span>
                                 </td>
                               </tr>                    
@@ -538,10 +568,13 @@
                                           @csrf
                                           <button type="submit" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
                                         </form>  
-                                        {{-- /form della delete --}} 
-                                        {{-- <a href="" v-on:click="showModal = true" data-id="{{$plate->id}}" ><i class="fas fa-trash-alt text-danger"></i></i></a> --}}
-                                        {{-- Bottone che richiama la modale  --}}
-                                        <button data-toggle="modal" data-action="{{ route('admin.plates.destroy', ['plate' => $plate->id] )}}" data-target="#delete" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
+                                        {{-- form della delete --}} 
+                                        <form class="d-inline-block" action="{{route('admin.plates.destroy', ['plate' => $plate->id] )}}" method="POST"> 
+                                          @method('DELETE')
+                                          @csrf
+                                          <button type="submit" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
+                                        </form>
+                                    {{-- /form della delete --}}
                                       </span>
                                     </td>
                                   </tr>                    
@@ -597,10 +630,13 @@
                                         @csrf
                                         <button type="submit" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
                                       </form>  
-                                      {{-- /form della delete --}} 
-                                      {{-- <a href="" v-on:click="showModal = true" data-id="{{$plate->id}}" ><i class="fas fa-trash-alt text-danger"></i></i></a> --}}
-                                      {{-- Bottone che richiama la modale  --}}
-                                      <button data-toggle="modal" data-action="{{ route('admin.plates.destroy', ['plate' => $plate->id] )}}" data-target="#delete" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
+                                      {{-- form della delete --}} 
+                                      <form class="d-inline-block" action="{{route('admin.plates.destroy', ['plate' => $plate->id] )}}" method="POST"> 
+                                        @method('DELETE')
+                                        @csrf
+                                        <button type="submit" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
+                                      </form>
+                                  {{-- /form della delete --}}
                                     </span>
                                   </td>
                                 </tr>                    
@@ -656,10 +692,13 @@
                                         @csrf
                                         <button type="submit" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
                                       </form>  
-                                      {{-- /form della delete --}} 
-                                      {{-- <a href="" v-on:click="showModal = true" data-id="{{$plate->id}}" ><i class="fas fa-trash-alt text-danger"></i></i></a> --}}
-                                      {{-- Bottone che richiama la modale  --}}
-                                      <button data-toggle="modal" data-action="{{ route('admin.plates.destroy', ['plate' => $plate->id] )}}" data-target="#delete" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
+                                     {{-- form della delete --}} 
+                                     <form class="d-inline-block" action="{{route('admin.plates.destroy', ['plate' => $plate->id] )}}" method="POST"> 
+                                      @method('DELETE')
+                                      @csrf
+                                      <button type="submit" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
+                                    </form>
+                                {{-- /form della delete --}}
                                     </span>
                                   </td>
                                 </tr>                    
@@ -716,10 +755,13 @@
                                           @csrf
                                           <button type="submit" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
                                         </form>  
-                                        {{-- /form della delete --}} 
-                                        {{-- <a href="" v-on:click="showModal = true" data-id="{{$plate->id}}" ><i class="fas fa-trash-alt text-danger"></i></i></a> --}}
-                                        {{-- Bottone che richiama la modale  --}}
-                                        <button data-toggle="modal" data-action="{{ route('admin.plates.destroy', ['plate' => $plate->id] )}}" data-target="#delete" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
+                                        {{-- form della delete --}} 
+                                        <form class="d-inline-block" action="{{route('admin.plates.destroy', ['plate' => $plate->id] )}}" method="POST"> 
+                                          @method('DELETE')
+                                          @csrf
+                                          <button type="submit" class="btn_invisible"><i class="fas fa-trash-alt text-danger"></i></button>
+                                        </form>
+                                    {{-- /form della delete --}}
                                       </span>
                                     </td>
                                   </tr>                    
@@ -819,7 +861,7 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+{{-- <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
         <div class="modal-header">
@@ -828,9 +870,9 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body"> --}}
            {{-- Intestazione form  --}}
-          <form id="deletePlateForm" class="d-inline-block" action="{{route('admin.plates.destroy', ['plate' => $plate->id] )}}" method="POST"> 
+          {{-- <form id="deletePlateForm" class="d-inline-block" action="{{route('admin.plates.destroy', ['plate' => $plate->id] )}}" method="POST"> 
           @method('DELETE')
           @csrf
           <h5>Confermi di voler eliminare questo piatto?</h5>
@@ -842,16 +884,16 @@
       </form>
     </div>
   </div>
-</div>
+</div> --}}
 
-<script>
+{{-- <script>
   $('#delete').on('show.bs.modal', function (event) {
               var button = $(event.relatedTarget);
               var action = button.data('action');
               var modal = $(this);
               modal.find('form').attr('action', action);
           });
-</script>
+</script> --}}
 @endsection
 
 
