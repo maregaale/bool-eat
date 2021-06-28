@@ -87,7 +87,7 @@
   <div class="card_container_2">
     <div class="div text-center">
       {{-- <h1><span>S</span><span>c</span><span>o</span><span>p</span><span>r</span><span>i</span> <span>i</span> <span>n</span><span>o</span><span>s</span><span>t</span><span>r</span><span>i</span> <span>r</span><span>i</span><span>s</span><span>t</span><span>o</span><span>r</span><span>a</span><span>n</span><span>t</span><span>i</span></h1> --}}
-      <h2>Scopri i nostri ristoranti!</h2>
+      <h2>I Nostri migliori Ristoranti</h2>
     </div>
 
     <div class="container_card">

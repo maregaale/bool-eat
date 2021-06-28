@@ -10514,6 +10514,8 @@ body {
 .container_card .card_restaurant img {
   width: 100%;
   height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .container_card .card_restaurant .card_address {
   color: #2fac66;
@@ -10707,6 +10709,8 @@ body {
 }
 .wrapper_genres .navbar_genres .genres_content img {
   filter: grayscale(60%);
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
   width: 90px;
   height: 90px;

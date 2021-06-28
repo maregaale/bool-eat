@@ -8,12 +8,15 @@ use App\Order;
 use App\Plate;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class BooleatController extends Controller
 {
     public function index()
     {
-        $users = User::all();
+         $users = DB::table('users')
+        ->limit(8)
+        ->get();
         $plates = Plate::all();
         $genres = Genre::all();
 
