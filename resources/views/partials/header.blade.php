@@ -1,13 +1,19 @@
 @guest
     <div class="main_nav_home">
+        <div class="div">
         <a class="" href="{{ url('/') }}"> 
             <img src="{{asset('images/bool_eat.png')}}" alt="">
         </a>
+        <div id="dark" v-on:click="darkThemeSwitch(); toggleTheme()" class="wrapper">
+            <input type="checkbox" name="checkbox" class="switch">
+        </div>
+    </div>
 
-        <button id="dark" v-on:click="darkThemeSwitch(); toggleTheme()">
+        {{-- <button id="dark" v-on:click="darkThemeSwitch(); toggleTheme()">
             <span v-if="theme == 'darkmode'">Light</span> 
             <span v-else>Dark</span>
-         </button> 
+         </button>  --}}
+         
 
         <div class="nav_top_right">
             <span class="hamburger_nav"><i class="fas fa-hamburger"></i></span>
