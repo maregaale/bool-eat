@@ -32,10 +32,10 @@
   <!-- Jumbotron search -->
   <div id="app">  
 
-    <button v-on:click="toggleTheme">
+    {{-- <button v-on:click="toggleTheme">
       <span v-if="this.theme == 'darkMode'"> Light</span>
       <span v-else> Dark</span>  
-    </button>
+    </button> --}}
 
     <div class="text-center jumbotron_bottom">
       <div class="d-flex justify-content-center align-items-center ">
