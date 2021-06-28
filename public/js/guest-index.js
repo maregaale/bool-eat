@@ -12,7 +12,8 @@ new Vue({
     users: [],
     genres: [],
     vegans: [],
-    usersId: []
+    usersId: [],
+    theme: ''
   },
   //Mounted
   mounted: function mounted() {
@@ -24,10 +25,19 @@ new Vue({
     axios.get('http://localhost:8000/api/vegan').then(function (resp) {
       _this.vegans = resp.data; //console.log(this.vegans);
     });
+    var localTheme = localStorage.getItem('theme');
+    document.documentElement.setAttribute('data-theme', localTheme);
   },
   //\Mounted
   //Methods
   methods: {
+    toggleTheme: function toggleTheme() {
+      this.theme = this.theme == 'darkMode' ? '' : 'darkMode'; //toggles theme value
+
+      document.documentElement.setAttribute('data-theme', this.theme); // sets the data-theme attribute
+
+      localStorage.setItem('theme', this.theme); // stores theme value on local storage
+    },
     //Filtro per genres!!!!!
     filterGenre: function filterGenre() {
       var _this2 = this;

@@ -8,6 +8,7 @@ new Vue({
     genres: [],
     vegans: [],
     usersId: [],
+    theme: ''
   },
   //Mounted
   mounted: function () {
@@ -23,6 +24,9 @@ new Vue({
         //console.log(this.vegans);
       });
 
+    let localTheme = localStorage.getItem('theme');
+    document.documentElement.setAttribute('data-theme', localTheme);
+
 
 
 
@@ -31,9 +35,16 @@ new Vue({
   },
   //\Mounted
 
- 
-//Methods
+
+  //Methods
   methods: {
+
+    toggleTheme() {
+      this.theme = this.theme == 'darkMode' ? '' : 'darkMode'; //toggles theme value
+      document.documentElement.setAttribute('data-theme', this.theme); // sets the data-theme attribute
+      localStorage.setItem('theme', this.theme); // stores theme value on local storage
+    },
+
     //Filtro per genres!!!!!
     filterGenre: function () {
 
@@ -76,9 +87,8 @@ new Vue({
         this.users = result.data;
       });
     },
-
   },
   //\Methods
 
-  
+
 });

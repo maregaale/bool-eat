@@ -6,9 +6,9 @@
 
         <div class="nav_top_right">
             <span class="hamburger_nav"><i class="fas fa-hamburger"></i></span>
-            <button class="button_card_menu"><a><i class="material-icons">login</i><a class="ml-2" href="{{ route('login') }}"><span>{{ __('Login') }}</span></a></button>
+            <a><a class="ml-2" href="{{ route('login') }}"><button class="button_card_menu"><i class="material-icons">login</i><span>{{ __('Login') }}</span></button></a>
             @if (Route::has('register'))
-            <button class="button_card_menu"><a><i class="material-icons">face</i><a class="ml-2" href="{{ route('register') }}"><span>{{ __('Register') }}</span></a></button>                                    
+            <a><a class="ml-2" href="{{ route('register') }}"><button class="button_card_menu"><i class="material-icons">face</i><span>{{ __('Register') }}</span></button></a>                                  
         </div>
     </div>
         @endif
