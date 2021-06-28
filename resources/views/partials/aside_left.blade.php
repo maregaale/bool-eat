@@ -8,7 +8,7 @@
       {{-- <img src="https://www.freeiconspng.com/thumbs/restaurant-icon-png/restaurant-icon-png-7.png" alt=""> --}}
       
       {{-- Restaurant name --}}
-      <div class="box-padding ">
+      <div class="box-padding dashboard_left-container-admin-txt">
         <h3 class=" text-capitalize ">{{ Auth::user()->restaurant_name }}</h3>
 
       </div>
