@@ -166,15 +166,23 @@ padding: 30px;
     
             }
 
-            $breakpoint-minheight: 425px;
+            $breakpoint-minheight: 490px;
             @media (max-height: $breakpoint-minheight) {
 
-                .box-padding {
-                    padding: 0;
+                &-txt {
+                    display: none!important;
+
                 }
+
+                .box-padding {
+                    padding: 0!important;
+                }
+
+
                 padding: 0;
                 margin-top:.5em;
                 margin-bottom:0;
+
     
             }
 
@@ -293,6 +301,17 @@ padding: 30px;
                 margin-bottom: 10px;
                 
             }
+
+
+            $breakpoint-minheight: 490px;
+            @media (max-height: $breakpoint-minheight) {
+
+                bottom: -40px;
+
+    
+            }
+
+
 
 
 

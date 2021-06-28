@@ -11065,14 +11065,17 @@ padding: 30px;
     display: none;
   }
 }
-@media (max-height: 425px) {
+@media (max-height: 490px) {
   .dashboard_left-container-admin {
     padding: 0;
     margin-top: 0.5em;
     margin-bottom: 0;
   }
+  .dashboard_left-container-admin-txt {
+    display: none !important;
+  }
   .dashboard_left-container-admin .box-padding {
-    padding: 0;
+    padding: 0 !important;
   }
 }
 .dashboard_left-container-button {
@@ -11138,6 +11141,11 @@ padding: 30px;
 @media (max-height: 999px) {
   .dashboard_left-container-logout {
     margin-bottom: 10px;
+  }
+}
+@media (max-height: 490px) {
+  .dashboard_left-container-logout {
+    bottom: -40px;
   }
 }
 .dashboard_left-container-logout-btn {
