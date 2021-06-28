@@ -24,7 +24,7 @@
 
                     <div class="mt-4 mb-0 box-padding">
                         <h4 class="text-uppercase">Ultimi piatti</h4>
-                            <p >Accedi subito agli ultimi piatti aggiunti</p>   
+                            <p>Accedi subito agli ultimi piatti aggiunti</p>   
                     </div>  
                    
     
@@ -169,7 +169,7 @@
 
                             <div class="charts_container-row-box-cont-chart">
 
-                                <div class="inline-flex"><h3>Indirzzo</h3></div>                               
+                                <div class="inline-flex"><h3>Indirizzo</h3></div>                               
 
                                 <h5 class="mr-2">{{$user->address}}</h5>
 

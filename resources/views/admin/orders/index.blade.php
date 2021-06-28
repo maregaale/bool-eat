@@ -16,7 +16,7 @@
                 {{-- titolo  --}}
                 <div class="mt-3 mb-1 title-padding">
                     <h4 class="text-uppercase">Grafico statistiche</h4>
-                        <p >Controlla nello specifico quanti ordini hai ricevuto in un determinato lasso di tempo</p>   
+                        <p>Controlla nello specifico quanti ordini e quanto hai guadagnato per ogni mese dell'anno corrente.</p>   
                 </div>
                 {{-- /titolo  --}}
     

@@ -37,7 +37,7 @@ class HomeController extends Controller
         $spicy_plates = Plate::where('hot', 1)->get();
         $glutenfree_plates = Plate::where('gluten_free', 1)->get();
 
-        $plates = Plate::where('user_id', Auth::id())->get();
+        $plates = Plate::where('user_id', Auth::id())->orderBy('created_at', 'desc')->limit(3)->get();
         //dd($user->address);
 
         return view('admin.home', compact('plates', 'user', 'vegan_plates', 'spicy_plates', 'glutenfree_plates', 'media', 'vegetarian_plates'));
