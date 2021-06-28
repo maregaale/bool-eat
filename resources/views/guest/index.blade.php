@@ -2,7 +2,7 @@
 
 @section('style')
 <link rel="stylesheet" href="<%= BASE_URL %>css/darktheme.css"> 
-  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 @endsection
 
 @section('pageTitle')
@@ -43,7 +43,7 @@
         <div class="text-white mt-3">
             <h2 class="mb-4">Cerca e ordina!</h2>
             {{-- Search names --}}
-            <input  type="text" placeholder="Nome ristorante" value="" v-model="restaurantName">
+            <input  type="text" placeholder="Nome ristorante" value="" v-model="restaurantName"  v-on:keydown="searchName">
             <button type="button" name="button" v-on:click="searchName">Search</button>
             {{-- Search names --}}
         </div>
@@ -106,12 +106,6 @@
     </div>
   </div>
 
-    <section id="vegan">
-       {{-- <h2>I Consigli per i piatti vegani</h2> --}}
-       <div v-for="plate in vegans">
-         <h4>@{{ plate.name }}</h4>
-       </div>
-    </section>
   </div>   
 
 

@@ -61,27 +61,27 @@
 
                                         <div class="form-group form-fields mb-3">
                                             <label for="name">Nome piatto</label>
-                                            <input type="text" class="form-control" name="name" id="name" placeholder="Inserisci un piatto">
+                                            <input type="text" class="form-control" name="name" id="name" placeholder="Inserisci un piatto" value="{{ old('name') }}">
                                         </div>
 
                                         <div class="form-group form-fields mb-3" >
                                             <label for="ingredients"><h4>Ingredienti</h4></label>
-                                            <textarea class="form-control" name="ingredients" id="ingredients" placeholder="Inserisci gli ingredienti"></textarea>
+                                            <textarea class="form-control" name="ingredients" id="ingredients" placeholder="Inserisci gli ingredienti" >{{ old('ingredients') }}</textarea>
                                         </div>
 
                                         <div class="form-group form-fields mb-3">
                                             <label for="price"><h4>Prezzo</h4></label>
-                                            <input type="text" class="form-control" name="price" id="price" placeholder="Inserisci il prezzo">
+                                            <input type="text" class="form-control" name="price" id="price" placeholder="Inserisci il prezzo" value="{{ old('price') }}">
                                         </div>
 
                                         <div class="form-group form-fields mb-3">
                                             <label for="description"><h4>Descrizione</h4></label>
-                                            <textarea name="description" class="form-control" id="description" rows='4' placeholder="Descrizione"></textarea>
+                                            <textarea name="description" class="form-control" id="description" rows='4' placeholder="Descrizione">{{ old('description') }}</textarea>
                                         </div>
 
                                         <div class="form-group form-fields mb-3">
                                             <label for="scope"><h4>Portata</h4></label>
-                                            <input type="text" class="form-control" name="scope" id="scope" placeholder="Inserisci il tipo di portata">
+                                            <input type="text" class="form-control" name="scope" id="scope" placeholder="Inserisci il tipo di portata" value="{{ old('scope') }}">
                                         </div>
                                         {{-- /input info piatto --}}
 
