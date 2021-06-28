@@ -29,7 +29,7 @@
       </div>
     </div>
   </div>
-
+  
   <!-- Jumbotron search -->
   <div id="app">  
 
