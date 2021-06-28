@@ -13,3 +13,7 @@ h2,h3,h4,h5,h6,p {
 .menu h1 {
   color: #fff !important;
 }
+
+.footer_list.up i, .footer_list.up span {
+  color: #fff;
+}

@@ -1,0 +1,79 @@
+.footer_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  
+  &.up {
+    align-items: flex-end;
+    position: fixed;
+    bottom: 5px;
+    right: 20px;
+
+    @include tablet {
+      bottom: 0px;
+    }
+
+    @include phone_landscape {
+      right: 10px;
+    }
+
+    span {
+      font-size: 18px;
+      font-weight: bold;
+      color: #000 ;
+      
+    }
+    i {
+      color: #000 ;
+      font-size: 30px !important;
+    }
+  }
+  
+
+    font-size: 18px;
+
+    @include phone_landscape {
+      font-size: 15px;
+
+    }
+
+    i {
+      font-size: 24px !important;
+      cursor: pointer;
+    }
+
+    
+  h4 {
+    margin-left: 20px;
+
+    @include phone_landscape {
+      margin: 5px;
+    }
+  }
+
+
+  li {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    
+    i {
+      margin-right: 12px;
+      font-size: 18px !important;
+    }
+
+    span {
+      margin: 5px 20px;
+
+      @include phone_landscape {
+        margin: 5px;
+
+  
+      }
+    }
+  }
+}
+
