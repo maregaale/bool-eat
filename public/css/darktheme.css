@@ -5,3 +5,11 @@ body {
 h2,h3,h4,h5,h6,p {
   color: #fff !important;
 }
+
+.restaurant_plate {
+  background-color: #2b5876 !important;
+}
+
+.menu h1 {
+  color: #fff !important;
+}
