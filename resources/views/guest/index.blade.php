@@ -29,6 +29,9 @@
       </div>
     </div>
   </div>
+
+
+
   
   <!-- Jumbotron search -->
   <div id="app">  
@@ -53,7 +56,7 @@
     <div class="wrapper_genres">
       {{-- <h2>...puoi sempre cercare per genere. Facile no?</h2> --}}
       <div id="navbarNav" class="navbar_genres">
-        <div class="navbar_genres">
+        <div class="navbar_genres-cont v-dragscroll.y">
           <div class="active genres_content text-center" v-for="genre in genres">
             <a class="btn-genres"  v-on:click="filterGenreButtons(genre.name)" href="javascript:;"><img v-bind:src="genre.logo" alt="">@{{ genre.name }}<span class="sr-only">(current)</span></a>
           </div>
@@ -114,6 +117,9 @@
 @endsection
 
 @section('script')
+
+  
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
   <script src="{{ asset('js/guest-index.js')}}"></script>
  @endsection
