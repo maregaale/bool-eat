@@ -63,9 +63,7 @@
         background-color: $db_white;
         box-shadow: 0 10px 40px 0 rgb(62 57 107 / 7%), 0 2px 9px 0 rgb(62 57 107 / 6%);
 
-        //border-radius: 5px;
-        //box-shadow: 0 9px #999;
-        margin-bottom: 20px;
+        
         margin-left: 10px;
         color: black;
 
@@ -90,7 +88,6 @@
             padding: 5px 10px 5px 16px;
             font-size: 10px;
             border-radius: 5px;
-            margin-bottom: 20px;
             margin-left: 5px;
 
             i{
@@ -125,9 +122,7 @@
             i{
                 vertical-align: middle;
 
-                &:hover{
-                    //color: #fff;
-                }
+                
             }
         }
 

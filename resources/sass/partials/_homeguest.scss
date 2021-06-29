@@ -35,6 +35,11 @@
 
 .switch{
     position: relative;
+    transform: scale(0.7);
+    @include phone_landscape {
+      transform: scale(0.4);
+
+    }
     width: 120px;
     height: 40px;
     margin: 0px;
@@ -60,6 +65,11 @@
     
     
     .switch:after{
+        transform: scale(0.7);
+    @include phone_landscape {
+      transform: scale(0.4);
+
+    }
     content: '';
     width: 36px;
     height:36px;
@@ -112,6 +122,11 @@
     
     
     .switch:checked:before{
+        transform: scale(0.7);
+    @include phone_landscape {
+      transform: scale(0.4);
+
+    }
     content: '';
     width: 15px;
     height: 15px;
@@ -159,6 +174,11 @@
     
     
     .switch:before{
+        transform: scale(0.7);
+    @include phone_landscape {
+      transform: scale(0.4);
+
+    }
     content: '';
     width: 15px;
     height: 15px;
@@ -484,6 +504,7 @@
 }
 
 .wrapper_genres{
+    
 
     h2{
         margin: 30px 0 20px 20px;
@@ -508,8 +529,9 @@
         //flex-wrap: nowrap;
         justify-content: center;
         &-cont{
-            overflow-x:  auto;
+            flex-wrap: wrap;
             display: flex;
+            justify-content: center;
 
 
         }
@@ -520,7 +542,7 @@
                 font-size: 12px;
                 text-decoration: none;
                 font-weight: bold;
-                color: black;
+                color: #3490dc;
                // font-style: italic;
             }
 
