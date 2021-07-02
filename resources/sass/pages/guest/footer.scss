@@ -2,10 +2,12 @@
     padding: 30px;
     margin-top: 30px;
     background: linear-gradient(to bottom right, #2fac66 6%, #006699 64%);
+    //background-image: url('../../images/footer_bg.jpg');
     background-size: cover;
     background-position: left;
+    background-position: top;
     background-repeat: no-repeat;
-
+    height: 400px;
     hr, .credits  {
         @media screen and( max-width: 700px){
             display: none;
@@ -120,3 +122,9 @@
         color: #fff;
     }
 }
+
+
+#foot-booleat {
+    border-radius: 40% 20% 0 0;
+    
+  }

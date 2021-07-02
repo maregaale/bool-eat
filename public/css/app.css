@@ -10736,7 +10736,7 @@ body {
   max-width: 100%;
 }
 .container_card h4 {
-  color: #004466;
+  color: #0C0C1D;
   font-size: 22px;
   text-decoration: none;
   font-weight: bold;
@@ -10760,7 +10760,7 @@ body {
      object-fit: cover;
 }
 .container_card .card_restaurant .card_address {
-  color: #2fac66;
+  color: #14B8B5;
   font-weight: bold;
   font-style: italic;
 }
@@ -10770,7 +10770,7 @@ body {
   text-align: center;
   cursor: pointer;
   outline: none;
-  background-color: #004466;
+  background-color: #242456;
   border: none;
   border-radius: 5px;
   box-shadow: 0 9px #999;
@@ -10784,16 +10784,17 @@ body {
 }
 .container_card .card_restaurant .button_card_menu:hover {
   transition: all 0.5s ease-out;
-  background-color: #3e8e41;
+  background-color: #14B8B5;
 }
 .container_card .card_restaurant .button_card_menu:active {
-  background-color: #3e8e41;
+  background-color: #14B8B5;
   box-shadow: 0 5px #666;
 }
 .container_card .card_restaurant {
   position: relative;
   width: calc((100% / 4) - 20px);
   max-height: 100%;
+  border-radius: 0.25rem;
 }
 @media screen and (max-width: 1280px) {
   .container_card .card_restaurant {
@@ -10899,6 +10900,7 @@ body {
   vertical-align: middle;
   background: #e6e6e6;
   border: none;
+  border-radius: 0.25rem;
 }
 .jumbotron_bottom input:focus {
   outline: none;
@@ -10912,13 +10914,14 @@ body {
   vertical-align: middle;
   height: 40px;
   padding: 0 20px;
-  background-color: #2fac66;
+  background-color: #0E7C7B;
+  border-radius: 0.25rem;
   border: none;
   color: #fff;
   font-weight: bold;
 }
 .jumbotron_bottom button:hover {
-  background: coral;
+  background: #14B8B5;
 }
 
 .wrapper_genres {
@@ -11803,10 +11806,12 @@ padding: 30px;
   font-weight: bold;
 }
 #cart .shopping_cart .elements_container {
+  margin-top: 8px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding-top: 10px;
+  border-radius: 0.25rem;
+  box-shadow: -1px 2px 10px -3px rgba(0, 0, 0, 0.74);
 }
 #cart .shopping_cart .elements_container .plus {
   display: flex;
@@ -11815,13 +11820,13 @@ padding: 30px;
 #cart .shopping_cart .elements_container .plus .fas.fa-plus-square {
   cursor: pointer;
   font-size: 20px;
-  color: #38c172;
+  color: #14B8B5;
   margin: 5px 0;
 }
 #cart .shopping_cart .elements_container .plus .fas.fa-minus-square {
   cursor: pointer;
   font-size: 20px;
-  color: #dc3545;
+  color: #C08497;
   margin: 5px 0;
 }
 #cart .shopping_cart .elements_container .input_cart {
@@ -11835,14 +11840,14 @@ padding: 30px;
 #cart .shopping_cart .elements_container p {
   margin: 0 !important;
   white-space: nowrap;
-  font-size: 16px;
+  font-size: 12px;
   min-height: 30px;
-  padding-top: 3px;
   align-self: center;
 }
 @media (min-width: 1200px) {
   #cart .shopping_cart .elements_container p {
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: bold;
   }
 }
 #cart .shopping_cart .elements_container .name {
@@ -11879,15 +11884,18 @@ padding: 30px;
   justify-content: space-between;
 }
 #cart .shopping_cart .elements_container .button button {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   text-align: center;
   font-size: 12px;
   font-weight: 600;
   display: flex;
+  background: none;
+  color: #A2536C;
   align-items: center;
   justify-content: center;
   margin: 3px 0;
+  border: none;
 }
 @media (min-width: 992px) {
   #cart .shopping_cart .elements_container .button button {
@@ -11907,12 +11915,13 @@ padding: 30px;
 }
 #cart .shopping_cart .checkout button {
   text-align: center;
-  background-color: #2fac66;
+  background-color: #14B8B5;
   width: 300px;
 }
 #cart .shopping_cart .checkout button a {
   color: #fff;
   font-size: 20px;
+  font-weight: bold;
 }
 
 .footer_wrapper {
@@ -11921,7 +11930,9 @@ padding: 30px;
   background: linear-gradient(to bottom right, #2fac66 6%, #006699 64%);
   background-size: cover;
   background-position: left;
+  background-position: top;
   background-repeat: no-repeat;
+  height: 400px;
 }
 @media screen and (max-width: 700px) {
   .footer_wrapper hr, .footer_wrapper .credits {
@@ -12016,6 +12027,10 @@ padding: 30px;
 .footer_wrapper .credits {
   text-align: center;
   color: #fff;
+}
+
+#foot-booleat {
+  border-radius: 40% 20% 0 0;
 }
 
 .dashboard_right.edit_user {

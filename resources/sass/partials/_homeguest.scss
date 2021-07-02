@@ -298,7 +298,7 @@
     max-width: 100%;
     
     h4{
-        color: #004466;
+        color: $db_blue_dark;
         font-size: 22px;
         text-decoration: none;
         font-weight: bold;
@@ -326,7 +326,7 @@
         }
 
         .card_address{
-            color: #2fac66;
+            color: $db_green-light;
             font-weight: bold;
             font-style: italic;
         }
@@ -337,7 +337,7 @@
             text-align: center;
             cursor: pointer;
             outline: none;
-            background-color: #004466;
+            background-color: $db_blue;
             border: none;
             border-radius: 5px;
             box-shadow: 0 9px #999;
@@ -354,11 +354,11 @@
           
           .button_card_menu:hover {
             transition: all .5s ease-out;
-            background-color: #3e8e41;  
+            background-color: $db_green-light;  
             }
           
           .button_card_menu:active {
-            background-color: #3e8e41;
+            background-color: $db_green-light;
             box-shadow: 0 5px #666;
           }
     }
@@ -367,6 +367,7 @@
         position: relative;
         width: calc((100% / 4) - 20px);
         max-height: 100%;
+        border-radius: $border_radius_boxes;
 
         @media screen and( max-width: 1280px){
             width: calc((100% / 3) - 20px);
@@ -491,6 +492,7 @@
         vertical-align: middle;
         background: #e6e6e6;
         border: none;
+        border-radius: $border_radius_boxes;
 
         &:focus{
             outline: none;
@@ -505,13 +507,14 @@
         vertical-align: middle;
         height: 40px;
         padding: 0 20px;
-        background-color: #2fac66;
+        background-color: $db_green;
+        border-radius: $border_radius_boxes;
         border:none;
         color:#fff;
         font-weight: bold;
 
         &:hover{
-            background: coral;
+            background: $db_green-light;
         }
     }
 }

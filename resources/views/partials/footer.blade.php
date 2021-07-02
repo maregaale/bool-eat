@@ -1,10 +1,10 @@
-<footer>
+<footer id="foot-booleat">
     <div class="footer_wrapper">
         
         <div class="footer_content">
-            <div class="img_footer">
+            {{-- <div class="img_footer">
                 <img src="{{asset('images/bool_eat.png')}}" alt="">
-            </div>
+            </div> --}}
             <div class="content_list about">
                 
                 <ul class="footer_list ">
