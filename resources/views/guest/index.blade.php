@@ -12,7 +12,7 @@
 @section('content')
 
   @include('partials.header')
-   
+  <div id="app"> 
   <!-- Jumbotron -->
   <div class="mb-3 jumbotron_wrapper">
     <div class="text-center height-text-jumbotron">
@@ -28,30 +28,31 @@
         </div>
       </div>
     </div>
-  </div>
-
-
-
-  
-  <!-- Jumbotron search -->
-  <div id="app">  
-
-    {{-- <button v-on:click="darkThemeSwitch">
-      
-       Dark
-    </button>  --}}
-
     <div class="text-center jumbotron_bottom">
       <div class="d-flex justify-content-center align-items-center ">
         <div class="text-white mt-3">
             <h2 class="mb-4">Cerca e ordina!</h2>
             {{-- Search names --}}
             <input  type="text" placeholder="Nome ristorante" value="" v-model="restaurantName"  v-on:keydown="searchName">
-            <button type="button" name="button" v-on:click="searchName">Search</button>
+            <button type="button" class="button_card_menu " name="button" v-on:click="searchName">Search</button>
             {{-- Search names --}}
         </div>
       </div>
     </div>
+  </div>
+
+
+
+  
+  <!-- Jumbotron search -->
+   
+
+    {{-- <button v-on:click="darkThemeSwitch">
+      
+       Dark
+    </button>  --}}
+
+ 
 
     <div class="wrapper_genres">
       {{-- <h2>...puoi sempre cercare per genere. Facile no?</h2> --}}

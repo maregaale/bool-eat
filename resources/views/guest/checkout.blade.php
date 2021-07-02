@@ -69,7 +69,7 @@ Booleat | Completa l'Ordine
                                     <div class="form-group fullwidth">
                         
               
-                                        {{-- <label for="name" class="col-form-label text-md-right">Nome</label> --}}
+                                         <label for="name" class="col-form-label text-md-right">Nome</label> 
         
                                         <input type="text" id="name" name="name"  placeholder="Inserisci il nome" required class="form-control" >
                                         
@@ -86,7 +86,7 @@ Booleat | Completa l'Ordine
                                     <div class="form-group fullwidth">
                         
               
-                                        {{-- <label for="lastname" class="col-form-label text-md-right">Cognome</label> --}}
+                                        <label for="lastname" class="col-form-label text-md-right">Cognome</label> 
         
                                         <input type="text" id="lastname" name="lastname"  placeholder="Inserisci il cognome" required class="form-control" >
                                         
@@ -103,7 +103,7 @@ Booleat | Completa l'Ordine
                                     <div class="form-group fullwidth">
                         
               
-                                        {{-- <label for="email" class="col-form-label text-md-right">Email</label> --}}
+                                        <label for="email" class="col-form-label text-md-right">Email</label> 
         
                                         <input type="email"  name="email" id="email" placeholder="Inserisci l'email" required class="form-control" >
                                         
@@ -121,7 +121,7 @@ Booleat | Completa l'Ordine
                                     <div class="form-group fullwidth">
                         
               
-                                        {{-- <label for="address" class="col-form-label text-md-right">Inserisci l'indirizzo</label> --}}
+                                         <label for="address" class="col-form-label text-md-right">Inserisci l'indirizzo</label> 
         
                                         <input type="text"  id="address" name="address" placeholder="Indirizzo" required class="form-control" >
                                         
@@ -139,7 +139,7 @@ Booleat | Completa l'Ordine
                                     <div class="form-group fullwidth">
                         
               
-                                        {{-- <label for="phone_number" class="col-form-label text-md-right">Inserisci il numero di telefono</label> --}}
+                                        <label for="phone_number" class="col-form-label text-md-right">Inserisci il numero di telefono</label>
         
                                         <input  type="tel" id="phone_number" name="phone_number" placeholder="Numero di telefono" required class="form-control" >
                                         
@@ -259,7 +259,7 @@ Booleat | Completa l'Ordine
  <script src="https://js.braintreegateway.com/web/dropin/1.10.0/js/dropin.js"></script>
 
  
- 
+
  
  <script>
     
@@ -285,6 +285,9 @@ form.addEventListener('submit',function (event) {
 });
  
 </script> 
+
+
+
 
 
 

@@ -22,21 +22,37 @@
       <div class="wrapper_plate">
 
       @foreach ($user->plates as $plate)
+      @if ($plate->visible == 1)
         {{-- piatto singolo e info--}}
-        <div class="restaurant_plate">
-          <div class="info-plate">
-            <h3>{{$plate->name}}</h3>
-            <p>{{ $plate->ingredients }}</p>
-            <h4 class="font-weight-bold">Portata</h4><p>{{ $plate->scope }}</p>
-            <p class="font-weight-bold">{{$plate->price}} &euro;</p>
-            <span v-on:click.once="removePrevCart({{ json_encode($plate) }},{{ json_encode($plate->id) }}, {{ json_encode($plate->name) }}, {{ json_encode($plate->price) }}, {{ json_encode($plate->user_id) }}); totalPrice({{ json_encode($plate->price) }})">
-              <i class="fas fa-cart-arrow-down"></i> Aggiungi al carrello 
-            </span>
-          </div>
-          <div class="img-plate">
-            <img src="{{ asset('storage/' . $plate->image )}}" alt="{{$plate->name}}" style="">
-          </div>
+        <div class="restaurant_plate box-padding">
+          {{-- Img Plate --}}
+            <div class="img-plate">
+              <img src="{{ asset('storage/' . $plate->image )}}" alt="{{$plate->name}}" style="">
+            </div>
+          {{-- /Img Plate --}}
+            {{-- Info Plate --}}
+            <div class="info-plate">
+              <h3>{{$plate->name}}</h3>
+              <div class="price-plate">
+                {{-- <h4 class="font-weight-bold">Portata</h4> --}}
+                <p><span>Portata: </span>{{ $plate->scope }}</p>
+                <p class="font-weight-bold"><span>Prezzo: </span>{{$plate->price}} &euro;</p>
+              </div>
+             
+              <p><span>Ingredienti: </span>{{ $plate->ingredients }}</p>
+            </div>
+          {{-- /Info Plate --}}
+          {{-- Button add to cart --}}
+            <div class="add-to-cart">
+              <div class="icon-cart" v-on:click.once="removePrevCart({{ json_encode($plate) }},{{ json_encode($plate->id) }}, {{ json_encode($plate->name) }}, {{ json_encode($plate->price) }}, {{ json_encode($plate->user_id) }}); totalPrice({{ json_encode($plate->price) }})">
+              <i class="fas fa-cart-arrow-down"></i>
+              </div>
+            </div>
+          {{--/Button add to cart --}}
+          
+          
         </div>
+        @endif
       @endforeach
     </div>
     </div>

@@ -24,7 +24,7 @@
     }
       
       h1 {
-        color: #004466;
+        color: $db_blue;
         font-weight: bold;
         font-style: italic;
         font-size: 40px;
@@ -40,59 +40,97 @@
           width: 100%;
           display: flex;
           justify-content: space-between;
-          border-radius: 10px;
+          border-radius: $border_radius_boxes;
           margin: 5px 0;
           margin-right: 10px;
-          padding: 10px;
+          // padding: 1.5rem;
           background-color: #fff;
           -webkit-box-shadow: -1px 2px 10px -3px rgba(0,0,0,0.74); 
           box-shadow: -1px 2px 10px -3px rgba(0,0,0,0.74);
 
           @include extra_large {
-            width: calc((100% / 2) - 20px);
+            width: 100%;
           }
-          
-          button {
-            width: 30px;
-            height: 30px;
-            margin: 0 10px;
-            display: inline-block;
-            padding: 5px;
+          .img-plate{
+            max-width: 40%;
+             img {
+               height: 100%;
+               border-radius: $border_radius_boxes;
+             }
+          }
+          // button {
+          //   width: 30px;
+          //   height: 30px;
+          //   margin: 0 10px;
+          //   display: inline-block;
+          //   padding: 5px;
             
-          }
+          // }
 
           .info-plate {
-            
+            width: 40%;
+            span {
+              font-weight: bold;
+            }
+            h3{
+              font-size: 35px;
+              padding: 4px 20px;
+            }
+            p {
+              padding: 4px 20px;
+              
+            }
+          }
             @include extra_extra_large {
               width: 60%;
             }
-
-            h3{
-              font-size: 18px;
-            }
+      
+                 .price-plate {
+                   p {
+                     font-size: 20px;
+                   }
+                 }
+                .add-to-cart {
+                  width: 20%;
+                  position: relative;
+                   .icon-cart {
+                     position: absolute;
+                     bottom: 0;
+                     right: 10px;
+                     background-color: $db_green ;
+                     padding: $padding_boxes;
+                     border-radius: $border_radius_boxes;
+                       &:hover {
+                         background-color: $db_green-light;
+                       }
+                       i {
+                         font-size: 30px;
+                         color: #fff;
+                         cursor: pointer;
+                          
+                       }
+                   }
+                }
+              // 
+           
+            
+           
 
             h4{
-              font-size: 16px;
+              font-size: 20px;
             }
             
-            span {
-              font-weight: bold;
-              color: #2fac66;
-              background-color: #e2e6ea;
-              padding: 8px;
-              border-radius: 5px;
-              cursor: pointer;
-            }
-          }
+           
+         
 
-          .img-plate  {
-            width: 40%;
+           //s width: 40%;
             
             img {
               width: 100%;
-              border-radius: 10px;
+              height: 200px;
+              object-fit: cover
             }
-          }
+ 
         }
       }
     }
