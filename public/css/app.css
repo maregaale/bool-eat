@@ -10399,7 +10399,7 @@ body {
 .jumbotron_wrapper {
   position: relative;
   background-image: url("images/banner_4.png");
-  height: 600px;
+  height: 700px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -10684,14 +10684,15 @@ body {
 }
 .jumbotron_content h1 {
   font-weight: bold;
-  font-size: 80px;
-  color: #004466;
+  font-size: 70px;
+  color: #E1B03D;
+  text-transform: uppercase;
 }
 .jumbotron_content h2 {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 600;
-  color: #000;
+  color: #14B8B5;
 }
 @media screen and (max-width: 992px) {
   .jumbotron_content h1 {
@@ -10760,9 +10761,8 @@ body {
      object-fit: cover;
 }
 .container_card .card_restaurant .card_address {
-  color: #14B8B5;
+  color: #E1B03D;
   font-weight: bold;
-  font-style: italic;
 }
 .container_card .card_restaurant .button_card_menu {
   padding: 5px 20px;
@@ -10770,7 +10770,7 @@ body {
   text-align: center;
   cursor: pointer;
   outline: none;
-  background-color: #242456;
+  background-color: #E1B03D;
   border: none;
   border-radius: 5px;
   box-shadow: 0 9px #999;
@@ -10784,10 +10784,10 @@ body {
 }
 .container_card .card_restaurant .button_card_menu:hover {
   transition: all 0.5s ease-out;
-  background-color: #14B8B5;
+  background-color: #E9C572;
 }
 .container_card .card_restaurant .button_card_menu:active {
-  background-color: #14B8B5;
+  background-color: #E9C572;
   box-shadow: 0 5px #666;
 }
 .container_card .card_restaurant {
@@ -10842,11 +10842,12 @@ body {
   bottom: 0;
   left: 100%;
   right: 0;
-  background-color: rgba(0, 68, 102, 0.9);
+  background-color: #242456;
   overflow: hidden;
   width: 0;
   height: 100%;
   transition: 0.5s ease;
+  opacity: 0.9;
 }
 .container_card .card_restaurant:hover .overlay {
   width: 100%;
@@ -11802,7 +11803,7 @@ padding: 30px;
   }
 }
 #cart .shopping_cart h2 {
-  color: #004466;
+  color: #242456;
   font-weight: bold;
 }
 #cart .shopping_cart .elements_container {
@@ -11927,7 +11928,7 @@ padding: 30px;
 .footer_wrapper {
   padding: 30px;
   margin-top: 30px;
-  background: linear-gradient(to bottom right, #2fac66 6%, #006699 64%);
+  background-color: #242456;
   background-size: cover;
   background-position: left;
   background-position: top;
@@ -12033,6 +12034,83 @@ padding: 30px;
   border-radius: 40% 20% 0 0;
 }
 
+.site-footer {
+  background-image: url("../../images/footer_bg.jpg");
+  background-size: cover;
+  background-position: right;
+  padding: 45px 0 20px;
+  font-size: 15px;
+  line-height: 24px;
+  color: #fff;
+  height: 400px;
+}
+
+.site-footer hr {
+  border-top-color: #E1B03D;
+  opacity: 0.5;
+}
+
+.site-footer hr.small {
+  margin: 20px 0;
+}
+
+.site-footer h6 {
+  color: #E1B03D;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 5px;
+  letter-spacing: 2px;
+}
+
+.site-footer a {
+  color: #737373;
+}
+
+.site-footer a:hover {
+  color: #E1B03D;
+  text-decoration: none;
+}
+
+.footer-links {
+  padding-left: 0;
+  list-style: none;
+}
+
+.footer-links li {
+  display: block;
+}
+
+.footer-links a {
+  color: #A2536C;
+}
+
+.footer-links a:active, .footer-links a:focus, .footer-links a:hover {
+  color: #C08497;
+  text-decoration: none;
+}
+
+.footer-links.inline li {
+  display: inline-block;
+}
+
+.copyright-text {
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .site-footer [class^=col-] {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .site-footer {
+    padding-bottom: 0;
+  }
+
+  .site-footer .copyright-text, .site-footer .social-icons {
+    text-align: center;
+  }
+}
 .dashboard_right.edit_user {
   padding: 0;
 }

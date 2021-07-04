@@ -1,4 +1,5 @@
 @guest
+
     <div class="main_nav_home">
         <div class="div">
         <a class="" href="{{ url('/') }}"> 
@@ -26,7 +27,7 @@
         @endif
 
     </div>
-    </div>
+    
 
 
     @else

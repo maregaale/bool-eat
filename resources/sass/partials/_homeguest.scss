@@ -10,11 +10,11 @@
          --text-color: #fff;   
       }
 
-    
 .jumbotron_wrapper {
     position: relative;
     background-image: url('images/banner_4.png');
-    height: 600px;
+    //background-image: url('../../images/jumbotronbg.jpg');
+    height: 700px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -232,16 +232,17 @@
 
     h1{
         font-weight: bold;
-        font-size: 80px;
-        color: #004466;
+        font-size: 70px;
+        color: $db_yellow;
+        text-transform: uppercase;
 
     }
 
     h2{
         font-weight: bold;
-        font-size: 30px;
+        font-size: 40px;
         font-weight: 600;
-        color: #000;
+        color: $db_green-light;
     }
 
     
@@ -326,9 +327,9 @@
         }
 
         .card_address{
-            color: $db_green-light;
+            color: $db_yellow;
             font-weight: bold;
-            font-style: italic;
+            //font-style: italic;
         }
 
         .button_card_menu {
@@ -337,7 +338,7 @@
             text-align: center;
             cursor: pointer;
             outline: none;
-            background-color: $db_blue;
+            background-color: $db_yellow;
             border: none;
             border-radius: 5px;
             box-shadow: 0 9px #999;
@@ -354,11 +355,11 @@
           
           .button_card_menu:hover {
             transition: all .5s ease-out;
-            background-color: $db_green-light;  
+            background-color: $db_yellow-light;  
             }
           
           .button_card_menu:active {
-            background-color: $db_green-light;
+            background-color: $db_yellow-light;
             box-shadow: 0 5px #666;
           }
     }
@@ -416,11 +417,13 @@
         bottom: 0;
         left: 100%;
         right: 0;
-        background-color: rgba($color: #004466, $alpha: 0.9);
+        background-color: $db_blue;
+        //rgba($color: #004466, $alpha: 0.9);
         overflow: hidden;
         width: 0;
         height: 100%;
         transition: .5s ease;
+        opacity: 0.9;
         // -webkit-border-top-left-radius: 30px;
         // -webkit-border-top-right-radius: 30px;
         // border-top-left-radius: 15px;

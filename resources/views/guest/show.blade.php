@@ -103,7 +103,7 @@
       </div> --}}
 
       <div class="checkout" v-if="namePlatesShow.length != 0" class="submit mt-3">
-        <button v-on:click="addStorage()" v-if class="btn mt-4"><a href="{{ route('guest.checkout' , $user->id)}}">Checkout</a></button>
+        <button v-on:click="addStorage()"  class="btn mt-3"><a href="{{ route('guest.checkout' , $user->id)}}">Checkout</a></button>
       </div>
     
     </div>
