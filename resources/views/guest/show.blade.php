@@ -67,30 +67,34 @@
         <img src="{{asset('images/shopping-cart.png')}}" alt="">
       </div>
       {{-- <h3>Carrello</h3> --}}
-      <div class="elements_container">
-
+      <div class="elements_container" v-if="namePlatesShow.length > 0">
+        {{-- Increment --}}
         <div class="plus">
           <i v-for="(namePlate, index) in namePlatesShow" v-on:click="adding(index)" class="fas fa-plus-square"></i>
         </div>
-
-        <div class="number-input">
-          <p v-if="show == true" v-for="element in quantity">@{{element}}</p>
-        </div>
-        
+        {{-- /Increment --}}
+        {{-- Decrement --}}
         <div class="plus">
           <i v-for="(namePlate, index) in namePlatesShow"  v-on:click="remove(index)" class="fas fa-minus-square"></i>
         </div>
+        {{-- /Decrement --}}
+
+        <div class="number-input">
+          <p v-if="show == true" v-for="element in quantity"><i class="fas fa-times"></i> @{{element}}</p>
+        </div>
+        
+   
         
         <div class="name">
           <p v-for="namePlate in namePlatesShow"> @{{namePlate}}</p>
         </div>
         
-        <div class="price">
+        {{-- <div class="price">
           <p v-for="price in pricesShow">@{{price}} &euro;</p>
-        </div>
+        </div> --}}
 
         <div class="button">
-          <button v-on:click="removeCartElement(index); removePrice(index, price)" v-for="(price, index) in pricesShow" v-if="namePlates.length != 0" class="btn btn-danger"><span class="trash_text">Elimina</span><i class="fas fa-trash trash"></i></button>
+          <button v-on:click="removeCartElement(index); removePrice(index, price)" v-for="(price, index) in pricesShow" v-if="namePlates.length != 0" class="btn btn-danger"><span class="trash_text"></span><i class="fas fa-trash trash"></i></button>
         </div>        
       </div>
 
@@ -99,7 +103,7 @@
       </div> --}}
 
       <div class="checkout" v-if="namePlatesShow.length != 0" class="submit mt-3">
-        <button v-on:click="addStorage()" v-if class="btn mt-4"><a href="{{ route('guest.checkout' , $user->id)}}">Completa l'ordine</a></button>
+        <button v-on:click="addStorage()"  class="btn mt-3"><a href="{{ route('guest.checkout' , $user->id)}}">Checkout</a></button>
       </div>
     
     </div>

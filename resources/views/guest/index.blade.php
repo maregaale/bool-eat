@@ -34,7 +34,7 @@
             <h2 class="mb-4">Cerca e ordina!</h2>
             {{-- Search names --}}
             <input  type="text" placeholder="Nome ristorante" value="" v-model="restaurantName"  v-on:keydown="searchName">
-            <button type="button" class="button_card_menu " name="button" v-on:click="searchName">Search</button>
+            <button type="button" class="button_card_menu " name="button" v-on:click="searchName"><i class="fas fa-search"></i></button>
             {{-- Search names --}}
         </div>
       </div>
@@ -43,7 +43,7 @@
 
 
 
-  
+
   <!-- Jumbotron search -->
    
 

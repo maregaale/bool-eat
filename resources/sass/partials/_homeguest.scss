@@ -10,11 +10,11 @@
          --text-color: #fff;   
       }
 
-    
 .jumbotron_wrapper {
     position: relative;
     background-image: url('images/banner_4.png');
-    height: 600px;
+    //background-image: url('../../images/jumbotronbg.jpg');
+    height: 700px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -232,16 +232,17 @@
 
     h1{
         font-weight: bold;
-        font-size: 80px;
-        color: #004466;
+        font-size: 70px;
+        color: $db_yellow;
+        text-transform: uppercase;
 
     }
 
     h2{
         font-weight: bold;
-        font-size: 30px;
+        font-size: 40px;
         font-weight: 600;
-        color: #000;
+        color: $db_green-light;
     }
 
     
@@ -298,7 +299,7 @@
     max-width: 100%;
     
     h4{
-        color: #004466;
+        color: $db_blue_dark;
         font-size: 22px;
         text-decoration: none;
         font-weight: bold;
@@ -326,9 +327,9 @@
         }
 
         .card_address{
-            color: #2fac66;
+            color: $db_yellow;
             font-weight: bold;
-            font-style: italic;
+            //font-style: italic;
         }
 
         .button_card_menu {
@@ -337,7 +338,7 @@
             text-align: center;
             cursor: pointer;
             outline: none;
-            background-color: #004466;
+            background-color: $db_yellow;
             border: none;
             border-radius: 5px;
             box-shadow: 0 9px #999;
@@ -354,11 +355,11 @@
           
           .button_card_menu:hover {
             transition: all .5s ease-out;
-            background-color: #3e8e41;  
+            background-color: $db_yellow-light;  
             }
           
           .button_card_menu:active {
-            background-color: #3e8e41;
+            background-color: $db_yellow-light;
             box-shadow: 0 5px #666;
           }
     }
@@ -367,6 +368,7 @@
         position: relative;
         width: calc((100% / 4) - 20px);
         max-height: 100%;
+        border-radius: $border_radius_boxes;
 
         @media screen and( max-width: 1280px){
             width: calc((100% / 3) - 20px);
@@ -415,11 +417,13 @@
         bottom: 0;
         left: 100%;
         right: 0;
-        background-color: rgba($color: #004466, $alpha: 0.9);
+        background-color: $db_blue;
+        //rgba($color: #004466, $alpha: 0.9);
         overflow: hidden;
         width: 0;
         height: 100%;
         transition: .5s ease;
+        opacity: 0.9;
         // -webkit-border-top-left-radius: 30px;
         // -webkit-border-top-right-radius: 30px;
         // border-top-left-radius: 15px;
@@ -491,6 +495,7 @@
         vertical-align: middle;
         background: #e6e6e6;
         border: none;
+        border-radius: $border_radius_boxes;
 
         &:focus{
             outline: none;
@@ -505,13 +510,14 @@
         vertical-align: middle;
         height: 40px;
         padding: 0 20px;
-        background-color: #2fac66;
+        background-color: $db_green;
+        border-radius: $border_radius_boxes;
         border:none;
         color:#fff;
         font-weight: bold;
 
         &:hover{
-            background: coral;
+            background: $db_green-light;
         }
     }
 }

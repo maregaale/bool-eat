@@ -223,15 +223,20 @@
     }
 
     h2{
-      color: #004466;
+      color: $db_blue;
       font-weight: bold;
     }
 
     .elements_container {
+      margin-top: 8px;
       display: flex;
       justify-content: space-evenly;
       align-items: center;
-      padding-top: 10px;
+      //padding-top: 10px;
+      //background-color: magenta;
+      border-radius: $border_radius_boxes;
+      -webkit-box-shadow: -1px 2px 10px -3px rgba(0,0,0,0.74); 
+       box-shadow: -1px 2px 10px -3px rgba(0,0,0,0.74);
 
       .plus {
         display: flex;
@@ -240,7 +245,7 @@
         .fas.fa-plus-square {
           cursor: pointer;
           font-size: 20px;
-          color: #38c172;
+          color: $db_green-light;
           margin: 5px 0;
 
         }
@@ -248,7 +253,7 @@
         .fas.fa-minus-square {
           cursor: pointer;
           font-size: 20px;
-          color: #dc3545;
+          color: $db_red-light;
           margin: 5px 0;
 
         }
@@ -266,13 +271,14 @@
       p {
         margin: 0!important;
         white-space: nowrap;
-        font-size: 16px;
+        font-size: 12px;
         min-height: 30px;
-        padding-top: 3px;
+        // padding-top: 3px;
         align-self: center;
 
         @include extra_large {
-          font-size: 20px;
+          font-size: 18px;
+          font-weight: bold;
         }
       }
 
@@ -311,15 +317,18 @@
         justify-content: space-between;
 
         button{
-          width: 30px;
-          height: 30px;
+          width: 20px;
+          height: 20px;
           text-align: center;
           font-size: 12px;
           font-weight: 600;
           display: flex;
+          background: none;
+          color: $db_red;
           align-items: center;
           justify-content: center;
           margin: 3px 0;
+          border: none;
 
           @include large {
             width: 50px;
@@ -344,11 +353,12 @@
 
       button{
         text-align: center;
-        background-color: #2fac66;
+        background-color: $db_green-light;
         width: 300px;
         a{
           color:#fff;
           font-size: 20px;
+          font-weight: bold;
         }
       }
     }

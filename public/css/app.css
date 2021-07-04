@@ -10399,7 +10399,7 @@ body {
 .jumbotron_wrapper {
   position: relative;
   background-image: url("images/banner_4.png");
-  height: 600px;
+  height: 700px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -10684,14 +10684,15 @@ body {
 }
 .jumbotron_content h1 {
   font-weight: bold;
-  font-size: 80px;
-  color: #004466;
+  font-size: 70px;
+  color: #E1B03D;
+  text-transform: uppercase;
 }
 .jumbotron_content h2 {
   font-weight: bold;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 600;
-  color: #000;
+  color: #14B8B5;
 }
 @media screen and (max-width: 992px) {
   .jumbotron_content h1 {
@@ -10736,7 +10737,7 @@ body {
   max-width: 100%;
 }
 .container_card h4 {
-  color: #004466;
+  color: #0C0C1D;
   font-size: 22px;
   text-decoration: none;
   font-weight: bold;
@@ -10760,9 +10761,8 @@ body {
      object-fit: cover;
 }
 .container_card .card_restaurant .card_address {
-  color: #2fac66;
+  color: #E1B03D;
   font-weight: bold;
-  font-style: italic;
 }
 .container_card .card_restaurant .button_card_menu {
   padding: 5px 20px;
@@ -10770,7 +10770,7 @@ body {
   text-align: center;
   cursor: pointer;
   outline: none;
-  background-color: #004466;
+  background-color: #E1B03D;
   border: none;
   border-radius: 5px;
   box-shadow: 0 9px #999;
@@ -10784,16 +10784,17 @@ body {
 }
 .container_card .card_restaurant .button_card_menu:hover {
   transition: all 0.5s ease-out;
-  background-color: #3e8e41;
+  background-color: #E9C572;
 }
 .container_card .card_restaurant .button_card_menu:active {
-  background-color: #3e8e41;
+  background-color: #E9C572;
   box-shadow: 0 5px #666;
 }
 .container_card .card_restaurant {
   position: relative;
   width: calc((100% / 4) - 20px);
   max-height: 100%;
+  border-radius: 0.25rem;
 }
 @media screen and (max-width: 1280px) {
   .container_card .card_restaurant {
@@ -10841,11 +10842,12 @@ body {
   bottom: 0;
   left: 100%;
   right: 0;
-  background-color: rgba(0, 68, 102, 0.9);
+  background-color: #242456;
   overflow: hidden;
   width: 0;
   height: 100%;
   transition: 0.5s ease;
+  opacity: 0.9;
 }
 .container_card .card_restaurant:hover .overlay {
   width: 100%;
@@ -10899,6 +10901,7 @@ body {
   vertical-align: middle;
   background: #e6e6e6;
   border: none;
+  border-radius: 0.25rem;
 }
 .jumbotron_bottom input:focus {
   outline: none;
@@ -10912,13 +10915,14 @@ body {
   vertical-align: middle;
   height: 40px;
   padding: 0 20px;
-  background-color: #2fac66;
+  background-color: #0E7C7B;
+  border-radius: 0.25rem;
   border: none;
   color: #fff;
   font-weight: bold;
 }
 .jumbotron_bottom button:hover {
-  background: coral;
+  background: #14B8B5;
 }
 
 .wrapper_genres {
@@ -11799,14 +11803,16 @@ padding: 30px;
   }
 }
 #cart .shopping_cart h2 {
-  color: #004466;
+  color: #242456;
   font-weight: bold;
 }
 #cart .shopping_cart .elements_container {
+  margin-top: 8px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding-top: 10px;
+  border-radius: 0.25rem;
+  box-shadow: -1px 2px 10px -3px rgba(0, 0, 0, 0.74);
 }
 #cart .shopping_cart .elements_container .plus {
   display: flex;
@@ -11815,13 +11821,13 @@ padding: 30px;
 #cart .shopping_cart .elements_container .plus .fas.fa-plus-square {
   cursor: pointer;
   font-size: 20px;
-  color: #38c172;
+  color: #14B8B5;
   margin: 5px 0;
 }
 #cart .shopping_cart .elements_container .plus .fas.fa-minus-square {
   cursor: pointer;
   font-size: 20px;
-  color: #dc3545;
+  color: #C08497;
   margin: 5px 0;
 }
 #cart .shopping_cart .elements_container .input_cart {
@@ -11835,14 +11841,14 @@ padding: 30px;
 #cart .shopping_cart .elements_container p {
   margin: 0 !important;
   white-space: nowrap;
-  font-size: 16px;
+  font-size: 12px;
   min-height: 30px;
-  padding-top: 3px;
   align-self: center;
 }
 @media (min-width: 1200px) {
   #cart .shopping_cart .elements_container p {
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: bold;
   }
 }
 #cart .shopping_cart .elements_container .name {
@@ -11879,15 +11885,18 @@ padding: 30px;
   justify-content: space-between;
 }
 #cart .shopping_cart .elements_container .button button {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   text-align: center;
   font-size: 12px;
   font-weight: 600;
   display: flex;
+  background: none;
+  color: #A2536C;
   align-items: center;
   justify-content: center;
   margin: 3px 0;
+  border: none;
 }
 @media (min-width: 992px) {
   #cart .shopping_cart .elements_container .button button {
@@ -11907,21 +11916,24 @@ padding: 30px;
 }
 #cart .shopping_cart .checkout button {
   text-align: center;
-  background-color: #2fac66;
+  background-color: #14B8B5;
   width: 300px;
 }
 #cart .shopping_cart .checkout button a {
   color: #fff;
   font-size: 20px;
+  font-weight: bold;
 }
 
 .footer_wrapper {
   padding: 30px;
   margin-top: 30px;
-  background: linear-gradient(to bottom right, #2fac66 6%, #006699 64%);
+  background-color: #242456;
   background-size: cover;
   background-position: left;
+  background-position: top;
   background-repeat: no-repeat;
+  height: 400px;
 }
 @media screen and (max-width: 700px) {
   .footer_wrapper hr, .footer_wrapper .credits {
@@ -12018,6 +12030,87 @@ padding: 30px;
   color: #fff;
 }
 
+#foot-booleat {
+  border-radius: 40% 20% 0 0;
+}
+
+.site-footer {
+  background-image: url("../../images/footer_bg.jpg");
+  background-size: cover;
+  background-position: right;
+  padding: 45px 0 20px;
+  font-size: 15px;
+  line-height: 24px;
+  color: #fff;
+  height: 400px;
+}
+
+.site-footer hr {
+  border-top-color: #E1B03D;
+  opacity: 0.5;
+}
+
+.site-footer hr.small {
+  margin: 20px 0;
+}
+
+.site-footer h6 {
+  color: #E1B03D;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 5px;
+  letter-spacing: 2px;
+}
+
+.site-footer a {
+  color: #737373;
+}
+
+.site-footer a:hover {
+  color: #E1B03D;
+  text-decoration: none;
+}
+
+.footer-links {
+  padding-left: 0;
+  list-style: none;
+}
+
+.footer-links li {
+  display: block;
+}
+
+.footer-links a {
+  color: #A2536C;
+}
+
+.footer-links a:active, .footer-links a:focus, .footer-links a:hover {
+  color: #C08497;
+  text-decoration: none;
+}
+
+.footer-links.inline li {
+  display: inline-block;
+}
+
+.copyright-text {
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .site-footer [class^=col-] {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .site-footer {
+    padding-bottom: 0;
+  }
+
+  .site-footer .copyright-text, .site-footer .social-icons {
+    text-align: center;
+  }
+}
 .dashboard_right.edit_user {
   padding: 0;
 }
