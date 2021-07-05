@@ -5,8 +5,6 @@ new Vue({
     platesId: [],
     namePlatesShow: [],
     pricesShow: [],
-    namePlates: [],
-    prices: [],
     usersId: [],
     sum: 0,
     display: false,
@@ -67,89 +65,79 @@ new Vue({
       }
     },
 
-    addElementsToCart: function (name, price) {
-      this.namePlates.push(name);
-      this.prices.push(price);
-    },
 
-    removePrevCart: function (plate, id, name, price, index) {
-
-      this.plates.push(plate);
-      this.platesId.push(id);
-
+    generalAdding: function (plate, id, name, price, index) {
       this.show = true;
 
       for (let i = 0; i < this.usersId.length; i++) {
         if (this.usersId[i] != index) {
-
           this.quantity = [];
         }
       }
-
-      this.usersId.push(index);
 
       if (this.namePlatesShow.includes(name)) {
         return;
       } else {
         this.quantity.push(1);
-
       }
 
       for (let i = 0; i < this.usersId.length; i++) {
         if (this.usersId[i] != index) {
-          this.usersId = [];
-
-          this.usersId.push(index);
-          this.namePlates = [];
           this.namePlatesShow = [];
-
-          this.prices = [];
+          this.platesId = [];
+          this.plates = [];
           this.pricesShow = [];
-        } else {
-          this.namePlates;
-          this.prices;
-        }
+        } 
       };
 
-      this.namePlates.push(name);
+      // pusho negli id dei piatti
+      if (!this.platesId.includes(id)) {
+        this.platesId.push(id);
+      }
 
+      // pusho nei piatti da mostrare
       if (!this.namePlatesShow.includes(name)) {
         this.namePlatesShow.push(name);
       }
 
+      // pusho nei piatti
+      if (!this.plates.includes(plate)) {
+        this.plates.push(plate);
+      }
+
+      // pusho negli id degli user
+      if (!this.usersId.includes(index)) {
+        this.usersId = [];
+        this.usersId.push(index);
+      }
     },
 
     totalPrice: function (price) {
+
       if (!this.pricesShow.includes(price)) {
         this.pricesShow.push(price);
       }
-
-      this.prices.push(price);
 
       this.sum = 0;
 
       for (let i = 0; i < this.pricesShow.length; i++) {
 
         for (let k = 0; k < this.quantity[i]; k++) {
-
           this.sum = this.sum + this.pricesShow[i];
         }
       }
-
 
       this.display = true;
     },
 
     removeCartElement: function (index) {
-
-      this.namePlates.splice(index, 1);
+      this.plates.splice(index, 1);
+      this.platesId.splice(index, 1);
       this.namePlatesShow.splice(index, 1);
       this.quantity.splice(index, 1);
-      this.usersId.splice(index, 1);
     },
 
     removePrice: function (index, price) {
-      this.prices.splice(index, 1);
       this.pricesShow.splice(index, 1);
 
       this.sum = 0;
@@ -161,23 +149,16 @@ new Vue({
 
   mounted() {
     this.usersId = []
-
     this.plates = JSON.parse(localStorage.getItem("plates")) || [],
-
-      this.platesId = JSON.parse(localStorage.getItem("platesId")) || [],
-      this.namePlates = JSON.parse(localStorage.getItem("namePlates")) || [],
-      this.namePlatesShow = JSON.parse(localStorage.getItem("namePlatesShow")) || [],
-      this.prices = JSON.parse(localStorage.getItem("prices")) || [],
-      this.pricesShow = JSON.parse(localStorage.getItem("pricesShow")) || [],
-      this.usersId = JSON.parse(localStorage.getItem("usersId")) || []
-
-
+    this.platesId = JSON.parse(localStorage.getItem("platesId")) || [],
+    this.namePlatesShow = JSON.parse(localStorage.getItem("namePlatesShow")) || [],
+    this.pricesShow = JSON.parse(localStorage.getItem("pricesShow")) || [],
+    this.usersId = JSON.parse(localStorage.getItem("usersId")) || []
     this.quantity = JSON.parse(localStorage.getItem("quantity")) || []
 
     for (let i = 0; i < this.pricesShow.length; i++) {
 
       for (let k = 0; k < this.quantity[i]; k++) {
-
         this.sum = this.sum + this.pricesShow[i];
       }
     }
@@ -195,14 +176,8 @@ new Vue({
     platesId(newValue, oldValue) {
       localStorage.setItem("platesId", JSON.stringify(newValue));
     },
-    namePlates(newValue, oldValue) {
-      localStorage.setItem("namePlates", JSON.stringify(newValue));
-    },
     namePlatesShow(newValue, oldValue) {
       localStorage.setItem("namePlatesShow", JSON.stringify(newValue));
-    },
-    prices(newValue, oldValue) {
-      localStorage.setItem("prices", JSON.stringify(newValue));
     },
     pricesShow(newValue, oldValue) {
       localStorage.setItem("pricesShow", JSON.stringify(newValue));
@@ -216,7 +191,6 @@ new Vue({
     quantity(newValue, oldValue) {
       localStorage.setItem("quantity", JSON.stringify(this.quantity));
     },
-
   }
 });
 

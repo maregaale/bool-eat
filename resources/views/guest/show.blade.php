@@ -44,7 +44,7 @@
           {{-- /Info Plate --}}
           {{-- Button add to cart --}}
             <div class="add-to-cart">
-              <div class="icon-cart" v-on:click.once="removePrevCart({{ json_encode($plate) }},{{ json_encode($plate->id) }}, {{ json_encode($plate->name) }}, {{ json_encode($plate->price) }}, {{ json_encode($plate->user_id) }}); totalPrice({{ json_encode($plate->price) }})">
+              <div class="icon-cart" v-on:click="generalAdding({{ json_encode($plate) }},{{ json_encode($plate->id) }}, {{ json_encode($plate->name) }}, {{ json_encode($plate->price) }}, {{ json_encode($plate->user_id) }}); totalPrice({{ json_encode($plate->price) }})">
               <i class="fas fa-cart-arrow-down"></i>
               </div>
             </div>
@@ -94,7 +94,7 @@
         </div> --}}
 
         <div class="button">
-          <button v-on:click="removeCartElement(index); removePrice(index, price)" v-for="(price, index) in pricesShow" v-if="namePlates.length != 0" class="btn btn-danger"><span class="trash_text"></span><i class="fas fa-trash trash"></i></button>
+          <button v-on:click="removeCartElement(index); removePrice(index, price)" v-for="(price, index) in pricesShow" v-if="namePlatesShow.length != 0" class="btn btn-danger"><i class="fas fa-trash trash"></i></button>
         </div>        
       </div>
 
