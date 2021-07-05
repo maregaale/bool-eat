@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
-
 @section('page_title')
     Statistiche Ordini {{ $user->name }}
 @endsection
@@ -52,9 +51,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 
     {{-- script statistiche--}}
-
     <script>               
-    
         const App = {
         data() {
         }
@@ -63,13 +60,9 @@
         const app = Vue.createApp(App);
         app.directive('dragscroll', VueDragscroll);
         app.mount('#app')
-
     </script>
 
-
     <script>
-
-
         new Vue({
             el: '#stats',
             data: {
@@ -80,7 +73,6 @@
             show: false,
             },
             mounted:function(){
-
                     
                 axios.get('http://localhost:8000/api/user/orders',{
                     params: {
