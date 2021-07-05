@@ -12,6 +12,9 @@
 @mixin tablet_landscape {
     @media (max-width: 1024px) { @content; }
   }
+@mixin smallest_desktop {
+  @media (max-width: 1200px) { @content; }
+}
 @mixin small_desktop {
     @media (max-width: 1336px) { @content; }
   }

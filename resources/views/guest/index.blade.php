@@ -30,7 +30,7 @@
     </div>
     <div class="text-center jumbotron_bottom">
       <div class="d-flex justify-content-center align-items-center ">
-        <div class="text-white mt-3">
+        <div class="text-white">
             <h2 class="mb-4">Cerca e ordina!</h2>
             {{-- Search names --}}
             <input  type="text" placeholder="Nome ristorante" value="" v-model="restaurantName"  v-on:keydown="searchName">
