@@ -14,7 +14,7 @@
 
   @include('partials.header')
 
-  <div id="cart" class="">
+  <div id="cart" >
     @if (count($user->plates) > 0)
         
     <div class="menu">

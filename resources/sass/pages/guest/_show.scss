@@ -6,6 +6,9 @@
   justify-content: space-between;
   margin: 0 auto;
   padding: 0 20px;
+  background-image: url('../../images/good_food-wallpaper-2880x1620.jpg');
+  background-position: right;
+  padding: 40px 0;
 
 
   @include small_medium {
@@ -16,7 +19,9 @@
   @include extra_extra_large {
     height: calc(100vh - 470px);
   }
-  
+
+    
+ 
   .menu {
     
     @include small_medium {
@@ -26,7 +31,6 @@
       h1 {
         color: $db_blue;
         font-weight: bold;
-        font-style: italic;
         font-size: 40px;
         letter-spacing: -1px;
       }

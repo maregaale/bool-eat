@@ -59,7 +59,10 @@
       <div id="navbarNav" class="navbar_genres">
         <div class="navbar_genres-cont v-dragscroll.y">
           <div class="active genres_content text-center" v-for="genre in genres">
-            <a class="btn-genres"  v-on:click="filterGenreButtons(genre.name)" href="javascript:;"><img v-bind:src="genre.logo" alt="">@{{ genre.name }}<span class="sr-only">(current)</span></a>
+            <img v-bind:src="genre.logo"  v-on:click="filterGenreButtons(genre.name)"  alt="">
+            <div class="genre-text">
+            <a class="btn-genres"  v-on:click="filterGenreButtons(genre.name)" href="javascript:;">@{{ genre.name }}<span class="sr-only">(current)</span></a>
+          </div>
           </div>
         </div>
       </div>

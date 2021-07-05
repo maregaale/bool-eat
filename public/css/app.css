@@ -10933,7 +10933,7 @@ body {
   font-weight: bold;
   font-style: italic;
   font-size: 32px;
-  color: #004466;
+  color: #242456;
   text-align: center;
 }
 @media screen and (max-width: 768px) {
@@ -10958,11 +10958,21 @@ body {
 .wrapper_genres .navbar_genres .genres_content {
   margin: 5px;
 }
-.wrapper_genres .navbar_genres .genres_content a {
+.wrapper_genres .navbar_genres .genres_content .genre-text {
+  width: 100%;
+  border-radius: 0.25rem;
+  background-color: #0E7C7B;
+  padding: 2px;
+}
+.wrapper_genres .navbar_genres .genres_content .genre-text:hover {
+  background-color: #14B8B5;
+}
+.wrapper_genres .navbar_genres .genres_content .genre-text a {
   font-size: 12px;
   text-decoration: none;
   font-weight: bold;
-  color: #3490dc;
+  color: #fff;
+  text-transform: uppercase;
 }
 .wrapper_genres .navbar_genres .genres_content img {
   filter: grayscale(60%);
@@ -10971,8 +10981,9 @@ body {
   display: block;
   width: 90px;
   height: 90px;
-  border-radius: 50%;
+  border-radius: 0.25rem;
   margin: 0 5px;
+  cursor: pointer;
 }
 .wrapper_genres .navbar_genres .genres_content img:hover {
   filter: grayscale(0%);
@@ -11624,6 +11635,9 @@ padding: 30px;
   justify-content: space-between;
   margin: 0 auto;
   padding: 0 20px;
+  background-image: url("../../images/good_food-wallpaper-2880x1620.jpg");
+  background-position: right;
+  padding: 40px 0;
 }
 @media (min-width: 700px) {
   #cart {
@@ -11643,7 +11657,6 @@ padding: 30px;
 #cart .menu h1 {
   color: #242456;
   font-weight: bold;
-  font-style: italic;
   font-size: 40px;
   letter-spacing: -1px;
 }
