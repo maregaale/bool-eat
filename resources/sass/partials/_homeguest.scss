@@ -226,7 +226,7 @@
     font-family: 'Vollkorn', serif;
     width: 100%;
     position: absolute;
-    top: 20%;
+    top: 42%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -460,15 +460,12 @@
 }
 
 .jumbotron_bottom{
+    display: flex;
+    align-items: center;
     bottom: -40px;
     position: absolute;
     padding: 0 40px;
-    // background-image: url('images/banner_2.webp');
-    //background: linear-gradient(to bottom right, #2fac66 23%, #006699 87%);
     font-family: 'Vollkorn', serif;
-    // filter: grayscale(44%) opacity(81%);
-    // -webkit-filter: grayscale(44%) opacity(81%);
-    // -moz-filter: grayscale(44%) opacity(81%);
     background-size: cover;
     height: 250px;
     background-color: $db_white;

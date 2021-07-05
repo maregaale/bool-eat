@@ -7,7 +7,7 @@ h2,h3,h4,h5,h6,p {
 }
 
 .restaurant_plate {
-  background-color: #2b5876 !important;
+  background-color: rgba(43, 88, 118, 0.9)!important;
 }
 
 .menu h1 {
@@ -17,4 +17,14 @@ h2,h3,h4,h5,h6,p {
 .footer_list.up i, .footer_list.up span {
   color: #fff;
 }
+
+.jumbotron_bottom {
+  background-color: rgb(43, 88, 118) !important;
+}
+
+.elements_container {
+  background-color: rgba(43, 88, 118, 0.9)!important;
+}
+
+
 
