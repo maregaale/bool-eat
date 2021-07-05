@@ -27,4 +27,7 @@ h2,h3,h4,h5,h6,p {
 }
 
 
-
+.card-body h2, .card-body p {
+  
+    color: #000 !important;
+}
