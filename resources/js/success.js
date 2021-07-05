@@ -2,27 +2,21 @@ new Vue ({
   el: '#success',
   data: {
     plates: [],
-    prices: [],
     usersId: [],
-    namePlates: [],
     namePlatesShow: [],
     pricesShow: [],
-
+    platesId: [],
     sum: 0,
     quantity: [],
-
   },
 
   mounted() {
     this.plates = JSON.parse(localStorage.getItem("plates")) || [],
-    this.namePlates = JSON.parse(localStorage.getItem("namePlates")) || [],
+    this.platesId = JSON.parse(localStorage.getItem("platesId")) || [],
     this.namePlatesShow = JSON.parse(localStorage.getItem("namePlatesShow")) || [],
-    this.prices = JSON.parse(localStorage.getItem("prices")) || [],
     this.pricesShow = JSON.parse(localStorage.getItem("pricesShow")) || [],
     this.usersId = JSON.parse(localStorage.getItem("usersId")) || []
-  
     this.quantity = JSON.parse(localStorage.getItem("quantity")) || []
-
     this.sum = JSON.parse(localStorage.getItem("sum")) || []
   },
   
@@ -30,17 +24,14 @@ new Vue ({
     plates([], oldValue) {
       localStorage.setItem("plates", JSON.stringify([]));
     },
-    namePlates([], oldValue) {
-      localStorage.setItem("namePlates", JSON.stringify([]));
+    platesId([], oldValue) {
+      localStorage.setItem("platesId", JSON.stringify([]));
     },
     namePlatesShow([], oldValue) {
       localStorage.setItem("namePlatesShow", JSON.stringify([]));
     },
     pricesShow([], oldValue) {
       localStorage.setItem("pricesShow", JSON.stringify([]));
-    },
-    prices([], oldValue) {
-      localStorage.setItem("prices", JSON.stringify([]));
     },
     usersId([], oldValue) {
       localStorage.setItem("usersId", JSON.stringify([]));
@@ -52,5 +43,4 @@ new Vue ({
       localStorage.setItem("quantity", JSON.stringify([]));
     },
   }
-
 });
